@@ -1,0 +1,42 @@
+.accept-cookie {
+    z-index: 99999;
+    background-color: #393d43;
+}
+
+@media only screen and (max-width:767px) {
+    .accept-cookie p {
+        flex-grow: 1;
+    }
+
+    .accept-cookie button {
+        flex-basis: 100%;
+    }
+}
+.hero .carousel-item-next,.hero .carousel-item-prev,.hero .carousel-item.active {
+    height: 100vh;
+    display: flex !important;
+}
+
+.hero {
+    background-image: url('../images.pcbuilder.dev/assets/images/banner/bg-banner.png'), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media screen and (max-width: 767.98px) {
+
+    .hero .carousel-item-next,
+    .hero .carousel-item-prev,
+    .hero .carousel-item.active {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+    .hero .carousel-item-next,
+    .hero .carousel-item-prev,
+    .hero .carousel-item.active {
+        height: 550px;
+    }
+}
