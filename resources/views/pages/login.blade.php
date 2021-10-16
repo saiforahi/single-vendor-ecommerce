@@ -462,7 +462,7 @@
 @section('content')
 <section class="pcb-breadcrumb">
     <h1>Login to PC Builder</h1>
-    <span><a href="../../index.html">Home</a><i class="fa fa-angle-right"></i><a href="index.html">Login</a></span>
+    <span><a href="/">Home</a><i class="fa fa-angle-right"></i><a href="{{route('login')}}">Login</a></span>
 </section>
 <section class="page-content">
     <div class="container">

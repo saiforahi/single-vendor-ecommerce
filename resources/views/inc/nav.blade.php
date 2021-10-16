@@ -23,7 +23,6 @@
     }
 
     @media screen and (min-width: 768px) and (max-width: 991.98px) {
-
         .hero .carousel-item-next,
         .hero .carousel-item-prev,
         .hero .carousel-item.active {
@@ -32,23 +31,45 @@
     }
 </style>
 @endpush
+@auth
+<form method="POST" action="{{route('logout')}}" id="logout_form">
+    @csrf
+</form>
+@endauth
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <header>
         <div class="logo">
-            <a href="index.html">
-                <img src="{{asset('images/logo-80.png')}}" alt="PC Builder" height="80"
-                    width="80">
+            <a href="/">
+                <img src="{{asset('images/logo-80.png')}}" alt="PC Builder" height="80" width="80"/>
                 <p class="hide-mobile"><span>PC</span>Builder</p>
             </a>
         </div>
         <div class="d-none d-md-flex pbc-border"></div>
-        <form method="GET" action="https://pcbuilder.net/" class="search">
-            <div><i class="fa fa-search" aria-hidden="true"></i><input autocomplete="off" name="s" type="text"
-                    placeholder="Search..." id="search"></div>
+        <form method="POST" action="" class="search">
+            <div><i class="fa fa-search" aria-hidden="true"></i><input autocomplete="off" name="s" type="text" placeholder="Search..." id="search"></div>
         </form>
-        
-        <div class="d-none d-lg-flex cart"><a href="list/cart.html"><img class="lazy"
-                    src="https://images.pcbuilder.dev/assets/images/icons/cart.svg" height="32" width="32"></a>
+        <div class="login">
+            <div class="mobile dropdown">
+                <a class="access-my-profile"><i class="fa fa-user-circle"></i></a>
+            </div>
+            <div class="pc">
+                @auth
+                <span><i class="fa fa-user-circle" style="margin-right: 15px;"></i></span>
+                @endauth
+                <span>Welcome
+                    <div>
+                        @auth
+                            <a href="#" tabindex="0" html="true" class="example-popover" role="button" data-toggle="popover" title="Menu" template="<a >Logout</a>" data-placement="bottom" >{{Auth::user()->name}}</a>
+                        @endauth
+                        @guest
+                            <a href="{{route('login')}}">Sign In / Register</a>
+                        @endguest
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="d-none d-lg-flex cart">
+            <a href="list/cart.html"><img class="lazy" src="https://images.pcbuilder.dev/assets/images/icons/cart.svg" height="32" width="32"/></a>
             <div><span>Cart</span></div>
         </div>
         <div class="d-none d-lg-flex mode">
@@ -68,36 +89,7 @@
                 </path>
             </svg>
         </button>
-        <div class="login">
-            <div class="mobile dropdown">
-                <a class="access-my-profile"><i class="fa fa-user-circle"></i></a>
-            </div>
-            <div class="pc">
-                @auth
-                <div class="">
-                    <a class="dropdown-toggle d-none d-lg-block" href="#" id="profileDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" style="margin-right: 15px;"></i></a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Profile</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" onclick="getElementById('logout_form').submit()">Logout</a>
-                        <form method="POST" action="{{route('logout')}}" id="logout_form">
-                        @csrf
-                        </form>
-                    </div>
-                </div>
-                @endauth
-                <span>Welcome
-                    <div>
-                        @auth
-                            <a href="#">{{Auth::user()->name}}</a>
-                        @endauth
-                        @guest
-                            <a href="{{route('login')}}">Sign In / Register</a>
-                        @endguest
-                    </div>
-                </span>
-            </div>
-        </div>
+        
     </header>
 
 
@@ -240,44 +232,44 @@
                                     <ul class="list-unstyled">
                                         <li class="heading top-padding">Peripherals</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/headphone/index.html">Headphones</a></li>
+                                                href="#">Headphones</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/keyboard/index.html">Keyboards</a></li>
+                                                href="#">Keyboards</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/mouse/index.html">Mouse</a></li>
+                                                href="#">Mouse</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/speakers/index.html">Speakers</a></li>
+                                                href="#">Speakers</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/ups/index.html">Uninteraptable Power Supplies</a></li>
+                                                href="#">Uninteraptable Power Supplies</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">External Storage</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/external-hard-drive/index.html">External Hard
+                                                href="#">External Hard
                                                 Drives</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Drivers</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/optical-drive/index.html">Optical Drive</a></li>
+                                                href="#">Optical Drive</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-6 col-sm-4">
                                     <ul class="list-unstyled">
                                         <li class="heading top-padding">Software</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/softwares/index.html">Antivirus</a></li>
+                                                href="#">Antivirus</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/softwares/index.html">Utilities</a></li>
+                                                href="#">Utilities</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/softwares/index.html">Operating Systems</a></li>
+                                                href="#">Operating Systems</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Pre-Built PCs</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="builts/gaming-pc/index.html">Gaming Desktops</a></li>
-                                        <li itemprop="name"><a itemprop="url" href="builts/cheap-pc/index.html">Cheap Desktops</a></li>
-                                        <li itemprop="name"><a itemprop="url" href="builts/aio-pc/index.html">AIO
+                                                href="#">Gaming Desktops</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="#">Cheap Desktops</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="#">AIO
                                                 Desktops</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
@@ -335,8 +327,13 @@
     </div>
     <div id="my-profile" class="collapse navbar-collapse">
         <div class="mega-profile">
-            <a class="dropdown-item" href="auth/login/index.html">Login</a>
-            <a class="dropdown-item" href="auth/register/index.html">Sign up</a>
+            @auth
+                <a class="dropdown-item" href="#" onclick="getElementById('logout_form').submit()">Logout</a>
+            @endauth
+            @guest
+                <a class="dropdown-item" href="{{route('login')}}">Login</a>
+                <a class="dropdown-item" href="{{route('register')}}">Sign up</a>
+            @endguest
             <a class="dropdown-item d-none" href="#">Forum</a>
             <a class="dropdown-item d-none" href="#">Blog</a>
         </div>
@@ -348,7 +345,7 @@
     </div>
 </nav>
 
-<script type="application/ld+json">
+{{-- <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -412,4 +409,4 @@
         }
       ]
     }
-  </script>
+  </script> --}}

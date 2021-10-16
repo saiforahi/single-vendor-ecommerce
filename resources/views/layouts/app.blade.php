@@ -70,7 +70,9 @@
         <link rel="stylesheet" type="text/css" href="{{asset('css/font.css')}}">
 
         @stack('style')
-
+        <script>
+            window.auth_user = {!! json_encode(Auth::user()); !!};  //retrieving auth user in a global script variable, it can be accessed in any vue component's script tag
+        </script>
         <script async src="{{asset('js/analytics.js')}}"></script>
         <script src="{{(asset('js/analytics-code.js'))}}"></script>
         <!-- Styles -->
