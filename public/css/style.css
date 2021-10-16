@@ -34,6 +34,7 @@ html.transition *:after {
 
 html {
   --navbarBgColor: #04151f;
+  /* --navbarBgColor: #18ae91; */
   --navbarText: #3a4c56;
   --navbarElementColor: #dae2e5;
   --navbarBorderColor: rgba(255,255,255,0.15);
