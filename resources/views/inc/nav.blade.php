@@ -96,15 +96,15 @@
     <div id="my-nav" class="collapse navbar-collapse">
         <ul itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar-nav mr-auto">
             <li itemprop="name" class="nav-item ">
-                <a itemprop="url" class="nav-link" href="list/index.html"><i class="fa fa-tools"></i> System Builder
+                <a itemprop="url" class="nav-link" href="{{route('system-builder')}}"><i class="fa fa-tools"></i>System Builder
                 </a>
             </li>
             <li itemprop="name" class="nav-item ">
-                <a itemprop="url" class="nav-link" href="builts/index.html"><i class="fa fa-server"></i> Pre-Build
+                <a itemprop="url" class="nav-link" href="{{route('pre-built')}}"><i class="fa fa-server"></i>Pre-Build
                     PC</a>
             </li>
             <li itemprop="name" class="nav-item ">
-                <a itemprop="url" class="nav-link" href="laptop/index.html"><i class="fa fa-laptop"></i> Laptops</a>
+                <a itemprop="url" class="nav-link" href="{{route('laptops')}}"><i class="fa fa-laptop"></i>Laptops</a>
             </li>
 
             <li class="nav-item dropdown megamenu-li ">

@@ -30,3 +30,13 @@ Route::get('/', function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('system-builder',function(){
+    return view('pages.system-builder');
+})->name('system-builder');
+Route::get('pre-built',function(){
+    return view('pages.pre-built');
+})->name('pre-built');
+Route::get('laptops',function(){
+    return view('pages.laptops');
+})->name('laptops');
