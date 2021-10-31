@@ -17,6 +17,8 @@ class CreateLaptopsTable extends Migration
             $table->id();
             $table->foreignId('product_id')->constrained('products')->nullable();
             $table->foreignId('brand_id')->constrained('brands')->nullable();
+            $table->json('specifications')->nullable();
+            $table->json('features')->nullable();
             $table->enum('status',['active','inactive']);
             $table->timestamps();
         });
