@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/login',[App\Http\Controllers\Api\AuthController::class,'login']);
 Route::post('/register',[App\Http\Controllers\Api\AuthController::class,'register']);
 Route::post('/logout',[App\Http\Controllers\Api\AuthController::class,'logout']);
+
+require __DIR__.'/basic_data_routes/brands.php';
