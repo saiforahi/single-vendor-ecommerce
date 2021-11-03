@@ -15,12 +15,15 @@ class CreateLaptopsTable extends Migration
     {
         Schema::create('laptops', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained('products')->nullable();
-            $table->foreignId('brand_id')->constrained('brands')->nullable();
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->foreign('product_id')->references('id')->on('products');
+            $table->unsignedBigInteger('brand_id')->nullable();
+            $table->foreign('brand_id')->references('id')->on('brands');
             $table->json('specifications')->nullable();
             $table->json('features')->nullable();
-            $table->enum('status',['active','inactive']);
+            $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
