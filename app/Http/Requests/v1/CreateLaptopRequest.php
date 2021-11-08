@@ -25,7 +25,8 @@ class CreateLaptopRequest extends FormRequest
     {
         return [
             //
-            'specifications'=>'required|json'
+            'specifications'=>'required|json',
+            'images' => 'sometimes|nullable|file',
         ];
     }
 }
