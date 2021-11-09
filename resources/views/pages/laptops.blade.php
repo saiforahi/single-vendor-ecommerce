@@ -536,8 +536,6 @@
         height: 20px;
         /* top: 15px; */
 }
-</style>
-<style>
     .pcb-breadcrumb-p {
         color: white;
         margin-top: 0;

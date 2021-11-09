@@ -11,8 +11,8 @@ class LaptopController extends Controller
 {
     //
     public function __construct(){
-        $this->middleware('auth:sanctum')->except(['all_added_operating_systems','show_laptops']);
-        $this->middleware('role:admin|user')->except(['all_added_operating_systems','show_laptops']);
+        $this->middleware('auth:sanctum')->except(['show_laptops','get_laptop_create_options']);
+        $this->middleware('role:admin|user')->except(['show_laptops','get_laptop_create_options']);
     }
     public function create(CreateLaptopRequest $req){
         try{
@@ -57,20 +57,22 @@ class LaptopController extends Controller
         }
     }
 
-    public function all_added_operating_systems(){
+    public function show_laptops($type){
+        return view('components.laptop_list')->with('type',$type);
+    }
+
+    public function get_laptop_create_options($type){
         try{
-            $os_list = array();
+            $list = array();
             foreach( Laptop::all() as $laptop ){
-                array_push($os_list,json_decode($laptop->specifications)->os);
+                if(isset(json_decode($laptop->specifications,true)[$type])){
+                    array_push($list,json_decode($laptop->specifications,true)[$type]);
+                }
             }
-            return response()->json(['success'=>true,'data'=>array_values(array_unique($os_list))],200);
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
         }
         catch(Exception $e){
             return response()->json(['success'=>false,'message'=>$e],500);
         }
-    }
-
-    public function show_laptops($type){
-        return view('components.laptop_list')->with('type',$type);
     }
 }
