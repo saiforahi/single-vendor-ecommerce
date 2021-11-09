@@ -21,4 +21,5 @@ Route::prefix('laptops')->group(function(){
     Route::put('/update',[App\Http\Controllers\api\LaptopController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\LaptopController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\LaptopController::class,'details']);
+    Route::get('/operating-systems',[App\Http\Controllers\api\LaptopController::class,'all_added_operating_systems']);
 });

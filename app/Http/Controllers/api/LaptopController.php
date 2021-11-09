@@ -6,12 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\v1\CreateLaptopRequest;
 use App\Models\Laptop;
+use DB;
 class LaptopController extends Controller
 {
     //
     public function __construct(){
-        $this->middleware('auth:sanctum');
-        $this->middleware('role:admin|user');
+        $this->middleware('auth:sanctum')->except(['all_added_operating_systems','show_laptops']);
+        $this->middleware('role:admin|user')->except(['all_added_operating_systems','show_laptops']);
     }
     public function create(CreateLaptopRequest $req){
         try{
@@ -54,5 +55,22 @@ class LaptopController extends Controller
         catch(Exception $e){
             return response()->json(['success'=>false,'message'=>$e],500);
         }
+    }
+
+    public function all_added_operating_systems(){
+        try{
+            $os_list = array();
+            foreach( Laptop::all() as $laptop ){
+                array_push($os_list,json_decode($laptop->specifications)->os);
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($os_list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+
+    public function show_laptops($type){
+        return view('components.laptop_list')->with('type',$type);
     }
 }

@@ -629,6 +629,16 @@
 </style>
 @endpush
 @section('content')
+<section class="pcb-breadcrumb">
+    <h1>Looking for a Laptop?</h1>
+    <p class="pcb-breadcrumb-p">Looking for the best laptop and confused between which one to choose? I know its too
+        hard and if you want to buy one, then here are some of the handpicked laptops for you!</p>
+    <hr class="pcb-breadcrumb-hr">
+    <span><a href="../index.html">Home</a>
+        <i class="fa fa-angle-right"></i>
+        <a href="index.html">Laptop</a>
+    </span>
+</section>
 <section class="system-builder pre-builts">
     <div class="container">
         
@@ -660,9 +670,9 @@
                                     which you can get today and experience the performance.</p>
                             </div>
                             <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
-                                    src="../../images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
+                                src="{!!asset('images/builds/pc-builds.jpg')!!}"
                                     alt="Gaming PC"></div>
-                            <a href="gaming-laptop/index.html"
+                            <a href="{!!route('laptop-list',['type'=>'gaming'])!!}"
                                 class="my-4 mb-5 d-block font-weight-bold btn-open"><i
                                     class="fas fa-external-link-alt mr-2"></i>Explore Gaming Laptop</a>
                         </div>
@@ -679,9 +689,9 @@
                                     also picked some of the best laptops which are handy for your work.</p>
                             </div>
                             <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
-                                    src="../../images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
+                                    src="{!!asset('images/builds/pc-builds.jpg')!!}"
                                     alt="Cheap PC"></div>
-                            <a href="business-laptop/index.html"
+                            <a href="{!!route('laptop-list',['type'=>'buisness'])!!}"
                                 class="my-4 mb-5 d-block font-weight-bold btn-open"><i
                                     class="fas fa-external-link-alt mr-2"></i>Explore Business Laptop</a>
                         </div>
@@ -699,9 +709,9 @@
                                     work in MS-Office, and a lot more things you could ever imagined.</p>
                             </div>
                             <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
-                                    src="../../images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
+                                src="{!!asset('images/builds/pc-builds.jpg')!!}"
                                     alt="AIO PC"></div>
-                            <a href="cheap-laptop/index.html" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
+                            <a href="{!!route('laptop-list',['type'=>'cheap'])!!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
                                     class="fas fa-external-link-alt mr-2"></i>Explore Cheap Laptop</a>
                         </div>
                     </div>
