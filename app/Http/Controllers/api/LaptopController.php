@@ -16,16 +16,25 @@ class LaptopController extends Controller
     }
     public function create(CreateLaptopRequest $req){
         try{
-            $new_laptop = Laptop::create($req->all());
+            $new_laptop = Laptop::create($req->only('name','specifications','price'));
+            if($req->has('total_images') && $req->total_images>0){
+                for($index=1;$index<=$req->total_images;$index++){
+                    // if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
+                    //     $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection();
+                    // }
+                    // dd($req->file('image'.$index));
+                    $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('images');
+                }
+            }
             if($new_laptop){
                 return response()->json(['success'=>true,'message'=>'New Laptop has been created'],201);
             }
             else{
-                return response()->json(['success'=>false,'message'=>'Internal Server Error'],500);
+                return response()->json(['success'=>false,'message'=>'Internal Server Error'],400);
             }
         }
         catch(Exception $e){
-            return response()->json(['success'=>false,'message'=>'Internal Server Error'],500);
+            return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
 
@@ -58,7 +67,7 @@ class LaptopController extends Controller
     }
 
     public function show_laptops($type){
-        return view('components.laptop_list')->with('type',$type);
+        return view('components.laptop_list')->with('type',$type)->with('laptops',Laptop::all());
     }
 
     public function get_laptop_create_options($type){

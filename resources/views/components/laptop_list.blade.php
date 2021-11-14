@@ -295,336 +295,77 @@
             </div>
         </div>
         <div class="row row-flex" id="myTable">
+            @foreach ($laptops as $item)
             <div class="searching col-md-4 col-sm-6 col-xs-12">
                 <div style="background:#ffffff;" class="content-gap">
                     <div class="content box">
                         <div class="ribbon hot-ribbon"><span>Hot</span></div>
                         <div class="product-image ">
+                            @foreach ($item->getMedia('images') as $image)
                             <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html">
+                                href="#">
+                                <img class="pic-{{ $loop->index+1 }} lazy" src="{{asset($image->getUrl())}}"
+                                    data-src="{{asset($image->getUrl())}}"
+                                    title="{{$item->name}}"
+                                    alt="{{$item->name}}">
+                            </a>
+                            @endforeach
+                            {{-- <a
+                                href="#">
                                 <img class="pic-1 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
                                     data-src="https://m.media-amazon.com/images/I/41Kp8-ILkYL._SL160_.jpg"
                                     title="Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Gold (Latest Model)"
                                     alt="PC Builder, Build My PC, Apple, Business Laptop">
                             </a>
                             <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html">
+                                href="#">
                                 <img class="pic-2 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
                                     data-src="https://m.media-amazon.com/images/I/21NSNFwRHaL.jpg"
                                     title="Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Gold (Latest Model)"
                                     alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
+                            </a> --}}
                         </div>
                         <center>
                             <h4
                                 onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'">
-                                Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Gold (Latest...</h4>
+                                {{$item->name}}</h4>
                             <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'"
                                 style="font-weight:500;" class="content-information">
                                 <div class="content-detail col-md-6 d-flex align-items-center"><img
                                         class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">Mac
-                                    OSX</div>
+                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">{{json_decode($item->specifications,true)['os']}}</div>
                                 <div class="content-detail col-md-6 d-flex align-items-center"><img
                                         class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">Intel
-                                    Core i3-10th Gen Processor</div>
+                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">{{json_decode($item->specifications,true)['processor']}}</div>
                                 <div class="content-detail col-md-6 d-flex align-items-center"><img
                                         class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">Intel
-                                    Iris Plus Graphics </div>
+                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">{{json_decode($item->specifications,true)['graphic']}}</div>
                                 <div class="content-detail col-md-6 d-flex align-items-center"><img
                                         class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">8
-                                    GB DDR4 (3733 MHz) Memory</div>
+                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">{{json_decode($item->specifications,true)['memory']}}</div>
                                 <div class="content-detail col-md-6 d-flex align-items-center"><img
                                         class="component-icons lazy"
                                         data-src="https://images.pcbuilder.dev/assets/images/pre-builts/rgb.svg">Apple
                                     - Gold</div>
                                 <div class="content-detail col-md-6 d-flex align-items-center"><img
                                         class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">256
-                                    GB SSD</div>
+                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">{{json_decode($item->specifications,true)['storage']}}</div>
                             </div>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'"
-                                class="col-md-12">
-                                <h3><img style="width:30px; height:30px" class="lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg">
-                                    $999.99 </h3>
+                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'" class="col-md-12">
+                                <h3>
+                                    <img style="width:30px; height:30px" class="lazy" data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg"/>
+                                    ৳ {{$item->price}}</h3>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <a style="margin:10px;" class="btn component-btn btn-block"
-                                    href="https://amazon.com/dp/B08636NKF8?tag=pcbuilder00-20" target="_blank"><i
-                                        class="fab fa-amazon"></i> View On Amazon</a>
+                                    href="#" target="_blank"><i
+                                        class="fab fa-amazon"></i> Add to Cart</a>
                             </div>
                         </center>
                     </div>
                 </div>
             </div>
-            <div class="searching col-md-4 col-sm-6 col-xs-12">
-                <div style="background:#ffffff;" class="content-gap">
-                    <div class="content box">
-                        <div class="ribbon popular-ribbon"><span>Popular</span></div>
-                        <div class="product-image ">
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-air-mqd32ll-a/index.html">
-                                <img class="pic-1 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/41wYOkqj80L._SL160_.jpg"
-                                    title="Apple 13 MacBook Air with Intel Core i5-5th Gen CPU, 8GB RAM, 128 GB SSD
-                                    (2017 Model)" alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-air-mqd32ll-a/index.html">
-                                <img class="pic-2 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/31d-fQuBXRL.jpg" title="Apple 13
-                                    MacBook Air with Intel Core i5-5th Gen CPU, 8GB RAM, 128 GB SSD (2017 Model)"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                        </div>
-                        <center>
-                            <h4
-                                onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mqd32ll-a/index.html'">
-                                Apple 13" MacBook Air with Intel Core i5-5th Gen CPU, 8GB RAM, 128 GB...</h4>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mqd32ll-a/index.html'"
-                                style="font-weight:500;" class="content-information">
-                                <div class="content-detail col-md-6 d-flex align-items-center">
-                                    <img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">Mac
-                                    OS X 10.0 Cheetah</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">Intel
-                                    Core i5-5th Gen Processor</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">Intel
-                                    HD Graphics 6000 </div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">8
-                                    GB DDR4 (2133 MHz) Memory</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/rgb.svg">Apple
-                                    - Silver</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">128
-                                    GB SSD</div>
-                            </div>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mqd32ll-a/index.html'"
-                                class="col-md-12">
-                                <h3><img style="width:30px; height:30px" class="lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg">
-                                    $999 </h3>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <a style="margin:10px;" class="btn component-btn btn-block"
-                                    href="https://amazon.com/dp/B07211W6X2?tag=pcbuilder00-20" target="_blank"><i
-                                        class="fab fa-amazon"></i> View On Amazon</a>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="searching col-md-4 col-sm-6 col-xs-12">
-                <div style="background:#ffffff;" class="content-gap">
-                    <div class="content box">
-                        <div class="product-image ">
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-pro-z0xz/index.html">
-                                <img class="pic-1 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/41qXjv2Ck3L._SL160_.jpg"
-                                    title="Apple 16" MacBook Pro with Touch Bar, Intel Core i9-9th Gen 8-Core, 32GB
-                                    RAM, 1TB SSD, AMD Radeon Pro 5500M 8GB, Space Gray, Late 2019"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-pro-z0xz/index.html">
-                                <img class="pic-2 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/21RmcS2b+cL.jpg" title="Apple 16"
-                                    MacBook Pro with Touch Bar, Intel Core i9-9th Gen 8-Core, 32GB RAM, 1TB SSD, AMD
-                                    Radeon Pro 5500M 8GB, Space Gray, Late 2019"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                        </div>
-                        <center>
-                            <h4
-                                onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-z0xz/index.html'">
-                                Apple 16" MacBook Pro with Touch Bar, Intel Core i9-9th Gen 8-Core,...</h4>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-z0xz/index.html'"
-                                style="font-weight:500;" class="content-information">
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">Mac
-                                    OSX</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">Intel
-                                    Core i9-9th Gen Processor</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">AMD
-                                    Radeon Pro 5500M 8 GB</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">32
-                                    GB DDR4 Memory</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/rgb.svg">Apple
-                                    - Space Gray</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">1
-                                    TB SSD</div>
-                            </div>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-z0xz/index.html'"
-                                class="col-md-12">
-                                <h3><img style="width:30px; height:30px" class="lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg">
-                                    $3,279.95 </h3>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <a style="margin:10px;" class="btn component-btn btn-block"
-                                    href="https://amazon.com/dp/B08374BBQG?tag=pcbuilder00-20" target="_blank"><i
-                                        class="fab fa-amazon"></i> View On Amazon</a>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="searching col-md-4 col-sm-6 col-xs-12">
-                <div style="background:#ffffff;" class="content-gap">
-                    <div class="content box">
-                        <div class="product-image ">
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-pro-mwp52ll-a/index.html">
-                                <img class="pic-1 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/41C9tXGfhrL._SL160_.jpg"
-                                    title="New Apple MacBook Pro (13-inch, 16GB RAM, 1TB SSD Storage, Magic Keyboard) - Space Gray"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-pro-mwp52ll-a/index.html">
-                                <img class="pic-2 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/31aP2JgRvkL.jpg"
-                                    title="New Apple MacBook Pro (13-inch, 16GB RAM, 1TB SSD Storage, Magic Keyboard) - Space Gray"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                        </div>
-                        <center>
-                            <h4
-                                onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-mwp52ll-a/index.html'">
-                                New Apple MacBook Pro (13-inch, 16GB RAM, 1TB SSD Storage, Magic...</h4>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-mwp52ll-a/index.html'"
-                                style="font-weight:500;" class="content-information">
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">Mac
-                                    OSX</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">Intel
-                                    Core i5-10th Gen Processor</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">Intel
-                                    Iris Plus Graphics </div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">16
-                                    GB DDR4 Memory</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/rgb.svg">Apple
-                                    - Space Gray</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">1
-                                    TB SSD</div>
-                            </div>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-mwp52ll-a/index.html'"
-                                class="col-md-12">
-                                <h3><img style="width:30px; height:30px" class="lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg">
-                                    $1,849 </h3>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <a style="margin:10px;" class="btn component-btn btn-block"
-                                    href="https://amazon.com/dp/B08821TJLG?tag=pcbuilder00-20" target="_blank"><i
-                                        class="fab fa-amazon"></i> View On Amazon</a>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="searching col-md-4 col-sm-6 col-xs-12">
-                <div style="background:#ffffff;" class="content-gap">
-                    <div class="content box">
-                        <div class="product-image ">
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-pro-mv962ll-a/index.html">
-                                <img class="pic-1 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/317JZoz+AxL._SL160_.jpg"
-                                    title="Apple MacBook Pro (13-Inch, 8GB RAM, 256GB Storage) - Space Gray (Previous Model)"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                            <a
-                                href="../../complete-laptop-details/business-laptop/apple-macbook-pro-mv962ll-a/index.html">
-                                <img class="pic-2 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/41Tq03Dx9bL.jpg"
-                                    title="Apple MacBook Pro (13-Inch, 8GB RAM, 256GB Storage) - Space Gray (Previous Model)"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                        </div>
-                        <center>
-                            <h4
-                                onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-mv962ll-a/index.html'">
-                                Apple MacBook Pro (13-Inch, 8GB RAM, 256GB Storage) - Space Gray...</h4>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-mv962ll-a/index.html'"
-                                style="font-weight:500;" class="content-information">
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">Mac
-                                    OSX</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">Intel
-                                    Core i5-8th Gen Processor</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">Intel
-                                    Iris Plus Graphics 655 </div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">8
-                                    GB DDR4 Memory</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/rgb.svg">Apple
-                                    - Space Gray</div>
-                                <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                        class="component-icons lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">256
-                                    GB SSD</div>
-                            </div>
-                            <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-pro-mv962ll-a/index.html'"
-                                class="col-md-12">
-                                <h3><img style="width:30px; height:30px" class="lazy"
-                                        data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg">
-                                    $1,429(Used) </h3>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <a style="margin:10px;" class="btn component-btn btn-block"
-                                    href="https://amazon.com/dp/B07S1YPSGT?tag=pcbuilder00-20" target="_blank"><i
-                                        class="fab fa-amazon"></i> View On Amazon</a>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

@@ -19,8 +19,11 @@ class CreateLaptopsTable extends Migration
             $table->foreign('product_id')->references('id')->on('products');
             $table->unsignedBigInteger('brand_id')->nullable();
             $table->foreign('brand_id')->references('id')->on('brands');
+            $table->string('name');
             $table->json('specifications')->nullable();
             $table->json('features')->nullable();
+            $table->integer('price')->nullable();
+            $table->string('type')->nullable();
             $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
             $table->softDeletes();

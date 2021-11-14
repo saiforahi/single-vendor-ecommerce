@@ -30,7 +30,14 @@ Route::get('/', function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
-
+Route::get('/config-cache', function () {
+    $exitCode = Artisan::call('config:cache');
+    return 'Config cache cleared';
+});
+Route::get('/clear-cache', function () {
+    $exitCode = Artisan::call('cache:clear');
+    return 'Application cache cleared';
+});
 Route::get('system-builder',function(){
     return view('pages.system-builder');
 })->name('system-builder');
