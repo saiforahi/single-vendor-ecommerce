@@ -22,4 +22,6 @@ Route::prefix('laptops')->group(function(){
     Route::post('/image/update',[App\Http\Controllers\api\LaptopController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\LaptopController::class,'details']);
     Route::get('/specification/list/{type}',[App\Http\Controllers\api\LaptopController::class,'get_laptop_create_options']);
+
+    Route::get('/images/{id}',[App\Http\Controllers\api\LaptopController::class,'get_all_media']);
 });

@@ -118,12 +118,12 @@
                         <div class="col-12 col-lg-6 ipad">
                             <div class="row">
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/storage/index.html">
+                                    <a itemprop="url" href="{{route('storage-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/storage.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="storage, pc builder, pc part picker, build my pc">
-                                            <p>Storage </p>
+                                            <p>Storage</p>
                                         </div>
                                     </a>
                                 </div>

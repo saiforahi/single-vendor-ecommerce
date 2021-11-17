@@ -632,7 +632,7 @@
     <p class="pcb-breadcrumb-p">Looking for the best laptop and confused between which one to choose? I know its too
         hard and if you want to buy one, then here are some of the handpicked laptops for you!</p>
     <hr class="pcb-breadcrumb-hr">
-    <span><a href="../index.html">Home</a>
+    <span><a href="{{route('home')}}">Home</a>
         <i class="fa fa-angle-right"></i>
         <a href="index.html">Laptop</a>
     </span>

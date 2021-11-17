@@ -301,11 +301,12 @@
                     <div class="content box">
                         <div class="ribbon hot-ribbon"><span>Hot</span></div>
                         <div class="product-image ">
-                            @foreach ($item->getMedia('images') as $image)
+                            @foreach ($item->getMedia('thumb') as $image)
+                            {{-- <p>{{ $loop->index+1 }}</p> --}}
                             <a
                                 href="#">
-                                <img class="pic-{{ $loop->index+1 }} lazy" src="{{asset($image->getUrl())}}"
-                                    data-src="{{asset($image->getUrl())}}"
+                                <img class="pic-{{ $loop->index+1 }} lazy" src="{{$image->getUrl('thumb')}}"
+                                    data-src="{{$image->getUrl('thumb')}}"
                                     title="{{$item->name}}"
                                     alt="{{$item->name}}">
                             </a>
@@ -359,7 +360,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <a style="margin:10px;" class="btn component-btn btn-block"
                                     href="#" target="_blank"><i
-                                        class="fab fa-amazon"></i> Add to Cart</a>
+                                        class=""></i> Add to Cart</a>
                             </div>
                         </center>
                     </div>

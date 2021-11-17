@@ -23,7 +23,7 @@ Route::get('/', function () {
     //     'laravelVersion' => Application::VERSION,
     //     'phpVersion' => PHP_VERSION,
     // ]);
-});
+})->name('home');
 
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');
@@ -48,3 +48,8 @@ Route::get('laptops',function(){
     return view('pages.laptops');
 })->name('laptops');
 Route::get('laptops/list/{type}',[App\Http\Controllers\api\LaptopController::class,'show_laptops'])->name('laptop-list');
+Route::get('cart',[App\Http\Controllers\api\CartController::class,'show_cart_page'])->name('cart');
+
+Route::get('storages/list',function(){ //storage list view
+    return view('pages.storages');
+})->name('storage-list');

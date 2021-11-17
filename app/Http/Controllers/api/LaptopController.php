@@ -19,11 +19,13 @@ class LaptopController extends Controller
             $new_laptop = Laptop::create($req->only('name','specifications','price'));
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
-                    // if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
-                    //     $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection();
-                    // }
+                    if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
+                        // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection();
+                        $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
+                    }
                     // dd($req->file('image'.$index));
-                    $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('images');
+                    // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
+                    // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
                 }
             }
             if($new_laptop){
@@ -56,7 +58,16 @@ class LaptopController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
-
+    public function get_all_media($id){
+        try{
+            $laptop = Laptop::findOrFail($id);
+            $images = $laptop->getMedia();
+            return response()->json(['images'=>$images]);
+        }
+        catch(Exception $e){
+            return response()->json(['message'=>$e]);
+        }
+    }
     public function details($id){
         try{
             return response()->json(['success'=>true,'data'=>Laptop::withTrashed()->where('id',$id)->first()],200);

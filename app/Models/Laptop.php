@@ -28,4 +28,14 @@ class Laptop extends Model implements HasMedia
               ->sharpen(10)
               ->queued();
     }
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('thumb')->useDisk('public')->acceptsMimeTypes(['image/jpeg','image/jpg','image/png'])->withResponsiveImages();
+        $this
+            ->addMediaCollection('main_image')
+            ->useDisk('public')
+            ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png'])
+            ->withResponsiveImages();
+    }
 }
