@@ -128,7 +128,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/graphics-card/index.html">
+                                    <a itemprop="url" href="{{route('graphics-card-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/graphics-card.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
@@ -138,7 +138,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/power-supply/index.html">
+                                    <a itemprop="url" href="{{route('power-supply-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/power-supply.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
@@ -148,7 +148,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/case/index.html">
+                                    <a itemprop="url" href="{{route('case-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/case.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
@@ -158,7 +158,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/processor/index.html">
+                                    <a itemprop="url" href="{{route('processor-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/mega-menu/nav-processor.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
@@ -168,7 +168,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/cpu-cooler/index.html">
+                                    <a itemprop="url" href="{{route('cpu-cooler-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/cpu-cooler.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
@@ -178,7 +178,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/motherboard/index.html">
+                                    <a itemprop="url" href="{{route('motherboard-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/motherboard.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
@@ -188,7 +188,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="product/ram/index.html">
+                                    <a itemprop="url" href="{{route('memory-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/memory.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
