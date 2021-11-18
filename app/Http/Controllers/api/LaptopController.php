@@ -4,7 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Requests\v1\CreateLaptopRequest;
+use App\Http\Requests\v1\CreateProductRequest;
 use App\Models\Laptop;
 use DB;
 class LaptopController extends Controller
@@ -14,7 +14,7 @@ class LaptopController extends Controller
         $this->middleware('auth:sanctum')->except(['show_laptops','get_laptop_create_options']);
         $this->middleware('role:admin|user')->except(['show_laptops','get_laptop_create_options']);
     }
-    public function create(CreateLaptopRequest $req){
+    public function create(CreateProductRequest $req){
         try{
             $new_laptop = Laptop::create($req->only('name','specifications','price'));
             if($req->has('total_images') && $req->total_images>0){

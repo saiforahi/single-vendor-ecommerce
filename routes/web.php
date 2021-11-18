@@ -50,13 +50,30 @@ Route::get('laptops',function(){
 Route::get('laptops/list/{type}',[App\Http\Controllers\api\LaptopController::class,'show_laptops'])->name('laptop-list');
 Route::get('cart',[App\Http\Controllers\api\CartController::class,'show_cart_page'])->name('cart');
 
-Route::get('storages/list',function(){ //storage list view
-    return view('pages.storages');
-})->name('storage-list');
-
-Route::get('graphics/list',function(){ //storage list view
-    return view('pages.graphics_cards');
-})->name('graphics-card-list');
+Route::prefix('storages')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.storages.list');
+    })->name('storage-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.storages.details');
+    })->name('storage-details');
+});
+Route::prefix('graphics')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.graphics.list');
+    })->name('graphics-card-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.graphics.details');
+    })->name('graphics-card-details');
+});
+Route::prefix('processors')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.processors.list');
+    })->name('processor-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.processors.details');
+    })->name('processor-details');
+});
 
 Route::get('powersupply/list',function(){ //storage list view
     return view('pages.power_supply');
@@ -65,10 +82,6 @@ Route::get('powersupply/list',function(){ //storage list view
 Route::get('cases/list',function(){ //storage list view
     return view('pages.cases');
 })->name('case-list');
-
-Route::get('processors/list',function(){ //storage list view
-    return view('pages.processors');
-})->name('processor-list');
 
 Route::get('cpu-cooler/list',function(){ //storage list view
     return view('pages.cpu-cooler');
