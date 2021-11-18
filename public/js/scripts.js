@@ -457,6 +457,15 @@ function newList() {
     });
 }
 
+function viewMore(id) {
+    $('.view-more-' + id).slideToggle(400);
+
+    var text = $('.viewMore' + id).text();
+    $('.viewMore' + id).text(text == "View More Details" ? "View Less Details" : "View More Details");
+
+    $('.view-More' + id).find('i').toggleClass('fa-chevron-circle-up fa-chevron-circle-down');
+
+  }
 
 function markup(type) {
     $(document).ready(function () {

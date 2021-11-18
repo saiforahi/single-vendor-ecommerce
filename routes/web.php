@@ -53,3 +53,31 @@ Route::get('cart',[App\Http\Controllers\api\CartController::class,'show_cart_pag
 Route::get('storages/list',function(){ //storage list view
     return view('pages.storages');
 })->name('storage-list');
+
+Route::get('graphics/list',function(){ //storage list view
+    return view('pages.graphics_cards');
+})->name('graphics-card-list');
+
+Route::get('powersupply/list',function(){ //storage list view
+    return view('pages.power_supply');
+})->name('power-supply-list');
+
+Route::get('cases/list',function(){ //storage list view
+    return view('pages.cases');
+})->name('case-list');
+
+Route::get('processors/list',function(){ //storage list view
+    return view('pages.processors');
+})->name('processor-list');
+
+Route::get('cpu-cooler/list',function(){ //storage list view
+    return view('pages.cpu-cooler');
+})->name('cpu-cooler-list');
+
+Route::get('motherboard/list',function(){ //storage list view
+    return view('pages.motherboard');
+})->name('motherboard-list');
+
+Route::get('memory/list',function(){ //storage list view
+    return view('pages.memory');
+})->name('memory-list');
