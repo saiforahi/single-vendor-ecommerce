@@ -23,3 +23,6 @@ Route::post('/logout',[App\Http\Controllers\Api\AuthController::class,'logout'])
 
 require __DIR__.'/basic_data_routes/brands.php';
 require __DIR__.'/laptops.php';
+require __DIR__.'/processors.php';
+require __DIR__.'/graphics.php';
+require __DIR__.'/storages.php';

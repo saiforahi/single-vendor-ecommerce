@@ -67,12 +67,8 @@ Route::prefix('graphics')->group(function(){
     })->name('graphics-card-details');
 });
 Route::prefix('processors')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.processors.list');
-    })->name('processor-list');
-    Route::get('/details',function(){ //storage list view
-        return view('pages.processors.details');
-    })->name('processor-details');
+    Route::get('/list',[App\Http\Controllers\api\ProcessorsController::class,'show_list'])->name('processor-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\ProcessorsController::class,'show_details'])->name('processor-details');
 });
 Route::prefix('powersupply')->group(function(){
     Route::get('/list',function(){ //storage list view

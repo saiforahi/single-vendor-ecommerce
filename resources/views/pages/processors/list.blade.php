@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-            letter-spacing: 1px;
-            word-spacing: 3px;
-            text-decoration: none**/
+                                            letter-spacing: 1px;
+                                            word-spacing: 3px;
+                                            text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                          transform: translate(-50%, -50%);
-                          */
+                                                          transform: translate(-50%, -50%);
+                                                          */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,11 +354,45 @@
             }
 
             /*
-                .modal-window div:not(:last-of-type) {
-                  margin-bottom: 15px;
-                }
-                */
+                                                .modal-window div:not(:last-of-type) {
+                                                  margin-bottom: 15px;
+                                                }
+                                                */
 
+        }
+
+    </style>
+    <style>
+        .c_micro_architecture {
+            display: none !important;
+        }
+
+        .c_brand {
+            display: none !important;
+        }
+
+        .c_socket_type {
+            display: none !important;
+        }
+
+        .c_series {
+            display: none !important;
+        }
+
+        .c_cores {
+            display: none !important;
+        }
+
+        .c_integrated_graphics {
+            display: none !important;
+        }
+
+        .c_unlocked {
+            display: none !important;
+        }
+
+        .c_core_family {
+            display: none !important;
         }
 
     </style>
@@ -395,87 +429,28 @@
                                 <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
                                     <div class="card-body">
                                         <div class="checkbox"> <label> <input id="0" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
+                                                    onclick="f_brand(0);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="1" type="checkbox"
+                                        @foreach ($brands as $brand)
+                                            <div class="checkbox"> <label> <input id="{{$loop->index+1}}" type="checkbox"
+                                                        onclick="f_brand({{$loop->index+1}});" class="option-input checkbox brand"
+                                                        name="filter['brand']" value="{{$brand->brand}}"> <span class="ml-10">{{$brand->brand}}
+                                                        ({{\App\Models\Processor::where('brand',$brand->brand)->count()}}) </span></label> </div>
+                                        @endforeach
+                                        {{-- <div class="checkbox"> <label> <input id="1" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="AMD"> <span class="ml-10">AMD
                                                     (43) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="2" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="Intel"> <span class="ml-10">Intel
-                                                    (121) </span></label> </div>
+                                                    (121) </span></label> </div> --}}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_brand {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_brand(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("brand");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_brand")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_brand");
-                                            } else {
-                                                tr[i].classList.remove("c_brand");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.add("c_brand");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.remove("c_brand");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -539,72 +514,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_socket_type {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_socket_type(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("socket_type");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_socket_type")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_socket_type");
-                                            } else {
-                                                tr[i].classList.remove("c_socket_type");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_socket_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_socket_type");
-                                                } else {
-                                                    tr[i].classList.add("c_socket_type");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_socket_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_socket_type");
-                                                } else {
-                                                    tr[i].classList.remove("c_socket_type");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -648,7 +558,8 @@
                                                 </span></label> </div>
                                         <div class="checkbox"> <label> <input id="8" type="checkbox"
                                                     onclick="f_series(this.id);" class="option-input checkbox series"
-                                                    name="filter['series']" value="i7"> <span class="ml-10">i7 (39)
+                                                    name="filter['series']" value="i7"> <span class="ml-10">i7
+                                                    (39)
                                                 </span></label> </div>
                                         <div class="checkbox"> <label> <input id="9" type="checkbox"
                                                     onclick="f_series(this.id);" class="option-input checkbox series"
@@ -658,72 +569,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_series {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_series(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("series");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_series")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_series");
-                                            } else {
-                                                tr[i].classList.remove("c_series");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_series")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_series");
-                                                } else {
-                                                    tr[i].classList.add("c_series");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_series")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_series");
-                                                } else {
-                                                    tr[i].classList.remove("c_series");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -789,72 +635,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_cores {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_cores(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("cores");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_cores")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_cores");
-                                            } else {
-                                                tr[i].classList.remove("c_cores");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cores")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cores");
-                                                } else {
-                                                    tr[i].classList.add("c_cores");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cores")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cores");
-                                                } else {
-                                                    tr[i].classList.remove("c_cores");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading5">
@@ -943,72 +724,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_integrated_graphics {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_integrated_graphics(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("integrated_graphics");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_integrated_graphics")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_integrated_graphics");
-                                            } else {
-                                                tr[i].classList.remove("c_integrated_graphics");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_integrated_graphics")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_integrated_graphics");
-                                                } else {
-                                                    tr[i].classList.add("c_integrated_graphics");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_integrated_graphics")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_integrated_graphics");
-                                                } else {
-                                                    tr[i].classList.remove("c_integrated_graphics");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="card-group" id="accordion6" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading6">
@@ -1034,72 +750,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_unlocked {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_unlocked(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("unlocked");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_unlocked")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_unlocked");
-                                            } else {
-                                                tr[i].classList.remove("c_unlocked");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_unlocked")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_unlocked");
-                                                } else {
-                                                    tr[i].classList.add("c_unlocked");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_unlocked")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_unlocked");
-                                                } else {
-                                                    tr[i].classList.remove("c_unlocked");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="card-group" id="accordion7" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading7">
@@ -1178,72 +829,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_micro_architecture {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_micro_architecture(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("micro_architecture");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_micro_architecture")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_micro_architecture");
-                                            } else {
-                                                tr[i].classList.remove("c_micro_architecture");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_micro_architecture")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_micro_architecture");
-                                                } else {
-                                                    tr[i].classList.add("c_micro_architecture");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_micro_architecture")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_micro_architecture");
-                                                } else {
-                                                    tr[i].classList.remove("c_micro_architecture");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="card-group" id="accordion8" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading8">
@@ -1377,72 +963,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_core_family {
-                                display: none !important;
-                            }
 
-                        </style>
-                        <script>
-                            function f_core_family(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("core_family");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_core_family")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_core_family");
-                                            } else {
-                                                tr[i].classList.remove("c_core_family");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_core_family")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_core_family");
-                                                } else {
-                                                    tr[i].classList.add("c_core_family");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_core_family")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_core_family");
-                                                } else {
-                                                    tr[i].classList.remove("c_core_family");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1520,132 +1041,620 @@
                             </tr>
                         </thead>
                         <tbody>
-                          <tr class="items" data-href="#">
-                            <td scope="row" class="component d-sm-none">
-                                <a href="index.html">#</a>
-                            </td>
-                            <td class="box">
-                                <div class="logo-name">
-                                    <div class="item-logo">
-                                        <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                            data-src="https://m.media-amazon.com/images/I/41cAAdXKoeL._SL75_.jpg"
-                                            title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                            alt="pc builder, custom pc builder, pc part picker, build my pc, AMD Ryzen Threadripper 3990X">
-                                        <div class="stars-rating" title="4.4 out of 5">
-                                            <div class="stars-score" style="width: 88%">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="stars-scale">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
+                            @foreach ($processors as $processor)
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <?php $images = $processor->getMedia('main_image'); ?>
+                                                <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                                    alt="pc builder, custom pc builder, pc part picker, build my pc, AMD Ryzen Threadripper 3990X">
+                                                <div class="stars-rating" title="4.4 out of 5">
+                                                    <div class="stars-score" style="width: 88%">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="stars-scale">
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="comp-details">
-                                <div class="table_title"><a
-                                        href="{{route('processor-details')}}">AMD
-                                        Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor
-                                        without Cooler</a></div>
-                                <span class="table_span">
-                                    <div class="detail">
-                                        <div class="detail__name">Brand:</div>
-                                        <div class="detail__value f_brand"> AMD </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Model:</div>
-                                        <div class="detail__value f_model"> Ryzen Threadripper 3990X </div>
-                                    </div>
-                                </span>
-                                <span class="table_span">
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a
+                                                href="{{ route('processor-details', ['id' => $processor->id]) }}">{{ $processor->name }}</a>
+                                        </div>
+                                        <span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Brand:</div>
+                                                <div class="detail__value f_brand">{{ $processor->brand }}</div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Model:</div>
+                                                <div class="detail__value f_model">{{ $processor->model }}</div>
+                                            </div>
+                                        </span>
+                                        <span class="table_span">
 
-                                    <div class="detail">
-                                        <div class="detail__name">Cores:</div>
-                                        <div class="detail__value f_cores"> 64 </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Threads:</div>
-                                        <div class="detail__value f_threads"> 128 </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Socket Type:</div>
-                                        <div class="detail__value f_socket_type"> sTRX4 </div>
-                                    </div>
-                                </span><span class="table_span">
-                                    <div class="detail">
-                                        <div class="detail__name">Base Speed:</div>
-                                        <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Turbo Speed:</div>
-                                        <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
-                                    </div>
-                                </span><span class="table_span view-more-6" style="display: none;">
-                                    <div class="detail">
-                                        <div class="detail__name">Architechture:</div>
-                                        <div class="detail__value f_micro_architecture"> Zen 2 </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Core Family:</div>
-                                        <div class="detail__value f_core_family"> Castle Peak </div>
-                                    </div>
-                                </span><span class="table_span view-more-6" style="display: none;">
-                                    <div class="detail">
-                                        <div class="detail__name">Integrated Graphics:</div>
-                                        <div class="detail__value f_integrated_graphics"> None </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Memory Type:</div>
-                                        <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
-                                    </div>
-                                </span><span style="display: none;">
-                                    <div class="detail">
-                                        <div class="detail__name">Series:</div>
-                                        <div class="detail__value f_series"> Threadripper </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Generation:</div>
-                                        <div class="detail__value f_generation"> 3 </div>
-                                    </div>
-                                </span>
+                                            <div class="detail">
+                                                <div class="detail__name">Cores:</div>
+                                                <div class="detail__value f_cores"> 64 </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Threads:</div>
+                                                <div class="detail__value f_threads"> 128 </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Socket Type:</div>
+                                                <div class="detail__value f_socket_type"> sTRX4 </div>
+                                            </div>
+                                        </span><span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Base Speed:</div>
+                                                <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Turbo Speed:</div>
+                                                <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
+                                            </div>
+                                        </span><span class="table_span view-more-6" style="display: none;">
+                                            <div class="detail">
+                                                <div class="detail__name">Architechture:</div>
+                                                <div class="detail__value f_micro_architecture"> Zen 2 </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Core Family:</div>
+                                                <div class="detail__value f_core_family"> Castle Peak </div>
+                                            </div>
+                                        </span><span class="table_span view-more-6" style="display: none;">
+                                            <div class="detail">
+                                                <div class="detail__name">Integrated Graphics:</div>
+                                                <div class="detail__value f_integrated_graphics"> None </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Memory Type:</div>
+                                                <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
+                                            </div>
+                                        </span><span style="display: none;">
+                                            <div class="detail">
+                                                <div class="detail__name">Series:</div>
+                                                <div class="detail__value f_series"> Threadripper </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Generation:</div>
+                                                <div class="detail__value f_generation"> 3 </div>
+                                            </div>
+                                        </span>
 
-                                <span class="view-more">
-                                    <div class="view-More6" onclick="viewMore(6);"><span
-                                            class="viewMore6">View More Details</span> <i
-                                            class="fas fa-chevron-circle-down"></i></div>
-                                </span>
-                                <div id="content" class="d-none">
-                                    <div>
-                                        <div class="circle green">100</div>
-                                        <p>PCB Benchmark
-                                        <p>
-                                    </div>6499.77<div>
-                                        <div class="circle red">%</div>
-                                        <p>Value for Money
-                                        <p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="price">
-                                $6,499.77 </td>
-                            <td><a class="btn btn-primary component-btn"
-                                    href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank"><i
-                                        class="fab fa-amazon"></i> View on Amazon</a></td>
-                            <td class="remove"><a class="btn btn-danger component-add-btn" id="p_6"
-                                    href="javascript:void(0);" onclick="setid(6)"><i class="fa fa-plus"></i></a>
-                            </td>
-                        </tr>
+                                        <span class="view-more">
+                                            <div class="view-More6" onclick="viewMore(6);"><span
+                                                    class="viewMore6">View More Details</span> <i
+                                                    class="fas fa-chevron-circle-down"></i></div>
+                                        </span>
+                                        <div id="content" class="d-none">
+                                            <div>
+                                                <div class="circle green">100</div>
+                                                <p>PCB Benchmark
+                                                <p>
+                                            </div>{{ $processor->price }}<div>
+                                                <div class="circle red">%</div>
+                                                <p>Value for Money
+                                                <p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="price">
+                                        ${{ $processor->price }} </td>
+                                    <td><a class="btn btn-primary component-btn"
+                                            href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank"><i
+                                                class="fab fa-amazon"></i> View on Amazon</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_6"
+                                            href="javascript:void(0);" onclick="setid(6)"><i
+                                                class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
     </section>
 @endsection
+@push('script')
+    <script>
+        function f_brand(id) {
+            console.log(id)
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("brand");
+            input = input[id];
+            filter = input.value;
+            console.log(filter)
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.remove("c_brand");
+                        }
+                    }
+                }
+            } else {
+                // filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            
+                            if (txtValue.indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.add("c_brand");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.remove("c_brand");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_socket_type(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("socket_type");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_socket_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_socket_type");
+                        } else {
+                            tr[i].classList.remove("c_socket_type");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_socket_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_socket_type");
+                            } else {
+                                tr[i].classList.add("c_socket_type");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_socket_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_socket_type");
+                            } else {
+                                tr[i].classList.remove("c_socket_type");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_series(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("series");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_series")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_series");
+                        } else {
+                            tr[i].classList.remove("c_series");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_series")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_series");
+                            } else {
+                                tr[i].classList.add("c_series");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_series")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_series");
+                            } else {
+                                tr[i].classList.remove("c_series");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_unlocked(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("unlocked");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_unlocked")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_unlocked");
+                        } else {
+                            tr[i].classList.remove("c_unlocked");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_unlocked")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_unlocked");
+                            } else {
+                                tr[i].classList.add("c_unlocked");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_unlocked")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_unlocked");
+                            } else {
+                                tr[i].classList.remove("c_unlocked");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_cores(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("cores");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_cores")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_cores");
+                        } else {
+                            tr[i].classList.remove("c_cores");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_cores")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_cores");
+                            } else {
+                                tr[i].classList.add("c_cores");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_cores")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_cores");
+                            } else {
+                                tr[i].classList.remove("c_cores");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_integrated_graphics(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("integrated_graphics");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_integrated_graphics")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_integrated_graphics");
+                        } else {
+                            tr[i].classList.remove("c_integrated_graphics");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_integrated_graphics")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_integrated_graphics");
+                            } else {
+                                tr[i].classList.add("c_integrated_graphics");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_integrated_graphics")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_integrated_graphics");
+                            } else {
+                                tr[i].classList.remove("c_integrated_graphics");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_micro_architecture(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("micro_architecture");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_micro_architecture")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_micro_architecture");
+                        } else {
+                            tr[i].classList.remove("c_micro_architecture");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_micro_architecture")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_micro_architecture");
+                            } else {
+                                tr[i].classList.add("c_micro_architecture");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_micro_architecture")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_micro_architecture");
+                            } else {
+                                tr[i].classList.remove("c_micro_architecture");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_core_family(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("core_family");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_core_family")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_core_family");
+                        } else {
+                            tr[i].classList.remove("c_core_family");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_core_family")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_core_family");
+                            } else {
+                                tr[i].classList.add("c_core_family");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_core_family")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_core_family");
+                            } else {
+                                tr[i].classList.remove("c_core_family");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+@endpush

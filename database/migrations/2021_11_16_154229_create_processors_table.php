@@ -13,15 +13,20 @@ class CreateProcessorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('laptops', function (Blueprint $table) {
+        Schema::create('processors', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products');
-            $table->unsignedBigInteger('brand_id')->nullable();
-            $table->foreign('brand_id')->references('id')->on('brands');
             $table->string('name');
-            $table->json('specifications')->nullable();
-            $table->json('features')->nullable();
+            $table->string('brand')->nullable();
+            $table->string('model')->nullable();
+            $table->json('general_specs')->nullable();
+            $table->json('performance_specs')->nullable();
+            $table->json('memory_specs')->nullable();
+            $table->json('power_specs')->nullable();
+            $table->json('graphics_specs')->nullable();
+            $table->json('packaging_specs')->nullable();
+
             $table->integer('price')->nullable();
             $table->string('type')->nullable();
             $table->enum('status',['active','inactive'])->default('active');
