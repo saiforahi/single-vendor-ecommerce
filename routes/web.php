@@ -60,10 +60,10 @@ Route::prefix('storages')->group(function(){
 });
 Route::prefix('graphics')->group(function(){
     Route::get('/list',function(){ //storage list view
-        return view('pages.graphics.list');
+        return view('pages.graphics-cards.list');
     })->name('graphics-card-list');
     Route::get('/details',function(){ //storage list view
-        return view('pages.graphics.details');
+        return view('pages.graphics-cards.details');
     })->name('graphics-card-details');
 });
 Route::prefix('processors')->group(function(){
@@ -74,23 +74,49 @@ Route::prefix('processors')->group(function(){
         return view('pages.processors.details');
     })->name('processor-details');
 });
+Route::prefix('powersupply')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.power-supply.list');
+    })->name('power-supply-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.power-supply.details');
+    })->name('power-supply-details');
+});
 
-Route::get('powersupply/list',function(){ //storage list view
-    return view('pages.power_supply');
-})->name('power-supply-list');
+Route::prefix('cases')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.cases.list');
+    })->name('case-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.cases.details');
+    })->name('case-details');
+});
+Route::prefix('cpucoolers')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.cpu-coolers.list');
+    })->name('cpu-cooler-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.cpu-coolers.details');
+    })->name('cpu-cooler-details');
+});
 
-Route::get('cases/list',function(){ //storage list view
-    return view('pages.cases');
-})->name('case-list');
+Route::prefix('motherboard')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.motherboards.list');
+    })->name('motherboard-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.motherboards.details');
+    })->name('motherboard-details');
+});
 
-Route::get('cpu-cooler/list',function(){ //storage list view
-    return view('pages.cpu-cooler');
-})->name('cpu-cooler-list');
+Route::prefix('memory')->group(function(){
+    Route::get('/list',function(){ //storage list view
+        return view('pages.memories.list');
+    })->name('memory-list');
+    Route::get('/details',function(){ //storage list view
+        return view('pages.memories.details');
+    })->name('memory-details');
+});
 
-Route::get('motherboard/list',function(){ //storage list view
-    return view('pages.motherboard');
-})->name('motherboard-list');
 
-Route::get('memory/list',function(){ //storage list view
-    return view('pages.memory');
-})->name('memory-list');
+

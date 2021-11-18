@@ -1433,7 +1433,7 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <table>
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -1522,8 +1522,9 @@
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
                                         href="javascript:void(0);" onclick="setid(185)"><i class="fa fa-plus"></i></a>
                                 </td>
-                            </tr>
-                        </tbody>
+                            </tr> 
+                        </table>
+                        
                     </table>
                 </div>
             </div>
