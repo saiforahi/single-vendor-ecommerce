@@ -1776,6 +1776,7 @@
 
                         </div>
                     </div>
+                    
                     <table id="myTable" class="mt-3 table table-design">
                         <thead>
                             <tr>
@@ -1873,8 +1874,9 @@
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
                                         href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
                                 </td>
-                            </tr>
+                            </tr> 
                         </tbody>
+                        
                     </table>
                 </div>
             </div>
