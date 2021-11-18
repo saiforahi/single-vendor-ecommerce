@@ -1456,7 +1456,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/case/nzxt-h510b-w1-ca-h510b-w1/index.html">NZXT
+                                            href="{{route("case-details")}}">NZXT
                                             H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C
                                             Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready
                                         </a></div>

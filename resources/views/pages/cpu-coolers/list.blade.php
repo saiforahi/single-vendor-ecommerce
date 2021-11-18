@@ -1065,7 +1065,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/cpu-cooler/cooler-master-hyper-212-evo-rr-212e-20pk-r2/index.html">Cooler
+                                            href="{{route("cpu-cooler-details")}}">Cooler
                                             Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum
                                             Fins</a></div>
                                     <span class="table_span">

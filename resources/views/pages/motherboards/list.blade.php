@@ -1291,7 +1291,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/motherboard/asrock-trx40-creator/index.html">ASRock
+                                            href="{{route("motherboard-details")}}">ASRock
                                             MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX</a></div>
                                     <span class="table_span">
                                         <div class="detail">

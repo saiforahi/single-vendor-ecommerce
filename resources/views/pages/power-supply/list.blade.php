@@ -1336,7 +1336,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/power-supply/corsair-rm750-cp-9020195-na/index.html">Corsair
+                                            href="{{route("power-supply-details")}}">Corsair
                                             RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply</a></div>
                                     <span class="table_span">
                                         <div class="detail">

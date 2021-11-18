@@ -1185,7 +1185,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/graphics-card/msi-rtx-3090-gaming-x-trio-24g-3090gamingxtrio24g/index.html">MSI
+                                            href="{{route("graphics-card-details")}}">MSI
                                             Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere
                                             Architecture OC
                                             Graphics Card (RTX 3090 GAMING X TRIO 24G)</a></div>
