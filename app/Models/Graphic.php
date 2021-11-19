@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Graphic extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','general_specs','clock_specs','additional_specs'];
+    protected $fillable=['product_id','brand','model','name','general_specs','clock_specs','additional_specs','slug_name'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
@@ -20,6 +20,7 @@ class Graphic extends Model implements HasMedia
         'performance_specs' => 'array',
         'clock_specs' => 'array',
         'additional_specs' => 'array',
+        'slug_name' => 'array',
        
     ];
     public function registerMediaConversions(Media $media = null): void
