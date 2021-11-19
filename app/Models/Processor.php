@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Processor extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','general_specs','performance_specs','memory_specs','packaging_specs','power_specs','graphic_specs','price'];
+    protected $fillable=['product_id','brand','model','name','general_specs','performance_specs','memory_specs','packaging_specs','power_specs','graphic_specs'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
@@ -46,4 +46,13 @@ class Processor extends Model implements HasMedia
             ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png'])
             ->withResponsiveImages();
     }
+
+    public function product(){
+        return $this->belongsTo(Product::class,'id','product_id');
+    }
+    // public function product()
+    // {
+    //     return $this->hasOne('App\Models\Processor', 'child_id', 'product_id')
+    //         ->whereImageableType('App\Models\Processor');
+    // }
 }

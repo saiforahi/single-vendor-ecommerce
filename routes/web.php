@@ -116,3 +116,7 @@ Route::prefix('memory')->group(function(){
 
 
 
+Route::prefix('system-builder')->group(function(){
+    Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
+    Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');
+});

@@ -10,4 +10,5 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 class Product extends Model implements HasMedia
 {
     use HasFactory,InteractsWithMedia;
+    protected $fillable =['price'];
 }

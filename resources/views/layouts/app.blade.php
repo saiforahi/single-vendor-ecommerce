@@ -7,31 +7,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>PC Builder - Build Your Custom PC Online</title>
+        <title>System Builder - Build Your Custom PC Online</title>
         <meta name="description" content="Building your PC compatibility was never so easy before - but with the use of PC Builder, just pick the desired PC parts from the list of latest components, and you're ready to turn your imagination into reality. You can use the PC building simulator offered by us to create your own PC virtually and even analyze the compatible pc parts before buying them, and its really easy by simply picking up the pc parts. We at PC Builder also help you to restrain your stress of getting into the complex structure and finding compatibility of the parts. And get assured before purchasing your custom PC with the PC Builder." />
 
         <meta name="robots" content="follow,index" />
         {{-- <link rel="canonical" href="index.html" /> --}}
-        <meta property="og:title" content="PC Builder - Build Your Custom PC Online">
-        <meta property="og:url" content="index.html">
-        <meta property="og:image" content="../images.pcbuilder.dev/assets/images/og/visit-pc-builder.png">
+        <meta property="og:title" content="System Builder - Build Your Custom PC Online">
+        <meta property="og:url" content="/">
+        {{-- <meta property="og:image" content="../images.pcbuilder.dev/assets/images/og/visit-pc-builder.png"> --}}
         <meta property="og:description" content="Building your PC compatibility was never so easy before - but with the use of PC Builder, just pick the desired PC parts from the list of latest components, and you're ready to turn your imagination into reality. You can use the PC building simulator offered by us to create your own PC virtually and even analyze the compatible pc parts before buying them, and its really easy by simply picking up the pc parts. We at PC Builder also help you to restrain your stress of getting into the complex structure and finding compatibility of the parts. And get assured before purchasing your custom PC with the PC Builder.">
-        <meta name="twitter:title" content="PC Builder - Build Your Custom PC Online">
+        <meta name="twitter:title" content="System Builder - Build Your Custom PC Online">
         <meta name="twitter:description" content="Building your PC compatibility was never so easy before - but with the use of PC Builder, just pick the desired PC parts from the list of latest components, and you're ready to turn your imagination into reality. You can use the PC building simulator offered by us to create your own PC virtually and even analyze the compatible pc parts before buying them, and its really easy by simply picking up the pc parts. We at PC Builder also help you to restrain your stress of getting into the complex structure and finding compatibility of the parts. And get assured before purchasing your custom PC with the PC Builder.">
         <link rel="preload" as="image" href="{{asset('images/banner/bg-banner.png')}}" />
         <meta name="author" content="Code Smith" />
         <meta property="og:locale" content="en_US">
         <meta property="og:type" content="website">
-        <meta property="og:site_name" content="PC Builder">
+        <meta property="og:site_name" content="System Builder">
         <meta property="og:image" content="{{asset('images/banner/bg-banner.png')}}">
         <meta property="og:image:secure_url" content="{{asset('images/banner/bg-banner.png')}}">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="627">
-        <meta property="og:image:alt" content="PC Builder - Build Your Custom PC Online">
+        <meta property="og:image:alt" content="System Builder - Build Your Custom PC Online">
         <meta property="og:image:type" content="image/png">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:creator" content="@pcbuilder_net">
         <meta name="twitter:image" content="{{asset('images/banner/bg-banner.png')}}">
         <meta property="fb:app_id" content="361771148502558">
 
@@ -48,7 +46,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{asset('images/favicon/favicon-32x32.png')}}">
         <link rel="icon" type="image/png" sizes="96x96" href="{{asset('images/favicon/favicon-96x96.png')}}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{asset('images/favicon/favicon-16x16.png')}}">
-        <link rel='manifest' href='manifest.json'>
+        {{-- <link rel='manifest' href='manifest.json'> --}}
         <meta name="msapplication-TileColor" content="#001119">
         <meta name="msapplication-TileImage" content="{{asset('images/favicon/ms-icon-144x144.png')}}">
         <meta name="theme-color" content="#001119">
@@ -87,13 +85,13 @@
         @include('inc.nav')
         @yield('content')
         @include('inc.footer')
-        @stack('script')
         <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
         <script src="{{asset('js/popper.min.js')}}"></script>
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
         <script src="{{asset('js/lazyload.min.js')}}"></script>
         <script src="{{asset('js/email-decode.min.js')}}"></script>
         <script src="{{asset('js/scripts.js')}}"></script>
+        @stack('script')
         @env ('local')
             <script src="http://localhost:8000/js/bundle.js"></script>
         @endenv

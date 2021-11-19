@@ -5,6 +5,7 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Processor;
+use App\Models\Product;
 use App\Http\Requests\v1\CreateProcessorRequest;
 class ProcessorsController extends Controller
 {
@@ -15,7 +16,8 @@ class ProcessorsController extends Controller
     }
     public function create(CreateProcessorRequest $req){
         try{
-            $new_processor = Processor::create($req->except('total_images','images'));
+            $new_product = Product::create($req->only('price'));
+            $new_processor = Processor::create(array_merge($req->except('total_images','images'),['product_id'=>$new_product->id]));
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
                     if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
@@ -61,7 +63,7 @@ class ProcessorsController extends Controller
 
     public function get_all(){
         try{
-            return response()->json(['success'=>true,'data'=>Processor::withTrashed()->get()],200);
+            return response()->json(['success'=>true,'data'=>Processor::with('product')->withTrashed()->get()],200);
         }
         catch(Exception $e){
             return response()->json(['success'=>false,'message'=>$e],500);

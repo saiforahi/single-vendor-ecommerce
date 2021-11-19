@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                                            letter-spacing: 1px;
-                                            word-spacing: 3px;
-                                            text-decoration: none**/
+                                                                                        letter-spacing: 1px;
+                                                                                        word-spacing: 3px;
+                                                                                        text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                                          transform: translate(-50%, -50%);
-                                                          */
+                                                                                                      transform: translate(-50%, -50%);
+                                                                                                      */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,10 +354,10 @@
             }
 
             /*
-                                                .modal-window div:not(:last-of-type) {
-                                                  margin-bottom: 15px;
-                                                }
-                                                */
+                                                                                            .modal-window div:not(:last-of-type) {
+                                                                                              margin-bottom: 15px;
+                                                                                            }
+                                                                                            */
 
         }
 
@@ -433,10 +433,13 @@
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
                                         @foreach ($brands as $brand)
-                                            <div class="checkbox"> <label> <input id="{{$loop->index+1}}" type="checkbox"
-                                                        onclick="f_brand({{$loop->index+1}});" class="option-input checkbox brand"
-                                                        name="filter['brand']" value="{{$brand->brand}}"> <span class="ml-10">{{$brand->brand}}
-                                                        ({{\App\Models\Processor::where('brand',$brand->brand)->count()}}) </span></label> </div>
+                                            <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
+                                                        type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
+                                                        class="option-input checkbox brand" name="filter['brand']"
+                                                        value="{{ $brand->brand }}"> <span
+                                                        class="ml-10">{{ $brand->brand }}
+                                                        ({{ \App\Models\Processor::where('brand', $brand->brand)->count() }})
+                                                    </span></label> </div>
                                         @endforeach
                                         {{-- <div class="checkbox"> <label> <input id="1" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
@@ -1036,7 +1039,7 @@
                                 <th scope="col" width="9%">Product</th>
                                 <th scope="col" width="47%">Title</th>
                                 <th scope="col" width="7%">Price</th>
-                                <th scope="col" width="18%">Product Link</th>
+                                <th scope="col" width="18%">Product Details</th>
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
@@ -1157,15 +1160,17 @@
                                             </div>
                                         </div>
                                     </td>
+
                                     <td class="price">
                                         ${{ $processor->price }} </td>
                                     <td><a class="btn btn-primary component-btn"
-                                            href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank"><i
-                                                class="fab fa-amazon"></i> View on Amazon</a></td>
-                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_6"
-                                            href="javascript:void(0);" onclick="setid(6)"><i
+                                            href="{{ route('processor-details', ['id' => $processor->id]) }}"
+                                            target="_blank">View Details</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn"
+                                            id="{{ 'p_' . $processor->id }}" href="{{route('add-processor-to-system',['processor_id'=>$processor->id])}}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
+
                                 </tr>
                             @endforeach
                         </tbody>
@@ -1175,6 +1180,27 @@
     </section>
 @endsection
 @push('script')
+    {{-- <script>
+        $(document).on('click', '.component-add-btn', (e) => { //replaces function book()
+            let id = e.currentTarget.getAttribute('id')
+            console.log(String(id).split('_')[1])
+            $("#" + id).addClass("loadingg");
+            $("#" + id).addClass("disabled");
+            $.ajax({
+                cache: false,
+                url: 'http://localhost:8000/api/system-builder/add-processor',
+                type: 'post',
+                async: true,
+                data: {
+                    processor_id: String(id).split('_')[1].trim(),
+                }, //$('form#myForm').serialize(),
+                success: function(result) {
+                    console.log(result)
+                    window.location = '/system-builder';
+                }
+            });
+        });
+    </script> --}}
     <script>
         function f_brand(id) {
             console.log(id)
@@ -1212,7 +1238,7 @@
                         if (td) {
                             td = td.getElementsByClassName("f_brand")['0'];
                             txtValue = td.textContent || td.innerText;
-                            
+
                             if (txtValue.indexOf(filter) > -1) {
                                 tr[i].classList.remove("c_brand");
                             } else {
@@ -1657,4 +1683,88 @@
             }
         }
     </script>
+    <script>
+        function myFunction() {
+            console.log('my function')
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            /**for (i = 0; i < tr.length; i++) {
+              td = tr[i].getElementsByTagName("td")[0];
+              if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  tr[i].style.display = "";
+                } else {
+                  tr[i].style.display = "none";
+                }
+              }       
+            }**/
+            for (i = 1; i < tr.length; i++) {
+                // Hide the row initially.
+                tr[i].style.display = "none";
+
+                td = tr[i].getElementsByTagName("td");
+                for (var j = 0; j < td.length; j++) {
+                    cell = tr[i].getElementsByTagName("td")[j];
+                    if (cell) {
+                        if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /////////
+        /*
+        //TABLE SORTING
+        const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+        
+        const comparer = (idx, asc) => (a, b) => ((v1, v2) =>
+            v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
+            )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
+        
+        // do the work...
+        document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
+            const table = th.closest('table');
+            Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
+                .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
+                .forEach(tr => table.appendChild(tr) );
+        })));
+        
+        */
+    </script>
+    {{-- <script type='text/javascript'>
+        function add_product(product) {
+            console.log('script tag found')
+            //$("#"+product).attr("disabled", true);
+            $("#p_" + product).addClass("loadingg");
+            $(".component-add-btn").addClass("disabled");
+
+            var url = 'processor';
+
+            $(document).ready(function() {
+                $.ajax({
+                    cache: false,
+                    url: 'http://localhost:8000/api/system-builder/add-product',
+                    type: 'post',
+                    async: true,
+                    data: {
+                        product: filename,
+                        id: product
+                    }, //$('form#myForm').serialize(),
+                    success: function(data) {
+                        window.location = {{ route('system-builder') }};
+                    }
+                });
+            });
+
+        }
+    </script> --}}
 @endpush

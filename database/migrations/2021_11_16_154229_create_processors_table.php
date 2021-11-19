@@ -26,8 +26,7 @@ class CreateProcessorsTable extends Migration
             $table->json('power_specs')->nullable();
             $table->json('graphics_specs')->nullable();
             $table->json('packaging_specs')->nullable();
-
-            $table->integer('price')->nullable();
+            // $table->integer('price')->nullable();
             $table->string('type')->nullable();
             $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();

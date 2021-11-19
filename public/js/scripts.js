@@ -16,13 +16,13 @@ $(window).scroll(function () {
 });
 
 
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-        navigator.serviceWorker.register(pcb_pwa.url)
-            .then(function (registration) { console.log('PCB-PWA service worker ready'); registration.update(); })
-            .catch(function (error) { console.log('Registration failed with ' + error); });
-    });
-}
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', function () {
+//         navigator.serviceWorker.register(pcb_pwa.url)
+//             .then(function (registration) { console.log('PCB-PWA service worker ready'); registration.update(); })
+//             .catch(function (error) { console.log('Registration failed with ' + error); });
+//     });
+// }
 
 
 $('.disabled').click(function (e) {
@@ -71,7 +71,6 @@ $(window).scroll(function () {
 
 
 $(document).ready(function () {
-
     $('.accordion .according-section').click(function () {
 
         if ($(this).hasClass("faq-active")) {

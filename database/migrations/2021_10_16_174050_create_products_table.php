@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->morphs('model');
+            $table->integer('price')->nullable();
             $table->enum('status',['active','inactive']);
             $table->timestamps();
         });
