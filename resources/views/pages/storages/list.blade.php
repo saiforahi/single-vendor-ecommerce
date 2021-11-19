@@ -86,9 +86,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                             letter-spacing: 1px;
-                             word-spacing: 3px;
-                             text-decoration: none**/
+                                     letter-spacing: 1px;
+                                     word-spacing: 3px;
+                                     text-decoration: none**/
         }
 
         .checkbox label,
@@ -328,8 +328,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                          transform: translate(-50%, -50%);
-                                          */
+                                                  transform: translate(-50%, -50%);
+                                                  */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -351,13 +351,11 @@
             .modal-bottom>* {
                 flex-basis: 49%;
             }
-
-            /*
-                                .modal-window div:not(:last-of-type) {
-                                  margin-bottom: 15px;
-                                }
-                                */
-
+        }
+    </style>
+    <style>
+        .c_brand {
+            display: none !important;
         }
 
     </style>
@@ -366,8 +364,8 @@
     <section class="pcb-breadcrumb">
         <h1><span>Select</span> Your Storage</h1>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Storage</a>
+            <i class="fa fa-angle-right"></i><a href="{{ route('home') }}">Product</a>
+            <i class="fa fa-angle-right"></i><a href="{{ route('storage-list') }}">Storage</a>
         </span>
     </section>
     <section class="system-builder">
@@ -391,323 +389,25 @@
                                 <div id="collapse1" class="collapse show" role="tabpanel" aria-labelledby="heading1">
                                     <div class="card-body">
                                         <div class="checkbox"> <label> <input id="0" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="All" checked> <span
+                                                    onclick="f_brand(0);" class="option-input checkbox brand"
+                                                    name="filter['brand']" value="All" checked disabled> <span
                                                     class="ml-10">All </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="1" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value=" Western Digital Company">
-                                                <span class="ml-10"> Western Digital Company (1) </span></label>
-                                        </div>
-                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ADATA"> <span class="ml-10">ADATA
-                                                    (66) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Addlink"> <span
-                                                    class="ml-10">Addlink (4) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Angelbird"> <span
-                                                    class="ml-10">Angelbird (9) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Apacer"> <span
-                                                    class="ml-10">Apacer (8) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="6" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Centon"> <span
-                                                    class="ml-10">Centon (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Corsair"> <span
-                                                    class="ml-10">Corsair (22) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="8" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Crucial"> <span
-                                                    class="ml-10">Crucial (29) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="9" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Enmotus"> <span
-                                                    class="ml-10">Enmotus (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="10" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Gigabyte"> <span
-                                                    class="ml-10">Gigabyte (9) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="11" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="HGST"> <span class="ml-10">HGST
-                                                    (8) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="12" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="HGST, a Western Digital Company"> <span
-                                                    class="ml-10">HGST, a Western Digital Company
-                                                    (11) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="13" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="HP"> <span class="ml-10">HP
-                                                    (11) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="14" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Hgst - Active Archive">
-                                                <span class="ml-10">Hgst - Active Archive (1) </span></label>
-                                        </div>
-                                        <div class="checkbox"> <label> <input id="15" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Hitachi"> <span
-                                                    class="ml-10">Hitachi (23) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="16" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Hitachi HGST"> <span
-                                                    class="ml-10">Hitachi HGST (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="17" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="HyperX"> <span
-                                                    class="ml-10">HyperX (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="18" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="INLAND"> <span
-                                                    class="ml-10">INLAND (8) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="19" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Intel"> <span class="ml-10">Intel
-                                                    (76) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="20" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Intenso"> <span
-                                                    class="ml-10">Intenso (10) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="21" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Kingston"> <span
-                                                    class="ml-10">Kingston (58) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="22" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Lenovo"> <span
-                                                    class="ml-10">Lenovo (8) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="23" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Lexar"> <span class="ml-10">Lexar
-                                                    (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="24" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Micron"> <span
-                                                    class="ml-10">Micron (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="25" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Mushkin"> <span
-                                                    class="ml-10">Mushkin (8) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="26" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="MyDigitalSSD"> <span
-                                                    class="ml-10">MyDigitalSSD (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="27" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="OCZ"> <span class="ml-10">OCZ
-                                                    (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="28" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="OCZ STORAGE SOLUTIONS">
-                                                <span class="ml-10">OCZ STORAGE SOLUTIONS (1) </span></label>
-                                        </div>
-                                        <div class="checkbox"> <label> <input id="29" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Optiarc"> <span
-                                                    class="ml-10">Optiarc (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="30" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="PNY"> <span class="ml-10">PNY
-                                                    (19) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="31" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Patriot"> <span
-                                                    class="ml-10">Patriot (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="32" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Patriot Memory"> <span
-                                                    class="ml-10">Patriot Memory (16) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="33" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Pioneer"> <span
-                                                    class="ml-10">Pioneer (4) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="34" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Plextor"> <span
-                                                    class="ml-10">Plextor (5) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="35" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="QNAP"> <span class="ml-10">QNAP
-                                                    (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="36" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SAMSUNG - IMSOURCING"> <span
-                                                    class="ml-10">SAMSUNG - IMSOURCING (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="37" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SK hynix"> <span
-                                                    class="ml-10">SK hynix (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="38" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SP Silicon Power"> <span
-                                                    class="ml-10">SP Silicon Power (10) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="39" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SSE"> <span class="ml-10">SSE
-                                                    (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="40" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Sabrent"> <span
-                                                    class="ml-10">Sabrent (24) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="41" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Samsung"> <span
-                                                    class="ml-10">Samsung (62) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="42" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Samsung Electronics"> <span
-                                                    class="ml-10">Samsung Electronics (17) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="43" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SanDisk"> <span
-                                                    class="ml-10">SanDisk (20) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="44" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Seagate"> <span
-                                                    class="ml-10">Seagate (234) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="45" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Silicon Power"> <span
-                                                    class="ml-10">Silicon Power (5) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="46" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Silicon Power Ace"> <span
-                                                    class="ml-10">Silicon Power Ace (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="47" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Synology"> <span
-                                                    class="ml-10">Synology (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="48" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="TC SUNBOW"> <span
-                                                    class="ml-10">TC SUNBOW (4) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="49" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="TEAMGROUP"> <span
-                                                    class="ml-10">TEAMGROUP (35) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="50" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Team"> <span class="ml-10">Team
-                                                    (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="51" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Team Group"> <span
-                                                    class="ml-10">Team Group (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="52" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Toshiba"> <span
-                                                    class="ml-10">Toshiba (53) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="53" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Toshiba OCZ"> <span
-                                                    class="ml-10">Toshiba OCZ (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="54" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Transcend"> <span
-                                                    class="ml-10">Transcend (34) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="55" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="V7"> <span class="ml-10">V7
-                                                    (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="56" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Verbatim"> <span
-                                                    class="ml-10">Verbatim (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="57" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="VisionTek"> <span
-                                                    class="ml-10">VisionTek (19) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="58" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Water Panther"> <span
-                                                    class="ml-10">Water Panther (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="59" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Western Digital"> <span
-                                                    class="ml-10">Western Digital (246) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="60" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="XPG"> <span class="ml-10">XPG
-                                                    (3) </span></label> </div>
+                                        @foreach ($brands as $brand)
+                                            <div class="checkbox"> <label> <input id="{{$loop->index+1}}" type="checkbox"
+                                                        onclick="f_brand({{$loop->index+1}});" class="option-input checkbox brand"
+                                                        name="filter['brand']" value="{{$brand->brand}}">
+                                                    <span class="ml-10">{{$brand->brand}} ({{ \App\Models\Storage::where('brand', $brand->brand)->count() }})
+                                                    </span></label>
+                                            </div>
+                                        @endforeach
+
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_brand {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_brand(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("brand");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_brand")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_brand");
-                                            } else {
-                                                tr[i].classList.remove("c_brand");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.add("c_brand");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.remove("c_brand");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -720,29 +420,29 @@
                                     <div class="card-body">
                                         <div class="checkbox"> <label> <input id="0" type="checkbox"
                                                     onclick="f_storage_type(this.id);"
-                                                    class="option-input checkbox storage_type"
-                                                    name="filter['storage_type']" value="All" checked>
+                                                    class="option-input checkbox storage_type" name="filter['storage_type']"
+                                                    value="All" checked>
                                                 <span class="ml-10">All </span></label> </div>
                                         <div class="checkbox"> <label> <input id="1" type="checkbox"
                                                     onclick="f_storage_type(this.id);"
-                                                    class="option-input checkbox storage_type"
-                                                    name="filter['storage_type']" value="HDD"> <span
-                                                    class="ml-10">HDD (503) </span></label> </div>
+                                                    class="option-input checkbox storage_type" name="filter['storage_type']"
+                                                    value="HDD"> <span class="ml-10">HDD (503) </span></label>
+                                        </div>
                                         <div class="checkbox"> <label> <input id="2" type="checkbox"
                                                     onclick="f_storage_type(this.id);"
-                                                    class="option-input checkbox storage_type"
-                                                    name="filter['storage_type']" value="SDD"> <span
-                                                    class="ml-10">SDD (504) </span></label> </div>
+                                                    class="option-input checkbox storage_type" name="filter['storage_type']"
+                                                    value="SDD"> <span class="ml-10">SDD (504) </span></label>
+                                        </div>
                                         <div class="checkbox"> <label> <input id="3" type="checkbox"
                                                     onclick="f_storage_type(this.id);"
-                                                    class="option-input checkbox storage_type"
-                                                    name="filter['storage_type']" value="SSD"> <span
-                                                    class="ml-10">SSD (226) </span></label> </div>
+                                                    class="option-input checkbox storage_type" name="filter['storage_type']"
+                                                    value="SSD"> <span class="ml-10">SSD (226) </span></label>
+                                        </div>
                                         <div class="checkbox"> <label> <input id="4" type="checkbox"
                                                     onclick="f_storage_type(this.id);"
-                                                    class="option-input checkbox storage_type"
-                                                    name="filter['storage_type']" value="SSHD"> <span
-                                                    class="ml-10">SSHD (3) </span></label> </div>
+                                                    class="option-input checkbox storage_type" name="filter['storage_type']"
+                                                    value="SSHD"> <span class="ml-10">SSHD (3) </span></label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -857,16 +557,16 @@
                                                     class="ml-10">1.92 TB (14) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="8" type="checkbox"
                                                     onclick="f_capacity(this.id);" class="option-input checkbox capacity"
-                                                    name="filter['capacity']" value="10 TB"> <span
-                                                    class="ml-10">10 TB (23) </span></label> </div>
+                                                    name="filter['capacity']" value="10 TB"> <span class="ml-10">10
+                                                    TB (23) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="9" type="checkbox"
                                                     onclick="f_capacity(this.id);" class="option-input checkbox capacity"
                                                     name="filter['capacity']" value="100 GB"> <span
                                                     class="ml-10">100 GB (2) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="10" type="checkbox"
                                                     onclick="f_capacity(this.id);" class="option-input checkbox capacity"
-                                                    name="filter['capacity']" value="12 TB"> <span
-                                                    class="ml-10">12 TB (15) </span></label> </div>
+                                                    name="filter['capacity']" value="12 TB"> <span class="ml-10">12
+                                                    TB (15) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="11" type="checkbox"
                                                     onclick="f_capacity(this.id);" class="option-input checkbox capacity"
                                                     name="filter['capacity']" value="120 GB"> <span
@@ -877,8 +577,8 @@
                                                     class="ml-10">128 GB (31) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="13" type="checkbox"
                                                     onclick="f_capacity(this.id);" class="option-input checkbox capacity"
-                                                    name="filter['capacity']" value="14 TB"> <span
-                                                    class="ml-10">14 TB (12) </span></label> </div>
+                                                    name="filter['capacity']" value="14 TB"> <span class="ml-10">14
+                                                    TB (12) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="14" type="checkbox"
                                                     onclick="f_capacity(this.id);" class="option-input checkbox capacity"
                                                     name="filter['capacity']" value="146 GB"> <span
@@ -1776,7 +1476,7 @@
 
                         </div>
                     </div>
-                    
+
                     <table id="myTable" class="mt-3 table table-design">
                         <thead>
                             <tr>
@@ -1789,18 +1489,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31SSaevqVNL._SL75_.jpg"
-                                                title="Samsung EVO 970 1TB PCIe Gen3 x4 NVMe M.2-2280 Internal Solid State Drive with V-NAND Technology & 1024MB Cache"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Samsung 970 EVO">
-                                            <div class="stars-rating" title="4.9 out of 5">
+                            @foreach ($storages as $storage)
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <?php $images = $storage->getMedia('main_image'); ?>
+                                                <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                    title="{{ $storage->name }}" alt="{{ $storage->name }}">
+                                                {{-- <div class="stars-rating" title="4.9 out of 5">
                                                 <div class="stars-score" style="width: 98%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1815,70 +1517,133 @@
                                                     <i class="far fa-star"></i>
                                                     <i class="far fa-star"></i>
                                                 </div>
+                                            </div> --}}
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="{{route('storage-details')}}">Samsung
-                                            EVO 970 1TB
-                                            PCIe Gen3 x4 NVMe M.2-2280 Internal Solid State Drive with V-NAND Technology &
-                                            1024MB Cache</a>
-                                    </div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Samsung </div>
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a
+                                                href="{{ route('storage-details', ['id' => $storage->id]) }}">{{ $storage->name }}</a>
                                         </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> 970 EVO </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
+                                        <span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Brand:</div>
+                                                <div class="detail__value f_brand">{{ $storage->brand }}</div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Model:</div>
+                                                <div class="detail__value f_model">{{ $storage->model }}</div>
+                                            </div>
+                                        </span>
+                                        <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">Capacity:</div>
-                                            <div class="detail__value f_capacity"> 1 TB </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Type:</div>
-                                            <div class="detail__value f_storage_type"> SSD </div>
-                                        </div>
-                                        <div class="detail d-none">
-                                            <div class="detail__name">RPM:</div>
-                                            <div class="detail__value f_rpm"> </div>
-                                        </div>
-                                    </span><span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe 3.0 x4 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Cache Memory:</div>
-                                            <div class="detail__value f_cache_memory"> 1024 MB </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Form Factor:</div>
-                                            <div class="detail__value f_form_factor"> M.2-2280 </div>
-                                        </div>
-                                    </span>
+                                            <div class="detail">
+                                                <div class="detail__name">Capacity:</div>
+                                                <div class="detail__value f_capacity"> 1 TB </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Type:</div>
+                                                <div class="detail__value f_storage_type"> SSD </div>
+                                            </div>
+                                            <div class="detail d-none">
+                                                <div class="detail__name">RPM:</div>
+                                                <div class="detail__value f_rpm"> </div>
+                                            </div>
+                                        </span><span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Interface:</div>
+                                                <div class="detail__value f_interface"> PCIe 3.0 x4 </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Cache Memory:</div>
+                                                <div class="detail__value f_cache_memory"> 1024 MB </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Form Factor:</div>
+                                                <div class="detail__value f_form_factor"> M.2-2280 </div>
+                                            </div>
+                                        </span>
 
-                                </td>
-                                <td class="price">
-                                    $179.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07BN217QG?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                        href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr> 
+                                    </td>
+                                    <td class="price">{{ $storage->product->price }}</td>
+                                    <td><a class="btn btn-primary component-btn"
+                                            href="{{ route('storage-details', ['id' => $storage->id]) }}"
+                                            target="_blank">View
+                                            details</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
+                                            href="{{route('add-storage-to-system',['storage_id'=>$storage->id])}}"><i
+                                                class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
+                            @endforeach
+
                         </tbody>
-                        
+
                     </table>
                 </div>
             </div>
     </section>
 @endsection
+
+@push('script')
+<script>
+    function f_brand(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("brand");
+        input = input[id];
+        filter = input.value;
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_brand")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_brand");
+                    } else {
+                        tr[i].classList.remove("c_brand");
+                    }
+                }
+            }
+        } else {
+            // filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.add("c_brand");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.remove("c_brand");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+@endpush

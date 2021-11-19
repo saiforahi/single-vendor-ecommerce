@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePowerSupplyTable extends Migration
+class CreatePowerSuppliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePowerSupplyTable extends Migration
      */
     public function up()
     {
-        Schema::create('PowerSupply', function (Blueprint $table) {
+        Schema::create('power_supplies', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products');
@@ -38,6 +38,6 @@ class CreatePowerSupplyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('processors');
+        Schema::dropIfExists('power_supplies');
     }
 }

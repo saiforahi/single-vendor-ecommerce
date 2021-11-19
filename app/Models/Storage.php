@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
+use App\Models\Product;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -44,5 +45,8 @@ class Storage extends Model implements HasMedia
             ->useDisk('public')
             ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])
             ->withResponsiveImages();
+    }
+    public function product(){
+        return $this->belongsTo(Product::class,'product_id','id');
     }
 }

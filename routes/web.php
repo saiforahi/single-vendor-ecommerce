@@ -51,18 +51,14 @@ Route::get('laptops/list/{type}',[App\Http\Controllers\api\LaptopController::cla
 Route::get('cart',[App\Http\Controllers\api\CartController::class,'show_cart_page'])->name('cart');
 
 Route::prefix('storages')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.storages.list');
-    })->name('storage-list');
-    Route::get('/details',function(){ //storage list view
-        return view('pages.storages.details');
-    })->name('storage-details');
+    Route::get('/list',[App\Http\Controllers\api\StoragesController::class,'show_list'])->name('storage-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\StoragesController::class,'show_details'])->name('storage-details');
 });
 Route::prefix('graphics')->group(function(){
     Route::get('/list',function(){ //storage list view
         return view('pages.graphics-cards.list');
     })->name('graphics-card-list');
-    Route::get('/details',function(){ //storage list view
+    Route::get('/details/{id}',function(){ //storage list view
         return view('pages.graphics-cards.details');
     })->name('graphics-card-details');
 });
@@ -119,4 +115,6 @@ Route::prefix('memory')->group(function(){
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');
+    Route::get('/add-storage/{storage_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_storage_web'])->name('add-storage-to-system');
+    Route::get('/remove-storage',[App\Http\Controllers\api\SystemBuilderController::class,'remove_storage_web'])->name('remove-storage-from-system');
 });

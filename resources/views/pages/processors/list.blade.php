@@ -430,7 +430,7 @@
                                     <div class="card-body">
                                         <div class="checkbox"> <label> <input id="0" type="checkbox"
                                                     onclick="f_brand(0);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="All" checked> <span
+                                                    name="filter['brand']" value="All" checked disabled> <span
                                                     class="ml-10">All </span></label> </div>
                                         @foreach ($brands as $brand)
                                             <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"

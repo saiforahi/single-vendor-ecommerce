@@ -8,6 +8,7 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 class PowerSupply extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;

@@ -96,16 +96,14 @@
                             <td scope="row" class="component">
                                 <a href="../product/processor/index.html">Processor</a>
                             </td>
-                            @if (Session::get('system')->get_processor()!='')
-                                <?php $processor=Session::get('system')->get_processor();?>
+                            @if (Session::has('system') && Session::get('system')->get_processor() != '')
+                                <?php $processor = Session::get('system')->get_processor(); ?>
                                 <td>
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <?php $images = $processor->getMedia('main_image'); ?>
-                                            <img src="{{ $images[0]->getUrl('thumb') }}"
-                                                title="{{$processor->name}}"
-                                                class="img-responsive"
-                                                alt="{{$processor->name}}">
+                                            <img src="{{ $images[0]->getUrl('thumb') }}" title="{{ $processor->name }}"
+                                                class="img-responsive" alt="{{ $processor->name }}">
                                             <div class="stars-rating" title="4.4 out of 5">
                                                 <div class="stars-score" style="width: 88%">
                                                     <i class="fas fa-star"></i>
@@ -127,15 +125,16 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{$processor->name}}</a></div>
+                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $processor->name }}</a>
+                                    </div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value">{{$processor->brand}}</div>
+                                            <div class="detail__value">{{ $processor->brand }}</div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value">{{$processor->model}}</div>
+                                            <div class="detail__value">{{ $processor->model }}</div>
                                         </div>
                                     </span>
                                     <span class="table_span">
@@ -197,16 +196,17 @@
                                     </span>
                                 </td>
                                 <td class="price">
-                                    $4,604.82 </td>
+                                    ৳ {{$processor->product->price}}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from System Builder</a></td>
+                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
+                                        System Builder</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="processor0"
-                                        href="{{route('remove-processor-from-system')}}"><i
+                                        href="{{ route('remove-processor-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
 
                             @else
                                 <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                        href="{{route('processor-list')}}"><i class="fa fa-plus"></i> ADD Component
+                                        href="{{ route('processor-list') }}"><i class="fa fa-plus"></i> ADD Component
                                     </a>
                                 </td>
                             @endif
@@ -253,11 +253,102 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/storage/index.html">Storage</a>
+                                <a href="{{route('storage-list')}}">Storage</a>
                             </td>
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/storage/index.html"><i class="fa fa-plus"></i> ADD Component </a>
-                            </td>
+                            @if (Session::has('system') && Session::get('system')->get_storage() != '')
+                                <?php $storage = Session::get('system')->get_storage(); ?>
+
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $storage->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                class="img-responsive lazy img-fluid"
+                                                data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                title="{{ $storage->name }}" alt="{{ $storage->name }}">
+                                            {{-- <div class="stars-rating" title="4.9 out of 5">
+                                            <div class="stars-score" style="width: 98%">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="stars-scale">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div> --}}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="{{ route('storage-details', ['id' => $storage->id]) }}">{{ $storage->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand">{{ $storage->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model">{{ $storage->model }}</div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Capacity:</div>
+                                            <div class="detail__value f_capacity"> 1 TB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Type:</div>
+                                            <div class="detail__value f_storage_type"> SSD </div>
+                                        </div>
+                                        <div class="detail d-none">
+                                            <div class="detail__name">RPM:</div>
+                                            <div class="detail__value f_rpm"> </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe 3.0 x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Cache Memory:</div>
+                                            <div class="detail__value f_cache_memory"> 1024 MB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Form Factor:</div>
+                                            <div class="detail__value f_form_factor"> M.2-2280 </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">৳ {{ $storage->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="{{ route('storage-details', ['id' => $storage->id]) }}"
+                                        target="_blank">View
+                                        details</a></td>
+                                
+                                <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
+                                    href="{{ route('remove-storage-from-system') }}"><i
+                                        class="fa fa-trash"></i></a></td>
+                                
+
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{route('storage-list')}}"><i class="fa fa-plus"></i> ADD Component
+                                    </a>
+                                </td>
+                            @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">

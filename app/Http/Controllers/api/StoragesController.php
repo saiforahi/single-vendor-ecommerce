@@ -36,4 +36,11 @@ class StoragesController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
+
+    public function show_list(){
+        return view('pages.storages.list')->with('storages',Storage::with('product')->get())->with('brands',Storage::select('brand')->distinct()->get());
+    }
+    public function show_details($id){
+        return view('pages.storages.details')->with('storage',Storage::findOrFail($id));
+    }
 }
