@@ -1565,7 +1565,7 @@
                                         </span>
 
                                     </td>
-                                    <td class="price">{{ $storage->product->price }}</td>
+                                    <td class="price">৳ {{ $storage->product->price }}</td>
                                     <td><a class="btn btn-primary component-btn"
                                             href="{{ route('storage-details', ['id' => $storage->id]) }}"
                                             target="_blank">View
