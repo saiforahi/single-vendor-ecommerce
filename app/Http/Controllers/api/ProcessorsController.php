@@ -46,7 +46,7 @@ class ProcessorsController extends Controller
         // ->groupBy('brand')
         // ->get();
         
-        return view('pages.processors.list')->with('processors',Processor::all())->with('brands',Processor::select('brand')->distinct()->get());
+        return view('pages.processors.list')->with('processors',Processor::with('product')->get())->with('brands',Processor::select('brand')->distinct()->get());
     }
     public function show_details($id){
         return view('pages.processors.details')->with('processor',Processor::findOrFail($id));

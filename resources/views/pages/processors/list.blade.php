@@ -1153,7 +1153,7 @@
                                                 <div class="circle green">100</div>
                                                 <p>PCB Benchmark
                                                 <p>
-                                            </div>{{ $processor->price }}<div>
+                                            </div>{{ $processor->product->price }}<div>
                                                 <div class="circle red">%</div>
                                                 <p>Value for Money
                                                 <p>
@@ -1162,7 +1162,7 @@
                                     </td>
 
                                     <td class="price">
-                                        ${{ $processor->price }} </td>
+                                        ${{ $processor->product->price }} </td>
                                     <td><a class="btn btn-primary component-btn"
                                             href="{{ route('processor-details', ['id' => $processor->id]) }}"
                                             target="_blank">View Details</a></td>
