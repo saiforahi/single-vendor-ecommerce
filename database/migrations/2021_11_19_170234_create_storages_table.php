@@ -20,6 +20,7 @@ class CreateStoragesTable extends Migration
             $table->string('name');
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
+            $table->json('slug_name')->nullable();
 
             $table->json('storage_specs')->nullable();
             $table->json('performance_specs')->nullable();

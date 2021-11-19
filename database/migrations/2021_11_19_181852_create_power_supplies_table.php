@@ -22,6 +22,7 @@ class CreatePowerSupplyTable extends Migration
             $table->string('model')->nullable();
             //common part ends here
             $table->json('specifications')->nullable();
+            $table->json('slug_name')->nullable();
     
             // $table->integer('price')->nullable();
             $table->string('type')->nullable();
