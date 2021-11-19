@@ -8,20 +8,16 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-class Processor extends Model implements HasMedia
+class CpuCooler extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','slug_name','general_specs','performance_specs','memory_specs','packaging_specs','power_specs','graphic_specs'];
+    protected $fillable=['product_id','brand','model','name','slug_name','general_specs','cooling_specs','packaging_specs'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
         'general_specs' => 'array',
-        'performance_specs' => 'array',
-        'memory_specs' => 'array',
         'packaging_specs' => 'array',
-        'graphic_specs' => 'array',
-        'power_specs' => 'array',
         'slug_name' => 'array',
     ];
     public function registerMediaConversions(Media $media = null): void
