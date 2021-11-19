@@ -8,21 +8,27 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-class Processor extends Model implements HasMedia
+class MotherBoard extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','slug_name','general_specs','performance_specs','memory_specs','packaging_specs','power_specs','graphic_specs'];
+    protected $fillable=['product_id','brand','model','name','slug_name','product_specs','back_panel_specs','memory_specs','storage_specs','internal_specs','front_panel_specs','audio_specs','wireless_specs','software_specs','physical_specs','packaging_specs',];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
-        'general_specs' => 'array',
-        'performance_specs' => 'array',
+        'product_specs' => 'array',
+        'back_panel_specs' => 'array',
+        'storage_specs' => 'array',
         'memory_specs' => 'array',
-        'packaging_specs' => 'array',
-        'graphic_specs' => 'array',
-        'power_specs' => 'array',
+        'storage_specs' => 'array',
+        'internal_specs' => 'array',
         'slug_name' => 'array',
+        'front_panel_specs' => 'array',
+        'audio_specs' => 'array',
+        'wireless_specs' => 'array',
+        'software_specs' => 'array',
+        'physical_specs' => 'array',
+        'packaging_specs' => 'array',
     ];
     public function registerMediaConversions(Media $media = null): void
     {
