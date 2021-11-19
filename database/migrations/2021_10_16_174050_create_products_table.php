@@ -17,8 +17,10 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->integer('price')->nullable();
+            $table->json('packaging_specs')->nullable();
             $table->enum('status',['active','inactive']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

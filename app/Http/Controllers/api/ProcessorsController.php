@@ -17,7 +17,7 @@ class ProcessorsController extends Controller
     public function create(CreateProcessorRequest $req){
         try{
             $new_product = Product::create($req->only('price'));
-            $new_processor = Processor::create(array_merge($req->except('total_images','images'),['product_id'=>$new_product->id]));
+            $new_processor = Processor::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
                     if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){

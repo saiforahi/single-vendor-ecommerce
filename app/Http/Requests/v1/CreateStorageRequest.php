@@ -4,7 +4,7 @@ namespace App\Http\Requests\v1;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateProcessorRequest extends FormRequest
+class CreateStorageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,8 +28,8 @@ class CreateProcessorRequest extends FormRequest
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
-            'general_specs'=>'required|json',
-            'total_images'=>'sometimes|nullable'
+            'storage_specs'=>'required|json',
+            'total_images'=>'sometimes|nullable',
         ];
     }
 }

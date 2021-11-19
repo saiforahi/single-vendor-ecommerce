@@ -31,11 +31,11 @@ class Laptop extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('thumb')->useDisk('public')->acceptsMimeTypes(['image/jpeg','image/jpg','image/png'])->withResponsiveImages();
+        $this->addMediaCollection('thumb')->useDisk('public')->acceptsMimeTypes(['image/webp','image/jpeg','image/jpg','image/png'])->withResponsiveImages();
         $this
             ->addMediaCollection('main_image')
             ->useDisk('public')
-            ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png'])
+            ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])
             ->withResponsiveImages();
     }
 }

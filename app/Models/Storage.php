@@ -4,24 +4,23 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-class Processor extends Model implements HasMedia
+class Storage extends Model implements HasMedia
 {
-    use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','general_specs','performance_specs','memory_specs','packaging_specs','power_specs','graphic_specs'];
+    use HasFactory, SoftDeletes, InteractsWithMedia;
+    protected $fillable=['product_id','brand','model','name','storage_specs','performance_specs','ssd_specs','packaging_specs','physical_specs','reliability_specs'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
-        'general_specs' => 'array',
+        'storage_specs' => 'array',
         'performance_specs' => 'array',
-        'memory_specs' => 'array',
-        'packaging_specs' => 'array',
-        'graphic_specs' => 'array',
-        'power_specs' => 'array',
+        'reliability_specs' => 'array',
+        'ssd_specs' => 'array',
+        'packaging_specs' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {
@@ -46,13 +45,4 @@ class Processor extends Model implements HasMedia
             ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])
             ->withResponsiveImages();
     }
-
-    public function product(){
-        return $this->belongsTo(Product::class,'product_id','id');
-    }
-    // public function product()
-    // {
-    //     return $this->hasOne('App\Models\Processor', 'child_id', 'product_id')
-    //         ->whereImageableType('App\Models\Processor');
-    // }
 }
