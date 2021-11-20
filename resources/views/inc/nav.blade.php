@@ -274,7 +274,7 @@
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Others</li>
-                                        <li itemprop="name"><a itemprop="url" href="laptop/index.html">Laptops</a>
+                                        <li itemprop="name"><a itemprop="url" href="{{route('laptops')}}">Laptops</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -344,69 +344,3 @@
         </div>
     </div>
 </nav>
-
-{{-- <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-            "@type": "WebSite",
-            "@id": "https://pcbuilder.net/#website",
-            "url": "https://pcbuilder.net/",
-            "name": "PC Builder - Build Your Custom PC Online",
-            "description": "Building your PC compatibility was never so easy before - but with the use of PC Builder, just pick the desired PC parts from the list of latest components, and you're ready to turn your imagination into reality. You can use the PC building simulator offered by us to create your own PC virtually and even analyze the compatible pc parts before buying them, and its really easy by simply picking up the pc parts. We at PC Builder also help you to restrain your stress of getting into the complex structure and finding compatibility of the parts. And get assured before purchasing your custom PC with the PC Builder.",
-            "potentialAction": [{
-                "@type": "SearchAction",
-                "target": "https://pcbuilder.net/?s={search_term_string}",
-                "query-input": "required name=search_term_string"
-                }],
-            "inLanguage": "en-US"
-        },
-        {
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "WebPage",
-          "@id": "https://pcbuilder.net/",
-          "inLanguage": "en-US",
-          "name": "PC Builder"
-          }
-        }]
-        },
-        {
-            "@type" : "Organization",
-            "name" : "PC Builder",
-            "legalName" : "PC Builder",
-            "url" : "https://pcbuilder.net/",
-            "contactPoint" : [
-					{
-						"@type" : "ContactPoint",
-						"contactType" : "customer service",
-						"email": "hello@pcbuilder.net",
-						"url": "https://pcbuilder.net/",
-						"areaServed": [
-							"US",
-							"UK",
-							"CA",
-							"IN",
-							"IT",
-							"AU"
-						],
-						"availableLanguage": [
-							"English"
-						]
-					}
-				],
-            "logo" : "https://images.pcbuilder.dev/assets/images/logo-512.png",
-            "foundingDate": "2020-08-24",
-            "sameAs" : [ 
-                "http://www.facebook.com/pcbuilder.net",
-                "http://www.twitter.com/pcbuilder_net",
-                "http://www.linkedin.com/company/pcbuilder"
-            ]
-        }
-      ]
-    }
-  </script> --}}
