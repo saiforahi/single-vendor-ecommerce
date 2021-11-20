@@ -1052,7 +1052,7 @@
                                     <td class="box">
                                         <div class="logo-name">
                                             <div class="item-logo">
-                                                <?php $images = $processor->getMedia('main_image'); ?>
+                                                <?php $images = $processor->product->getMedia('main_image'); ?>
                                                 <img src="{{ $images[0]->getUrl('main_image') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ $images[0]->getUrl('main_image') }}"

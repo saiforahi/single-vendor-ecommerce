@@ -42,6 +42,6 @@ class CreateCpuCoolersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('processors');
+        Schema::dropIfExists('cpu_coolers');
     }
 }

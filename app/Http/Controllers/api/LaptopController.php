@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\v1\CreateLaptopRequest;
 use App\Models\Laptop;
+use App\Models\Product;
+use App\Events\UploadImageEvent;
 use DB;
 class LaptopController extends Controller
 {
@@ -16,18 +18,21 @@ class LaptopController extends Controller
     }
     public function create(CreateLaptopRequest $req){
         try{
+            $new_product = Product::create($req->only('price'));
             $new_laptop = Laptop::create($req->only('name','specifications','price'));
+            $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
                     if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
                         // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection();
-                        $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
+                        array_push($images,$req->file('image'.$index));
                     }
                     // dd($req->file('image'.$index));
                     // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
                     // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
                 }
             }
+            event(new UploadImageEvent($new_product,$images));
             if($new_laptop){
                 return response()->json(['success'=>true,'message'=>'New Laptop has been created'],201);
             }

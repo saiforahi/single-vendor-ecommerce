@@ -13,7 +13,7 @@ class CreateGraphicsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Graphics', function (Blueprint $table) {
+        Schema::create('graphics', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products');
@@ -41,6 +41,6 @@ class CreateGraphicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('processors');
+        Schema::dropIfExists('graphics');
     }
 }

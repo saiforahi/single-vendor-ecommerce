@@ -41,6 +41,6 @@ class CreateMemoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('processors');
+        Schema::dropIfExists('memories');
     }
 }

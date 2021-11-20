@@ -301,7 +301,7 @@
                     <div class="content box">
                         <div class="ribbon hot-ribbon"><span>Hot</span></div>
                         <div class="product-image ">
-                            @foreach ($item->getMedia('thumb') as $image)
+                            @foreach ($item->product->getMedia('thumb') as $image)
                             {{-- <p>{{ $loop->index+1 }}</p> --}}
                             <a
                                 href="#">

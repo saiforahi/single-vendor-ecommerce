@@ -42,6 +42,6 @@ class CreateCasingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('processors');
+        Schema::dropIfExists('casings');
     }
 }

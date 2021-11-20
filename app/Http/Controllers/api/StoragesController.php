@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Storage;
 use App\Models\Product;
 use App\Http\Requests\v1\CreateStorageRequest;
+use App\Events\UploadImageEvent;
 class StoragesController extends Controller
 {
     //
@@ -14,10 +15,13 @@ class StoragesController extends Controller
         try{
             $new_product = Product::create($req->only('price'));
             $new_storage = Storage::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
+            // event(new UploadImageEvent());
+            $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
                     if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
-                        $new_storage->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
+                        // $new_storage->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
+                        array_push($images,$req->file('image'.$index));
                         // $new_storage->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
                     }
                     // dd($req->file('image'.$index));
@@ -25,6 +29,7 @@ class StoragesController extends Controller
                     // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
                 }
             }
+            event(new UploadImageEvent($new_product,$images));
             if($new_storage){
                 return response()->json(['success'=>true,'message'=>'New Storage has been added'],201);
             }

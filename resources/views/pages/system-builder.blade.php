@@ -2,7 +2,7 @@
 @section('content')
     <section class="pcb-breadcrumb">
         <h1>System Builder</h1>
-        <span><a href="../index.html">Home</a><i class="fa fa-angle-right"></i><a href="index.html">System
+        <span><a href="{{route('home')}}">Home</a><i class="fa fa-angle-right"></i><a href="{{route('system-builder')}}">System
                 Builder</a></span>
     </section>
     <section class="system-builder">

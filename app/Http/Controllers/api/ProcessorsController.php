@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Processor;
 use App\Models\Product;
 use App\Http\Requests\v1\CreateProcessorRequest;
+use App\Events\UploadImageEvent;
 class ProcessorsController extends Controller
 {
     //
@@ -18,17 +19,15 @@ class ProcessorsController extends Controller
         try{
             $new_product = Product::create($req->only('price'));
             $new_processor = Processor::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
+            $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
                     if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
-                        $new_processor->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
-                        // $new_processor->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
+                        array_push($images,$req->file('image'.$index));
                     }
-                    // dd($req->file('image'.$index));
-                    // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
-                    // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
                 }
             }
+            event(new UploadImageEvent($new_product,$images));
             if($new_processor){
                 return response()->json(['success'=>true,'message'=>'New Processor has been created'],201);
             }
