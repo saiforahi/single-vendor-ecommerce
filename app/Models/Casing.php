@@ -20,9 +20,7 @@ class Casing extends Model implements HasMedia
         'cooling_specs' => 'array',
         'i/o_specs' => 'array',
         'packaging_specs' => 'array',
-        'physical_specs' => 'array',
-        'slug_name' => 'array',
-        
+        'physical_specs' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {

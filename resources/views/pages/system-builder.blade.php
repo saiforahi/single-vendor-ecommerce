@@ -94,14 +94,14 @@
                     <tbody>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/processor/index.html">Processor</a>
+                                <a href="{{route('processor-list')}}">Processor</a>
                             </td>
                             @if (Session::has('system') && Session::get('system')->get_processor() != '')
                                 <?php $processor = Session::get('system')->get_processor(); ?>
                                 <td>
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $processor->getMedia('main_image'); ?>
+                                            <?php $images = $processor->product->getMedia('main_image'); ?>
                                             <img src="{{ $images[0]->getUrl('thumb') }}" title="{{ $processor->name }}"
                                                 class="img-responsive" alt="{{ $processor->name }}">
                                             <div class="stars-rating" title="4.4 out of 5">
@@ -246,10 +246,99 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/ram/index.html">RAM</a>
+                                <a href="{{route('memory-list')}}">RAM</a>
                             </td>
+                            @if(Session::has('system') && Session::get('system')->get_memory() != '')
+                            <?php $memory = Session::get('system')->get_memory(); ?>
+                            <td scope="row" class="component d-sm-none">
+                                <a href="index.html">#</a>
+                            </td>
+                            <td class="box">
+                                <div class="logo-name">
+                                    <div class="item-logo">
+                                        <?php $images = $memory->product->getMedia('main_image'); ?>
+                                        <img src="{{$images[0]->getUrl('main_image')}}" class="img-responsive lazy img-fluid"
+                                            data-src="{{$images[0]->getUrl('main_image')}}"
+                                            title="{{$memory->name}}"
+                                            alt="{{$memory->name}}">
+                                        <div class="stars-rating" title="5.0 out of 5">
+                                            <div class="stars-score" style="width: 100%">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="stars-scale">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="comp-details">
+                                <div class="table_title"><a
+                                        href="{{route('memory-details',['id'=>$memory->id])}}">{{$memory->name}}</a></div>
+                                <span class="table_span">
+                                    <div class="detail">
+                                        <div class="detail__name">Brand:</div>
+                                        <div class="detail__value f_brand"> G.Skill </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Model:</div>
+                                        <div class="detail__value f_model"> Trident Z Royal </div>
+                                    </div>
+                                </span>
+                                <span class="table_span">
+
+                                    <div class="detail">
+                                        <div class="detail__name">RAM Size:</div>
+                                        <div class="detail__value f_ram">{{json_decode($memory->memory_specs,true)['ram_size']==null?'':json_decode($memory->memory_specs,true)['ram_size']}}</div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Quantity:</div>
+                                        <div class="detail__value f_ram_quantity"> 2 x 8 GB </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">RAM Type:</div>
+                                        <div class="detail__value f_ram_type"> DDR4 </div>
+                                    </div>
+                                </span><span class="table_span view-more-185" style="display: none;">
+                                    <div class="detail">
+                                        <div class="detail__name">RAM Speed:</div>
+                                        <div class="detail__value f_ram_speed"> 4800 MHz </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">DIMM Type:</div>
+                                        <div class="detail__value f_dimm_type"> 288-Pin </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">CAS Latency:</div>
+                                        <div class="detail__value f_cas_latency"> CL18 </div>
+                                    </div>
+                                </span>
+
+                                <span class="view-more">
+                                    <div class="view-More185" onclick="viewMore(185);"><span
+                                            class="viewMore185">View More Details</span> <i
+                                            class="fas fa-chevron-circle-down"></i></div>
+                                </span>
+                            </td>
+                            <td class="price">৳{{$memory->product->price}}</td>
+                            <td><a class="btn btn-primary component-btn"
+                                    href="{{route('memory-details',['id'=>$memory->id])}}" target="_blank">View Details</a></td>
+                            <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
+                                href="{{route('remove-memory-from-system')}}"><i class="fa fa-trash"></i></a>
+                            </td>
+                            @else
                             <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/ram/index.html"><i class="fa fa-plus"></i> ADD Component </a></td>
+                                href="{{route('memory-list')}}"><i class="fa fa-plus"></i> ADD Component </a></td>
+                            @endif
+                            
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
@@ -264,7 +353,7 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $storage->getMedia('main_image'); ?>
+                                            <?php $images = $storage->product->getMedia('main_image'); ?>
                                             <img src="{{ $images[0]->getUrl('main_image') }}"
                                                 class="img-responsive lazy img-fluid"
                                                 data-src="{{ $images[0]->getUrl('main_image') }}"
@@ -332,7 +421,7 @@
                                     </span>
 
                                 </td>
-                                <td class="price">৳ {{ $storage->product->price }}</td>
+                                <td class="price">৳{{ $storage->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
                                         href="{{ route('storage-details', ['id' => $storage->id]) }}"
                                         target="_blank">View

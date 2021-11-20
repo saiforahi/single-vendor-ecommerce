@@ -21,7 +21,6 @@ class Storage extends Model implements HasMedia
         'performance_specs' => 'array',
         'reliability_specs' => 'array',
         'ssd_specs' => 'array',
-        'slug_name' => 'array',
         'packaging_specs' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void

@@ -17,8 +17,7 @@ class CpuCooler extends Model implements HasMedia
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
         'general_specs' => 'array',
-        'packaging_specs' => 'array',
-        'slug_name' => 'array',
+        'packaging_specs' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {

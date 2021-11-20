@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @push('style')
     <style>
         #content {

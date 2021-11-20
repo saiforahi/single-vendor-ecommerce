@@ -102,8 +102,8 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Samsung 970 EVO (MZ-V7E1T0BW)</h2>
-        <span><a href="../../../index.html">Home</a>
+        <h2>{{$storage->name}}</h2>
+        <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/storage/index.html">Storage</a>
             <i class="fa fa-angle-right"></i><a href="index.html">Samsung 970 EVO</a></span>
     </section>

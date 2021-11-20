@@ -290,7 +290,7 @@
             <div class="col-12 col-md-3">
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
-                        @foreach ($processor->getMedia('main_image') as $image)
+                        @foreach ($processor->product->getMedia('main_image') as $image)
                         <div class="{{ $loop->index == 0 ? 'carousel-item img-gradient active':'carousel-item img-gradient' }}">
                             <img class="d-block img-fluid big-image lazy"
                                 title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
@@ -417,7 +417,7 @@
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler</h1>
+                <h1>{{$processor->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.4 out of 5">
                         <div class="stars-score" style="width: 88%">
@@ -475,7 +475,7 @@
                         <a href="javascript:void(0);" onclick="setid('processor',6)" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                            class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
             </div>

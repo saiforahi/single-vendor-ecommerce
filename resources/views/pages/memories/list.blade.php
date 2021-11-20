@@ -536,66 +536,7 @@
                             }
 
                         </style>
-                        <script>
-                            function f_brand(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("brand");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_brand")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_brand");
-                                            } else {
-                                                tr[i].classList.remove("c_brand");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.add("c_brand");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.remove("c_brand");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -667,66 +608,7 @@
                             }
 
                         </style>
-                        <script>
-                            function f_ram(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("ram");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_ram")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_ram");
-                                            } else {
-                                                tr[i].classList.remove("c_ram");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram");
-                                                } else {
-                                                    tr[i].classList.add("c_ram");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram");
-                                                } else {
-                                                    tr[i].classList.remove("c_ram");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -856,66 +738,7 @@
                             }
 
                         </style>
-                        <script>
-                            function f_ram_quantity(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("ram_quantity");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_ram_quantity")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_ram_quantity");
-                                            } else {
-                                                tr[i].classList.remove("c_ram_quantity");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram_quantity")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram_quantity");
-                                                } else {
-                                                    tr[i].classList.add("c_ram_quantity");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram_quantity")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram_quantity");
-                                                } else {
-                                                    tr[i].classList.remove("c_ram_quantity");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -1047,66 +870,7 @@
                             }
 
                         </style>
-                        <script>
-                            function f_ram_speed(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("ram_speed");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_ram_speed")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_ram_speed");
-                                            } else {
-                                                tr[i].classList.remove("c_ram_speed");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram_speed")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram_speed");
-                                                } else {
-                                                    tr[i].classList.add("c_ram_speed");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram_speed")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram_speed");
-                                                } else {
-                                                    tr[i].classList.remove("c_ram_speed");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading5">
@@ -1138,66 +902,7 @@
                             }
 
                         </style>
-                        <script>
-                            function f_ram_type(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("ram_type");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_ram_type")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_ram_type");
-                                            } else {
-                                                tr[i].classList.remove("c_ram_type");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram_type");
-                                                } else {
-                                                    tr[i].classList.add("c_ram_type");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_ram_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_ram_type");
-                                                } else {
-                                                    tr[i].classList.remove("c_ram_type");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
                         <div class="card-group" id="accordion6" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading6">
@@ -1297,66 +1002,7 @@
                             }
 
                         </style>
-                        <script>
-                            function f_cas_latency(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("cas_latency");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_cas_latency")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_cas_latency");
-                                            } else {
-                                                tr[i].classList.remove("c_cas_latency");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cas_latency")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cas_latency");
-                                                } else {
-                                                    tr[i].classList.add("c_cas_latency");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cas_latency")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cas_latency");
-                                                } else {
-                                                    tr[i].classList.remove("c_cas_latency");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1433,7 +1079,8 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        <table>
+                        <tbody>
+                            @foreach ($memories as $memory)
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -1441,10 +1088,11 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41Am2sv4KRL._SL75_.jpg"
-                                                title="G.SKILL Trident Z Royal Series, 16GB (2 x 8GB) 288-Pin DDR4-4800MHz Desktop Memory Model with CL18"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, G.Skill Trident Z Royal">
+                                            <?php $images = $memory->product->getMedia('main_image'); ?>
+                                            <img src="{{$images[0]->getUrl('main_image')}}" class="img-responsive lazy img-fluid"
+                                                data-src="{{$images[0]->getUrl('main_image')}}"
+                                                title="{{$memory->name}}"
+                                                alt="{{$memory->name}}">
                                             <div class="stars-rating" title="5.0 out of 5">
                                                 <div class="stars-score" style="width: 100%">
                                                     <i class="fas fa-star"></i>
@@ -1466,9 +1114,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route('memory-details')}}">G.SKILL
-                                            Trident Z Royal Series, 16GB (2 x 8GB) 288-Pin DDR4-4800MHz Desktop Memory Model
-                                            with CL18</a></div>
+                                            href="{{route('memory-details',['id'=>$memory->id])}}">{{$memory->name}}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
@@ -1483,7 +1129,7 @@
 
                                         <div class="detail">
                                             <div class="detail__name">RAM Size:</div>
-                                            <div class="detail__value f_ram"> 16 GB </div>
+                                            <div class="detail__value f_ram">{{json_decode($memory->memory_specs,true)['ram_size']==null?'':json_decode($memory->memory_specs,true)['ram_size']}}</div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Quantity:</div>
@@ -1514,19 +1160,382 @@
                                                 class="fas fa-chevron-circle-down"></i></div>
                                     </span>
                                 </td>
-                                <td class="price">
-                                    $490 </td>
+                                <td class="price">{{$memory->product->price}}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07PXGZDXZ?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                        href="{{route('memory-details',['id'=>$memory->id])}}" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
-                                        href="javascript:void(0);" onclick="setid(185)"><i class="fa fa-plus"></i></a>
+                                    href="{{route('add-memory-to-system',['memory_id'=>$memory->id])}}"><i class="fa fa-plus"></i></a>
                                 </td>
-                            </tr> 
-                        </table>
+                            </tr>
+                            @endforeach
+                             
+                        </tbody>
                         
                     </table>
                 </div>
             </div>
     </section>
 @endsection
+
+@push('script')
+<script>
+    function f_cas_latency(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("cas_latency");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_cas_latency")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_cas_latency");
+                    } else {
+                        tr[i].classList.remove("c_cas_latency");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_cas_latency")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_cas_latency");
+                        } else {
+                            tr[i].classList.add("c_cas_latency");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_cas_latency")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_cas_latency");
+                        } else {
+                            tr[i].classList.remove("c_cas_latency");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_brand(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("brand");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_brand")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_brand");
+                    } else {
+                        tr[i].classList.remove("c_brand");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.add("c_brand");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.remove("c_brand");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_ram(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("ram");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_ram")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_ram");
+                    } else {
+                        tr[i].classList.remove("c_ram");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram");
+                        } else {
+                            tr[i].classList.add("c_ram");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram");
+                        } else {
+                            tr[i].classList.remove("c_ram");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_ram_quantity(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("ram_quantity");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_ram_quantity")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_ram_quantity");
+                    } else {
+                        tr[i].classList.remove("c_ram_quantity");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram_quantity")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram_quantity");
+                        } else {
+                            tr[i].classList.add("c_ram_quantity");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram_quantity")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram_quantity");
+                        } else {
+                            tr[i].classList.remove("c_ram_quantity");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_ram_speed(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("ram_speed");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_ram_speed")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_ram_speed");
+                    } else {
+                        tr[i].classList.remove("c_ram_speed");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram_speed")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram_speed");
+                        } else {
+                            tr[i].classList.add("c_ram_speed");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram_speed")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram_speed");
+                        } else {
+                            tr[i].classList.remove("c_ram_speed");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_ram_type(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("ram_type");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_ram_type")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_ram_type");
+                    } else {
+                        tr[i].classList.remove("c_ram_type");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram_type");
+                        } else {
+                            tr[i].classList.add("c_ram_type");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram_type");
+                        } else {
+                            tr[i].classList.remove("c_ram_type");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+@endpush

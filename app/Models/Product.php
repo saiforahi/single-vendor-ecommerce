@@ -34,10 +34,10 @@ class Product extends Model implements HasMedia
     }
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('thumb')->useDisk('public')->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])->withResponsiveImages();
+        $this->addMediaCollection('thumb')->useDisk('media')->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])->withResponsiveImages();
         $this
             ->addMediaCollection('main_image')
-            ->useDisk('public')
+            ->useDisk('media')
             ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])
             ->withResponsiveImages();
     }

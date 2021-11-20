@@ -21,8 +21,7 @@ class Processor extends Model implements HasMedia
         'memory_specs' => 'array',
         'packaging_specs' => 'array',
         'graphic_specs' => 'array',
-        'power_specs' => 'array',
-        'slug_name' => 'array',
+        'power_specs' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {

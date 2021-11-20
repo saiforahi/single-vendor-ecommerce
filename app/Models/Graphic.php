@@ -19,9 +19,7 @@ class Graphic extends Model implements HasMedia
         'general_specs' => 'array',
         'performance_specs' => 'array',
         'clock_specs' => 'array',
-        'additional_specs' => 'array',
-        'slug_name' => 'array',
-       
+        'additional_specs' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {

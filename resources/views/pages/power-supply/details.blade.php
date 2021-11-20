@@ -1,95 +1,110 @@
 @extends('layouts.app')
 
 @push('style')
-<style>
-    .component-details {
-        padding: 40px;
-        color: rgba(255, 255, 255, 0.8);
-        background-color: #1d2b36;
-    }
-    .component-details .big-image {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-    }
-    .small-image {
-        min-height: 50px;
-        min-width: 50px;
-        
-    }
-    .carousel-indicators {
-        position: relative;
-    }
-    .carousel-indicators li {
-        background-color: white;
-    }
-    .component-details h1 {
-        font-size: 28px;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    .component-details h2,.component-details h3,.component-details h4 {
-        color: rgba(255, 255, 255, 0.9);
-    }
-    span.carousel-control-prev-icon, span.carousel-control-next-icon {
-        background-color: #373737;
-    }
-    span.carousel-control-prev-icon:after, span.carousel-control-next-icon:after {
-        color: #fff;
-    }
-    
-</style>
-<style>
+    <style>
+        .component-details {
+            padding: 40px;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: #1d2b36;
+        }
 
-.pcb-product-summary {
-    display: flex;
-    align-items: center;
-}
+        .component-details .big-image {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
 
-.hot-selling {
-    margin-left: auto;
-    margin-right: 10px;
-    display: flex;
-    align-items:center;
-}
-.hot {
-background-color: #ff4e00;
-background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+        .small-image {
+            min-height: 50px;
+            min-width: 50px;
 
-color:transparent;
--webkit-background-clip: text;
-background-clip: text;
-font-size: 26px;
-}
-</style>
-<style>
-    .stars-rating {
-        color: rgba(255, 255, 255, 0.9);
-    	position: relative;
-        display: inline-block;
-    }
-    
-    .stars-rating .stars-score {
-      color: rgba(255, 255, 255, 0.9);
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      width: 20%;
-      white-space: nowrap;
-    }
-</style>
-<style>
-    ul {
-        padding-inline-start: 40px;
-    }
-</style>
+        }
+
+        .carousel-indicators {
+            position: relative;
+        }
+
+        .carousel-indicators li {
+            background-color: white;
+        }
+
+        .component-details h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .component-details h2,
+        .component-details h3,
+        .component-details h4 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        span.carousel-control-prev-icon,
+        span.carousel-control-next-icon {
+            background-color: #373737;
+        }
+
+        span.carousel-control-prev-icon:after,
+        span.carousel-control-next-icon:after {
+            color: #fff;
+        }
+
+    </style>
+    <style>
+        .pcb-product-summary {
+            display: flex;
+            align-items: center;
+        }
+
+        .hot-selling {
+            margin-left: auto;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hot {
+            background-color: #ff4e00;
+            background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 26px;
+        }
+
+    </style>
+    <style>
+        .stars-rating {
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            display: inline-block;
+        }
+
+        .stars-rating .stars-score {
+            color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            width: 20%;
+            white-space: nowrap;
+        }
+
+    </style>
+    <style>
+        ul {
+            padding-inline-start: 40px;
+        }
+
+    </style>
 @endpush
 
 @section('content')
     <section class="pcb-breadcrumb">
         <h2>Corsair RM750 (CP-9020195-NA)</h2>
-        <span><a href="../../../index.html">Home</a>
+        <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/power-supply/index.html">Power Supply</a>
             <i class="fa fa-angle-right"></i><a href="index.html">Corsair RM750</a></span>
     </section>
@@ -276,7 +291,7 @@ font-size: 26px;
             <style>
                 .sticky {
                     /*position: sticky!important;
-                            top: 80px;*/
+                                top: 80px;*/
                 }
 
             </style>

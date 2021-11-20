@@ -18,8 +18,7 @@ class Memory extends Model implements HasMedia
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
         'general_specs' => 'array',
         'memory_specs' => 'array',
-        'additional_specs' => 'array',
-        'slug_name' => 'array',
+        'additional_specs' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {

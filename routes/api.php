@@ -27,3 +27,4 @@ require __DIR__.'/processors.php';
 require __DIR__.'/graphics.php';
 require __DIR__.'/storages.php';
 require __DIR__.'/system-builder.php';
+require __DIR__.'/memories.php';

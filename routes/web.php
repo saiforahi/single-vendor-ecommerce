@@ -38,6 +38,10 @@ Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('cache:clear');
     return 'Application cache cleared';
 });
+Route::get('/storage-link', function () {
+    $exitCode = Artisan::call('storage:link');
+    return 'Application cache cleared';
+});
 Route::get('system-builder',function(){
     return view('pages.system-builder');
 })->name('system-builder');
@@ -102,14 +106,9 @@ Route::prefix('motherboard')->group(function(){
 });
 
 Route::prefix('memory')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.memories.list');
-    })->name('memory-list');
-    Route::get('/details',function(){ //storage list view
-        return view('pages.memories.details');
-    })->name('memory-details');
+    Route::get('/list',[App\Http\Controllers\api\MemoriesController::class,'show_list'])->name('memory-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\MemoriesController::class,'show_details'])->name('memory-details');
 });
-
 
 
 Route::prefix('system-builder')->group(function(){
@@ -117,4 +116,6 @@ Route::prefix('system-builder')->group(function(){
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');
     Route::get('/add-storage/{storage_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_storage_web'])->name('add-storage-to-system');
     Route::get('/remove-storage',[App\Http\Controllers\api\SystemBuilderController::class,'remove_storage_web'])->name('remove-storage-from-system');
+    Route::get('/add-memory/{memory_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_memory_web'])->name('add-memory-to-system');
+    Route::get('/remove-memory',[App\Http\Controllers\api\SystemBuilderController::class,'remove_memory_web'])->name('remove-memory-from-system');
 });

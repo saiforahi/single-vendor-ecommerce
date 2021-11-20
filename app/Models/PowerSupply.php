@@ -17,9 +17,7 @@ class PowerSupply extends Model implements HasMedia
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
-        'specifications' => 'array',
-        'slug_name' => 'array',
-        
+        'specifications' => 'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {

@@ -104,7 +104,7 @@
 @section('content')
     <section class="pcb-breadcrumb">
         <h2>Cooler Master Hyper 212 EVO (RR-212E-20PK-R2)</h2>
-        <span><a href="../../../index.html">Home</a>
+        <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/cpu-cooler/index.html">Cpu Cooler</a>
             <i class="fa fa-angle-right"></i><a href="index.html">Cooler Master Hyper 212 EVO</a></span>
     </section>

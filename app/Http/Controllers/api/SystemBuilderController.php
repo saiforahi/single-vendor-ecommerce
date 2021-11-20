@@ -67,4 +67,28 @@ class SystemBuilderController extends Controller
         }
         return view('index');
     }
+    //memory
+    public function add_memory_web($memory_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_memory($memory_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+            // return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_memory($memory_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+        // dd($req->all());
+    }
+    public function remove_memory_web(){
+        if(Session::has('system') && Session::get('system')->get_memory()!=''){
+            $system = Session::get('system');
+            $system->remove_memory();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return view('index');
+    }
 }
