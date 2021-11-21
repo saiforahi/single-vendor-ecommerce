@@ -23,5 +23,5 @@ Route::prefix('memories')->group(function(){
     Route::get('/details/{id}',[App\Http\Controllers\api\MemoriesController::class,'details']);
     Route::get('/specification/list/{type}',[App\Http\Controllers\api\MemoriesController::class,'get_laptop_create_options']);
 
-    Route::get('/images/{id}',[App\Http\Controllers\api\StoragesController::class,'get_all_media']);
+    Route::get('/images/{id}',[App\Http\Controllers\api\MemoriesController::class,'get_all_media']);
 });

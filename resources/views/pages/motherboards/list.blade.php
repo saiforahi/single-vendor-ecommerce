@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-            letter-spacing: 1px;
-            word-spacing: 3px;
-            text-decoration: none**/
+                    letter-spacing: 1px;
+                    word-spacing: 3px;
+                    text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                          transform: translate(-50%, -50%);
-                          */
+                                  transform: translate(-50%, -50%);
+                                  */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,10 +354,10 @@
             }
 
             /*
-                .modal-window div:not(:last-of-type) {
-                  margin-bottom: 15px;
-                }
-                */
+                        .modal-window div:not(:last-of-type) {
+                          margin-bottom: 15px;
+                        }
+                        */
 
         }
 
@@ -1259,95 +1259,460 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/51GC1-pJzWL._SL75_.jpg"
-                                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, ASRock TRX40 CREATOR">
-                                            <div class="stars-rating" title="4.2 out of 5">
-                                                <div class="stars-score" style="width: 84%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
+                            @foreach ($motherboards as $motherboard)
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <?php $images = $motherboard->product->getMedia('main_image'); ?>
+                                                <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                    title="{{ $motherboard->name }}" alt="{{ $motherboard->name }}">
+                                                <div class="stars-rating" title="4.2 out of 5">
+                                                    <div class="stars-score" style="width: 84%">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="stars-scale">
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="{{route("motherboard-details")}}">ASRock
-                                            MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ASRock </div>
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a
+                                                href="{{ route('motherboard-details', ['id' => $motherboard->id]) }}">{{ $motherboard->name }}</a>
                                         </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> TRX40 CREATOR </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Chipset:</div>
-                                            <div class="detail__value f_chipset"> AMD X570 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Form Factor:</div>
-                                            <div class="detail__value f_form_factor"> ATX </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Socket Type:</div>
-                                            <div class="detail__value f_socket_type"> sTRX4 </div>
-                                        </div>
-                                    </span><span class="table_span view-more-184" style="display: none;">
-                                        <div class="detail">
-                                            <div class="detail__name">Memory Slots:</div>
-                                            <div class="detail__value f_ram_quantity"> 8 Slots </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Max Memory Support:</div>
-                                            <div class="detail__value f_max_memory_support"> 256 GB </div>
-                                        </div>
-                                    </span>
-
-                                    <span class="view-more">
-                                        <div class="view-More184" onclick="viewMore(184);"><span
-                                                class="viewMore184">View More Details</span> <i
-                                                class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
-                                </td>
-                                <td class="price">
-                                    $786.86 (Used) </td>
-
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B081JX35ZK?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_184"
-                                        href="javascript:void(0);" onclick="setid(184)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr> 
-                        </tbody>
-                        
-                    </table>
                 </div>
+                <span class="table_span">
+                    <div class="detail">
+                        <div class="detail__name">Brand:</div>
+                        <div class="detail__value f_brand"> ASRock </div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail__name">Model:</div>
+                        <div class="detail__value f_model"> TRX40 CREATOR </div>
+                    </div>
+                </span>
+                <span class="table_span">
+
+                    <div class="detail">
+                        <div class="detail__name">Chipset:</div>
+                        <div class="detail__value f_chipset"> AMD X570 </div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail__name">Form Factor:</div>
+                        <div class="detail__value f_form_factor"> ATX </div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail__name">Socket Type:</div>
+                        <div class="detail__value f_socket_type"> sTRX4 </div>
+                    </div>
+                </span><span class="table_span view-more-184" style="display: none;">
+                    <div class="detail">
+                        <div class="detail__name">Memory Slots:</div>
+                        <div class="detail__value f_ram_quantity"> 8 Slots </div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail__name">Max Memory Support:</div>
+                        <div class="detail__value f_max_memory_support"> 256 GB </div>
+                    </div>
+                </span>
+
+                <span class="view-more">
+                    <div class="view-More184" onclick="viewMore(184);"><span class="viewMore184">View More
+                            Details</span> <i class="fas fa-chevron-circle-down"></i></div>
+                </span>
+                </td>
+                <td class="price">{{ $motherboard->product->price }}</td>
+                <td><a class="btn btn-primary component-btn" href="{{ route('motherboard-details', ['id' => $motherboard->id]) }}"
+                        target="_blank">View Details</a></td>
+                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
+                        href="{{ route('add-motherboard-to-system', ['motherboard_id' => $motherboard->id]) }}"><i
+                            class="fa fa-plus"></i></a>
+                </td>
+                </tr>
+                @endforeach
+
+                </tbody>
+
+                </table>
             </div>
+        </div>
     </section>
 @endsection
+
+@push('script')
+    <script>
+        function f_brand(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("brand");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.remove("c_brand");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.add("c_brand");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.remove("c_brand");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_chipset(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("chipset");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_chipset")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_chipset");
+                        } else {
+                            tr[i].classList.remove("c_chipset");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_chipset")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_chipset");
+                            } else {
+                                tr[i].classList.add("c_chipset");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_chipset")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_chipset");
+                            } else {
+                                tr[i].classList.remove("c_chipset");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_socket_type(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("socket_type");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_socket_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_socket_type");
+                        } else {
+                            tr[i].classList.remove("c_socket_type");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_socket_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_socket_type");
+                            } else {
+                                tr[i].classList.add("c_socket_type");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_socket_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_socket_type");
+                            } else {
+                                tr[i].classList.remove("c_socket_type");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_form_factor(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("form_factor");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_form_factor")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_form_factor");
+                        } else {
+                            tr[i].classList.remove("c_form_factor");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_form_factor")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_form_factor");
+                            } else {
+                                tr[i].classList.add("c_form_factor");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_form_factor")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_form_factor");
+                            } else {
+                                tr[i].classList.remove("c_form_factor");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_ram_quantity(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("ram_quantity");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ram_quantity")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ram_quantity");
+                        } else {
+                            tr[i].classList.remove("c_ram_quantity");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_quantity")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_quantity");
+                            } else {
+                                tr[i].classList.add("c_ram_quantity");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_quantity")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_quantity");
+                            } else {
+                                tr[i].classList.remove("c_ram_quantity");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_max_memory_support(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("max_memory_support");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_max_memory_support")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_max_memory_support");
+                        } else {
+                            tr[i].classList.remove("c_max_memory_support");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_max_memory_support")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_max_memory_support");
+                            } else {
+                                tr[i].classList.add("c_max_memory_support");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_max_memory_support")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_max_memory_support");
+                            } else {
+                                tr[i].classList.remove("c_max_memory_support");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+@endpush

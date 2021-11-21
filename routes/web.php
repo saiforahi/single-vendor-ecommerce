@@ -97,19 +97,13 @@ Route::prefix('cpucoolers')->group(function(){
 });
 
 Route::prefix('motherboard')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.motherboards.list');
-    })->name('motherboard-list');
-    Route::get('/details',function(){ //storage list view
-        return view('pages.motherboards.details');
-    })->name('motherboard-details');
+    Route::get('/list',[App\Http\Controllers\api\MotherBoardsController::class,'show_list'])->name('motherboard-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\MotherBoardsController::class,'show_details'])->name('motherboard-details');
 });
-
 Route::prefix('memory')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\MemoriesController::class,'show_list'])->name('memory-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\MemoriesController::class,'show_details'])->name('memory-details');
 });
-
 
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');

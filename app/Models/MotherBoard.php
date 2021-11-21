@@ -20,7 +20,6 @@ class MotherBoard extends Model implements HasMedia
         'back_panel_specs' => 'array',
         'storage_specs' => 'array',
         'memory_specs' => 'array',
-        'storage_specs' => 'array',
         'internal_specs' => 'array',
         'front_panel_specs' => 'array',
         'audio_specs' => 'array',

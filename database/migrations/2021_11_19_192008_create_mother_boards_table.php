@@ -13,7 +13,7 @@ class CreateMotherBoardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('motherboards', function (Blueprint $table) {
+        Schema::create('mother_boards', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products');
@@ -48,6 +48,6 @@ class CreateMotherBoardsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('motherboards');
+        Schema::dropIfExists('mother_boards');
     }
 }
