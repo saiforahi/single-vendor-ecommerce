@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('storages')->group(function(){
     Route::post('/create',[App\Http\Controllers\api\StoragesController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\StoragesController::class,'get_all']);
-    Route::delete('/delete/{id}',[App\Http\Controllers\api\StoragesController::class,'delete_laptop']);
+    Route::delete('/delete/{id}',[App\Http\Controllers\api\StoragesController::class,'delete']);
     Route::put('/update',[App\Http\Controllers\api\StoragesController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\StoragesController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\StoragesController::class,'details']);

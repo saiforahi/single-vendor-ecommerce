@@ -38,6 +38,10 @@ Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('cache:clear');
     return 'Application cache cleared';
 });
+Route::get('/remember-what-you-are-doing/migrate-refresh-seed', function () {
+    $exitCode = Artisan::call('migrate:refresh --seed');
+    return 'Application migrations refreshed with seeding';
+});
 Route::get('/storage-link', function () {
     $exitCode = Artisan::call('storage:link');
     return 'Application cache cleared';

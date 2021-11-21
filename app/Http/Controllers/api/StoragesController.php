@@ -11,6 +11,23 @@ use App\Events\UploadImageEvent;
 class StoragesController extends Controller
 {
     //
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>Storage::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function delete($id){
+        try{
+            Storage::findOrFail($id)->delete();
+            return response()->json(['success'=>true,'message'=>'Storage has been deleted'],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
     public function create(CreateStorageRequest $req){
         try{
             $new_product = Product::create($req->only('price'));
