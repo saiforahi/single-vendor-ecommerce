@@ -1153,6 +1153,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($graphics as $graphic)
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -1185,10 +1186,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route("graphics-card-details")}}">MSI
-                                            Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere
-                                            Architecture OC
-                                            Graphics Card (RTX 3090 GAMING X TRIO 24G)</a></div>
+                                        href="{{ route('graphics-cards-details', ['id' => $graphic->id]) }}">{{ $graphic->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
@@ -1252,6 +1250,8 @@
                                         href="javascript:void(0);" onclick="setid(108)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>  
+                            @endforeach
+                             
                         </tbody>
                         
                     </table>

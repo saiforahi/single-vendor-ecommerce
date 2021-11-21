@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                letter-spacing: 1px;
-                word-spacing: 3px;
-                text-decoration: none**/
+                    letter-spacing: 1px;
+                    word-spacing: 3px;
+                    text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                              transform: translate(-50%, -50%);
-                              */
+                                  transform: translate(-50%, -50%);
+                                  */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,10 +354,10 @@
             }
 
             /*
-                    .modal-window div:not(:last-of-type) {
-                      margin-bottom: 15px;
-                    }
-                    */
+                        .modal-window div:not(:last-of-type) {
+                          margin-bottom: 15px;
+                        }
+                        */
 
         }
 
@@ -536,7 +536,7 @@
                             }
 
                         </style>
-                        
+
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -608,7 +608,7 @@
                             }
 
                         </style>
-                        
+
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -738,7 +738,7 @@
                             }
 
                         </style>
-                        
+
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -870,7 +870,7 @@
                             }
 
                         </style>
-                        
+
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading5">
@@ -902,7 +902,7 @@
                             }
 
                         </style>
-                        
+
                         <div class="card-group" id="accordion6" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading6">
@@ -1002,7 +1002,7 @@
                             }
 
                         </style>
-                        
+
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1081,97 +1081,102 @@
                         </thead>
                         <tbody>
                             @foreach ($memories as $memory)
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <?php $images = $memory->product->getMedia('main_image'); ?>
-                                            <img src="{{count($images)>0?$images[0]->getUrl('main_image'):asset('images/dummy-thumbnail')}}" class="img-responsive lazy img-fluid"
-                                                data-src="{{count($images)>0?$images[0]->getUrl('main_image'):asset('images/dummy-thumbnail')}}"
-                                                title="{{$memory->name}}"
-                                                alt="{{$memory->name}}">
-                                            
-                                            <div class="stars-rating" title="5.0 out of 5">
-                                                <div class="stars-score" style="width: 100%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <?php $images = $memory->product->getMedia('main_image'); ?>
+                                                <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    title="{{ $memory->name }}" alt="{{ $memory->name }}">
+
+                                                <div class="stars-rating" title="5.0 out of 5">
+                                                    <div class="stars-score" style="width: 100%">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="stars-scale">
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="{{route('memory-details',['id'=>$memory->id])}}">{{$memory->name}}</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> G.Skill </div>
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a
+                                                href="{{ route('memory-details', ['id' => $memory->id]) }}">{{ $memory->name }}</a>
                                         </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Trident Z Royal </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
+                                        <span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Brand:</div>
+                                                <div class="detail__value f_brand"> G.Skill </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Model:</div>
+                                                <div class="detail__value f_model"> Trident Z Royal </div>
+                                            </div>
+                                        </span>
+                                        <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">RAM Size:</div>
-                                            <div class="detail__value f_ram">{{json_decode($memory->memory_specs,true)['ram_size']==null?'':json_decode($memory->memory_specs,true)['ram_size']}}</div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Quantity:</div>
-                                            <div class="detail__value f_ram_quantity"> 2 x 8 GB </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">RAM Type:</div>
-                                            <div class="detail__value f_ram_type"> DDR4 </div>
-                                        </div>
-                                    </span><span class="table_span view-more-185" style="display: none;">
-                                        <div class="detail">
-                                            <div class="detail__name">RAM Speed:</div>
-                                            <div class="detail__value f_ram_speed"> 4800 MHz </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">DIMM Type:</div>
-                                            <div class="detail__value f_dimm_type"> 288-Pin </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">CAS Latency:</div>
-                                            <div class="detail__value f_cas_latency"> CL18 </div>
-                                        </div>
-                                    </span>
+                                            <div class="detail">
+                                                <div class="detail__name">RAM Size:</div>
+                                                <div class="detail__value f_ram">
+                                                    {{ json_decode($memory->memory_specs, true)['ram_size'] == null ? '' : json_decode($memory->memory_specs, true)['ram_size'] }}
+                                                </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Quantity:</div>
+                                                <div class="detail__value f_ram_quantity"> 2 x 8 GB </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">RAM Type:</div>
+                                                <div class="detail__value f_ram_type"> DDR4 </div>
+                                            </div>
+                                        </span><span class="table_span view-more-185" style="display: none;">
+                                            <div class="detail">
+                                                <div class="detail__name">RAM Speed:</div>
+                                                <div class="detail__value f_ram_speed"> 4800 MHz </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">DIMM Type:</div>
+                                                <div class="detail__value f_dimm_type"> 288-Pin </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">CAS Latency:</div>
+                                                <div class="detail__value f_cas_latency"> CL18 </div>
+                                            </div>
+                                        </span>
 
-                                    <span class="view-more">
-                                        <div class="view-More185" onclick="viewMore(185);"><span
-                                                class="viewMore185">View More Details</span> <i
-                                                class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
-                                </td>
-                                <td class="price">{{$memory->product->price}}</td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="{{route('memory-details',['id'=>$memory->id])}}" target="_blank">View Details</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
-                                    href="{{route('add-memory-to-system',['memory_id'=>$memory->id])}}"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
+                                        <span class="view-more">
+                                            <div class="view-More185" onclick="viewMore(185);"><span
+                                                    class="viewMore185">View More Details</span> <i
+                                                    class="fas fa-chevron-circle-down"></i></div>
+                                        </span>
+                                    </td>
+                                    <td class="price">{{ $memory->product->price }}</td>
+                                    <td><a class="btn btn-primary component-btn"
+                                            href="{{ route('memory-details', ['id' => $memory->id]) }}" target="_blank">View
+                                            Details</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
+                                            href="{{ route('add-memory-to-system', ['memory_id' => $memory->id]) }}"><i
+                                                class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
                             @endforeach
-                             
+
                         </tbody>
-                        
+
                     </table>
                 </div>
             </div>
@@ -1179,50 +1184,22 @@
 @endsection
 
 @push('script')
-<script>
-    function f_cas_latency(id) {
+    <script>
+        function f_cas_latency(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("cas_latency");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_cas_latency")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_cas_latency");
-                    } else {
-                        tr[i].classList.remove("c_cas_latency");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_cas_latency")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_cas_latency");
-                        } else {
-                            tr[i].classList.add("c_cas_latency");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("cas_latency");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1235,41 +1212,54 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script>
-<script>
-    function f_brand(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("brand");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_brand")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_brand");
-                    } else {
-                        tr[i].classList.remove("c_brand");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_cas_latency")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_cas_latency");
+                            } else {
+                                tr[i].classList.add("c_cas_latency");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_cas_latency")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_cas_latency");
+                            } else {
+                                tr[i].classList.remove("c_cas_latency");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script>
+        function f_brand(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("brand");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1278,71 +1268,58 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_brand");
                         } else {
-                            tr[i].classList.add("c_brand");
+                            tr[i].classList.remove("c_brand");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_brand")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_brand");
-                        } else {
-                            tr[i].classList.remove("c_brand");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.add("c_brand");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.remove("c_brand");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
-<script>
-    function f_ram(id) {
+    </script>
+    <script>
+        function f_ram(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("ram");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_ram")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_ram");
-                    } else {
-                        tr[i].classList.remove("c_ram");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_ram")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_ram");
-                        } else {
-                            tr[i].classList.add("c_ram");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("ram");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1355,41 +1332,54 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script>
-<script>
-    function f_ram_quantity(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("ram_quantity");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_ram_quantity")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_ram_quantity");
-                    } else {
-                        tr[i].classList.remove("c_ram_quantity");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram");
+                            } else {
+                                tr[i].classList.add("c_ram");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram");
+                            } else {
+                                tr[i].classList.remove("c_ram");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script>
+        function f_ram_quantity(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("ram_quantity");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1398,71 +1388,58 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_ram_quantity");
                         } else {
-                            tr[i].classList.add("c_ram_quantity");
+                            tr[i].classList.remove("c_ram_quantity");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_ram_quantity")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_ram_quantity");
-                        } else {
-                            tr[i].classList.remove("c_ram_quantity");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_quantity")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_quantity");
+                            } else {
+                                tr[i].classList.add("c_ram_quantity");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_quantity")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_quantity");
+                            } else {
+                                tr[i].classList.remove("c_ram_quantity");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
-<script>
-    function f_ram_speed(id) {
+    </script>
+    <script>
+        function f_ram_speed(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("ram_speed");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_ram_speed")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_ram_speed");
-                    } else {
-                        tr[i].classList.remove("c_ram_speed");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_ram_speed")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_ram_speed");
-                        } else {
-                            tr[i].classList.add("c_ram_speed");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("ram_speed");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1475,41 +1452,54 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script>
-<script>
-    function f_ram_type(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("ram_type");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_ram_type")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_ram_type");
-                    } else {
-                        tr[i].classList.remove("c_ram_type");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_speed")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_speed");
+                            } else {
+                                tr[i].classList.add("c_ram_speed");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_speed")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_speed");
+                            } else {
+                                tr[i].classList.remove("c_ram_speed");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script>
+        function f_ram_type(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("ram_type");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1518,25 +1508,40 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_ram_type");
                         } else {
-                            tr[i].classList.add("c_ram_type");
+                            tr[i].classList.remove("c_ram_type");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_ram_type")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_ram_type");
-                        } else {
-                            tr[i].classList.remove("c_ram_type");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_type");
+                            } else {
+                                tr[i].classList.add("c_ram_type");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ram_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ram_type");
+                            } else {
+                                tr[i].classList.remove("c_ram_type");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
+    </script>
 @endpush

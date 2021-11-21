@@ -28,3 +28,5 @@ require __DIR__.'/graphics.php';
 require __DIR__.'/storages.php';
 require __DIR__.'/system-builder.php';
 require __DIR__.'/memories.php';
+require __DIR__.'/powersupplies.php';
+require __DIR__.'/motherboards.php';

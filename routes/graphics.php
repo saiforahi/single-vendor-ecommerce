@@ -15,15 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('graphics')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\LaptopController::class,'create']);
-    Route::get('/all',[App\Http\Controllers\api\LaptopController::class,'get_all']);
-    Route::delete('/delete/{id}',[App\Http\Controllers\api\LaptopController::class,'delete_laptop']);
-    Route::put('/update',[App\Http\Controllers\api\LaptopController::class,'update']);
-    Route::post('/image/update',[App\Http\Controllers\api\LaptopController::class,'update_image']);
-    Route::get('/details/{id}',[App\Http\Controllers\api\LaptopController::class,'details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\LaptopController::class,'get_laptop_create_options']);
+    Route::post('/create',[App\Http\Controllers\api\ProductController::class,'create']);
+    Route::get('/all',[App\Http\Controllers\api\GraphicsController::class,'get_all']);
+    Route::delete('/delete/{id}',[App\Http\Controllers\api\GraphicsController::class,'delete_laptop']);
+    Route::put('/update',[App\Http\Controllers\api\GraphicsController::class,'update']);
+    Route::post('/image/update',[App\Http\Controllers\api\GraphicsController::class,'update_image']);
+    Route::get('/details/{id}',[App\Http\Controllers\api\GraphicsController::class,'details']);
+    Route::get('/specification/list/{type}',[App\Http\Controllers\api\GraphicsController::class,'get_laptop_create_options']);
 
-    Route::get('/images/{id}',[App\Http\Controllers\api\LaptopController::class,'get_all_media']);
+    Route::get('/images/{id}',[App\Http\Controllers\api\GraphicsController::class,'get_all_media']);
 
     
 });

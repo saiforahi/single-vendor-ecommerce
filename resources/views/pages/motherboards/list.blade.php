@@ -1268,9 +1268,9 @@
                                         <div class="logo-name">
                                             <div class="item-logo">
                                                 <?php $images = $motherboard->product->getMedia('main_image'); ?>
-                                                <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
-                                                    data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                    data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     title="{{ $motherboard->name }}" alt="{{ $motherboard->name }}">
                                                 <div class="stars-rating" title="4.2 out of 5">
                                                     <div class="stars-score" style="width: 84%">
@@ -1339,16 +1339,17 @@
                 <td class="price">{{ $motherboard->product->price }}</td>
                 <td><a class="btn btn-primary component-btn" href="{{ route('motherboard-details', ['id' => $motherboard->id]) }}"
                         target="_blank">View Details</a></td>
-                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
+                {{-- <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
                         href="{{ route('add-motherboard-to-system', ['motherboard_id' => $motherboard->id]) }}"><i
                             class="fa fa-plus"></i></a>
-                </td>
+                </td> --}}
                 </tr>
                 @endforeach
 
                 </tbody>
 
                 </table>
+
             </div>
         </div>
     </section>

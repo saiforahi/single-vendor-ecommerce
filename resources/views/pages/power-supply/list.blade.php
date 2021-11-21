@@ -1304,6 +1304,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($power_supplies as $powersupply)
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -1311,8 +1312,9 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/51EkSdu6J-L._SL75_.jpg"
+                                            <?php $images = $powersupply->product->getMedia('main_image'); ?>
+                                            <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}" class="img-responsive lazy img-fluid"
+                                                data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                 title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
                                                 alt="pc builder, custom pc builder, pc part picker, build my pc, Corsair RM750">
                                             <div class="stars-rating" title="4.6 out of 5">
@@ -1335,7 +1337,7 @@
                                     </div>
                                 </td>
                                 <td class="comp-details">
-                                    <div class="table_title"><a href="{{ route('power-supply-details') }}">Corsair
+                                    <div class="table_title"><a href="{{ route('power-supply-details',['id'=>$powersupply->id]) }}">Corsair
                                             RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply</a></div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -1373,6 +1375,7 @@
                                         href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
 
                     </table>

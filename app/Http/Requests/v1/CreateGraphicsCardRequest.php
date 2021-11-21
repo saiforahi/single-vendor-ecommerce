@@ -4,7 +4,7 @@ namespace App\Http\Requests\v1;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateMotherBoardRequest extends FormRequest
+class CreateGraphicsCardRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,17 +30,10 @@ class CreateMotherBoardRequest extends FormRequest
             'price'=> 'required|numeric',
             'total_images'=>'sometimes|nullable',
             'slug_name'=>'sometimes|nullable',
-            'product_specs'=>'sometimes|nullable|json',
-            'back_panel_specs'=>'sometimes|nullable|json',
-            'storage_specs'=>'sometimes|nullable|json',
-            'memory_specs'=>'sometimes|nullable|json',
-            'internal_specs'=>'sometimes|nullable|json',
-            'front_panel_specs'=>'sometimes|nullable|json',
-            'audio_specs'=>'sometimes|nullable|json',
-            'wireless_specs'=>'sometimes|nullable|json',
-            'software_specs'=>'sometimes|nullable|json',
-            'physical_specs'=>'sometimes|nullable|json',
-            'packaging_specs'=>'sometimes|nullable|json'
+            'general_specs'=>'sometimes|nullable|json',
+            'clock_specs'=>'sometimes|nullable|json',
+            'additional_specs'=>'sometimes|nullable|json'
+            
         ];
     }
 }

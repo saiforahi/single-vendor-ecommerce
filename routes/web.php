@@ -63,9 +63,7 @@ Route::prefix('storages')->group(function(){
     Route::get('/details/{id}',[App\Http\Controllers\api\StoragesController::class,'show_details'])->name('storage-details');
 });
 Route::prefix('graphics')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.graphics-cards.list');
-    })->name('graphics-card-list');
+    Route::get('/list',[App\Http\Controllers\api\GraphicsController::class,'show_list'])->name('graphics-card-list');
     Route::get('/details/{id}',function(){ //storage list view
         return view('pages.graphics-cards.details');
     })->name('graphics-card-details');
@@ -75,13 +73,10 @@ Route::prefix('processors')->group(function(){
     Route::get('/details/{id}',[App\Http\Controllers\api\ProcessorsController::class,'show_details'])->name('processor-details');
 });
 Route::prefix('powersupply')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.power-supply.list');
-    })->name('power-supply-list');
-    Route::get('/details',function(){ //storage list view
-        return view('pages.power-supply.details');
-    })->name('power-supply-details');
+    Route::get('/list',[App\Http\Controllers\api\PowerSupplyController::class,'show_list'])->name('power-supply-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\PowerSupplyController::class,'show_details'])->name('power-supply-details');
 });
+
 
 Route::prefix('cases')->group(function(){
     Route::get('/list',function(){ //storage list view

@@ -4,7 +4,7 @@ namespace App\Http\Requests\v1;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateMemoryRequest extends FormRequest
+class CreatePowerSupplyRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,10 +28,12 @@ class CreateMemoryRequest extends FormRequest
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
-            'general_specs'=>'sometimes|nullable|json',
-            'memory_specs'=>'sometimes|nullable|json',
-            'slug_name'=>'sometimes|nullable|json',
-            'total_images'=>'sometimes|nullable'
+            
+            'total_images'=>'sometimes|nullable',
+            'slug_name'=>'|nullable',
+
+            'specifications'=>'sometimes|nullable|json',
+            
         ];
     }
 }

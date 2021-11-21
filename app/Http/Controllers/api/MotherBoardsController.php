@@ -35,6 +35,7 @@ class MotherBoardsController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
+    
     public function show_list(){
         // $brands = DB::table('processors')
         // ->select('id','name', 'brand')
