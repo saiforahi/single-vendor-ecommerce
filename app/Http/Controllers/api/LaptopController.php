@@ -19,7 +19,7 @@ class LaptopController extends Controller
     public function create(CreateLaptopRequest $req){
         try{
             $new_product = Product::create($req->only('price'));
-            $new_laptop = Laptop::create($req->only('name','specifications','price'));
+            $new_laptop = Laptop::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
@@ -89,9 +89,16 @@ class LaptopController extends Controller
     public function get_laptop_create_options($type){
         try{
             $list = array();
-            foreach( Laptop::all() as $laptop ){
-                if(isset(json_decode($laptop->specifications,true)[$type])){
-                    array_push($list,json_decode($laptop->specifications,true)[$type]);
+            if($type == 'brand'){
+                $list = Laptop::select('brand')->distinct()->get('brand');
+            }
+            else if($type=='model'){
+                $list = Laptop::select('model')->distinct()->get('model');
+            }else{
+                foreach( Laptop::all() as $laptop ){
+                    if(isset(json_decode($laptop->specifications,true)[$type])){
+                        array_push($list,json_decode($laptop->specifications,true)[$type]);
+                    }
                 }
             }
             return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);

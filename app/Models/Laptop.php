@@ -13,7 +13,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Laptop extends Model implements HasMedia
 {
     use HasFactory,InteractsWithMedia,SoftDeletes;
-    protected $fillable=['product_id','brand_id','name','specifications','features','price'];
+    protected $fillable=['product_id','brand','model','name','specifications','features'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
@@ -37,5 +37,8 @@ class Laptop extends Model implements HasMedia
             ->useDisk('public')
             ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])
             ->withResponsiveImages();
+    }
+    public function product(){
+        return $this->belongsTo(Product::class,'product_id','id');
     }
 }
