@@ -90,10 +90,10 @@ class LaptopController extends Controller
         try{
             $list = array();
             if($type == 'brand'){
-                $list = Laptop::select('brand')->distinct()->get('brand');
+                $list = Laptop::select('brand')->distinct()->get('brand')->toArray();
             }
             else if($type=='model'){
-                $list = Laptop::select('model')->distinct()->get('model');
+                $list = Laptop::select('model')->distinct()->get('model')->toArray();
             }else{
                 foreach( Laptop::all() as $laptop ){
                     if(isset(json_decode($laptop->specifications,true)[$type])){

@@ -363,7 +363,7 @@
                                         <h3>
                                             <img style="width:30px; height:30px" class="lazy"
                                                 data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg" />
-                                            ৳ {{ $item->price }}
+                                            ৳ {{ $item->product->price }}
                                         </h3>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
