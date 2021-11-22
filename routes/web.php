@@ -94,6 +94,10 @@ Route::prefix('memory')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\MemoriesController::class,'show_list'])->name('memory-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\MemoriesController::class,'show_details'])->name('memory-details');
 });
+Route::prefix('monitor')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\MonitorsController::class,'show_list'])->name('monitor-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\MonitorsController::class,'show_details'])->name('monitor-details');
+});
 
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');

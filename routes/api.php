@@ -32,3 +32,4 @@ require __DIR__.'/powersupplies.php';
 require __DIR__.'/motherboards.php';
 require __DIR__.'/cases.php';
 require __DIR__.'/cpucoolers.php';
+require __DIR__.'/monitors.php';

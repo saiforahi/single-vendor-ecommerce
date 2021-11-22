@@ -4,8 +4,45 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-class Monitor extends Model
+use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
+class MotherBoard extends Model implements HasMedia
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMedia, SoftDeletes;
+    protected $fillable=['product_id','brand','model','name','slug_name','product_specs'];
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d h:i:s A',
+        'updated_at' => 'datetime:Y-m-d h:i:s A',
+        'deleted_at' => 'datetime:Y-m-d h:i:s A',
+        
+    ];
+    public function registerMediaConversions(Media $media = null): void
+    {
+        $this->addMediaConversion('main_image')
+              ->width(247)
+              ->height(300)
+              ->sharpen(10)
+              ->queued();
+        
+        $this->addMediaConversion('thumb')
+        ->width(74)
+        ->height(62)
+        ->sharpen(10)
+        ->queued();
+    }
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('thumb')->useDisk('public')->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])->withResponsiveImages();
+        $this
+            ->addMediaCollection('main_image')
+            ->useDisk('public')
+            ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])
+            ->withResponsiveImages();
+    }
+
+    public function product(){
+        return $this->belongsTo(Product::class,'product_id','id');
+    }
 }
