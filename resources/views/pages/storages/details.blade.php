@@ -256,8 +256,8 @@
     <section class="pcb-breadcrumb">
         <h2>{{ $storage->name }}</h2>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/storage/index.html">Storage</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Samsung 970 EVO</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('storage-list')}}">Storage</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('storage-details',['id'=>$storage->id])}}">Samsung 970 EVO</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -293,22 +293,22 @@
                 <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">Storage</span>
-                        <div class="level2"><span class="key">Drive Capacity</span> : <span>1.0 TB</span>
+                        <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ json_decode($storage->storage_specs, true)['drive_capacity'] == null ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
                         </div>
                     </div>
                     <div class="level1"><span class="title">Performance</span>
-                        <div class="level2"><span class="key">Interface</span> : <span>PCIe 3.0 x4</span>
+                        <div class="level2"><span class="key">Interface</span> : <span>{{ json_decode($storage->performance_specs, true)['interface'] == null ? '' : json_decode($storage->performance_specs, true)['interface'] }}</span>
                         </div>
                         <div class="level2"><span class="key">Sequential Read Speed</span> :
-                            <span>3400 MB/s</span>
+                            <span>{{ json_decode($storage->performance_specs, true)['write_speed'] == null ? '' : json_decode($storage->performance_specs, true)['write_speed'] }}</span>
                         </div>
                         <div class="level2"><span class="key">Sequential Write Speed</span> :
-                            <span>2500 MB/s</span>
+                            <span>{{ json_decode($storage->performance_specs, true)['read_speed'] == null ? '' : json_decode($storage->performance_specs, true)['read_speed'] }}</span>
                         </div>
                     </div>
                     <div class="level1"><span class="title">Physical</span>
-                        <div class="level2"><span class="key">Drive Type</span> : <span>SSD</span></div>
-                        <div class="level2"><span class="key">Form Factor</span> : <span>M.2 2280</span>
+                        <div class="level2"><span class="key">Drive Type</span> : <span>{{ json_decode($storage->physical_specs, true)['drive_type'] == null ? '' : json_decode($storage->physical_specs, true)['drive_type'] }}</span></div>
+                        <div class="level2"><span class="key">Form Factor</span> : <span>{{ json_decode($storage->physical_specs, true)['form_factor'] == null ? '' : json_decode($storage->physical_specs, true)['form_factor'] }}</span>
                         </div>
                     </div>
                     <div class="level1"><span class="title">SSD Specs</span>
@@ -323,9 +323,7 @@
                         </div>
                     </div>
                     <div class="level1"><span class="title">Reliability / Data Integrity</span>
-                        <div class="level2"><span class="key">Encryption</span> : <span>256-Bit AES
-                                Hardware
-                                Encryption</span></div>
+                        <div class="level2"><span class="key">Encryption</span> : <span>{{ json_decode($storage->reliability_specs, true)['encryption'] == null ? '' : json_decode($storage->reliability_specs, true)['encryption'] }}</span></div>
                     </div>
                     <div class="level1"><span class="title">Packaging Info</span>
                         <div class="level2"><span class="key">Package Weight</span> : <span>0.185
@@ -344,8 +342,7 @@
 
             </style>
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>Samsung EVO 970 1TB PCIe Gen3 x4 NVMe M.2-2280 Internal Solid State Drive with V-NAND Technology &
-                    1024MB Cache</h1>
+                <h1>{{$storage->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.9 out of 5">
                         <div class="stars-score" style="width: 98%">
@@ -409,7 +406,7 @@
                         }
 
                     </style>
-                    <div class="budget-price">$179.99</div>
+                    <div class="budget-price">${{$storage->product->price}}</div>
 
                     <div class="align-button">
                         <a href="javascript:void(0);" onclick="setid('storage',1)" class="btn btn-primary btn2 "><i
@@ -422,7 +419,7 @@
             <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">Storage</span>
-                    <div class="level2"><span class="key">Drive Capacity</span> : <span>1.0 TB</span>
+                    <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ json_decode($storage->storage_specs, true)['drive_capacity'] == null ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
                     </div>
                 </div>
                 <div class="level1"><span class="title">Performance</span>

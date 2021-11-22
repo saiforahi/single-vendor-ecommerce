@@ -65,4 +65,68 @@ class StoragesController extends Controller
     public function show_details($id){
         return view('pages.storages.details')->with('storage',Storage::findOrFail($id));
     }
+
+    public function get_storage_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'storage':
+                    foreach( Storage::all() as $storage ){
+                        if(isset(json_decode($storage->storage_specs,true)[$child])){
+                            array_push($list,json_decode($storage->storage_specs,true)[$child]);
+                        }
+                    }
+                    break;
+                
+                case 'performance':
+                    foreach( Storage::all() as $storage ){
+                        if(isset(json_decode($storage->performance_specs,true)[$child])){
+                            array_push($list,json_decode($storage->performance_specs,true)[$child]);
+                        }
+                    }
+                    break;
+                
+                case 'physical':
+                    foreach( Storage::all() as $storage ){
+                        if(isset(json_decode($storage->physical_specs,true)[$child])){
+                            array_push($list,json_decode($storage->physical_specs,true)[$child]);
+                        }
+                    }
+                    break;
+
+                case 'ssd':
+                    foreach( Storage::all() as $storage ){
+                        if(isset(json_decode($storage->ssd_specs,true)[$child])){
+                            array_push($list,json_decode($storage->ssd_specs,true)[$child]);
+                        }
+                    }
+                    break;
+
+                case 'reliability':
+                    foreach( Storage::all() as $storage ){
+                        if(isset(json_decode($storage->reliability_specs,true)[$child])){
+                            array_push($list,json_decode($storage->reliability_specs,true)[$child]);
+                        }
+                    }
+                    break;
+                
+                case 'brand':
+                    foreach( Storage::all() as $storage ){
+                        array_push($list,$storage->brand);
+                    }
+                    break;
+
+                case 'model':
+                    foreach( Storage::all() as $storage ){
+                        array_push($list,$storage->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }
