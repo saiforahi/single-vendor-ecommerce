@@ -1424,6 +1424,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($cases as $case)
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -1431,10 +1432,11 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41m2uJiS03L._SL75_.jpg"
-                                                title="NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, NZXT H510B-W1">
+                                            <?php $images = $case->product->getMedia('main_image'); ?>
+                                            <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                class="img-responsive lazy img-fluid"
+                                                data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                title="{{ $memory->name }}" alt="{{ $memory->name }}">
                                             <div class="stars-rating" title="4.7 out of 5">
                                                 <div class="stars-score" style="width: 94%">
                                                     <i class="fas fa-star"></i>
@@ -1495,7 +1497,9 @@
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
                                         href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
                                 </td>
-                            </tr> 
+                            </tr>   
+                            @endforeach
+                            
                         </tbody>
                         
                     </table>

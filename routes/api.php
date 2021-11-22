@@ -30,3 +30,5 @@ require __DIR__.'/system-builder.php';
 require __DIR__.'/memories.php';
 require __DIR__.'/powersupplies.php';
 require __DIR__.'/motherboards.php';
+require __DIR__.'/cases.php';
+require __DIR__.'/cpucoolers.php';
