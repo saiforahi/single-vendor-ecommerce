@@ -9,6 +9,7 @@ class SystemBuilder
     private $processor = '';
     private $storage = '';
     private $memory = '';
+    private $cooler = '';
     public function set_processor($processor_id){
         $this->processor = $processor_id;
     }

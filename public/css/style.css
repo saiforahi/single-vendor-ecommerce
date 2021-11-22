@@ -3366,3 +3366,17 @@ a.btn.btn-mdb-color.btn-sm {
           }
 
       }
+
+      .level2:before {
+        content: "";
+        background: url(../../../assets/images/arrow5e1f.svg?v=2) no-repeat 0 0;
+        display: inline-block;
+        margin-right: 5px;
+        background-size: 100%;
+        margin-left: -18px;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 11px;
+        left: 16px;
+    }

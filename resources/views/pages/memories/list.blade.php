@@ -1132,7 +1132,7 @@
                                             <div class="detail">
                                                 <div class="detail__name">RAM Size:</div>
                                                 <div class="detail__value f_ram">
-                                                    {{ json_decode($memory->memory_specs, true)['ram_size'] == null ? '' : json_decode($memory->memory_specs, true)['ram_size'] }}
+                                                    {{ json_decode($memory->memory_specs, true)['memory'] == null ? '' : json_decode($memory->memory_specs, true)['memory'] }}
                                                 </div>
                                             </div>
                                             <div class="detail">
