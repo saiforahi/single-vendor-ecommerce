@@ -359,6 +359,42 @@
         }
 
     </style>
+    <style>
+        .c_storage_type {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_capacity {
+            display: none !important;
+        }
+
+    </style>
+      <style>
+        .c_form_factor {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_rpm {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_interface {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_cache_memory {
+            display: none !important;
+        }
+
+    </style>
 @endpush
 @section('content')
     <section class="pcb-breadcrumb">
@@ -447,72 +483,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_storage_type {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_storage_type(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("storage_type");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_storage_type")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_storage_type");
-                                            } else {
-                                                tr[i].classList.remove("c_storage_type");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_storage_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_storage_type");
-                                                } else {
-                                                    tr[i].classList.add("c_storage_type");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_storage_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_storage_type");
-                                                } else {
-                                                    tr[i].classList.remove("c_storage_type");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                       
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -779,72 +751,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_capacity {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_capacity(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("capacity");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_capacity")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_capacity");
-                                            } else {
-                                                tr[i].classList.remove("c_capacity");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_capacity")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_capacity");
-                                                } else {
-                                                    tr[i].classList.add("c_capacity");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_capacity")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_capacity");
-                                                } else {
-                                                    tr[i].classList.remove("c_capacity");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -909,72 +817,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_form_factor {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_form_factor(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("form_factor");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_form_factor")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_form_factor");
-                                            } else {
-                                                tr[i].classList.remove("c_form_factor");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_form_factor")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_form_factor");
-                                                } else {
-                                                    tr[i].classList.add("c_form_factor");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_form_factor")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_form_factor");
-                                                } else {
-                                                    tr[i].classList.remove("c_form_factor");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                      
+                        
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading5">
@@ -1033,72 +877,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_rpm {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_rpm(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("rpm");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_rpm")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_rpm");
-                                            } else {
-                                                tr[i].classList.remove("c_rpm");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_rpm")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_rpm");
-                                                } else {
-                                                    tr[i].classList.add("c_rpm");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_rpm")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_rpm");
-                                                } else {
-                                                    tr[i].classList.remove("c_rpm");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="card-group" id="accordion6" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading6">
@@ -1185,72 +965,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_interface {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_interface(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("interface");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_interface")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_interface");
-                                            } else {
-                                                tr[i].classList.remove("c_interface");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_interface")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_interface");
-                                                } else {
-                                                    tr[i].classList.add("c_interface");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_interface")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_interface");
-                                                } else {
-                                                    tr[i].classList.remove("c_interface");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="card-group" id="accordion7" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading7">
@@ -1345,72 +1061,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_cache_memory {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_cache_memory(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("cache_memory");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_cache_memory")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_cache_memory");
-                                            } else {
-                                                tr[i].classList.remove("c_cache_memory");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cache_memory")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cache_memory");
-                                                } else {
-                                                    tr[i].classList.add("c_cache_memory");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cache_memory")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cache_memory");
-                                                } else {
-                                                    tr[i].classList.remove("c_cache_memory");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1639,6 +1291,366 @@
                             tr[i].classList.remove("c_brand");
                         } else {
                             tr[i].classList.remove("c_brand");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_capacity(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("capacity");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_capacity")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_capacity");
+                    } else {
+                        tr[i].classList.remove("c_capacity");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_capacity")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_capacity");
+                        } else {
+                            tr[i].classList.add("c_capacity");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_capacity")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_capacity");
+                        } else {
+                            tr[i].classList.remove("c_capacity");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_storage_type(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("storage_type");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_storage_type")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_storage_type");
+                    } else {
+                        tr[i].classList.remove("c_storage_type");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_storage_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_storage_type");
+                        } else {
+                            tr[i].classList.add("c_storage_type");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_storage_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_storage_type");
+                        } else {
+                            tr[i].classList.remove("c_storage_type");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_form_factor(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("form_factor");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_form_factor")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_form_factor");
+                    } else {
+                        tr[i].classList.remove("c_form_factor");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_form_factor")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_form_factor");
+                        } else {
+                            tr[i].classList.add("c_form_factor");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_form_factor")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_form_factor");
+                        } else {
+                            tr[i].classList.remove("c_form_factor");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_rpm(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("rpm");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_rpm")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_rpm");
+                    } else {
+                        tr[i].classList.remove("c_rpm");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_rpm")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_rpm");
+                        } else {
+                            tr[i].classList.add("c_rpm");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_rpm")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_rpm");
+                        } else {
+                            tr[i].classList.remove("c_rpm");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_interface(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("interface");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_interface")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_interface");
+                    } else {
+                        tr[i].classList.remove("c_interface");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_interface")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_interface");
+                        } else {
+                            tr[i].classList.add("c_interface");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_interface")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_interface");
+                        } else {
+                            tr[i].classList.remove("c_interface");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_cache_memory(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("cache_memory");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_cache_memory")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_cache_memory");
+                    } else {
+                        tr[i].classList.remove("c_cache_memory");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_cache_memory")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_cache_memory");
+                        } else {
+                            tr[i].classList.add("c_cache_memory");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_cache_memory")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_cache_memory");
+                        } else {
+                            tr[i].classList.remove("c_cache_memory");
                         }
                     }
                 }

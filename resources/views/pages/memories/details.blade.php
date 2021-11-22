@@ -379,10 +379,7 @@
                         <li><span>This DDR4 RAM comes with CL18 CAS latency at 1.35V tested voltage.</span></li>
                     </ul>
 
-                    <style>
-
-
-                    </style>
+                   
                     <div class="budget-price">৳{{$memory->product->price}}</div>
                     <div class="align-button">
                         <a href="javascript:void(0);" onclick="setid('ram',185)" class="btn btn-primary btn2 "><i

@@ -362,6 +362,36 @@
         }
 
     </style>
+    <style>
+        .c_brand {
+            display: none !important;
+        }
+
+    </style>
+     <style>
+        .c_power {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_color {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_efficiency {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_form_factor {
+            display: none !important;
+        }
+
+    </style>
 @endpush
 
 @section('content')
@@ -592,72 +622,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_brand {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_brand(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("brand");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_brand")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_brand");
-                                            } else {
-                                                tr[i].classList.remove("c_brand");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.add("c_brand");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.remove("c_brand");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                       
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -799,72 +765,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_power {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_power(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("power");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_power")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_power");
-                                            } else {
-                                                tr[i].classList.remove("c_power");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_power")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_power");
-                                                } else {
-                                                    tr[i].classList.add("c_power");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_power")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_power");
-                                                } else {
-                                                    tr[i].classList.remove("c_power");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                       
+                        
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -938,72 +840,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_color {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_color(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("color");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_color")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_color");
-                                            } else {
-                                                tr[i].classList.remove("c_color");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_color")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_color");
-                                                } else {
-                                                    tr[i].classList.add("c_color");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_color")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_color");
-                                                } else {
-                                                    tr[i].classList.remove("c_color");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -1052,72 +890,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_efficiency {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_efficiency(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("efficiency");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_efficiency")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_efficiency");
-                                            } else {
-                                                tr[i].classList.remove("c_efficiency");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_efficiency")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_efficiency");
-                                                } else {
-                                                    tr[i].classList.add("c_efficiency");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_efficiency")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_efficiency");
-                                                } else {
-                                                    tr[i].classList.remove("c_efficiency");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                       
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading5">
@@ -1161,72 +935,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_form_factor {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_form_factor(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("form_factor");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_form_factor")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_form_factor");
-                                            } else {
-                                                tr[i].classList.remove("c_form_factor");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_form_factor")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_form_factor");
-                                                } else {
-                                                    tr[i].classList.add("c_form_factor");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_form_factor")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_form_factor");
-                                                } else {
-                                                    tr[i].classList.remove("c_form_factor");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1383,3 +1093,306 @@
             </div>
     </section>
 @endsection
+
+@push('script')
+<script>
+    function f_power(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("power");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_power")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_power");
+                    } else {
+                        tr[i].classList.remove("c_power");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_power")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_power");
+                        } else {
+                            tr[i].classList.add("c_power");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_power")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_power");
+                        } else {
+                            tr[i].classList.remove("c_power");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script> 
+<script>
+    function f_color(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("color");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_color")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_color");
+                    } else {
+                        tr[i].classList.remove("c_color");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_color")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_color");
+                        } else {
+                            tr[i].classList.add("c_color");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_color")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_color");
+                        } else {
+                            tr[i].classList.remove("c_color");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_brand(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("brand");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_brand")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_brand");
+                    } else {
+                        tr[i].classList.remove("c_brand");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.add("c_brand");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.remove("c_brand");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_efficiency(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("efficiency");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_efficiency")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_efficiency");
+                    } else {
+                        tr[i].classList.remove("c_efficiency");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_efficiency")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_efficiency");
+                        } else {
+                            tr[i].classList.add("c_efficiency");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_efficiency")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_efficiency");
+                        } else {
+                            tr[i].classList.remove("c_efficiency");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_form_factor(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("form_factor");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_form_factor")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_form_factor");
+                    } else {
+                        tr[i].classList.remove("c_form_factor");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_form_factor")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_form_factor");
+                        } else {
+                            tr[i].classList.add("c_form_factor");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_form_factor")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_form_factor");
+                        } else {
+                            tr[i].classList.remove("c_form_factor");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+@endpush

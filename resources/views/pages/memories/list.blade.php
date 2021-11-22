@@ -57,6 +57,12 @@
 
     </style>
     <style>
+        .c_brand {
+            display: none !important;
+        }
+
+    </style>
+    <style>
         @media (min-width: 990px) {
             .filter-sidebar {
                 margin-right: -15px;
@@ -206,6 +212,12 @@
 
     </style>
     <style>
+        .c_ram {
+            display: none !important;
+        }
+
+    </style>
+    <style>
         #FilterParameters.show,
         #FilterParameters.collapsing {
             display: block !important;
@@ -249,6 +261,12 @@
 
     </style>
     <style>
+        .c_ram_quantity {
+            display: none !important;
+        }
+
+    </style>
+    <style>
         .loadingg {
             width: 34px !important;
             height: 34px !important;
@@ -263,6 +281,12 @@
             100% {
                 transform: rotate(360deg)
             }
+        }
+
+    </style>
+    <style>
+        .c_cas_latency {
+            display: none !important;
         }
 
     </style>
@@ -292,6 +316,12 @@
             .my-float {
                 margin-top: 16px;
             }
+        }
+
+    </style>
+    <style>
+        .c_ram_type {
+            display: none !important;
         }
 
     </style>
@@ -359,6 +389,12 @@
                         }
                         */
 
+        }
+
+    </style>
+    <style>
+        .c_ram_speed {
+            display: none !important;
         }
 
     </style>
@@ -530,12 +566,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_brand {
-                                display: none !important;
-                            }
-
-                        </style>
+                        
 
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -602,12 +633,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_ram {
-                                display: none !important;
-                            }
-
-                        </style>
+                        
 
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -732,12 +758,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_ram_quantity {
-                                display: none !important;
-                            }
-
-                        </style>
+                        
 
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -864,12 +885,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_ram_speed {
-                                display: none !important;
-                            }
-
-                        </style>
+                        
 
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -896,12 +912,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_ram_type {
-                                display: none !important;
-                            }
-
-                        </style>
+                        
 
                         <div class="card-group" id="accordion6" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -996,12 +1007,7 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_cas_latency {
-                                display: none !important;
-                            }
-
-                        </style>
+                        
 
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>

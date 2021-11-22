@@ -267,6 +267,12 @@
 
     </style>
     <style>
+        .c_brand {
+            display: none !important;
+        }
+
+    </style>
+    <style>
         .float {
             display: none;
         }
@@ -359,6 +365,24 @@
             }
             */
 
+        }
+
+    </style>
+    <style>
+        .c_color {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_side_panel {
+            display: none !important;
+        }
+
+    </style>
+    <style>
+        .c_cabinet_type {
+            display: none !important;
         }
 
     </style>
@@ -644,72 +668,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_brand {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_brand(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("brand");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_brand")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_brand");
-                                            } else {
-                                                tr[i].classList.remove("c_brand");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.add("c_brand");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_brand")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_brand");
-                                                } else {
-                                                    tr[i].classList.remove("c_brand");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -876,72 +836,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_side_panel {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_side_panel(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("side_panel");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_side_panel")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_side_panel");
-                                            } else {
-                                                tr[i].classList.remove("c_side_panel");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_side_panel")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_side_panel");
-                                                } else {
-                                                    tr[i].classList.add("c_side_panel");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_side_panel")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_side_panel");
-                                                } else {
-                                                    tr[i].classList.remove("c_side_panel");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -990,72 +886,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_cabinet_type {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_cabinet_type(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("cabinet_type");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_cabinet_type")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_cabinet_type");
-                                            } else {
-                                                tr[i].classList.remove("c_cabinet_type");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cabinet_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cabinet_type");
-                                                } else {
-                                                    tr[i].classList.add("c_cabinet_type");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_cabinet_type")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_cabinet_type");
-                                                } else {
-                                                    tr[i].classList.remove("c_cabinet_type");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                       
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -1281,72 +1113,8 @@
                                 </div>
                             </div>
                         </div>
-                        <style>
-                            .c_color {
-                                display: none !important;
-                            }
-
-                        </style>
-                        <script>
-                            function f_color(id) {
-
-                                /*
-                                $('html, body').animate({
-                                    scrollTop: $("#myTable").offset().top - 100
-                                }, 2000);
-                                */
-
-                                var input, filter, table, tr, td, i, txtValue;
-                                input = document.getElementsByClassName("color");
-                                input = input[id];
-                                filter = input.value.toUpperCase();
-                                table = document.getElementById("myTable");
-                                tr = table.getElementsByTagName("tr");
-                                if (filter == 'ALL') {
-                                    for (i = 0; i < tr.length; i++) {
-                                        td = tr[i].getElementsByTagName("td")[2];
-                                        if (td) {
-                                            td = td.getElementsByClassName("f_color")['0'];
-                                            txtValue = td.textContent || td.innerText;
-                                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                tr[i].classList.remove("c_color");
-                                            } else {
-                                                tr[i].classList.remove("c_color");
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    filter = ' ' + filter + ' ';
-                                    if (input.checked) {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_color")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_color");
-                                                } else {
-                                                    tr[i].classList.add("c_color");
-                                                }
-                                            }
-                                        }
-                                    } else {
-                                        for (i = 0; i < tr.length; i++) {
-                                            td = tr[i].getElementsByTagName("td")[2];
-                                            if (td) {
-                                                td = td.getElementsByClassName("f_color")['0'];
-                                                txtValue = td.textContent || td.innerText;
-                                                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                                    tr[i].classList.remove("c_color");
-                                                } else {
-                                                    tr[i].classList.remove("c_color");
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        </script>
+                        
+                        
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1507,3 +1275,246 @@
             </div>
     </section>
 @endsection
+
+@push('script')
+<script>
+    function f_brand(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("brand");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_brand")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_brand");
+                    } else {
+                        tr[i].classList.remove("c_brand");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.add("c_brand");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_brand")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_brand");
+                        } else {
+                            tr[i].classList.remove("c_brand");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script> 
+<script>
+    function f_side_panel(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("side_panel");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_side_panel")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_side_panel");
+                    } else {
+                        tr[i].classList.remove("c_side_panel");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_side_panel")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_side_panel");
+                        } else {
+                            tr[i].classList.add("c_side_panel");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_side_panel")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_side_panel");
+                        } else {
+                            tr[i].classList.remove("c_side_panel");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_cabinet_type(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("cabinet_type");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_cabinet_type")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_cabinet_type");
+                    } else {
+                        tr[i].classList.remove("c_cabinet_type");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_cabinet_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_cabinet_type");
+                        } else {
+                            tr[i].classList.add("c_cabinet_type");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_cabinet_type")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_cabinet_type");
+                        } else {
+                            tr[i].classList.remove("c_cabinet_type");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script>
+    function f_color(id) {
+
+        /*
+        $('html, body').animate({
+            scrollTop: $("#myTable").offset().top - 100
+        }, 2000);
+        */
+
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementsByClassName("color");
+        input = input[id];
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        if (filter == 'ALL') {
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    td = td.getElementsByClassName("f_color")['0'];
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].classList.remove("c_color");
+                    } else {
+                        tr[i].classList.remove("c_color");
+                    }
+                }
+            }
+        } else {
+            filter = ' ' + filter + ' ';
+            if (input.checked) {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_color")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_color");
+                        } else {
+                            tr[i].classList.add("c_color");
+                        }
+                    }
+                }
+            } else {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_color")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_color");
+                        } else {
+                            tr[i].classList.remove("c_color");
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+@endpush
