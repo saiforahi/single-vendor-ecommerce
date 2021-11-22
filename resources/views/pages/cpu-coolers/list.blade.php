@@ -369,7 +369,7 @@
         <h1><span>Select</span> Your CPU Cooler</h1>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="{{ route('cpu-cooler-list') }}">CPU Cooler</a>
+            <i class="fa fa-angle-right"></i><a href="{{ route('cpu-coolers-list') }}">CPU Cooler</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -1033,6 +1033,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($cpucoolers as $cpucooler)
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -1040,10 +1041,11 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/51Au1Rx9vDL._SL75_.jpg"
-                                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Cooler Master Hyper 212 EVO">
+                                            <?php $images = $cpucooler->product->getMedia('main_image'); ?>
+                                            <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                class="img-responsive lazy img-fluid"
+                                                data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                title="{{ $memory->name }}" alt="{{ $memory->name }}">
                                             <div class="stars-rating" title="4.6 out of 5">
                                                 <div class="stars-score" style="width: 92%">
                                                     <i class="fas fa-star"></i>
@@ -1104,7 +1106,9 @@
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
                                         href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
                                 </td>
-                            </tr>  
+                            </tr>   
+                            @endforeach
+                             
                         </tbody>
                         
                     </table>

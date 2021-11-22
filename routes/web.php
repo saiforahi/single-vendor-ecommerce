@@ -76,24 +76,15 @@ Route::prefix('powersupply')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\PowerSupplyController::class,'show_list'])->name('power-supply-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\PowerSupplyController::class,'show_details'])->name('power-supply-details');
 });
-
-
-Route::prefix('cases')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.cases.list');
-    })->name('case-list');
-    Route::get('/details',function(){ //storage list view
-        return view('pages.cases.details');
-    })->name('case-details');
+Route::prefix('casing')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\CasesController::class,'show_list'])->name('case-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\CasesController::class,'show_details'])->name('case-details');
 });
-Route::prefix('cpucoolers')->group(function(){
-    Route::get('/list',function(){ //storage list view
-        return view('pages.cpu-coolers.list');
-    })->name('cpu-cooler-list');
-    Route::get('/details',function(){ //storage list view
-        return view('pages.cpu-coolers.details');
-    })->name('cpu-cooler-details');
+Route::prefix('cpucooler')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\CpuCoolerController::class,'show_list'])->name('cpu-coolers-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\CpuCoolerController::class,'show_details'])->name('cpu-coolers-details');
 });
+
 
 Route::prefix('motherboard')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\MotherBoardsController::class,'show_list'])->name('motherboard-list');
