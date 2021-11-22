@@ -1,3 +1,4 @@
+@extends('layouts.app')
 @push('style')
     <style>
         .component-details {
@@ -102,7 +103,7 @@
 @section('content')
     <section class="pcb-breadcrumb">
         <h2>AOC C24G1</h2>
-        <span><a href="../../../index.html">Home</a>
+        <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/monitor/index.html">Monitor</a>
             <i class="fa fa-angle-right"></i><a href="index.html">AOC C24G1</a></span>
     </section>

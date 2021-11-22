@@ -29,7 +29,7 @@ class CreateGraphicsCardRequest extends FormRequest
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
             'total_images'=>'sometimes|nullable',
-            'slug_name'=>'sometimes|nullable',
+            'slug_name'=>'sometimes|nullable|string',
             'general_specs'=>'sometimes|nullable|json',
             'clock_specs'=>'sometimes|nullable|json',
             'additional_specs'=>'sometimes|nullable|json'

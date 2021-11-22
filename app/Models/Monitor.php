@@ -8,15 +8,16 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-class MotherBoard extends Model implements HasMedia
+class Monitor extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','slug_name','product_specs'];
+    protected $fillable=['product_id','brand','model','name','slug_name','specifications','features'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
-        
+        'specifications'=> 'array',
+        'features'=>'array'
     ];
     public function registerMediaConversions(Media $media = null): void
     {

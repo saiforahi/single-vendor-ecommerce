@@ -29,7 +29,7 @@ class CreateMotherBoardRequest extends FormRequest
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
             'total_images'=>'sometimes|nullable',
-            'slug_name'=>'sometimes|nullable',
+            'slug_name'=>'sometimes|nullable|string',
             'product_specs'=>'sometimes|nullable|json',
             'back_panel_specs'=>'sometimes|nullable|json',
             'storage_specs'=>'sometimes|nullable|json',

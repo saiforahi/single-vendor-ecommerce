@@ -15,8 +15,18 @@ class CreateMonitorsTable extends Migration
     {
         Schema::create('monitors', function (Blueprint $table) {
             $table->id();
-            $table->enum('status',['active','inactive']);
+            $table->unsignedBigInteger('product_id')->nullable();
+            $table->foreign('product_id')->references('id')->on('products');
+            $table->string('brand')->nullable();
+            $table->string('model')->nullable();
+            $table->string('name');
+            $table->string('slug_name')->nullable();
+            $table->json('specifications')->nullable();
+            $table->json('features')->nullable();
+            $table->string('type')->nullable();
+            $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

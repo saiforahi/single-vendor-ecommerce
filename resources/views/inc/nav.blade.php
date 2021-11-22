@@ -223,7 +223,7 @@
                                     <ul class="list-unstyled">
                                         <li class="heading">Displays</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/monitor/index.html">Monitors</a></li>
+                                                href="{{route('monitor-list')}}">Monitors</a></li>
                                         <li itemprop="name"><a itemprop="url"
                                                 href="product/webcam/index.html">Webcam</a></li>
                                     </ul>

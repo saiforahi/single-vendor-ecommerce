@@ -30,7 +30,7 @@ class CreatePowerSupplyRequest extends FormRequest
             'price'=> 'required|numeric',
             
             'total_images'=>'sometimes|nullable',
-            'slug_name'=>'|nullable',
+            'slug_name'=>'sometimes|nullable|string',
 
             'specifications'=>'sometimes|nullable|json',
             

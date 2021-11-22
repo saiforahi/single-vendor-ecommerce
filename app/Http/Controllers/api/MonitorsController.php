@@ -10,7 +10,6 @@ use App\Http\Requests\v1\CreateMonitorRequest;
 use App\Events\UploadImageEvent;
 class MonitorsController extends Controller
 {
-    
     public function create(CreateMonitorRequest $req){
         try{
             $new_product = Product::create($req->only('price'));
@@ -25,7 +24,7 @@ class MonitorsController extends Controller
             }
             event(new UploadImageEvent($new_product,$images));
             if($new_monitor){
-                return response()->json(['success'=>true,'message'=>'New MotherBoard has been created'],201);
+                return response()->json(['success'=>true,'message'=>'New Monitor has been created'],201);
             }
             else{
                 return response()->json(['success'=>false,'message'=>'Internal Server Error'],400);

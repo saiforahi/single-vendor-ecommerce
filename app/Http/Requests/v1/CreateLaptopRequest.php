@@ -29,6 +29,7 @@ class CreateLaptopRequest extends FormRequest
             'images' => 'sometimes|nullable|file',
             'brand'=> 'required|string',
             'model' => 'required|string',
+            'slug_name'=>'sometimes|nullable|string'
         ];
     }
 }
