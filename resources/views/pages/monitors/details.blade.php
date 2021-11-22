@@ -112,72 +112,15 @@
             <div class="col-12 col-md-3">
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/417no+rFnbL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/41DVd5eFtBL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/41pIDhIhD9L.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/31EqNqCdk-L.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/41EitS9i+iL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/4193b+KzckL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/414q+ieke1L.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/41NbGLYwZyL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/41YLYqtQUxL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/51FdUi-4YQL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy" title="AOC C24G1 24" Curved Frameless Gaming
-                                Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height adjustable, VESA, 3-Year
-                                Zero Dead Pixels" data-src="https://m.media-amazon.com/images/I/31tzvtn5SuL.jpg"
-                                alt="Build My PC, PC Builder, AOC C24G1">
-                        </div>
+                        @foreach ($monitor->product->getMedia('main_image') as $image)
+                            <div class="{{ $loop->index == 0 ? 'carousel-item img-gradient active':'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="G.SKILL Trident Z Royal Series, 16GB (2 x 8GB) 288-Pin DDR4-4800MHz Desktop Memory Model with CL18"
+                                    data-src="{{$image->getUrl('main_image')}}"
+                                    alt="Build My PC, PC Builder, G.Skill Trident Z Royal">
+                            </div>
+                        @endforeach
+                        
                     </div>
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
@@ -188,28 +131,11 @@
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
                     <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
+                        @foreach ($monitor->getMedia('main_image') as $image)
+                        <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                            class="{{ $loop->index == 0 ? 'active' : '' }}">
                         </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="6">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="7">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="8">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="9">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="10">
-                        </li>
+                        @endforeach
                     </ol>
                 </div>
                

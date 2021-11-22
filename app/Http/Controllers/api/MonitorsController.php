@@ -44,7 +44,7 @@ class MonitorsController extends Controller
         return view('pages.monitors.list')->with('monitors',Monitor::with('product')->get())->with('brands',Monitor::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.monitors.details')->with('monitors',Monitor::findOrFail($id));
+        return view('pages.monitors.details')->with('monitor',Monitor::findOrFail($id));
     }
     
 }

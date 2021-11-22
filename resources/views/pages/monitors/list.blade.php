@@ -1825,7 +1825,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/monitor/aoc-c24g1/index.html">{{$monitor->name}}</a></div>
+                                            href="{{route('monitor-details',['id'=>$monitor->id])}}">{{$monitor->name}}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>

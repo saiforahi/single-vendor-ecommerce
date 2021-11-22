@@ -212,7 +212,7 @@
 
         .sticky {
             /*position: sticky!important;
-                                            top: 80px;*/
+                                                top: 80px;*/
         }
 
         .budget-price {
@@ -282,11 +282,11 @@
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($memory->product->getMedia('main_image') as $image)
-                            <div class="carousel-item img-gradient active">
+                            <div class="{{ $loop->index == 0 ? 'carousel-item img-gradient active':'carousel-item img-gradient' }}">
                                 <img class="d-block img-fluid big-image lazy"
                                     title="G.SKILL Trident Z Royal Series, 16GB (2 x 8GB) 288-Pin DDR4-4800MHz Desktop Memory Model with CL18"
-                                    data-src="https://m.media-amazon.com/images/I/41Am2sv4KRL.jpg"
-                                    alt="Build My PC, PC Builder, G.Skill Trident Z Royal">
+                                    data-src="{{$image->getUrl('main_image')}}"
+                                    alt="Build My PC, System Builder, G.Skill Trident Z Royal">
                             </div>
                         @endforeach
                     </div>
@@ -298,11 +298,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
-                    @foreach ($memory->getMedia('main_image') as $image)
-                        <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
-                            class="{{ $loop->index == 0 ? 'active' : '' }}">
-                        </li>
-                    @endforeach
+                    <ol>
+                        @foreach ($memory->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
+
+                    </ol>
 
                 </div>
 
@@ -379,12 +382,12 @@
                         <li><span>This DDR4 RAM comes with CL18 CAS latency at 1.35V tested voltage.</span></li>
                     </ul>
 
-                   
-                    <div class="budget-price">৳{{$memory->product->price}}</div>
+
+                    <div class="budget-price">৳{{ $memory->product->price }}</div>
                     <div class="align-button">
                         <a href="javascript:void(0);" onclick="setid('ram',185)" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
-                        <a href="{{route('add-memory-to-system',['memory_id'=>$memory->id])}}"
+                        <a href="{{ route('add-memory-to-system', ['memory_id' => $memory->id]) }}"
                             class="btn btn-primary btn1 "><i class="fa fa-plus"></i>Add to Sytem Builder</a>
                     </div>
                 </div>

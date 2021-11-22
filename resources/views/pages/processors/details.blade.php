@@ -295,7 +295,7 @@
                             <img class="d-block img-fluid big-image lazy"
                                 title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
                                 data-src="{{$image->getUrl('main_image')}}"
-                                alt="Build My PC, PC Builder, AMD Ryzen Threadripper 3990X">
+                                alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
                         </div>
                         @endforeach
                         {{-- <div class="carousel-item img-gradient active">
