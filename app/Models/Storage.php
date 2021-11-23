@@ -9,6 +9,7 @@ use App\Models\Product;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+
 class Storage extends Model implements HasMedia
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;

@@ -273,6 +273,7 @@
                         </div>
                         @endforeach
                     </div>
+                    @if(count($storage->product->getMedia('main_image'))>1)
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
                         <span class="sr-only" aria-hidden="true">Prev</span>
@@ -281,8 +282,9 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
+                    @endif
                     <ol class="carousel-indicators">
-                        @foreach ($storage->getMedia('main_image') as $image)
+                        @foreach ($storage->product->getMedia('main_image') as $image)
                             <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
                                 class="{{ $loop->index == 0 ? 'active' : '' }}">
                             </li>
@@ -293,22 +295,22 @@
                 <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">Storage</span>
-                        <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ json_decode($storage->storage_specs, true)['drive_capacity'] == null ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
+                        <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ empty(json_decode($storage->storage_specs, true)) ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
                         </div>
                     </div>
                     <div class="level1"><span class="title">Performance</span>
-                        <div class="level2"><span class="key">Interface</span> : <span>{{ json_decode($storage->performance_specs, true)['interface'] == null ? '' : json_decode($storage->performance_specs, true)['interface'] }}</span>
+                        <div class="level2"><span class="key">Interface</span> : <span>{{ empty(json_decode($storage->performance_specs, true)) ? '' : json_decode($storage->performance_specs, true)['interface'] }}</span>
                         </div>
                         <div class="level2"><span class="key">Sequential Read Speed</span> :
-                            <span>{{ json_decode($storage->performance_specs, true)['write_speed'] == null ? '' : json_decode($storage->performance_specs, true)['write_speed'] }}</span>
+                            <span>{{ empty(json_decode($storage->performance_specs, true)) ? '' : json_decode($storage->performance_specs, true)['read_speed'] }}</span>
                         </div>
                         <div class="level2"><span class="key">Sequential Write Speed</span> :
-                            <span>{{ json_decode($storage->performance_specs, true)['read_speed'] == null ? '' : json_decode($storage->performance_specs, true)['read_speed'] }}</span>
+                            <span>{{ empty(json_decode($storage->performance_specs, true)) ? '' : json_decode($storage->performance_specs, true)['write_speed'] }}</span>
                         </div>
                     </div>
                     <div class="level1"><span class="title">Physical</span>
-                        <div class="level2"><span class="key">Drive Type</span> : <span>{{ json_decode($storage->physical_specs, true)['drive_type'] == null ? '' : json_decode($storage->physical_specs, true)['drive_type'] }}</span></div>
-                        <div class="level2"><span class="key">Form Factor</span> : <span>{{ json_decode($storage->physical_specs, true)['form_factor'] == null ? '' : json_decode($storage->physical_specs, true)['form_factor'] }}</span>
+                        <div class="level2"><span class="key">Drive Type</span> : <span>{{ empty(json_decode($storage->physical_specs, true)) ? '' : json_decode($storage->physical_specs, true)['drive_type'] }}</span></div>
+                        <div class="level2"><span class="key">Form Factor</span> : <span>{{ empty(json_decode($storage->physical_specs, true)) ? '' : json_decode($storage->physical_specs, true)['form_factor'] }}</span>
                         </div>
                     </div>
                     <div class="level1"><span class="title">SSD Specs</span>
@@ -323,15 +325,15 @@
                         </div>
                     </div>
                     <div class="level1"><span class="title">Reliability / Data Integrity</span>
-                        <div class="level2"><span class="key">Encryption</span> : <span>{{ json_decode($storage->reliability_specs, true)['encryption'] == null ? '' : json_decode($storage->reliability_specs, true)['encryption'] }}</span></div>
+                        <div class="level2"><span class="key">Encryption</span> : <span>{{ empty(json_decode($storage->reliability_specs, true)) ? "":json_decode($storage->reliability_specs, true)['encryption']}}</span></div>
                     </div>
-                    <div class="level1"><span class="title">Packaging Info</span>
+                    {{--<div class="level1"><span class="title">Packaging Info</span>
                         <div class="level2"><span class="key">Package Weight</span> : <span>0.185
                                 lb</span></div>
                         <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>6.7 x
                                 6.25 x
                                 6.15"</span></div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <style>
@@ -419,22 +421,22 @@
             <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">Storage</span>
-                    <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ json_decode($storage->storage_specs, true)['drive_capacity'] == null ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
+                    <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ empty(json_decode($storage->storage_specs, true)) ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
                     </div>
                 </div>
                 <div class="level1"><span class="title">Performance</span>
-                    <div class="level2"><span class="key">Interface</span> : <span>PCIe 3.0 x4</span>
+                    <div class="level2"><span class="key">Interface</span> : <span>{{ empty(json_decode($storage->performance_specs, true)) ? '' : json_decode($storage->performance_specs, true)['interface'] }}</span>
                     </div>
                     <div class="level2"><span class="key">Sequential Read Speed</span> :
-                        <span>3400 MB/s</span>
+                        <span>{{ empty(json_decode($storage->performance_specs, true)) ? '' : json_decode($storage->performance_specs, true)['read_speed'] }}</span>
                     </div>
                     <div class="level2"><span class="key">Sequential Write Speed</span> :
-                        <span>2500 MB/s</span>
+                        <span>{{ empty(json_decode($storage->performance_specs, true)) ? '' : json_decode($storage->performance_specs, true)['write_speed'] }}</span>
                     </div>
                 </div>
                 <div class="level1"><span class="title">Physical</span>
-                    <div class="level2"><span class="key">Drive Type</span> : <span>SSD</span></div>
-                    <div class="level2"><span class="key">Form Factor</span> : <span>M.2 2280</span>
+                    <div class="level2"><span class="key">Drive Type</span> : <span>{{ empty(json_decode($storage->physical_specs, true)) ? '' : json_decode($storage->physical_specs, true)['drive_type'] }}</span></div>
+                    <div class="level2"><span class="key">Form Factor</span> : <span>{{ empty(json_decode($storage->physical_specs, true)) ? '' : json_decode($storage->physical_specs, true)['form_factor'] }}</span>
                     </div>
                 </div>
                 <div class="level1"><span class="title">SSD Specs</span>
@@ -447,9 +449,7 @@
                     <div class="level2"><span class="key">TRIM Support</span> : <span>Yes</span></div>
                 </div>
                 <div class="level1"><span class="title">Reliability / Data Integrity</span>
-                    <div class="level2"><span class="key">Encryption</span> : <span>256-Bit AES
-                            Hardware
-                            Encryption</span></div>
+                    <div class="level2"><span class="key">Encryption</span> : <span>{{ empty(json_decode($storage->reliability_specs, true)) ? "":json_decode($storage->reliability_specs, true)['encryption']}}</span></div>
                 </div>
                 <div class="level1"><span class="title">Packaging Info</span>
                     <div class="level2"><span class="key">Package Weight</span> : <span>0.185 lb</span>

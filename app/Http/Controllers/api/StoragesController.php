@@ -129,4 +129,12 @@ class StoragesController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
+    public function details($id){
+        try{
+            return response()->json(['success'=>true,'data'=>Storage::withTrashed()->where('id',$id)->first()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }
