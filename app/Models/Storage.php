@@ -13,7 +13,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Storage extends Model implements HasMedia
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
-    protected $fillable=['product_id','brand','model','name','storage_specs','slug_name','performance_specs','ssd_specs','packaging_specs','physical_specs','reliability_specs'];
+    protected $fillable=['product_id','brand','model','name','storage_specs','short_name','performance_specs','ssd_specs','packaging_specs','physical_specs','reliability_specs'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',

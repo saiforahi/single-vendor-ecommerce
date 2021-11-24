@@ -4,6 +4,7 @@ namespace App\Classes;
 use App\Models\Processor;
 use App\Models\Storage;
 use App\Models\Memory;
+use App\Models\CpuCooler;
 class SystemBuilder
 {
     private $processor = '';
@@ -52,5 +53,20 @@ class SystemBuilder
 
     public function remove_memory(){
         $this->memory="";
+    }
+    //cooler
+    public function set_cooler($cooler_id){
+        $this->cooler = $cooler_id;
+    }
+
+    public function get_cooler(){
+        if($this->cooler!=''){
+            return CpuCooler::findOrFail($this->cooler);
+        }
+        return $this->cooler;
+    }
+
+    public function remove_cooler(){
+        $this->cooler="";
     }
 }

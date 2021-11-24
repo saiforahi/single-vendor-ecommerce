@@ -40,7 +40,7 @@ class SystemBuilderController extends Controller
             session(['system'=>$system]);
             return redirect('/system-builder');
         }
-        return view('index');
+        return redirect('/system-builder');
     }
 
     //storage
@@ -65,7 +65,7 @@ class SystemBuilderController extends Controller
             session(['system'=>$system]);
             return redirect('/system-builder');
         }
-        return view('index');
+        return redirect('/system-builder');
     }
     //memory
     public function add_memory_web($memory_id){
@@ -89,6 +89,30 @@ class SystemBuilderController extends Controller
             session(['system'=>$system]);
             return redirect('/system-builder');
         }
-        return view('index');
+        return redirect('/system-builder');
+    }
+    //cpu_cooler
+    public function add_cooler_web($cooler_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_cooler($cooler_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+            // return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_cooler($cooler_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+        // dd($req->all());
+    }
+    public function remove_cooler_web(){
+        if(Session::has('system') && Session::get('system')->get_cooler()!=''){
+            $system = Session::get('system');
+            $system->remove_cooler();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
     }
 }

@@ -25,7 +25,7 @@ class CreateProcessorsTable extends Migration
             $table->json('performance_specs')->nullable();
             $table->json('memory_specs')->nullable();
             $table->json('power_specs')->nullable();
-            $table->json('slug_name')->nullable();
+            $table->json('short_name')->nullable();
             $table->json('graphics_specs')->nullable();
             // $table->integer('price')->nullable();
             $table->string('type')->nullable();

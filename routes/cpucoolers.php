@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('cpucooler')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductController::class,'create']);
+Route::prefix('cpucoolers')->group(function(){
+    Route::post('/create',[App\Http\Controllers\api\CpuCoolerController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\CpuCoolerController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\CpuCoolerController::class,'delete_laptop']);
     Route::put('/update',[App\Http\Controllers\api\CpuCoolerController::class,'update']);

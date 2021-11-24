@@ -30,7 +30,7 @@ class CreateCaseRequest extends FormRequest
             'price'=> 'required|numeric',
             'compatibility_specs'=>'sometimes|nullable|json',
             'cooling_specs'=>'sometimes|nullable|json',
-            'slug_name'=>'sometimes|nullable|string',
+            'short_name'=>'sometimes|nullable|string',
             'i/o_specs'=>'sometimes|nullable',
             'packaging_specs'=>'sometimes|nullable',
             'physical_specs'=>'sometimes|nullable'

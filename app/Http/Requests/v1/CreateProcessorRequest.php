@@ -29,7 +29,8 @@ class CreateProcessorRequest extends FormRequest
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
             'general_specs'=>'required|json',
-            'total_images'=>'sometimes|nullable'
+            'total_images'=>'sometimes|nullable',
+            'short_name'=> 'sometimes|nullable|string'
         ];
     }
 }

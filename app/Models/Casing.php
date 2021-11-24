@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Casing extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','slug_name','compatibility_specs','cooling_specs','i/o_specs','packaging_specs','physical_specs'];
+    protected $fillable=['product_id','brand','model','name','short_name','compatibility_specs','cooling_specs','i/o_specs','packaging_specs','physical_specs'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',

@@ -441,11 +441,102 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/case-cooler/index.html">Case Cooler</a>
+                                <a href="{{route('cpu-coolers-list')}}">CPU Cooler</a>
                             </td>
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/case-cooler/index.html"><i class="fa fa-plus"></i> ADD Component
-                                </a></td>
+                            @if (Session::has('system') && Session::get('system')->get_cooler() != '')
+                                <?php $cooler = Session::get('system')->get_storage(); ?>
+
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $cooler->product->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                class="img-responsive lazy img-fluid"
+                                                data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                title="{{ $cooler->name }}" alt="{{ $cooler->name }}">
+                                            {{-- <div class="stars-rating" title="4.9 out of 5">
+                                            <div class="stars-score" style="width: 98%">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="stars-scale">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div> --}}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="{{ route('cpu-coolers-details', ['id' => $cooler->id]) }}">{{ $cooler->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand">{{ $cooler->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model">{{ $cooler->model }}</div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Capacity:</div>
+                                            <div class="detail__value f_capacity"> 1 TB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Type:</div>
+                                            <div class="detail__value f_storage_type"> SSD </div>
+                                        </div>
+                                        <div class="detail d-none">
+                                            <div class="detail__name">RPM:</div>
+                                            <div class="detail__value f_rpm"> </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe 3.0 x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Cache Memory:</div>
+                                            <div class="detail__value f_cache_memory"> 1024 MB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Form Factor:</div>
+                                            <div class="detail__value f_form_factor"> M.2-2280 </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">৳{{ $cooler->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="{{ route('cooler-details', ['id' => $cooler->id]) }}"
+                                        target="_blank">View
+                                        details</a></td>
+                                
+                                <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
+                                    href="{{ route('remove-cooler-from-system') }}"><i
+                                        class="fa fa-trash"></i></a></td>
+                                
+
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{route('cpu-coolers-list')}}"><i class="fa fa-plus"></i> ADD Component
+                                    </a>
+                                </td>
+                            @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">

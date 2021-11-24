@@ -30,7 +30,7 @@ class CreateMonitorRequest extends FormRequest
             'price'=> 'required|numeric',
             'specifications'=>'sometimes|nullable|json',
             'features'=>'sometimes|nullable|json',
-            'slug_name'=>'sometimes|nullable|string',
+            'short_name'=>'sometimes|nullable|string',
             'total_images'=>'sometimes|nullable'
         ];
     }

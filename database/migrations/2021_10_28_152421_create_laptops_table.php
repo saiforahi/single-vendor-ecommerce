@@ -20,7 +20,7 @@ class CreateLaptopsTable extends Migration
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
             $table->string('name');
-            $table->string('slug_name')->nullable();
+            $table->string('short_name')->nullable();
             $table->json('specifications')->nullable();
             $table->json('features')->nullable();
             $table->string('type')->nullable();

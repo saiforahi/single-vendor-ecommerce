@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class Processor extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','slug_name','general_specs','performance_specs','memory_specs','packaging_specs','power_specs','graphic_specs'];
+    protected $fillable=['product_id','brand','model','name','short_name','general_specs','performance_specs','memory_specs','packaging_specs','power_specs','graphic_specs'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',

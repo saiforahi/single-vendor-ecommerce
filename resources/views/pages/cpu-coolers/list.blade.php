@@ -929,7 +929,7 @@
                                             <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                 class="img-responsive lazy img-fluid"
                                                 data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                title="{{ $memory->name }}" alt="{{ $memory->name }}">
+                                                title="{{ $cpucooler->name }}" alt="{{ $cpucooler->name }}">
                                             <div class="stars-rating" title="4.6 out of 5">
                                                 <div class="stars-score" style="width: 92%">
                                                     <i class="fas fa-star"></i>
@@ -951,7 +951,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route("cpu-cooler-details")}}">Cooler
+                                            href="{{route("cpu-coolers-details",['id'=>$cpucooler->id])}}">Cooler
                                             Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum
                                             Fins</a></div>
                                     <span class="table_span">
@@ -982,13 +982,12 @@
 
                                 </td>
                                 <td class="price">
-                                    $35 </td>
+                                    {{$cpucooler->product->price}} </td>
 
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B005O65JXI?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                        href="https://amazon.com/dp/B005O65JXI?tag=pcbuilder00-20" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                        href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
+                                        href="{{route('add-cooler-to-system',['cooler_id'=>$cpucooler->id])}}"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>   
                             @endforeach
