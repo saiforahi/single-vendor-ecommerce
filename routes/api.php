@@ -34,3 +34,7 @@ require __DIR__.'/cases.php';
 require __DIR__.'/cpucoolers.php';
 require __DIR__.'/monitors.php';
 require __DIR__.'/keyboards.php';
+require __DIR__.'/mouses.php';
+require __DIR__.'/thermalpastes.php';
+require __DIR__.'/speakers.php';
+require __DIR__.'/ups.php';

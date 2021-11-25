@@ -207,7 +207,7 @@
                                         <li itemprop="name"><a itemprop="url"
                                                 href="product/case-cooler/index.html">Case Fans</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/thermal-paste/index.html">Thermal Compound</a></li>
+                                                href="{{route('thermalpaste-list')}}">Thermal Compound</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Expansion</li>
@@ -233,14 +233,15 @@
                                         <li class="heading top-padding">Peripherals</li>
                                         <li itemprop="name"><a itemprop="url"
                                                 href="#">Headphones</a></li>
+                                        <li itemprop="name">
+                                            <a itemprop="url"
+                                                href="{{route('keyboard-list')}}">Keyboards</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="#">Keyboards</a></li>
+                                                href="{{route('mouse-list')}}">Mouse</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="#">Mouse</a></li>
+                                                href="{{route('speakers-list')}}">Speakers</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="#">Speakers</a></li>
-                                        <li itemprop="name"><a itemprop="url"
-                                                href="#">Uninteraptable Power Supplies</a></li>
+                                                href="{{route('ups-list')}}">Uninteraptable Power Supplies</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">External Storage</li>

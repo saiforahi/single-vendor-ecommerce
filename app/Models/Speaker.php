@@ -8,11 +8,11 @@ use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-class Mouse extends Model implements HasMedia
+class Speaker extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
     protected $fillable=['product_id','brand','model','name','specifications'];
-    protected $table="mice";
+    protected $table="speakers";
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
