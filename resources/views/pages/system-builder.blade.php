@@ -257,8 +257,8 @@
                                 <div class="logo-name">
                                     <div class="item-logo">
                                         <?php $images = $memory->product->getMedia('main_image'); ?>
-                                        <img src="{{$images[0]->getUrl('main_image')}}" class="img-responsive lazy img-fluid"
-                                            data-src="{{$images[0]->getUrl('main_image')}}"
+                                        <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}" class="img-responsive lazy img-fluid"
+                                            data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                             title="{{$memory->name}}"
                                             alt="{{$memory->name}}">
                                         <div class="stars-rating" title="5.0 out of 5">
