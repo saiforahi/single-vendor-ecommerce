@@ -1098,7 +1098,7 @@
                                                 <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                    title="{{ $memory->name }}" alt="{{ $memory->name }}">
+                                                    title="{{ $memory->name }}" alt="{{ $memory->name }}"/>
 
                                                 <div class="stars-rating" title="5.0 out of 5">
                                                     <div class="stars-score" style="width: 100%">
@@ -1138,7 +1138,7 @@
                                             <div class="detail">
                                                 <div class="detail__name">RAM Size:</div>
                                                 <div class="detail__value f_ram">
-                                                    {{ json_decode($memory->memory_specs, true)['memory'] == null ? '' : json_decode($memory->memory_specs, true)['memory'] }}
+                                                    {{ empty(json_decode($memory->memory_specs, true)) ? '' : json_decode($memory->memory_specs, true)['ram_size'] }}
                                                 </div>
                                             </div>
                                             <div class="detail">
