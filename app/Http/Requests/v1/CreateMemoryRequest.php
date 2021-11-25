@@ -30,6 +30,7 @@ class CreateMemoryRequest extends FormRequest
             'price'=> 'required|numeric',
             'general_specs'=>'sometimes|nullable|json',
             'memory_specs'=>'sometimes|nullable|json',
+            'additional_specs'=>'sometimes|nullable|json',
             'short_name'=>'sometimes|nullable|string',
             'total_images'=>'sometimes|nullable'
         ];

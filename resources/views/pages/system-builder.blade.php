@@ -15,65 +15,24 @@
                             <div data-toggle="tooltip" title="Copy Link!" id="selectable"
                                 onclick="selectText('selectable','link')" class="copy-link"><i class="fa fa-link"
                                     aria-hidden="true"></i>
-                                <div class="link px-2">https://pcbuilder.net/rigs/zydTX7/</div>
+                                <div class="link px-2">{{Request::url()}}</div>
                                 <i class="fa fa-clone pl-2" aria-hidden="true"></i>
                             </div>
-                            <div class="action-box">
-                                <div class="action-box-item ">Markup:</div>
-                                <div id="reddit" class="action-box-item" data-toggle="tooltip" title="Copy Reddit Markup!"
-                                    onclick="markup('reddit');"><i class="fab fa-reddit-alien" aria-hidden="true"></i></div>
-                                <div id="html" class="action-box-item" data-toggle="tooltip" title="Copy Html Markup!"
-                                    onclick="markup('html');"><i class="fa fa-code" aria-hidden="true"></i></div>
-                                <div id="text" class="action-box-item" data-toggle="tooltip" title="Copy Text Markup!"
-                                    onclick="markup('text');"><i class="fa fa-text-width" aria-hidden="true"></i></div>
-                                <div id="forum" class="action-box-item" data-toggle="tooltip" title="Copy Forum Markup!"
-                                    onclick="markup('forum');"><i class="fa fa-bold" aria-hidden="true"></i></div>
-                            </div>
+                            
                             <div class="history-box">
-                                <div class="action-box-item"><i class="fa fa-plus" aria-hidden="true"></i> <span
-                                        class="px-2" id="newList" onclick="newList();"> New List
+                                <div class="action-box-item"><span
+                                        class="px-2" id="newList" onclick="newList();"> Total (BDT)
                                     </span>
                                 </div>
                             </div>
-                            <div class="selectbox dropup center-block">
-                                <div class="choose-country px-2"><b>Select Country:</b></div>
-                                <li class="image-li dropdown pcb-country">
-                                    <a class="country dropdown-toggle" id="navbarDropdownMenuLink3" role="button"
-                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                            class="img-fluid change-country lazy"
-                                            data-src="https://images.pcbuilder.dev/assets/images/flags/us.svg">United
-                                        States</a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-                                        <a class="dropdown-item" onclick="changecountry('US');"><img
-                                                class="img-fluid dropdown-image lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/flags/us.svg">United
-                                            States</a>
-                                        <a class="dropdown-item" onclick="changecountry('GB');"><img
-                                                class="img-fluid dropdown-image lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/flags/gb.svg">United
-                                            Kingdom</a>
-                                        <a class="dropdown-item" onclick="changecountry('CA');"><img
-                                                class="img-fluid dropdown-image lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/flags/ca.svg">Canada</a>
-                                        <a class="dropdown-item" onclick="changecountry('IN');"><img
-                                                class="img-fluid dropdown-image lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/flags/in.svg">India</a>
-                                        <a class="dropdown-item" onclick="changecountry('AU');"><img
-                                                class="img-fluid dropdown-image lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/flags/au.svg">Australia</a>
-                                        <a class="dropdown-item" onclick="changecountry('IT');"><img
-                                                class="img-fluid dropdown-image lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/flags/it.svg">Italy</a>
-                                    </div>
-                                </li>
-                            </div>
+                            
                         </div>
                         <div class="bottom-box">
                             <div class="compatibility"><i class="inline-icon fa fa-check-circle pr-2"
                                     aria-hidden="true"></i>
-                                Compatibility: No issues or incompatibilities found.</div>
-                            <div class="estimation"><i class="fa fa-bolt px-2" aria-hidden="true"></i>
-                                Estimated Wattage: 0W</div>
+                                <a href="{{route('cart')}}">Add components to cart and proceed to checkout</a></div>
+                            {{-- <div class="estimation"><i class="fa fa-bolt px-2" aria-hidden="true"></i>
+                                Estimated Wattage: 0W</div> --}}
                         </div>
                     </div>
                     <div class="col-12 col-md-3">
@@ -338,7 +297,7 @@
                                         href="{{ route('memory-details', ['id' => $memory->id]) }}" target="_blank">View
                                         Details</a></td>
                                 <td class="remove">
-                                    <a class="btn btn-danger component-add-btn" onClick="remove_memory()" id="p_185"><i
+                                    <a class="btn btn-danger component-add-btn" href="{{route('remove-memory-from-system')}}" id="p_185"><i
                                             class="fa fa-trash"></i></a>
                                 </td>
                             @else
@@ -616,17 +575,20 @@
                     </tbody>
                 </table>
             </div>
+            
         </div>
     </section>
 @endsection
 @push('script')
-    <script>
-        function remove_memory() {
-            // console.log(JSON.parse({{ json_encode(session()->get('system')) }}))
-            console.log({!! json_encode(session()->get('system')})
-            $.get("remove-memory", function(data) {
-                console.log('res data',data)
+    {{-- <script>
+        $(document).ready(function() {
+            function remove_memory() {
+                // console.log(JSON.parse({{ json_encode(session()->get('system')) }}))
+                // console.log({{json_encode(session()->get('system');}})
+                    // $.get("remove-memory", function(data) {
+                    //     console.log('res data',data)
+                    // });
+                }
             });
-        }
-    </script>
+    </script> --}}
 @endpush

@@ -13,7 +13,7 @@ class MotherBoardsController extends Controller
     
     public function create(CreateMotherBoardRequest $req){
         try{
-            $new_product = Product::create($req->only('price'));
+            $new_product = Product::create($req->all());
             $new_motherboard = MotherBoard::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){

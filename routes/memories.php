@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('memories')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductsController::class,'add_memory']);
+    Route::post('/create',[App\Http\Controllers\api\MemoriesController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\MemoriesController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\MemoriesController::class,'delete_laptop']);
     Route::put('/update',[App\Http\Controllers\api\MemoriesController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\MemoriesController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\MemoriesController::class,'details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\MemoriesController::class,'get_laptop_create_options']);
+    Route::get('/specification/list/{parent}/{child}',[App\Http\Controllers\api\MemoriesController::class,'get_memory_create_options']);
 
     Route::get('/images/{id}',[App\Http\Controllers\api\MemoriesController::class,'get_all_media']);
 });

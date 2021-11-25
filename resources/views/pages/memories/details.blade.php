@@ -290,6 +290,7 @@
                             </div>
                         @endforeach
                     </div>
+                    @if(count($memory->product->getMedia('main_image'))>1)
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
                         <span class="sr-only" aria-hidden="true">Prev</span>
@@ -298,8 +299,9 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
+                    @endif
                     <ol>
-                        @foreach ($memory->getMedia('main_image') as $image)
+                        @foreach ($memory->product->getMedia('main_image') as $image)
                             <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
                                 class="{{ $loop->index == 0 ? 'active' : '' }}">
                             </li>
@@ -383,10 +385,10 @@
                     </ul>
 
 
-                    <div class="budget-price">৳{{ $memory->product->price }}</div>
+                    <div class="budget-price">৳ {{ $memory->product->price }}</div>
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('ram',185)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
+                        <a href="{{route('add-product-to-cart',['product_id'=>$memory->product->id])}}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i> Add Product to Cart</a>
                         <a href="{{ route('add-memory-to-system', ['memory_id' => $memory->id]) }}"
                             class="btn btn-primary btn1 "><i class="fa fa-plus"></i>Add to Sytem Builder</a>
                     </div>

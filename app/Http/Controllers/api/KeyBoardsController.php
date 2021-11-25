@@ -13,8 +13,8 @@ class KeyBoardsController extends Controller
     
     public function create(CreateKeyBoardsRequest $req){
         try{
-            $new_product = Product::create($req->only('price'));
-            $new_keyboard = Graphics::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
+            $new_product = Product::create($req->all());
+            $new_graphics = Graphics::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
