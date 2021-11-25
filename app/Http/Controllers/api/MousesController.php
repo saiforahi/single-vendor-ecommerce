@@ -4,17 +4,17 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\KeyBoard;
+use App\Models\Mouse;
 use App\Models\Product;
-use App\Http\Requests\v1\CreateKeyBoardsRequest;
+use App\Http\Requests\v1\CreateMousesRequest;
 use App\Events\UploadImageEvent;
-class KeyBoardsController extends Controller
+class MousesController extends Controller
 {
     
-    public function create(CreateKeyBoardsRequest $req){
+    public function create(CreateMousesRequest $req){
         try{
             $new_product = Product::create($req->only('price'));
-            $new_keyboard = Graphics::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
+            $new_mouse = Mouses::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
@@ -24,7 +24,7 @@ class KeyBoardsController extends Controller
                 }
             }
             event(new UploadImageEvent($new_product,$images));
-            if($new_keyboard){
+            if($new_mouse){
                 return response()->json(['success'=>true,'message'=>'New KeyBoard has been created'],201);
             }
             else{
@@ -42,10 +42,10 @@ class KeyBoardsController extends Controller
         // ->groupBy('brand')
         // ->get();
         
-        return view('pages.keyboards.list')->with('keyboards',KeyBoard::with('product')->get())->with('brands',KeyBoard::select('brand')->distinct()->get());
+        return view('pages.mouses.list')->with('mouses',Mouse::with('product')->get())->with('brands',Mouse::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.keyboards.details')->with('keyboards',KeyBoard::findOrFail($id));
+        return view('pages.mouses.details')->with('mouses',Mouse::findOrFail($id));
     }
     
 }

@@ -184,7 +184,7 @@
         <h2>APC Smart-UPS X (SMX3000HVT)</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/ups/index.html">Ups</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">APC Smart-UPS X</a></span>
+            <i class="fa fa-angle-right"></i><a href="ups-details">APC Smart-UPS X</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

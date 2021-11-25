@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMiceTable extends Migration
+class CreateSpeakersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMiceTable extends Migration
      */
     public function up()
     {
-        Schema::create('mice', function (Blueprint $table) {
+        Schema::create('speakers', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('product_id')->nullable();
             $table->foreign('product_id')->references('id')->on('products');
@@ -38,6 +38,6 @@ class CreateMiceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mice');
+        Schema::dropIfExists('speakers');
     }
 }

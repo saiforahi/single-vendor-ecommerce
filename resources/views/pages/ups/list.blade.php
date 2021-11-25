@@ -387,7 +387,7 @@
         <h1><span>Select</span> Your UPS</h1>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">UPS</a>
+            <i class="fa fa-angle-right"></i><a href="ups-list">UPS</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -1201,7 +1201,7 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        @foreach ($upses as $ups)
+                        @foreach ($ups as $ups)
                         <tbody>
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">

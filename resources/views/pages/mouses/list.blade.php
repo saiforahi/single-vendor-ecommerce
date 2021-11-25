@@ -278,7 +278,7 @@
         <h1><span>Select</span> Your Mouse</h1>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Mouse</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('mouse-list')}}">Mouse</a>
         </span>
     </section>
     <a href="#open-modal" class="float">

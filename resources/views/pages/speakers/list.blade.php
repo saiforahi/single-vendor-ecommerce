@@ -366,7 +366,7 @@
         <h1><span>Select</span> Your Speakers</h1>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Speakers</a>
+            <i class="fa fa-angle-right"></i><a href="speakers-list">Speakers</a>
         </span>
     </section>
     <a href="#open-modal" class="float">

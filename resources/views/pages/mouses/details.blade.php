@@ -282,7 +282,7 @@
         <h2>Logitech G502 Hero (910-005469)</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/mouse/index.html">Mouse</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Logitech G502 Hero</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('mouse-details')}}">Logitech G502 Hero</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

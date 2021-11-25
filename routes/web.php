@@ -102,7 +102,22 @@ Route::prefix('keyboard')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\KeyBoardsController::class,'show_list'])->name('keyboard-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\KeyBoardsController::class,'show_details'])->name('keyboard-details');
 });
-
+Route::prefix('mouse')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\MousesController::class,'show_list'])->name('mouse-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\MousesController::class,'show_details'])->name('mouse-details');
+});
+Route::prefix('thermalpastes')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\ThermalPasteController::class,'show_list'])->name('thermalpaste-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\ThermalPasteController::class,'show_details'])->name('thermalpaste-details');
+});
+Route::prefix('speakers')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\SpeakersController::class,'show_list'])->name('speakers-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\SpeakersController::class,'show_details'])->name('speakers-details');
+});
+Route::prefix('ups')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\UpsController::class,'show_list'])->name('ups-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\UpsController::class,'show_details'])->name('ups-details');
+});
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');
