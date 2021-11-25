@@ -282,7 +282,7 @@
         <h2>Corsair K55 RGB (CH-9206015-NA)</h2>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/keyboard/index.html">Keyboard</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Corsair K55 RGB</a></span>
+            <i class="fa fa-angle-right"></i><a href="keyboard-details">Corsair K55 RGB</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

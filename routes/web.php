@@ -98,6 +98,10 @@ Route::prefix('monitor')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\MonitorsController::class,'show_list'])->name('monitor-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\MonitorsController::class,'show_details'])->name('monitor-details');
 });
+Route::prefix('keyboard')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\KeyBoardsController::class,'show_list'])->name('keyboard-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\KeyBoardsController::class,'show_details'])->name('keyboard-details');
+});
 
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
@@ -110,3 +114,5 @@ Route::prefix('system-builder')->group(function(){
     Route::get('/add-cooler/{cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_cooler_web'])->name('add-cooler-to-system');
     Route::get('/remove-cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_cooler_web'])->name('remove-cooler-from-system');
 });
+
+Route::get('/remove-memory',[App\Http\Controllers\api\SystemBuilderController::class,'remove_memory_ajax']);

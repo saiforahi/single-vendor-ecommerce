@@ -405,7 +405,7 @@
         <h1><span>Select</span> Your Keyboard</h1>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Keyboard</a>
+            <i class="fa fa-angle-right"></i><a href="keyboard-list">Keyboard</a>
         </span>
     </section>
     <a href="#open-modal" class="float">

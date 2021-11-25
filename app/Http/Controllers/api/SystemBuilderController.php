@@ -91,6 +91,15 @@ class SystemBuilderController extends Controller
         }
         return redirect('/system-builder');
     }
+    public function remove_memory_ajax(){
+        if(Session::has('system') && Session::get('system')->get_memory()!=''){
+            $system = Session::get('system');
+            $system->remove_memory();
+            session(['system'=>$system]);
+            return $system->toArray();
+        }
+        return "";
+    }
     //cpu_cooler
     public function add_cooler_web($cooler_id){
         if(Session::has('system')){

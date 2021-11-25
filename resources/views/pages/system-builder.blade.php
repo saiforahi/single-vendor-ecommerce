@@ -2,7 +2,8 @@
 @section('content')
     <section class="pcb-breadcrumb">
         <h1>System Builder</h1>
-        <span><a href="{{route('home')}}">Home</a><i class="fa fa-angle-right"></i><a href="{{route('system-builder')}}">System
+        <span><a href="{{ route('home') }}">Home</a><i class="fa fa-angle-right"></i><a
+                href="{{ route('system-builder') }}">System
                 Builder</a></span>
     </section>
     <section class="system-builder">
@@ -94,7 +95,7 @@
                     <tbody>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="{{route('processor-list')}}">Processor</a>
+                                <a href="{{ route('processor-list') }}">Processor</a>
                             </td>
                             @if (Session::has('system') && Session::get('system')->get_processor() != '')
                                 <?php $processor = Session::get('system')->get_processor(); ?>
@@ -196,7 +197,7 @@
                                     </span>
                                 </td>
                                 <td class="price">
-                                    ৳ {{$processor->product->price}}</td>
+                                    ৳ {{ $processor->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
                                         href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
                                         System Builder</a></td>
@@ -206,7 +207,8 @@
 
                             @else
                                 <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                        href="{{ route('processor-list') }}"><i class="fa fa-plus"></i> ADD Component
+                                        href="{{ route('processor-list') }}"><i class="fa fa-plus"></i> ADD
+                                        Component
                                     </a>
                                 </td>
                             @endif
@@ -246,103 +248,109 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="{{route('memory-list')}}">RAM</a>
+                                <a href="{{ route('memory-list') }}">RAM</a>
                             </td>
-                            @if(Session::has('system') && Session::get('system')->get_memory() != '')
-                            <?php $memory = Session::get('system')->get_memory(); ?>
-                            <td scope="row" class="component d-sm-none">
-                                <a href="index.html">#</a>
-                            </td>
-                            <td class="box">
-                                <div class="logo-name">
-                                    <div class="item-logo">
-                                        <?php $images = $memory->product->getMedia('main_image'); ?>
-                                        <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}" class="img-responsive lazy img-fluid"
-                                            data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                            title="{{$memory->name}}"
-                                            alt="{{$memory->name}}">
-                                        <div class="stars-rating" title="5.0 out of 5">
-                                            <div class="stars-score" style="width: 100%">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="stars-scale">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
+                            @if (Session::has('system') && Session::get('system')->get_memory() != '')
+                                <?php $memory = Session::get('system')->get_memory(); ?>
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $memory->product->getMedia('main_image'); ?>
+                                            <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                class="img-responsive lazy img-fluid"
+                                                data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                title="{{ $memory->name }}" alt="{{ $memory->name }}">
+                                            <div class="stars-rating" title="5.0 out of 5">
+                                                <div class="stars-score" style="width: 100%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td class="comp-details">
-                                <div class="table_title"><a
-                                        href="{{route('memory-details',['id'=>$memory->id])}}">{{$memory->name}}</a></div>
-                                <span class="table_span">
-                                    <div class="detail">
-                                        <div class="detail__name">Brand:</div>
-                                        <div class="detail__value f_brand"> G.Skill </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="{{ route('memory-details', ['id' => $memory->id]) }}">{{ $memory->name }}</a>
                                     </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Model:</div>
-                                        <div class="detail__value f_model"> Trident Z Royal </div>
-                                    </div>
-                                </span>
-                                <span class="table_span">
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> G.Skill </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> Trident Z Royal </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
 
-                                    <div class="detail">
-                                        <div class="detail__name">RAM Size:</div>
-                                        <div class="detail__value f_ram">{{json_decode($memory->memory_specs,true)['ram_size']==null?'':json_decode($memory->memory_specs,true)['ram_size']}}</div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">Quantity:</div>
-                                        <div class="detail__value f_ram_quantity"> 2 x 8 GB </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">RAM Type:</div>
-                                        <div class="detail__value f_ram_type"> DDR4 </div>
-                                    </div>
-                                </span><span class="table_span view-more-185" style="display: none;">
-                                    <div class="detail">
-                                        <div class="detail__name">RAM Speed:</div>
-                                        <div class="detail__value f_ram_speed"> 4800 MHz </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">DIMM Type:</div>
-                                        <div class="detail__value f_dimm_type"> 288-Pin </div>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="detail__name">CAS Latency:</div>
-                                        <div class="detail__value f_cas_latency"> CL18 </div>
-                                    </div>
-                                </span>
+                                        <div class="detail">
+                                            <div class="detail__name">RAM Size:</div>
+                                            <div class="detail__value f_ram">
+                                                {{ json_decode($memory->memory_specs, true)['ram_size'] == null ? '' : json_decode($memory->memory_specs, true)['ram_size'] }}
+                                            </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Quantity:</div>
+                                            <div class="detail__value f_ram_quantity"> 2 x 8 GB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">RAM Type:</div>
+                                            <div class="detail__value f_ram_type"> DDR4 </div>
+                                        </div>
+                                    </span><span class="table_span view-more-185" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">RAM Speed:</div>
+                                            <div class="detail__value f_ram_speed"> 4800 MHz </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">DIMM Type:</div>
+                                            <div class="detail__value f_dimm_type"> 288-Pin </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">CAS Latency:</div>
+                                            <div class="detail__value f_cas_latency"> CL18 </div>
+                                        </div>
+                                    </span>
 
-                                <span class="view-more">
-                                    <div class="view-More185" onclick="viewMore(185);"><span
-                                            class="viewMore185">View More Details</span> <i
-                                            class="fas fa-chevron-circle-down"></i></div>
-                                </span>
-                            </td>
-                            <td class="price">৳{{$memory->product->price}}</td>
-                            <td><a class="btn btn-primary component-btn"
-                                    href="{{route('memory-details',['id'=>$memory->id])}}" target="_blank">View Details</a></td>
-                            <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
-                                href="{{route('remove-memory-from-system')}}"><i class="fa fa-trash"></i></a>
-                            </td>
+                                    <span class="view-more">
+                                        <div class="view-More185" onclick="viewMore(185);"><span
+                                                class="viewMore185">View More Details</span> <i
+                                                class="fas fa-chevron-circle-down"></i></div>
+                                    </span>
+                                </td>
+                                <td class="price">৳{{ $memory->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="{{ route('memory-details', ['id' => $memory->id]) }}" target="_blank">View
+                                        Details</a></td>
+                                <td class="remove">
+                                    <a class="btn btn-danger component-add-btn" onClick="remove_memory()" id="p_185"><i
+                                            class="fa fa-trash"></i></a>
+                                </td>
                             @else
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                href="{{route('memory-list')}}"><i class="fa fa-plus"></i> ADD Component </a></td>
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{ route('memory-list') }}"><i class="fa fa-plus"></i> ADD Component
+                                    </a></td>
                             @endif
-                            
+
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="{{route('storage-list')}}">Storage</a>
+                                <a href="{{ route('storage-list') }}">Storage</a>
                             </td>
                             @if (Session::has('system') && Session::get('system')->get_storage() != '')
                                 <?php $storage = Session::get('system')->get_storage(); ?>
@@ -426,22 +434,22 @@
                                         href="{{ route('storage-details', ['id' => $storage->id]) }}"
                                         target="_blank">View
                                         details</a></td>
-                                
+
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
-                                    href="{{ route('remove-storage-from-system') }}"><i
-                                        class="fa fa-trash"></i></a></td>
-                                
+                                        href="{{ route('remove-storage-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+
 
                             @else
                                 <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                        href="{{route('storage-list')}}"><i class="fa fa-plus"></i> ADD Component
+                                        href="{{ route('storage-list') }}"><i class="fa fa-plus"></i> ADD Component
                                     </a>
                                 </td>
                             @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="{{route('cpu-coolers-list')}}">CPU Cooler</a>
+                                <a href="{{ route('cpu-coolers-list') }}">CPU Cooler</a>
                             </td>
                             @if (Session::has('system') && Session::get('system')->get_cooler() != '')
                                 <?php $cooler = Session::get('system')->get_storage(); ?>
@@ -522,18 +530,18 @@
                                 </td>
                                 <td class="price">৳{{ $cooler->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{ route('cooler-details', ['id' => $cooler->id]) }}"
-                                        target="_blank">View
+                                        href="{{ route('cooler-details', ['id' => $cooler->id]) }}" target="_blank">View
                                         details</a></td>
-                                
+
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
-                                    href="{{ route('remove-cooler-from-system') }}"><i
-                                        class="fa fa-trash"></i></a></td>
-                                
+                                        href="{{ route('remove-cooler-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+
 
                             @else
                                 <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                        href="{{route('cpu-coolers-list')}}"><i class="fa fa-plus"></i> ADD Component
+                                        href="{{ route('cpu-coolers-list') }}"><i class="fa fa-plus"></i> ADD
+                                        Component
                                     </a>
                                 </td>
                             @endif
@@ -612,27 +620,13 @@
     </section>
 @endsection
 @push('script')
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-                    "@type": "ListItem",
-                    "position": 1,
-                    "item": {
-                        "@id": "https://pcbuilder.net/",
-                        "name": "PC Builder"
-                    }
-                },
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "item": {
-                        "@id": "https://pcbuilder.net/list/",
-                        "name": "System Builder"
-                    }
-                }
-            ]
+    <script>
+        function remove_memory() {
+            // console.log(JSON.parse({{ json_encode(session()->get('system')) }}))
+            console.log({!! json_encode(session()->get('system')})
+            $.get("remove-memory", function(data) {
+                console.log('res data',data)
+            });
         }
     </script>
 @endpush

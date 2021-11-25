@@ -46,7 +46,7 @@ class SystemBuilder
 
     public function get_memory(){
         if($this->memory!=''){
-            return Memory::findOrFail($this->memory);
+            return Memory::with('product')->findOrFail($this->memory);
         }
         return $this->memory;
     }
