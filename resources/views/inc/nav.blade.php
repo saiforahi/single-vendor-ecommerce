@@ -69,7 +69,7 @@
             </div>
         </div>
         <div class="d-none d-lg-flex cart">
-            <a href="list/cart.html"><img class="lazy" src="https://images.pcbuilder.dev/assets/images/icons/cart.svg" height="32" width="32"/></a>
+            <a href="{{route('cart')}}"><img class="lazy" src="https://images.pcbuilder.dev/assets/images/icons/cart.svg" height="32" width="32"/></a>
             <div><span>Cart</span></div>
         </div>
         <div class="d-none d-lg-flex mode">

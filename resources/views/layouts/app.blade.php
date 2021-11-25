@@ -91,6 +91,13 @@
         <script src="{{asset('js/lazyload.min.js')}}"></script>
         <script src="{{asset('js/email-decode.min.js')}}"></script>
         <script src="{{asset('js/scripts.js')}}"></script>
+        <script type="text/javascript">
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            </script>
         @stack('script')
         @env ('local')
             <script src="http://localhost:8000/js/bundle.js"></script>
