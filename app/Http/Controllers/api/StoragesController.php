@@ -30,7 +30,7 @@ class StoragesController extends Controller
     }
     public function create(CreateStorageRequest $req){
         try{
-            $new_product = Product::create($req->only('price'));
+            $new_product = Product::create($req->all());
             $new_storage = Storage::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             // event(new UploadImageEvent());
             $images=array();

@@ -9,10 +9,12 @@ use App\Models\Product;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
-class Product extends Model implements HasMedia
+use Gloudemans\Shoppingcart\Contracts\Buyable;
+class Product extends Model implements HasMedia, Buyable
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
-    protected $fillable=['price'];
+    // use Gloudemans\Shoppingcart\CanBeBought;
+    protected $fillable=['price','name','brand','model','weight'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
@@ -40,5 +42,18 @@ class Product extends Model implements HasMedia
             ->useDisk('media')
             ->acceptsMimeTypes(['image/jpeg','image/jpg','image/png','image/webp'])
             ->withResponsiveImages();
+    }
+
+    public function getBuyableIdentifier($options = null) {
+        return $this->id;
+    }
+    public function getBuyableDescription($options = null) {
+        return $this->name;
+    }
+    public function getBuyablePrice($options = null) {
+        return $this->price;
+    }
+    public function getBuyableWeight($options = null) {
+        return $this->weight;
     }
 }

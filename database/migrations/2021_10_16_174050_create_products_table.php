@@ -16,7 +16,10 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
+            $table->string('brand')->nullable();
+            $table->string('model')->nullable();
             $table->integer('price')->nullable();
+            $table->float('weight',8,2)->default(0.0);
             $table->json('packaging_specs')->nullable();
             $table->enum('status',['active','inactive']);
             $table->timestamps();

@@ -434,7 +434,7 @@
                         </thead>
                         <tbody>
                             @if (Session::has('cart'))
-                                @foreach ($products as $processor)
+                                @foreach (\Cart::content() as $item)
                                     <tr class="items" data-href="#">
                                         <td scope="row" class="component d-sm-none">
                                             <a href="index.html">#</a>
@@ -442,12 +442,12 @@
                                         <td class="box">
                                             <div class="logo-name">
                                                 <div class="item-logo">
-                                                    <?php $images = $processor->product->getMedia('main_image'); ?>
-                                                    <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    {{-- <?php $images = $item->product->getMedia('main_image'); ?> --}}
+                                                    {{-- <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                         class="img-responsive lazy img-fluid"
                                                         data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                         title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                                        alt="pc builder, custom pc builder, pc part picker, build my pc, AMD Ryzen Threadripper 3990X">
+                                                        alt="pc builder, custom pc builder, pc part picker, build my pc, AMD Ryzen Threadripper 3990X"> --}}
                                                     <div class="stars-rating" title="4.4 out of 5">
                                                         <div class="stars-score" style="width: 88%">
                                                             <i class="fas fa-star"></i>
@@ -467,18 +467,18 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td class="comp-details">
+                                        {{-- <td class="comp-details">
                                             <div class="table_title"><a
-                                                    href="{{ route('processor-details', ['id' => $processor->id]) }}">{{ $processor->name }}</a>
+                                                    href="{{ route('processor-details', ['id' => $item->id]) }}">{{ $item->name }}</a>
                                             </div>
                                             <span class="table_span">
                                                 <div class="detail">
                                                     <div class="detail__name">Brand:</div>
-                                                    <div class="detail__value f_brand">{{ $processor->brand }}</div>
+                                                    <div class="detail__value f_brand">{{ $item->brand }}</div>
                                                 </div>
                                                 <div class="detail">
                                                     <div class="detail__name">Model:</div>
-                                                    <div class="detail__value f_model">{{ $processor->model }}</div>
+                                                    <div class="detail__value f_model">{{ $item->model }}</div>
                                                 </div>
                                             </span>
                                             <span class="table_span">
@@ -549,17 +549,17 @@
                                                     <p>
                                                 </div>
                                             </div>
-                                        </td>
+                                        </td> --}}
 
                                         <td class="price">
-                                            ৳ {{ $processor->product->price }} </td>
+                                            ৳ {{ $item->price }} </td>
                                         <td><a class="btn btn-primary component-btn"
-                                                href="{{ route('processor-details', ['id' => $processor->id]) }}"
+                                                href="{{ route('processor-details', ['id' => $item->id]) }}"
                                                 target="_blank">View Details</a></td>
                                         <td class="remove"><a class="btn btn-danger component-add-btn"
-                                                id="{{ 'p_' . $processor->id }}"
-                                                href="{{ route('add-processor-to-system', ['processor_id' => $processor->id]) }}"><i
-                                                    class="fa fa-plus"></i></a>
+                                                id="{{ 'p_' . $item->id }}"
+                                                href="{{ route('remove-from-cart', ['product_id' => $item->rowId]) }}"><i
+                                                    class="fa fa-minus"></i></a>
                                         </td>
 
                                     </tr>

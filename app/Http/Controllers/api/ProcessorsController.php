@@ -17,7 +17,7 @@ class ProcessorsController extends Controller
     }
     public function create(CreateProcessorRequest $req){
         try{
-            $new_product = Product::create($req->only('price'));
+            $new_product = Product::create($req->all());
             $new_processor = Processor::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
