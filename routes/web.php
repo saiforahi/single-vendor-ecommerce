@@ -119,6 +119,22 @@ Route::prefix('ups')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\UpsController::class,'show_list'])->name('ups-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\UpsController::class,'show_details'])->name('ups-details');
 });
+Route::prefix('headphones')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\HeadphonesController::class,'show_list'])->name('headphones-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\HeadphonesController::class,'show_details'])->name('headphones-details');
+});
+Route::prefix('external-hard-drive')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\ExternalHardDriveController::class,'show_list'])->name('external-hard-drive-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\ExternalHardDriveController::class,'show_details'])->name('external-hard-drive-details');
+});
+Route::prefix('webcams')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\WebCamController::class,'show_list'])->name('webcams-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\WebCamController::class,'show_details'])->name('webcams-details');
+});
+Route::prefix('opticaldrives')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\OpticalDriveController::class,'show_list'])->name('optical-drives-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\OpticalDriveController::class,'show_details'])->name('optical-drives-details');
+});
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');

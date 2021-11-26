@@ -395,7 +395,7 @@
         <h1><span>Select</span> Your Webcam</h1>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Webcam</a>
+            <i class="fa fa-angle-right"></i><a href="webcams-list">Webcam</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -710,7 +710,7 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        @foreach ($webcams as $webcam)
+                        @foreach ($web_cams as $web_cam)
                         <tbody>
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
@@ -719,11 +719,11 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $webcam->product->getMedia('main_image'); ?>
+                                            <?php $images = $web_cam->product->getMedia('main_image'); ?>
                                                 <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                    title="{{ $webcam->name }}" alt="{{ $webcam->name }}">
+                                                    title="{{ $web_cam->name }}" alt="{{ $web_cam->name }}">
                                             <div class="stars-rating" title="4.5 out of 5">
                                                 <div class="stars-score" style="width: 90%">
                                                     <i class="fas fa-star"></i>

@@ -38,3 +38,7 @@ require __DIR__.'/mouses.php';
 require __DIR__.'/thermalpastes.php';
 require __DIR__.'/speakers.php';
 require __DIR__.'/ups.php';
+require __DIR__.'/headphones.php';
+require __DIR__.'/externalharddrives.php';
+require __DIR__.'/webcams.php';
+require __DIR__.'/opticaldrives.php';

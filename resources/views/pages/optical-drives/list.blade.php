@@ -387,7 +387,7 @@
         <h1><span>Select</span> Your Optical Drive</h1>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Optical Drive</a>
+            <i class="fa fa-angle-right"></i><a href="optical-drives-list">Optical Drive</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -636,7 +636,7 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        @foreach ($opticaldrives as $opticaldrive)
+                        @foreach ($optical_drives as $optical_drive)
                         <tbody>
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
@@ -645,11 +645,11 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $opticaldrive->product->getMedia('main_image'); ?>
+                                            <?php $images = $optical_drive->product->getMedia('main_image'); ?>
                                                 <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                    title="{{ $opticaldrive->name }}" alt="{{ $opticaldrive->name }}">
+                                                    title="{{ $optical_drive->name }}" alt="{{ $optical_drive->name }}">
                                             <div class="stars-rating" title="4.5 out of 5">
                                                 <div class="stars-score" style="width: 90%">
                                                     <i class="fas fa-star"></i>

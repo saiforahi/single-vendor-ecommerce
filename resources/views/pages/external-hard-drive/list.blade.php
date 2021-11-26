@@ -412,7 +412,7 @@
         <h1><span>Select</span> Your External Hard Drive</h1>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">External Hard Drive</a>
+            <i class="fa fa-angle-right"></i><a href="external-hard-drive-list">External Hard Drive</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -872,7 +872,7 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        @foreach ($externalharddrives as $externalharddrive )
+                        @foreach ($external_hard_drives as $external_hard_drive )
                         <tbody>
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
@@ -881,11 +881,11 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $externalharddrive->product->getMedia('main_image'); ?>
+                                            <?php $images = $external_hard_drive->product->getMedia('main_image'); ?>
                                             <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                 class="img-responsive lazy img-fluid"
                                                 data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                title="{{ $externalharddrive->name }}" alt="{{ $externalharddrive->name }}">
+                                                title="{{ $external_hard_drive->name }}" alt="{{ $external_hard_drive->name }}">
                                             <div class="stars-rating" title="4.6 out of 5">
                                                 <div class="stars-score" style="width: 92%">
                                                     <i class="fas fa-star"></i>

@@ -541,15 +541,15 @@
                                 <a>Accessories</a>
                             </td>
                             <td colspan="6" class="comps">
-                                <a href="../product/keyboard/index.html">Keyboard</a>, <a
-                                    href="../product/mouse/index.html">Mouse</a>, <a
-                                    href="../product/thermal-paste/index.html">Thermal Paste</a>, <a
-                                    href="../product/speakers/index.html">Speakers</a>, <a
-                                    href="../product/ups/index.html">UPS</a>, <a
-                                    href="../product/headphone/index.html">Headphone</a>, <a
-                                    href="../product/external-hard-drive/index.html">External Hard Drive</a>, <a
-                                    href="../product/webcam/index.html">Webcam</a>, <a
-                                    href="../product/optical-drive/index.html">Optical Drive</a>
+                                <a href="{{route('keyboard-list')}}">Keyboard</a>, <a
+                                    href="{{route('mouse-list')}}">Mouse</a>, <a
+                                    href="{{route('thermalpaste-list')}}">Thermal Paste</a>, <a
+                                    href="{{route('speakers-list')}}">Speakers</a>, <a
+                                    href="{{route('ups-list')}}">UPS</a>, <a
+                                    href="{{route('headphones-list')}}">Headphone</a>, <a
+                                    href="{{route('external-hard-drive-list')}}">External Hard Drive</a>, <a
+                                    href="{{route('webcams-list')}}">Webcam</a>, <a
+                                    href="{{route('optical-drives-list')}}">Optical Drive</a>
                             </td>
                         </tr>
                         <tr class="items extra">

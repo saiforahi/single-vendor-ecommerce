@@ -185,7 +185,7 @@
         <h2>ASUS DRW 24 B1STA (DRW-24B1STA BLACK/BULK)</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/optical-drive/index.html">Optical Drive</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">ASUS DRW 24 B1STA </a></span>
+            <i class="fa fa-angle-right"></i><a href="optical-drives-details">ASUS DRW 24 B1STA </a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

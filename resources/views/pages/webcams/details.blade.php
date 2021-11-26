@@ -282,7 +282,7 @@
         <h2>Logitech BRIO (960-001105)</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/webcam/index.html">Webcam</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Logitech BRIO</a></span>
+            <i class="fa fa-angle-right"></i><a href="webcams-details">Logitech BRIO</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

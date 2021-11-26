@@ -225,14 +225,14 @@
                                         <li itemprop="name"><a itemprop="url"
                                                 href="{{route('monitor-list')}}">Monitors</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/webcam/index.html">Webcam</a></li>
+                                                href="{{route('webcams-list')}}">Webcam</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-6 col-sm-4">
                                     <ul class="list-unstyled">
                                         <li class="heading top-padding">Peripherals</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="#">Headphones</a></li>
+                                                href="{{route('headphones-list')}}">Headphones</a></li>
                                         <li itemprop="name">
                                             <a itemprop="url"
                                                 href="{{route('keyboard-list')}}">Keyboards</a></li>
@@ -246,13 +246,13 @@
                                     <ul class="list-unstyled">
                                         <li class="heading">External Storage</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="#">External Hard
+                                                href="{{route('external-hard-drive-list')}}">External Hard
                                                 Drives</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Drivers</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="#">Optical Drive</a></li>
+                                                href="{{route('optical-drives-list')}}">Optical Drive</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-6 col-sm-4">

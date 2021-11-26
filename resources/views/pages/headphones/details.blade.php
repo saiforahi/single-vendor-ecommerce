@@ -267,7 +267,7 @@
         <h2>HyperX Cloud II (KHX-HSCP-RD)</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/headphone/index.html">Headphone</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">HyperX Cloud II</a></span>
+            <i class="fa fa-angle-right"></i><a href="headphones-details">HyperX Cloud II</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
