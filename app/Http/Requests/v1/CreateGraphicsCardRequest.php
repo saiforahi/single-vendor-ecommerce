@@ -33,7 +33,6 @@ class CreateGraphicsCardRequest extends FormRequest
             'general_specs'=>'sometimes|nullable|json',
             'clock_specs'=>'sometimes|nullable|json',
             'additional_specs'=>'sometimes|nullable|json'
-            
         ];
     }
 }

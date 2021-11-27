@@ -56,4 +56,8 @@ class Product extends Model implements HasMedia, Buyable
     public function getBuyableWeight($options = null) {
         return $this->weight;
     }
+    public function extendable()
+    {
+        return $this->morphTo();
+    }
 }

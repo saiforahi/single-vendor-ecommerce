@@ -76,30 +76,6 @@
 
     </style>
     <style>
-        .stars-rating {
-            color: rgba(255, 255, 255, 0.9);
-            position: relative;
-            display: inline-block;
-        }
-
-        .stars-rating .stars-score {
-            color: rgba(255, 255, 255, 0.9);
-            position: absolute;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            width: 20%;
-            white-space: nowrap;
-        }
-
-    </style>
-    <style>
-        ul {
-            padding-inline-start: 40px;
-        }
-
-    </style>
-    <style>
         .product-info {
             /*box-shadow: 0 2px 4px #fff, -2px 0 4px #fff;*/
             padding: 10px;
@@ -204,24 +180,8 @@
             margin-bottom: 0rem;
         }
 
-        @media screen and (min-width: 768px) {
-            ul {
-                padding-right: 100px;
-            }
-        }
-
-        .sticky {
-            /*position: sticky!important;
-                                                top: 80px;*/
-        }
-
-        .budget-price {
-            color: #fff !important;
-            font-size: 35px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
+    </style>
+    <style>
         a.disabled {
             pointer-events: none;
             cursor: default;
@@ -264,6 +224,30 @@
             .btn2 {
                 width: 100%;
             }
+        }
+
+    </style>
+    <style>
+        .stars-rating {
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            display: inline-block;
+        }
+
+        .stars-rating .stars-score {
+            color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            width: 20%;
+            white-space: nowrap;
+        }
+
+    </style>
+    <style>
+        ul {
+            padding-inline-start: 40px;
         }
 
     </style>

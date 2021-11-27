@@ -20,13 +20,8 @@ class MemoriesController extends Controller
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
                     if($req->hasFile('image'.$index) && $req->file('image'.$index)->isValid()){
-                        // $new_storage->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
                         array_push($images,$req->file('image'.$index));
-                        // $new_storage->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
                     }
-                    // dd($req->file('image'.$index));
-                    // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('thumb');
-                    // $new_laptop->addMediaFromRequest('image'.$index)->toMediaCollection('main_image');
                 }
             }
             event(new UploadImageEvent($new_product,$images));

@@ -47,9 +47,8 @@ class Memory extends Model implements HasMedia
     public function product(){
         return $this->belongsTo(Product::class,'product_id','id');
     }
-    // public function product()
-    // {
-    //     return $this->hasOne('App\Models\Processor', 'child_id', 'product_id')
-    //         ->whereImageableType('App\Models\Processor');
-    // }
+    public function parent()
+    {
+        return $this->morphOne(Product::class, 'extendable');
+    }
 }

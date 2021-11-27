@@ -32,7 +32,10 @@
         .red {
             background-color: #e74c3c;
         }
-
+        .td-text-center{
+            /* text-align: center !important; */
+            vertical-align: inherit !important;
+        }
     </style>
     <style>
         .search {
@@ -86,9 +89,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                                                                                                letter-spacing: 1px;
-                                                                                                word-spacing: 3px;
-                                                                                                text-decoration: none**/
+                                                                                                    letter-spacing: 1px;
+                                                                                                    word-spacing: 3px;
+                                                                                                    text-decoration: none**/
         }
 
         .checkbox label,
@@ -328,8 +331,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                                                                                              transform: translate(-50%, -50%);
-                                                                                                              */
+                                                                                                                  transform: translate(-50%, -50%);
+                                                                                                                  */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -353,10 +356,10 @@
             }
 
             /*
-                                                                                                    .modal-window div:not(:last-of-type) {
-                                                                                                      margin-bottom: 15px;
-                                                                                                    }
-                                                                                                    */
+                                                                                                        .modal-window div:not(:last-of-type) {
+                                                                                                          margin-bottom: 15px;
+                                                                                                        }
+                                                                                                        */
 
         }
 
@@ -425,15 +428,15 @@
                         <thead>
                             <tr>
                                 <th class="d-sm-none" scope="col" width="12%">#</th>
-                                <th scope="col" width="9%">Product</th>
-                                <th scope="col" width="47%">Title</th>
-                                <th scope="col" width="7%">Price</th>
-                                <th scope="col" width="18%">Product Details</th>
-                                <th scope="col" width="12%">Quantity</th>
+                                <th scope="col" width="15%">Product</th>
+                                <th scope="col" width="37%">Name</th>
+                                <th scope="col" width="12%">Price</th>
+                                <th scope="col" width="28%">Quantity</th>
+                                <th scope="col" width="12%">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @if (Session::has('cart'))
+                            @if (Cart::count() > 0)
                                 @foreach (\Cart::content() as $item)
                                     <tr class="items" data-href="#">
                                         <td scope="row" class="component d-sm-none">
@@ -442,12 +445,12 @@
                                         <td class="box">
                                             <div class="logo-name">
                                                 <div class="item-logo">
-                                                    {{-- <?php $images = $item->product->getMedia('main_image'); ?> --}}
-                                                    {{-- <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    <?php $images = App\Models\Product::find($item->id)->getMedia('main_image'); ?>
+                                                    <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                         class="img-responsive lazy img-fluid"
                                                         data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                         title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                                        alt="pc builder, custom pc builder, pc part picker, build my pc, AMD Ryzen Threadripper 3990X"> --}}
+                                                        alt="pc builder, custom pc builder, pc part picker, build my pc, AMD Ryzen Threadripper 3990X">
                                                     <div class="stars-rating" title="4.4 out of 5">
                                                         <div class="stars-score" style="width: 88%">
                                                             <i class="fas fa-star"></i>
@@ -467,11 +470,11 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        {{-- <td class="comp-details">
+                                        <td class="comp-details td-text-center">
                                             <div class="table_title"><a
                                                     href="{{ route('processor-details', ['id' => $item->id]) }}">{{ $item->name }}</a>
                                             </div>
-                                            <span class="table_span">
+                                            {{-- <span class="table_span">
                                                 <div class="detail">
                                                     <div class="detail__name">Brand:</div>
                                                     <div class="detail__value f_brand">{{ $item->brand }}</div>
@@ -537,8 +540,8 @@
                                                 <div class="view-More6" onclick="viewMore(6);"><span
                                                         class="viewMore6">View More Details</span> <i
                                                         class="fas fa-chevron-circle-down"></i></div>
-                                            </span>
-                                            <div id="content" class="d-none">
+                                            </span> --}}
+                                            {{-- <div id="content" class="d-none">
                                                 <div>
                                                     <div class="circle green">100</div>
                                                     <p>PCB Benchmark
@@ -548,15 +551,37 @@
                                                     <p>Value for Money
                                                     <p>
                                                 </div>
-                                            </div>
-                                        </td> --}}
+                                            </div> --}}
+                                        </td>
 
-                                        <td class="price">
+                                        <td class="price td-text-center">
                                             ৳ {{ $item->price }} </td>
-                                        <td><a class="btn btn-primary component-btn"
-                                                href="{{ route('processor-details', ['id' => $item->id]) }}"
-                                                target="_blank">View Details</a></td>
-                                        <td class="remove"><a class="btn btn-danger component-add-btn"
+                                        <td class="td-text-center">
+                                            <div class="form">
+                                                <form>
+                                                    {{-- <input class="form-control mb-3" /> --}}
+                                                    <div class="input-group" style="width: 130px;">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-number" type="button" data-type="minus"
+                                                                data-field="quantity" disabled="disabled">
+                                                                <i class="fa fa-minus"></i>
+                                                            </button>
+                                                        </span>
+                                                        <input type="text" name="quantity"
+                                                            class="form-control h-auto input-number text-center"
+                                                            placeholder="1" value="1" min="1" max="10">
+                                                        <span class="input-group-btn">
+                                                            <button class="btn btn-number" type="button" data-type="plus"
+                                                                data-field="quantity">
+                                                                <i class="fa fa-plus"></i>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </td>
+                                        <td class="td-text-center"><a class="btn btn-danger component-add-btn"
                                                 id="{{ 'p_' . $item->id }}"
                                                 href="{{ route('remove-from-cart', ['product_id' => $item->rowId]) }}"><i
                                                     class="fa fa-minus"></i></a>
