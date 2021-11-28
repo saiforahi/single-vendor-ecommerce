@@ -25,6 +25,7 @@ class CreaOpticalDrivesRequest extends FormRequest
     {
         return [
             'name'=> 'required|string|max:1055',
+            'short_name'=>'required|string|max:255',
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',

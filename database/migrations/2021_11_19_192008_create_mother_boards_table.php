@@ -25,7 +25,7 @@ class CreateMotherBoardsTable extends Migration
             $table->json('back_panel_specs')->nullable();
             $table->json('storage_specs')->nullable();
             $table->json('memory_specs')->nullable();
-            $table->json('short_name')->nullable();
+            $table->string('short_name')->nullable();
             $table->json('internal_specs')->nullable();
             $table->json('front_panel_specs')->nullable();
             $table->json('audio_specs')->nullable();

@@ -25,10 +25,16 @@ class CreateStorageRequest extends FormRequest
     {
         return [
             'name'=> 'required|string|max:1055',
+            'short_name'=>'required|string|max:255',
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
-            'storage_specs'=>'required|json',
+            'storage_specs'=>'sometimes|nullable|json',
+            'physical_specs'=>'sometimes|nullable|json',
+            'performance_specs'=>'sometimes|nullable|json',
+            'ssd_specs'=>'sometimes|nullable|json',
+            'reliability_specs'=>'sometimes|nullable|json',
+            'packaging_specs'=>'sometimes|nullable|json',
             'total_images'=>'sometimes|nullable',
         ];
     }

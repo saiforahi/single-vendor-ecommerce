@@ -20,7 +20,7 @@ class CreateCasingsTable extends Migration
             $table->string('name');
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
-            $table->json('short_name')->nullable();
+            $table->string('short_name')->nullable();
             //common part ends here
             $table->json('compatibility_specs')->nullable();
             $table->json('cooling_specs')->nullable();

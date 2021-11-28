@@ -11,7 +11,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class SoundCard extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','specifications'];
+    protected $fillable=['product_id','brand','model','name','specifications','short_name'];
     protected $table="sound_cards";
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',

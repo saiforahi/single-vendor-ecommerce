@@ -29,7 +29,7 @@ class CreateHeadPhonesRequest extends FormRequest
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
             'specifications'=>'sometimes|nullable|json',
-            
+            'short_name'=>'required|string|max:255',
             'total_images'=>'sometimes|nullable'
         ];
     }

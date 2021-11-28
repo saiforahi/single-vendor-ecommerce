@@ -1191,11 +1191,11 @@
 
                                             <div class="detail">
                                                 <div class="detail__name">Capacity:</div>
-                                                <div class="detail__value f_capacity"> 1 TB </div>
+                                                <div class="detail__value f_capacity">{{ empty(json_decode($storage->storage_specs, true)) ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Type:</div>
-                                                <div class="detail__value f_storage_type"> SSD </div>
+                                                <div class="detail__value f_storage_type">{{ empty(json_decode($storage->physical_specs, true)) ? '' : json_decode($storage->physical_specs, true)['drive_type'] }}</div>
                                             </div>
                                             <div class="detail d-none">
                                                 <div class="detail__name">RPM:</div>
@@ -1204,7 +1204,7 @@
                                         </span><span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Interface:</div>
-                                                <div class="detail__value f_interface"> PCIe 3.0 x4 </div>
+                                                <div class="detail__value f_interface">{{ empty(json_decode($storage->performance_specs, true)) ? '' : json_decode($storage->performance_specs, true)['interface'] }}</div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Cache Memory:</div>
@@ -1212,7 +1212,7 @@
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Form Factor:</div>
-                                                <div class="detail__value f_form_factor"> M.2-2280 </div>
+                                                <div class="detail__value f_form_factor">{{ empty(json_decode($storage->physical_specs, true)) ? '' : json_decode($storage->physical_specs, true)['form_factor'] }}</div>
                                             </div>
                                         </span>
 

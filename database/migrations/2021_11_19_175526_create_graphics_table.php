@@ -24,7 +24,7 @@ class CreateGraphicsTable extends Migration
             $table->json('general_specs')->nullable();
             $table->json('clock_specs')->nullable();
             $table->json('additional_specs')->nullable();
-            $table->json('short_name')->nullable();
+            $table->string('short_name')->nullable();
     
             // $table->integer('price')->nullable();
             $table->string('type')->nullable();

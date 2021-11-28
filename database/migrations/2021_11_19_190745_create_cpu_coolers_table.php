@@ -25,7 +25,7 @@ class CreateCpuCoolersTable extends Migration
             $table->json('cooling_specs')->nullable();
             $table->json('packaging_specs')->nullable();
             
-            $table->json('short_name')->nullable();
+            $table->string('short_name')->nullable();
             
             // $table->integer('price')->nullable();
             $table->string('type')->nullable();

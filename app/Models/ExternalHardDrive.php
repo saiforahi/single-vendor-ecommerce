@@ -14,7 +14,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class ExternalHardDrive extends Model
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','specifications'];
+    protected $fillable=['product_id','brand','model','name','specifications','short_name'];
     protected $table="external_hard_drives";
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',

@@ -24,7 +24,7 @@ class CreateMemoriesTable extends Migration
             $table->json('general_specs')->nullable();
             $table->json('memory_specs')->nullable();
             $table->json('additional_specs')->nullable();
-            $table->json('short_name')->nullable();
+            $table->string('short_name')->nullable();
             
             // $table->integer('price')->nullable();
             $table->string('type')->nullable();
