@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-        letter-spacing: 1px;
-        word-spacing: 3px;
-        text-decoration: none**/
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            text-decoration: none**/
         }
 
         .checkbox label,
@@ -335,8 +335,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                      transform: translate(-50%, -50%);
-                      */
+                          transform: translate(-50%, -50%);
+                          */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -360,10 +360,10 @@
             }
 
             /*
-            .modal-window div:not(:last-of-type) {
-              margin-bottom: 15px;
-            }
-            */
+                .modal-window div:not(:last-of-type) {
+                  margin-bottom: 15px;
+                }
+                */
 
         }
 
@@ -668,8 +668,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -836,8 +836,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -886,8 +886,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                       
+
+
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -1113,8 +1113,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1193,83 +1193,85 @@
                         </thead>
                         <tbody>
                             @foreach ($cases as $case)
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <?php $images = $case->product->getMedia('main_image'); ?>
-                                            <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                class="img-responsive lazy img-fluid"
-                                                data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                title="{{ $memory->name }}" alt="{{ $memory->name }}">
-                                            <div class="stars-rating" title="4.7 out of 5">
-                                                <div class="stars-score" style="width: 94%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <?php $images = $case->product->getMedia('main_image'); ?>
+                                                <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    title="{{ $memory->name }}" alt="{{ $memory->name }}">
+                                                <div class="stars-rating" title="4.7 out of 5">
+                                                    <div class="stars-score" style="width: 94%">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="stars-scale">
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="{{route("case-details")}}">NZXT
-                                            H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C
-                                            Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready
-                                        </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> NZXT </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> H510B-W1 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a href="{{ route('case-details') }}">NZXT
+                                                H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB
+                                                Type-C
+                                                Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling
+                                                Ready
+                                            </a></div>
+                                        <span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Brand:</div>
+                                                <div class="detail__value f_brand"> NZXT </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Model:</div>
+                                                <div class="detail__value f_model"> H510B-W1 </div>
+                                            </div>
+                                        </span>
+                                        <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">Side Panel:</div>
-                                            <div class="detail__value f_side_panel"> Tempered Glass, Steel </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Cabinet Type:</div>
-                                            <div class="detail__value f_cabinet_type"> ATX Mid Tower </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> White </div>
-                                        </div>
-                                    </span>
+                                            <div class="detail">
+                                                <div class="detail__name">Side Panel:</div>
+                                                <div class="detail__value f_side_panel"> Tempered Glass, Steel </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Cabinet Type:</div>
+                                                <div class="detail__value f_cabinet_type"> ATX Mid Tower </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Color:</div>
+                                                <div class="detail__value f_color"> White </div>
+                                            </div>
+                                        </span>
 
-                                </td>
-                                <td class="price">
-                                    $74.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07TC76671?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                        href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>   
+                                    </td>
+                                    <td class="price">
+                                        $74.99 </td>
+                                    <td><a class="btn btn-primary component-btn"
+                                            href="https://amazon.com/dp/B07TC76671?tag=pcbuilder00-20" target="_blank"><i
+                                                class="fab fa-amazon"></i> View on Amazon</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
+                                            href="javascript:void(0);" onclick="setid(1)"><i
+                                                class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
                             @endforeach
-                            
+
                         </tbody>
-                        
+
                     </table>
                 </div>
             </div>
@@ -1277,50 +1279,22 @@
 @endsection
 
 @push('script')
-<script>
-    function f_brand(id) {
+    <script>
+        function f_brand(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("brand");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_brand")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_brand");
-                    } else {
-                        tr[i].classList.remove("c_brand");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_brand")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_brand");
-                        } else {
-                            tr[i].classList.add("c_brand");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("brand");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1333,41 +1307,85 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script> 
-<script>
-    function f_side_panel(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("side_panel");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_side_panel")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_side_panel");
-                    } else {
-                        tr[i].classList.remove("c_side_panel");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.add("c_brand");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.remove("c_brand");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://pcbuilder.net/",
+                        "name": "PC Builder"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/",
+                        "name": "Product"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/case/",
+                        "name": "Case"
+                    }
+                }
+            ]
+        }
+    </script>
+    <script>
+        function f_side_panel(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("side_panel");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1376,71 +1394,58 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_side_panel");
                         } else {
-                            tr[i].classList.add("c_side_panel");
+                            tr[i].classList.remove("c_side_panel");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_side_panel")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_side_panel");
-                        } else {
-                            tr[i].classList.remove("c_side_panel");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_side_panel")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_side_panel");
+                            } else {
+                                tr[i].classList.add("c_side_panel");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_side_panel")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_side_panel");
+                            } else {
+                                tr[i].classList.remove("c_side_panel");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
-<script>
-    function f_cabinet_type(id) {
+    </script>
+    <script>
+        function f_cabinet_type(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("cabinet_type");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_cabinet_type")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_cabinet_type");
-                    } else {
-                        tr[i].classList.remove("c_cabinet_type");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_cabinet_type")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_cabinet_type");
-                        } else {
-                            tr[i].classList.add("c_cabinet_type");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("cabinet_type");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1453,41 +1458,54 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script>
-<script>
-    function f_color(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("color");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_color")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_color");
-                    } else {
-                        tr[i].classList.remove("c_color");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_cabinet_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_cabinet_type");
+                            } else {
+                                tr[i].classList.add("c_cabinet_type");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_cabinet_type")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_cabinet_type");
+                            } else {
+                                tr[i].classList.remove("c_cabinet_type");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script>
+        function f_color(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("color");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1496,25 +1514,40 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_color");
                         } else {
-                            tr[i].classList.add("c_color");
+                            tr[i].classList.remove("c_color");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_color")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_color");
-                        } else {
-                            tr[i].classList.remove("c_color");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_color")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_color");
+                            } else {
+                                tr[i].classList.add("c_color");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_color")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_color");
+                            } else {
+                                tr[i].classList.remove("c_color");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
+    </script>
 @endpush

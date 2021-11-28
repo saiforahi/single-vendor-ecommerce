@@ -86,9 +86,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                letter-spacing: 1px;
-                word-spacing: 3px;
-                text-decoration: none**/
+                    letter-spacing: 1px;
+                    word-spacing: 3px;
+                    text-decoration: none**/
         }
 
         .checkbox label,
@@ -328,8 +328,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                              transform: translate(-50%, -50%);
-                              */
+                                  transform: translate(-50%, -50%);
+                                  */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -353,10 +353,10 @@
             }
 
             /*
-                    .modal-window div:not(:last-of-type) {
-                      margin-bottom: 15px;
-                    }
-                    */
+                        .modal-window div:not(:last-of-type) {
+                          margin-bottom: 15px;
+                        }
+                        */
 
         }
 
@@ -427,9 +427,9 @@
 @section('content')
     <section class="pcb-breadcrumb">
         <h1><span>Select</span> Your Monitor</h1>
-        <span><a href="{{route('home')}}">Home</a>
+        <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('monitor-list')}}">Monitor</a>
+            <i class="fa fa-angle-right"></i><a href="{{ route('monitor-list') }}">Monitor</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -1792,87 +1792,89 @@
                         </thead>
                         <tbody>
                             @foreach ($monitors as $monitor)
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <?php $images = $monitor->product->getMedia('main_image'); ?>
-                                            <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}" class="img-responsive lazy img-fluid"
-                                                data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                title="{{$monitor->name}}"
-                                                alt="{{$monitor->name}}">
-                                            <div class="stars-rating" title="4.6 out of 5">
-                                                <div class="stars-score" style="width: 92%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <?php $images = $monitor->product->getMedia('main_image'); ?>
+                                                <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    title="{{ $monitor->name }}" alt="{{ $monitor->name }}">
+                                                <div class="stars-rating" title="4.6 out of 5">
+                                                    <div class="stars-score" style="width: 92%">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="stars-scale">
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="{{route('monitor-details',['id'=>$monitor->id])}}">{{$monitor->name}}</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> AOC </div>
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a
+                                                href="{{ route('monitor-details', ['id' => $monitor->id]) }}">{{ $monitor->name }}</a>
                                         </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> C24G1 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
+                                        <span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Brand:</div>
+                                                <div class="detail__value f_brand"> AOC </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Model:</div>
+                                                <div class="detail__value f_model"> C24G1 </div>
+                                            </div>
+                                        </span>
+                                        <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">Screen Size:</div>
-                                            <div class="detail__value f_screen"> 24" </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Resolution:</div>
-                                            <div class="detail__value f_resolution"> 1920 x 1080 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Aspect Ratio:</div>
-                                            <div class="detail__value f_aspect_ratio"> 16:9 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Response Time:</div>
-                                            <div class="detail__value f_response_time"> 1 ms </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Panel Type:</div>
-                                            <div class="detail__value f_panel_type"> VA </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Refresh Rate:</div>
-                                            <div class="detail__value f_refresh_rate"> 144 Hz </div>
-                                        </div>
-                                    </span>
+                                            <div class="detail">
+                                                <div class="detail__name">Screen Size:</div>
+                                                <div class="detail__value f_screen"> 24" </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Resolution:</div>
+                                                <div class="detail__value f_resolution"> 1920 x 1080 </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Aspect Ratio:</div>
+                                                <div class="detail__value f_aspect_ratio"> 16:9 </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Response Time:</div>
+                                                <div class="detail__value f_response_time"> 1 ms </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Panel Type:</div>
+                                                <div class="detail__value f_panel_type"> VA </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Refresh Rate:</div>
+                                                <div class="detail__value f_refresh_rate"> 144 Hz </div>
+                                            </div>
+                                        </span>
 
-                                </td>
-                                <td class="price">{{$monitor->product->price}}</td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07GD7H18F?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                        href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td class="price">{{ $monitor->product->price }}</td>
+                                    <td><a class="btn btn-primary component-btn"
+                                            href="https://amazon.com/dp/B07GD7H18F?tag=pcbuilder00-20" target="_blank"><i
+                                                class="fab fa-amazon"></i> View on Amazon</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
+                                            href="javascript:void(0);" onclick="setid(1)"><i
+                                                class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>
@@ -1940,6 +1942,37 @@
                     }
                 }
             }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://pcbuilder.net/",
+                        "name": "PC Builder"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/",
+                        "name": "Product"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/monitor/",
+                        "name": "Monitor"
+                    }
+                }
+            ]
         }
     </script>
     <script>

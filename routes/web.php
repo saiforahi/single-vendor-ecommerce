@@ -135,6 +135,15 @@ Route::prefix('opticaldrives')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\OpticalDriveController::class,'show_list'])->name('optical-drives-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\OpticalDriveController::class,'show_details'])->name('optical-drives-details');
 });
+
+Route::prefix('soundcards')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\SoundCardController::class,'show_list'])->name('sound-card-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\SoundCardController::class,'show_details'])->name('sound-card-details');
+});
+Route::prefix('wireless-network-adapter')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\WirelessNetworkAdapterController::class,'show_list'])->name('wireless-network-adapter-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\WirelessNetworkAdapterController::class,'show_details'])->name('wireless-network-adapter-details');
+});
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');

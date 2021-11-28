@@ -212,7 +212,7 @@
                                     <ul class="list-unstyled">
                                         <li class="heading">Expansion</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/sound-card/index.html">Sound Cards</a></li>
+                                                href="{{route('sound-card-list')}}">Sound Cards</a></li>
                                         <li itemprop="name"><a itemprop="url"
                                                 href="product/wired-network-adapter/index.html">Wired Networking</a>
                                         </li>

@@ -42,3 +42,4 @@ require __DIR__.'/headphones.php';
 require __DIR__.'/externalharddrives.php';
 require __DIR__.'/webcams.php';
 require __DIR__.'/opticaldrives.php';
+require __DIR__.'/soundcards.php';

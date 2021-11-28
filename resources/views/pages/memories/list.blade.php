@@ -93,9 +93,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                    letter-spacing: 1px;
-                    word-spacing: 3px;
-                    text-decoration: none**/
+                        letter-spacing: 1px;
+                        word-spacing: 3px;
+                        text-decoration: none**/
         }
 
         .checkbox label,
@@ -359,8 +359,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                  transform: translate(-50%, -50%);
-                                  */
+                                      transform: translate(-50%, -50%);
+                                      */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -384,10 +384,10 @@
             }
 
             /*
-                        .modal-window div:not(:last-of-type) {
-                          margin-bottom: 15px;
-                        }
-                        */
+                            .modal-window div:not(:last-of-type) {
+                              margin-bottom: 15px;
+                            }
+                            */
 
         }
 
@@ -566,7 +566,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -633,7 +633,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -758,7 +758,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -885,7 +885,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -912,7 +912,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="card-group" id="accordion6" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
@@ -1007,7 +1007,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
@@ -1098,7 +1098,7 @@
                                                 <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                    title="{{ $memory->name }}" alt="{{ $memory->name }}"/>
+                                                    title="{{ $memory->name }}" alt="{{ $memory->name }}" />
 
                                                 <div class="stars-rating" title="5.0 out of 5">
                                                     <div class="stars-score" style="width: 100%">
@@ -1172,7 +1172,8 @@
                                     </td>
                                     <td class="price">{{ $memory->product->price }}</td>
                                     <td><a class="btn btn-primary component-btn"
-                                            href="{{ route('memory-details', ['id' => $memory->id]) }}" target="_blank">View
+                                            href="{{ route('memory-details', ['id' => $memory->id]) }}"
+                                            target="_blank">View
                                             Details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
                                             href="{{ route('add-memory-to-system', ['memory_id' => $memory->id]) }}"><i
@@ -1248,6 +1249,37 @@
                     }
                 }
             }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://pcbuilder.net/",
+                        "name": "PC Builder"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/",
+                        "name": "Product"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/ram/",
+                        "name": "RAM"
+                    }
+                }
+            ]
         }
     </script>
     <script>

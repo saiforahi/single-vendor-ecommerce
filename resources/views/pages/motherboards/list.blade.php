@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                    letter-spacing: 1px;
-                    word-spacing: 3px;
-                    text-decoration: none**/
+                        letter-spacing: 1px;
+                        word-spacing: 3px;
+                        text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                  transform: translate(-50%, -50%);
-                                  */
+                                      transform: translate(-50%, -50%);
+                                      */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,10 +354,10 @@
             }
 
             /*
-                        .modal-window div:not(:last-of-type) {
-                          margin-bottom: 15px;
-                        }
-                        */
+                            .modal-window div:not(:last-of-type) {
+                              margin-bottom: 15px;
+                            }
+                            */
 
         }
 
@@ -478,7 +478,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <script>
                             function f_brand(id) {
 
@@ -696,8 +696,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -766,8 +766,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -806,8 +806,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading5">
@@ -841,8 +841,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion6" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading6">
@@ -891,8 +891,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1048,8 +1048,9 @@
                 </span>
                 </td>
                 <td class="price">{{ $motherboard->product->price }}</td>
-                <td><a class="btn btn-primary component-btn" href="{{ route('motherboard-details', ['id' => $motherboard->id]) }}"
-                        target="_blank">View Details</a></td>
+                <td><a class="btn btn-primary component-btn"
+                        href="{{ route('motherboard-details', ['id' => $motherboard->id]) }}" target="_blank">View
+                        Details</a></td>
                 {{-- <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
                         href="{{ route('add-motherboard-to-system', ['motherboard_id' => $motherboard->id]) }}"><i
                             class="fa fa-plus"></i></a>
@@ -1125,6 +1126,37 @@
                     }
                 }
             }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://pcbuilder.net/",
+                        "name": "PC Builder"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/",
+                        "name": "Product"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/motherboard/",
+                        "name": "Motherboard"
+                    }
+                }
+            ]
         }
     </script>
     <script>
@@ -1427,5 +1459,5 @@
             }
         }
     </script>
-    
+
 @endpush

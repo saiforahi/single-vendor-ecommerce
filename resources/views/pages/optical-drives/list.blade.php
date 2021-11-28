@@ -4079,6 +4079,42 @@
             }
         }
     </script>
+    <script type="application/ld+json">
+        {
+         "@context": "http://schema.org",
+         "@type": "BreadcrumbList",
+         "itemListElement":
+         [
+          {
+           "@type": "ListItem",
+           "position": 1,
+           "item":
+           {
+            "@id": "https://pcbuilder.net/",
+            "name": "PC Builder"
+            }
+          },
+          {
+           "@type": "ListItem",
+           "position": 2,
+           "item":
+           {
+            "@id": "https://pcbuilder.net/product/",
+            "name": "Product"
+            }
+          },
+          {
+           "@type": "ListItem",
+          "position": 3,
+          "item":
+           {
+             "@id": "https://pcbuilder.net/product/optical-drive/",
+             "name": "Optical Drive"
+           }
+          }
+         ]
+        }
+        </script>
     <script>
         function f_buffer_memory(id) {
 

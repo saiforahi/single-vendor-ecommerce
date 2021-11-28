@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-     letter-spacing: 1px;
-     word-spacing: 3px;
-     text-decoration: none**/
+         letter-spacing: 1px;
+         word-spacing: 3px;
+         text-decoration: none**/
         }
 
         .checkbox label,
@@ -341,8 +341,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                      transform: translate(-50%, -50%);
-                      */
+                          transform: translate(-50%, -50%);
+                          */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -366,10 +366,10 @@
             }
 
             /*
-            .modal-window div:not(:last-of-type) {
-              margin-bottom: 15px;
-            }
-            */
+                .modal-window div:not(:last-of-type) {
+                  margin-bottom: 15px;
+                }
+                */
 
         }
 
@@ -503,8 +503,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -575,8 +575,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -782,8 +782,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -842,8 +842,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -922,106 +922,109 @@
                         </thead>
                         <tbody>
                             @foreach ($graphics as $graphic)
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41t1VU+qlYL._SL75_.jpg"
-                                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, MSI RTX 3090 GAMING X TRIO 24G">
-                                            <div class="stars-rating" title="4.3 out of 5">
-                                                <div class="stars-score" style="width: 86%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <img src="../../assets/images/blank.jpg"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="https://m.media-amazon.com/images/I/41t1VU+qlYL._SL75_.jpg"
+                                                    title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
+                                                    alt="pc builder, custom pc builder, pc part picker, build my pc, MSI RTX 3090 GAMING X TRIO 24G">
+                                                <div class="stars-rating" title="4.3 out of 5">
+                                                    <div class="stars-score" style="width: 86%">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="stars-scale">
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                        href="{{ route('graphics-cards-details', ['id' => $graphic->id]) }}">{{ $graphic->name }}</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> MSI </div>
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a
+                                                href="{{ route('graphics-cards-details', ['id' => $graphic->id]) }}">{{ $graphic->name }}</a>
                                         </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> RTX 3090 GAMING X TRIO 24G </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
+                                        <span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Brand:</div>
+                                                <div class="detail__value f_brand"> MSI </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Model:</div>
+                                                <div class="detail__value f_model"> RTX 3090 GAMING X TRIO 24G </div>
+                                            </div>
+                                        </span>
+                                        <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">Memory:</div>
-                                            <div class="detail__value f_memory"> 24 GB </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Memory Interface:</div>
-                                            <div class="detail__value f_memory_interface"> GDRR6X </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Length:</div>
-                                            <div class="detail__value f_length"> 335 mm </div>
-                                        </div>
-                                    </span><span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x16 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Chipset:</div>
-                                            <div class="detail__value f_chipset"> GeForce RTX 3090 </div>
-                                        </div>
-                                    </span><span class="table_span view-more-108" style="display: none;">
-                                        <div class="detail">
-                                            <div class="detail__name">Base Clock:</div>
-                                            <div class="detail__value f_base_clock"> 1395 MHz </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Clock Speed:</div>
-                                            <div class="detail__value f_clock_speed"> 1785 MHz </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Frame Sync:</div>
-                                            <div class="detail__value f_frame_sync"> G-Sync </div>
-                                        </div>
-                                    </span>
+                                            <div class="detail">
+                                                <div class="detail__name">Memory:</div>
+                                                <div class="detail__value f_memory"> 24 GB </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Memory Interface:</div>
+                                                <div class="detail__value f_memory_interface"> GDRR6X </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Length:</div>
+                                                <div class="detail__value f_length"> 335 mm </div>
+                                            </div>
+                                        </span><span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Interface:</div>
+                                                <div class="detail__value f_interface"> PCIe x16 </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Chipset:</div>
+                                                <div class="detail__value f_chipset"> GeForce RTX 3090 </div>
+                                            </div>
+                                        </span><span class="table_span view-more-108" style="display: none;">
+                                            <div class="detail">
+                                                <div class="detail__name">Base Clock:</div>
+                                                <div class="detail__value f_base_clock"> 1395 MHz </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Clock Speed:</div>
+                                                <div class="detail__value f_clock_speed"> 1785 MHz </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Frame Sync:</div>
+                                                <div class="detail__value f_frame_sync"> G-Sync </div>
+                                            </div>
+                                        </span>
 
-                                    <span class="view-more">
-                                        <div class="view-More108" onclick="viewMore(108);"><span
-                                                class="viewMore108">View More
-                                                Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
-                                </td>
-                                <td class="price">
-                                    $3,299 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B08HRBW6VB?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_108"
-                                        href="javascript:void(0);" onclick="setid(108)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>  
+                                        <span class="view-more">
+                                            <div class="view-More108" onclick="viewMore(108);"><span
+                                                    class="viewMore108">View More
+                                                    Details</span> <i class="fas fa-chevron-circle-down"></i></div>
+                                        </span>
+                                    </td>
+                                    <td class="price">
+                                        $3,299 </td>
+                                    <td><a class="btn btn-primary component-btn"
+                                            href="https://amazon.com/dp/B08HRBW6VB?tag=pcbuilder00-20" target="_blank"><i
+                                                class="fab fa-amazon"></i> View on Amazon</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_108"
+                                            href="javascript:void(0);" onclick="setid(108)"><i
+                                                class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
                             @endforeach
-                             
+
                         </tbody>
-                        
+
                     </table>
                 </div>
             </div>
@@ -1029,50 +1032,22 @@
 @endsection
 
 @push('script')
-<script>
-    function f_memory(id) {
+    <script>
+        function f_memory(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("memory");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_memory")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_memory");
-                    } else {
-                        tr[i].classList.remove("c_memory");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_memory")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_memory");
-                        } else {
-                            tr[i].classList.add("c_memory");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("memory");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1085,41 +1060,85 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script>
-<script>
-    function f_chipset(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("chipset");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_chipset")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_chipset");
-                    } else {
-                        tr[i].classList.remove("c_chipset");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_memory")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_memory");
+                            } else {
+                                tr[i].classList.add("c_memory");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_memory")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_memory");
+                            } else {
+                                tr[i].classList.remove("c_memory");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://pcbuilder.net/",
+                        "name": "PC Builder"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/",
+                        "name": "Product"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/graphics-card/",
+                        "name": "Graphics Card"
+                    }
+                }
+            ]
+        }
+    </script>
+    <script>
+        function f_chipset(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("chipset");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1128,71 +1147,58 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_chipset");
                         } else {
-                            tr[i].classList.add("c_chipset");
+                            tr[i].classList.remove("c_chipset");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_chipset")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_chipset");
-                        } else {
-                            tr[i].classList.remove("c_chipset");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_chipset")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_chipset");
+                            } else {
+                                tr[i].classList.add("c_chipset");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_chipset")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_chipset");
+                            } else {
+                                tr[i].classList.remove("c_chipset");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
-<script>
-    function f_brand(id) {
+    </script>
+    <script>
+        function f_brand(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("brand");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_brand")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_brand");
-                    } else {
-                        tr[i].classList.remove("c_brand");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_brand")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_brand");
-                        } else {
-                            tr[i].classList.add("c_brand");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("brand");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1205,41 +1211,54 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script>
-<script>
-    function f_interface(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("interface");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_interface")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_interface");
-                    } else {
-                        tr[i].classList.remove("c_interface");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.add("c_brand");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.remove("c_brand");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script>
+        function f_interface(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("interface");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1248,26 +1267,40 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_interface");
                         } else {
-                            tr[i].classList.add("c_interface");
+                            tr[i].classList.remove("c_interface");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_interface")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_interface");
-                        } else {
-                            tr[i].classList.remove("c_interface");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_interface")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_interface");
+                            } else {
+                                tr[i].classList.add("c_interface");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_interface")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_interface");
+                            } else {
+                                tr[i].classList.remove("c_interface");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
+    </script>
 @endpush
-
