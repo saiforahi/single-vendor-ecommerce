@@ -144,6 +144,10 @@ Route::prefix('wireless-network-adapter')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\WirelessNetworkAdapterController::class,'show_list'])->name('wireless-network-adapter-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\WirelessNetworkAdapterController::class,'show_details'])->name('wireless-network-adapter-details');
 });
+Route::prefix('wired-network-adapter')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\WiredNetworkAdapterController::class,'show_list'])->name('wired-network-adapter-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\WiredNetworkAdapterController::class,'show_details'])->name('wired-network-adapter-details');
+});
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');

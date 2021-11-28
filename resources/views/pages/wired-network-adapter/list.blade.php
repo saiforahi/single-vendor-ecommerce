@@ -14,6 +14,12 @@
 
     </style>
     <style>
+        .c_ports {
+            display: none !important;
+        }
+
+    </style>
+    <style>
         .c_color {
             display: none !important;
         }
@@ -82,8 +88,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                          transform: translate(-50%, -50%);
-                          */
+                      transform: translate(-50%, -50%);
+                      */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -107,10 +113,10 @@
             }
 
             /*
-                .modal-window div:not(:last-of-type) {
-                  margin-bottom: 15px;
-                }
-                */
+            .modal-window div:not(:last-of-type) {
+              margin-bottom: 15px;
+            }
+            */
 
         }
 
@@ -201,9 +207,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                    letter-spacing: 1px;
-                    word-spacing: 3px;
-                    text-decoration: none**/
+                letter-spacing: 1px;
+                word-spacing: 3px;
+                text-decoration: none**/
         }
 
         .checkbox label,
@@ -384,10 +390,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h1><span>Select</span> Your Wireless Network Adapter</h1>
+        <h1><span>Select</span> Your Wired Network Adapter</h1>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="wireless-network-adapter-details">Wireless Network Adapter</a>
+            <i class="fa fa-angle-right"></i><a href="wired-network-adapter-list">Wired Network Adapter</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -419,11 +425,11 @@
                                         <div class="checkbox"> <label> <input id="1" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="ASUS"> <span class="ml-10">ASUS
-                                                    (5) </span></label> </div>
+                                                    (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="2" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="BrosTrend"> <span
-                                                    class="ml-10">BrosTrend (4) </span></label> </div>
+                                                    name="filter['brand']" value="Belkin"> <span
+                                                    class="ml-10">Belkin (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="3" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="D-Link"> <span
@@ -434,48 +440,52 @@
                                                     class="ml-10">Edimax (2) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="5" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Encore"> <span
-                                                    class="ml-10">Encore (1) </span></label> </div>
+                                                    name="filter['brand']" value="Intel"> <span class="ml-10">Intel
+                                                    (8) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="6" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Hawking Technology"> <span
-                                                    class="ml-10">Hawking Technology (1) </span></label> </div>
+                                                    name="filter['brand']" value="Lenovo"> <span
+                                                    class="ml-10">Lenovo (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="7" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Intel"> <span class="ml-10">Intel
-                                                    (3) </span></label> </div>
+                                                    name="filter['brand']" value="Linksys"> <span
+                                                    class="ml-10">Linksys (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="8" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Linksys"> <span
-                                                    class="ml-10">Linksys (3) </span></label> </div>
+                                                    name="filter['brand']" value="Plugable"> <span
+                                                    class="ml-10">Plugable (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="9" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="NETGEAR"> <span
-                                                    class="ml-10">NETGEAR (4) </span></label> </div>
+                                                    name="filter['brand']" value="QLogic"> <span
+                                                    class="ml-10">QLogic (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="10" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Rosewill"> <span
-                                                    class="ml-10">Rosewill (3) </span></label> </div>
+                                                    name="filter['brand']" value="QNAP"> <span class="ml-10">QNAP
+                                                    (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="11" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="StarTech"> <span
-                                                    class="ml-10">StarTech (1) </span></label> </div>
+                                                    name="filter['brand']" value="Rosewill"> <span
+                                                    class="ml-10">Rosewill (5) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="12" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Syba"> <span class="ml-10">Syba
-                                                    (1) </span></label> </div>
+                                                    name="filter['brand']" value="SIIG"> <span class="ml-10">SIIG
+                                                    (3) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="13" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="TP-Link"> <span
-                                                    class="ml-10">TP-Link (15) </span></label> </div>
+                                                    name="filter['brand']" value="StarTech"> <span
+                                                    class="ml-10">StarTech (11) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="14" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="TRENDnet"> <span
-                                                    class="ml-10">TRENDnet (3) </span></label> </div>
+                                                    name="filter['brand']" value="Syba"> <span class="ml-10">Syba
+                                                    (7) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="15" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Ziyituod"> <span
-                                                    class="ml-10">Ziyituod (1) </span></label> </div>
+                                                    name="filter['brand']" value="TP-Link"> <span
+                                                    class="ml-10">TP-Link (2) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="16" type="checkbox"
+                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
+                                                    name="filter['brand']" value="TRENDnet"> <span
+                                                    class="ml-10">TRENDnet (2) </span></label> </div>
                                     </div>
                                 </div>
                             </div>
@@ -497,24 +507,36 @@
                                                     class="ml-10">All </span></label> </div>
                                         <div class="checkbox"> <label> <input id="1" type="checkbox"
                                                     onclick="f_interface(this.id);" class="option-input checkbox interface"
-                                                    name="filter['interface']" value="Mini-PCIe"> <span
-                                                    class="ml-10">Mini-PCIe (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
-                                                    onclick="f_interface(this.id);" class="option-input checkbox interface"
                                                     name="filter['interface']" value="PCIe"> <span
-                                                    class="ml-10">PCIe (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
+                                                    class="ml-10">PCIe (2) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
                                                     onclick="f_interface(this.id);" class="option-input checkbox interface"
                                                     name="filter['interface']" value="PCIe x1"> <span
                                                     class="ml-10">PCIe x1 (16) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
+                                                    onclick="f_interface(this.id);" class="option-input checkbox interface"
+                                                    name="filter['interface']" value="PCIe x4"> <span
+                                                    class="ml-10">PCIe x4 (14) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="4" type="checkbox"
                                                     onclick="f_interface(this.id);" class="option-input checkbox interface"
-                                                    name="filter['interface']" value="USB 2.0"> <span
-                                                    class="ml-10">USB 2.0 (24) </span></label> </div>
+                                                    name="filter['interface']" value="PCIe x8"> <span
+                                                    class="ml-10">PCIe x8 (2) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="5" type="checkbox"
                                                     onclick="f_interface(this.id);" class="option-input checkbox interface"
+                                                    name="filter['interface']" value="USB 1.0"> <span
+                                                    class="ml-10">USB 1.0 (1) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="6" type="checkbox"
+                                                    onclick="f_interface(this.id);" class="option-input checkbox interface"
+                                                    name="filter['interface']" value="USB 2.0"> <span
+                                                    class="ml-10">USB 2.0 (2) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
+                                                    onclick="f_interface(this.id);" class="option-input checkbox interface"
                                                     name="filter['interface']" value="USB 3.0"> <span
-                                                    class="ml-10">USB 3.0 (8) </span></label> </div>
+                                                    class="ml-10">USB 3.0 (11) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="8" type="checkbox"
+                                                    onclick="f_interface(this.id);" class="option-input checkbox interface"
+                                                    name="filter['interface']" value="USB Type C"> <span
+                                                    class="ml-10">USB Type C (2) </span></label> </div>
                                     </div>
                                 </div>
                             </div>
@@ -526,9 +548,56 @@
                                 <div class="card-header" role="tab" id="heading3">
                                     <h4 class="card-title"> <a class="collapsed" role="button"
                                             data-toggle="collapse" data-parent="#accordion3" href="#collapse3"
-                                            aria-expanded="false" aria-controls="collapse1"> Color </a> </h4>
+                                            aria-expanded="false" aria-controls="collapse1"> Ports </a> </h4>
                                 </div>
                                 <div id="collapse3" class="collapse " role="tabpanel" aria-labelledby="heading3">
+                                    <div class="card-body">
+                                        <div class="checkbox"> <label> <input id="0" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="All" checked> <span
+                                                    class="ml-10">All </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="1" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="1 x 10 Gbit/s"> <span
+                                                    class="ml-10">1 x 10 Gbit/s (6) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="1 x 100 Mbit/s"> <span
+                                                    class="ml-10">1 x 100 Mbit/s (3) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="1 x 1000 Mbit/s"> <span
+                                                    class="ml-10">1 x 1000 Mbit/s (22) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="1 x 2.5 Gbit/s"> <span
+                                                    class="ml-10">1 x 2.5 Gbit/s (1) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="2 x 10 Gbit/s"> <span
+                                                    class="ml-10">2 x 10 Gbit/s (4) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="6" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="2 x 1000 Mbit/s"> <span
+                                                    class="ml-10">2 x 1000 Mbit/s (8) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
+                                                    onclick="f_ports(this.id);" class="option-input checkbox ports"
+                                                    name="filter['ports']" value="4 x 1000 Mbit/s"> <span
+                                                    class="ml-10">4 x 1000 Mbit/s (6) </span></label> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
+                            <div class="card panel-default">
+                                <div class="card-header" role="tab" id="heading4">
+                                    <h4 class="card-title"> <a class="collapsed" role="button"
+                                            data-toggle="collapse" data-parent="#accordion4" href="#collapse4"
+                                            aria-expanded="false" aria-controls="collapse1"> Color </a> </h4>
+                                </div>
+                                <div id="collapse4" class="collapse " role="tabpanel" aria-labelledby="heading4">
                                     <div class="card-body">
                                         <div class="checkbox"> <label> <input id="0" type="checkbox"
                                                     onclick="f_color(this.id);" class="option-input checkbox color"
@@ -540,28 +609,24 @@
                                                     class="ml-10">Black (39) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="2" type="checkbox"
                                                     onclick="f_color(this.id);" class="option-input checkbox color"
-                                                    name="filter['color']" value="Black / Gray"> <span
-                                                    class="ml-10">Black / Gray (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
-                                                    onclick="f_color(this.id);" class="option-input checkbox color"
                                                     name="filter['color']" value="Black / silver"> <span
                                                     class="ml-10">Black / silver (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
+                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
                                                     onclick="f_color(this.id);" class="option-input checkbox color"
-                                                    name="filter['color']" value="Blue"> <span class="ml-10">Blue
+                                                    name="filter['color']" value="Red"> <span class="ml-10">Red
                                                     (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
+                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
                                                     onclick="f_color(this.id);" class="option-input checkbox color"
                                                     name="filter['color']" value="Red / Black"> <span
                                                     class="ml-10">Red / Black (2) </span></label> </div>
+                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
+                                                    onclick="f_color(this.id);" class="option-input checkbox color"
+                                                    name="filter['color']" value="Silver"> <span
+                                                    class="ml-10">Silver (2) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="6" type="checkbox"
                                                     onclick="f_color(this.id);" class="option-input checkbox color"
                                                     name="filter['color']" value="White"> <span
                                                     class="ml-10">White (5) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
-                                                    onclick="f_color(this.id);" class="option-input checkbox color"
-                                                    name="filter['color']" value="White / Black"> <span
-                                                    class="ml-10">White / Black (1) </span></label> </div>
                                     </div>
                                 </div>
                             </div>
@@ -585,7 +650,7 @@
                             <div class="action-box">
                                 <div class="action-box-item search"> Search: </div>
                                 <input type="text" id="myInput" onkeyup="myFunction()"
-                                    placeholder="Search Wireless Network Adapter....." title="Search....">
+                                    placeholder="Search Wired Network Adapter....." title="Search....">
                             </div>
                             <div class="history-box">
                                 <div class="action-box-item"><i class="fa fa-plus" aria-hidden="true"></i> <span
@@ -644,7 +709,7 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        @foreach ($wireless_network_adapters as $wireless_network_adapter)
+                        @foreach ($wired_network_adapters as $wired_network_adapter)
                         <tbody>
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
@@ -653,11 +718,82 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $wireless_network_adapter->product->getMedia('main_image'); ?>
+                                            <?php $images = $wired_network_adapter->product->getMedia('main_image'); ?>
                                                 <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                    title="{{ $wireless_network_adapter->name }}" alt="{{ $wireless_network_adapter->name }}">
+                                                    title="{{ $wired_network_adapter->name }}" alt="{{ $wired_network_adapter->name }}">
+                                            <div class="stars-rating" title="4.7 out of 5">
+                                                <div class="stars-score" style="width: 94%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/tp-link-tg-3468/index.html">TP-Link
+                                            TG-3468 1Gb/s Ethernet PCI Express Network Adapter for Desktop PC</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> TP-Link </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> TG-3468 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black / silver </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $14.63 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B003CFATNI?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
+                                        href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31USWhohfpL._SL75_.jpg"
+                                                title="StarTech ST3300U3S USB 3.0 to Gigabit Ethernet NIC Network Adapter with 3 Port Hub "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech ST3300U3S">
                                             <div class="stars-rating" title="4.3 out of 5">
                                                 <div class="stars-score" style="width: 86%">
                                                     <i class="fas fa-star"></i>
@@ -679,42 +815,43 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-tl-n150-tl-wn725n/index.html">TP-Link
-                                            TL-N150 USB 2.0 based WiFi Adapter for Desktop PC</a></div>
+                                            href="../../component-details/wired-network-adapter/startech-st3300u3s/index.html">StarTech
+                                            ST3300U3S USB 3.0 to Gigabit Ethernet NIC Network Adapter with 3 Port Hub </a>
+                                    </div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
+                                            <div class="detail__value f_brand"> StarTech </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> TL-N150 </div>
+                                            <div class="detail__value f_model"> ST3300U3S </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> IEEE 802.11b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
+                                            <div class="detail__value f_color"> White </div>
                                         </div>
                                     </span>
 
                                 </td>
                                 <td class="price">
-                                    $9.89 </td>
+                                    $45.46 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B008IFXQFU?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00BB7TU8Y?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                        href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_2"
+                                        href="javascript:void(0);" onclick="setid(2)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <tr class="items" data-href="#">
@@ -725,9 +862,644 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41uYOBFTnOL._SL75_.jpg"
-                                                title="TP-Link Archer AX3000 Dual Band Wireless Adapter with Bluetooth 5.0"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Archer TX3000E">
+                                                data-src="https://m.media-amazon.com/images/I/41zOefaipLL._SL75_.jpg"
+                                                title="ASUS XG-C100C PCIe x4 10Gb/s Network Adapter Card with Single RJ-45 Port"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, ASUS C100C">
+                                            <div class="stars-rating" title="4.0 out of 5">
+                                                <div class="stars-score" style="width: 80%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/asus-c100c-xg-c100c/index.html">ASUS
+                                            XG-C100C PCIe x4 10Gb/s Network Adapter Card with Single RJ-45 Port</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> ASUS </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> C100C </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Red </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $92.99 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B072N84DG6?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_3"
+                                        href="javascript:void(0);" onclick="setid(3)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41PxuFPoE4L._SL75_.jpg"
+                                                title="StarTech PCIe x1 10Gb/s Ethernet NIC Network Card  NIC"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech ST10000SPEX">
+                                            <div class="stars-rating" title="4.2 out of 5">
+                                                <div class="stars-score" style="width: 84%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/startech-st10000spex/index.html">StarTech
+                                            PCIe x1 10Gb/s Ethernet NIC Network Card NIC</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> StarTech </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> ST10000SPEX </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $361.42 (Used) </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00LPRS36K?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_4"
+                                        href="javascript:void(0);" onclick="setid(4)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/515X-bcxALL._SL75_.jpg"
+                                                title="Intel Corporation X550T2 Converged Dual Port Gigabyte PCIe x4 Network Adapter "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel X550">
+                                            <div class="stars-rating" title="3.0 out of 5">
+                                                <div class="stars-score" style="width: 60%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/intel-x550-x550t2/index.html">Intel
+                                            Corporation X550T2 Converged Dual Port Gigabyte PCIe x4 Network Adapter </a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Intel </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> X550 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $356.57 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B01D3ZE0FY?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_5"
+                                        href="javascript:void(0);" onclick="setid(5)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41kP8hD-X7L._SL75_.jpg"
+                                                title="Intel CT 1Gb/s Gigabit PCIe x1 Network Adapter Card"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel CT PCIe">
+                                            <div class="stars-rating" title="4.5 out of 5">
+                                                <div class="stars-score" style="width: 90%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/intel-ct-pcie-expi9301ctblk/index.html">Intel
+                                            CT 1Gb/s Gigabit PCIe x1 Network Adapter Card</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Intel </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> CT PCIe </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $38.14 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B001CY0P7G?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_6"
+                                        href="javascript:void(0);" onclick="setid(6)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31xNCftd2NL._SL75_.jpg"
+                                                title="SIIG JU-NE0621-S2 USB 3.0 to Gigabit Ethernet 1Gb/s RJ45 LAN Adapter for Desktop PC"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, SIIG JU-NE0621-S2">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/siig-ju-ne0621-s2/index.html">SIIG
+                                            JU-NE0621-S2 USB 3.0 to Gigabit Ethernet 1Gb/s RJ45 LAN Adapter for Desktop
+                                            PC</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> SIIG </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> JU-NE0621-S2 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> White </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $13.99 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00YT737ZU?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_7"
+                                        href="javascript:void(0);" onclick="setid(7)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41k1Dh8xSfL._SL75_.jpg"
+                                                title="D-Link DXE-820T Dual Port10Gb/s Gigabit RJ45 PCI Express Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, D-Link DXE-820T">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/d-link-dxe-820t/index.html">D-Link
+                                            DXE-820T Dual Port10Gb/s Gigabit RJ45 PCI Express Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> D-Link </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> DXE-820T </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x8 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> White </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    N/A </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00PVDQ2BW?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_8"
+                                        href="javascript:void(0);" onclick="setid(8)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41gtaFbaRRL._SL75_.jpg"
+                                                title="Edimax EN-9320TX-E, 10 Gigabit PCI Express Ethernet Server Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Edimax EN-9320TX-E">
+                                            <div class="stars-rating" title="3.8 out of 5">
+                                                <div class="stars-score" style="width: 76%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/edimax-en-9320tx-e/index.html">Edimax
+                                            EN-9320TX-E, 10 Gigabit PCI Express Ethernet Server Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Edimax </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> EN-9320TX-E </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    N/A </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0779PKJCP?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_9"
+                                        href="javascript:void(0);" onclick="setid(9)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/216TQsaMMNL._SL75_.jpg"
+                                                title="Intel E1G42ETBLK Dual Port 1 Gigabit PCIe x4 Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel E1G42ETBLK">
+                                            <div class="stars-rating" title="4.8 out of 5">
+                                                <div class="stars-score" style="width: 96%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/intel-e1g42etblk/index.html">Intel
+                                            E1G42ETBLK Dual Port 1 Gigabit PCIe x4 Network Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Intel </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> E1G42ETBLK </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $49.99 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B001G2UEH0?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_10"
+                                        href="javascript:void(0);" onclick="setid(10)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31ExWWQ87+L._SL75_.jpg"
+                                                title="QLogic QLE3242-CU-CK 10Gb/s Dual Gigabit PCIe x8 Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, QLogic QLE3242CUCK">
+                                            <div class="stars-rating" title="5.0 out of 5">
+                                                <div class="stars-score" style="width: 100%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/qlogic-qle3242cuck/index.html">QLogic
+                                            QLE3242-CU-CK 10Gb/s Dual Gigabit PCIe x8 Network Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> QLogic </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> QLE3242CUCK </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x8 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    N/A </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00CIQKWMA?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_11"
+                                        href="javascript:void(0);" onclick="setid(11)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41+layE-ivL._SL75_.jpg"
+                                                title="StarTech USB 3.0 to Dual Port Gigabit Ethernet NIC Adapter with USB Port "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech USB32000SPT">
                                             <div class="stars-rating" title="4.6 out of 5">
                                                 <div class="stars-score" style="width: 92%">
                                                     <i class="fas fa-star"></i>
@@ -749,27 +1521,27 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-archer-tx3000e/index.html">TP-Link
-                                            Archer AX3000 Dual Band Wireless Adapter with Bluetooth 5.0</a></div>
+                                            href="../../component-details/wired-network-adapter/startech-usb32000spt/index.html">StarTech
+                                            USB 3.0 to Dual Port Gigabit Ethernet NIC Adapter with USB Port </a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
+                                            <div class="detail__value f_brand"> StarTech </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Archer TX3000E </div>
+                                            <div class="detail__value f_model"> USB32000SPT </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -779,500 +1551,9 @@
 
                                 </td>
                                 <td class="price">
-                                    $75 </td>
+                                    $47.62 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07ZV2CJL2?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_5"
-                                        href="javascript:void(0);" onclick="setid(5)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41RfjuRyrIL._SL75_.jpg"
-                                                title="TP-Link Archer T6E AC1300 Dual Band PCIe based Wireless Network Card "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Archer T6E">
-                                            <div class="stars-rating" title="4.4 out of 5">
-                                                <div class="stars-score" style="width: 88%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-archer-t6e/index.html">TP-Link
-                                            Archer T6E AC1300 Dual Band PCIe based Wireless Network Card </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Archer T6E </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $33.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B016K0896K?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_6"
-                                        href="javascript:void(0);" onclick="setid(6)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41AulmMwqCL._SL75_.jpg"
-                                                title="TP-Link Archer T4E AC1200 Dual Band Wireless PCI Express Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Archer T4E">
-                                            <div class="stars-rating" title="4.4 out of 5">
-                                                <div class="stars-score" style="width: 88%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-archer-t4e/index.html">TP-Link
-                                            Archer T4E AC1200 Dual Band Wireless PCI Express Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Archer T4E </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $29.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07NFMSGGR?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_7"
-                                        href="javascript:void(0);" onclick="setid(7)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31EVdkBnzYL._SL75_.jpg"
-                                                title="TP-Link Archer TX50E AX3000 PCIe WiFi Adapter with Bluetooth 5.0"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Archer TX50E">
-                                            <div class="stars-rating" title="4.5 out of 5">
-                                                <div class="stars-score" style="width: 90%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-archer-tx50e/index.html">TP-Link
-                                            Archer TX50E AX3000 PCIe WiFi Adapter with Bluetooth 5.0</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Archer TX50E </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $84.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B089FCX3C3?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_8"
-                                        href="javascript:void(0);" onclick="setid(8)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31zldqSYIEL._SL75_.jpg"
-                                                title="TP-Link Archer T3U AC1300 USB 3.0 Mini WiFi Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Archer T3U">
-                                            <div class="stars-rating" title="4.4 out of 5">
-                                                <div class="stars-score" style="width: 88%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-archer-t3u/index.html">TP-Link
-                                            Archer T3U AC1300 USB 3.0 Mini WiFi Network Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Archer T3U </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $19.99 </td>
-
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07P6N2TZH?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_9"
-                                        href="javascript:void(0);" onclick="setid(9)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41bl3gkBq3L._SL75_.jpg"
-                                                title="Ziyituod ZYT-AX200 PCIe based Wireless WiFi Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Ziyituod ZYT-AX200">
-                                            <div class="stars-rating" title="4.4 out of 5">
-                                                <div class="stars-score" style="width: 88%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/ziyituod-zyt-ax200/index.html">Ziyituod
-                                            ZYT-AX200 PCIe based Wireless WiFi Network Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Ziyituod </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> ZYT-AX200 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11 a/b/g/n/ac/ax </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $39.90 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07YB7HSFZ?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_10"
-                                        href="javascript:void(0);" onclick="setid(10)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41PoFiRfFiL._SL75_.jpg"
-                                                title="ASUS AC1900 PCIe x1 based Dual-Band Wireless Adapter  "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, ASUS AC1900">
-                                            <div class="stars-rating" title="4.5 out of 5">
-                                                <div class="stars-score" style="width: 90%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/asus-ac1900-pce-ac68/index.html">ASUS
-                                            AC1900 PCIe x1 based Dual-Band Wireless Adapter </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ASUS </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1900 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $79.49 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00F42V83C?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_11"
-                                        href="javascript:void(0);" onclick="setid(11)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41HWRQcV0BL._SL75_.jpg"
-                                                title="ASUS AC1300 Dual-Band PCIe based WiFi Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, ASUS PCE-AC56">
-                                            <div class="stars-rating" title="4.4 out of 5">
-                                                <div class="stars-score" style="width: 88%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/asus-pce-ac56/index.html">ASUS
-                                            AC1300 Dual-Band PCIe based WiFi Network Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ASUS </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> PCE-AC56 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Red / Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $62.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00JNA337K?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00D8XTOD0?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_12"
                                         href="javascript:void(0);" onclick="setid(12)"><i class="fa fa-plus"></i></a>
@@ -1286,11 +1567,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41zgXber37L._SL75_.jpg"
-                                                title="TP-Link Archer T2U Plus AC600 Dual-Band Wi-Fi USB Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Archer T2U Plus">
-                                            <div class="stars-rating" title="4.4 out of 5">
-                                                <div class="stars-score" style="width: 88%">
+                                                data-src="https://m.media-amazon.com/images/I/41mYieVJxwL._SL75_.jpg"
+                                                title="Intel I340-T4 PCI Express x4 Lane Ethernet Server Adapter 1Gb/s RJ-45 Copper "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel E1G44HTBLK">
+                                            <div class="stars-rating" title="4.5 out of 5">
+                                                <div class="stars-score" style="width: 90%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1310,27 +1591,28 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-archer-t2u-plus/index.html">TP-Link
-                                            Archer T2U Plus AC600 Dual-Band Wi-Fi USB Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/intel-e1g44htblk/index.html">Intel
+                                            I340-T4 PCI Express x4 Lane Ethernet Server Adapter 1Gb/s RJ-45 Copper </a>
+                                    </div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
+                                            <div class="detail__value f_brand"> Intel </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Archer T2U Plus </div>
+                                            <div class="detail__value f_model"> E1G44HTBLK </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 4 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -1340,10 +1622,10 @@
 
                                 </td>
                                 <td class="price">
-                                    $19.99 </td>
+                                    $81 </td>
 
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07P5PRK7J?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B003A7LKOU?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_13"
                                         href="javascript:void(0);" onclick="setid(13)"><i class="fa fa-plus"></i></a>
@@ -1357,11 +1639,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31JcjMglX-L._SL75_.jpg"
-                                                title="BrosTrend AC5 Long Range 650Mbps High-gain USB WiFi Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, BrosTrend AC5">
-                                            <div class="stars-rating" title="4.2 out of 5">
-                                                <div class="stars-score" style="width: 84%">
+                                                data-src="https://m.media-amazon.com/images/I/31bI4rqYUUL._SL75_.jpg"
+                                                title="TRENDnet TUC-ET2G USB Type-C 3.1 to RJ-45 2.5Gb/s LAN Ethernet Adapter for Desktop PC, MacBook, and Chromebook"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TRENDnet TUC-ET2G">
+                                            <div class="stars-rating" title="4.0 out of 5">
+                                                <div class="stars-score" style="width: 80%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1381,27 +1663,28 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/brostrend-ac5/index.html">BrosTrend
-                                            AC5 Long Range 650Mbps High-gain USB WiFi Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/trendnet-tuc-et2g/index.html">TRENDnet
+                                            TUC-ET2G USB Type-C 3.1 to RJ-45 2.5Gb/s LAN Ethernet Adapter for Desktop PC,
+                                            MacBook, and Chromebook</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> BrosTrend </div>
+                                            <div class="detail__value f_brand"> TRENDnet </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC5 </div>
+                                            <div class="detail__value f_model"> TUC-ET2G </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11 a/b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB Type C </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 2.5 Gbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -1411,9 +1694,9 @@
 
                                 </td>
                                 <td class="price">
-                                    N/A </td>
+                                    $32.99 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B01ID03X9I?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B07RBMTVYF?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_14"
                                         href="javascript:void(0);" onclick="setid(14)"><i class="fa fa-plus"></i></a>
@@ -1427,11 +1710,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/413w3XLyrYL._SL75_.jpg"
-                                                title="ASUS AC750 Dual Band PCIe Based Wireless Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, ASUS PCE-AC51">
-                                            <div class="stars-rating" title="4.3 out of 5">
-                                                <div class="stars-score" style="width: 86%">
+                                                data-src="https://m.media-amazon.com/images/I/31VDO1rx-PL._SL75_.jpg"
+                                                title="StarTech ST1000SPEXD2 Low Profile Dual Port Gigabit Network Server Adapter NIC Card"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech ST1000SPEXD2">
+                                            <div class="stars-rating" title="4.5 out of 5">
+                                                <div class="stars-score" style="width: 90%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1451,27 +1734,28 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/asus-pce-ac51/index.html">ASUS
-                                            AC750 Dual Band PCIe Based Wireless Network Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/startech-st1000spexd2/index.html">StarTech
+                                            ST1000SPEXD2 Low Profile Dual Port Gigabit Network Server Adapter NIC Card</a>
+                                    </div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ASUS </div>
+                                            <div class="detail__value f_brand"> StarTech </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> PCE-AC51 </div>
+                                            <div class="detail__value f_model"> ST1000SPEXD2 </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> 802.11ac/a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
                                             <div class="detail__name">Interface:</div>
                                             <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -1481,9 +1765,9 @@
 
                                 </td>
                                 <td class="price">
-                                    $29.99 </td>
+                                    $11.66 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B075SWSN32?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B005WKKDQO?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_15"
                                         href="javascript:void(0);" onclick="setid(15)"><i class="fa fa-plus"></i></a>
@@ -1497,11 +1781,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/51ox5niWH8L._SL75_.jpg"
-                                                title="Intel Centrino Advanced N6205 PCIe based WiFi Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel Centrino N6205">
-                                            <div class="stars-rating" title="3.5 out of 5">
-                                                <div class="stars-score" style="width: 70%">
+                                                data-src="https://m.media-amazon.com/images/I/41aQjghbX4L._SL75_.jpg"
+                                                title="Rosewill RC-NIC416Dual 10Gb/s PCI Express Dual Port Ethernet Network Adapter with Intel X550-AT2 Chipset"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill RC-NIC416Dual">
+                                            <div class="stars-rating" title="4.6 out of 5">
+                                                <div class="stars-score" style="width: 92%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1521,27 +1805,28 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/intel-centrino-n6205-62205anhmwdtx1/index.html">Intel
-                                            Centrino Advanced N6205 PCIe based WiFi Network Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/rosewill-rc-nic416dual/index.html">Rosewill
+                                            RC-NIC416Dual 10Gb/s PCI Express Dual Port Ethernet Network Adapter with Intel
+                                            X550-AT2 Chipset</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Intel </div>
+                                            <div class="detail__value f_brand"> Rosewill </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Centrino N6205 </div>
+                                            <div class="detail__value f_model"> RC-NIC416Dual </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> Wi-Fi 4 </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 10 Gbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -1551,9 +1836,80 @@
 
                                 </td>
                                 <td class="price">
-                                    $249.95 </td>
+                                    N/A </td>
+
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B007ZWL4A6?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B07NJN87QN?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_16"
+                                        href="javascript:void(0);" onclick="setid(16)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41MKOz3sfzL._SL75_.jpg"
+                                                title="Syba  SY-HUB24047 4 Port RJ45 Gigabit USB 3.0 Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba SY-HUB24047">
+                                            <div class="stars-rating" title="3.3 out of 5">
+                                                <div class="stars-score" style="width: 66%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/syba-sy-hub24047/index.html">Syba
+                                            SY-HUB24047 4 Port RJ45 Gigabit USB 3.0 Network Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Syba </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> SY-HUB24047 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 4 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $54.80 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B01N16C75R?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_17"
                                         href="javascript:void(0);" onclick="setid(17)"><i class="fa fa-plus"></i></a>
@@ -1567,9 +1923,9 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41o5xx1FqTL._SL75_.jpg"
-                                                title="Intel Centrino 2200 PCI Express Wi-Fi Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel Centrino 2200">
+                                                data-src="https://m.media-amazon.com/images/I/515q+pyBjDL._SL75_.jpg"
+                                                title="QNAP QXG-10G1T PCIe Gen3 x4 10Gb/s Ethernet Network Expansion Card"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, QNAP QXG-10G1T">
                                             <div class="stars-rating" title="4.4 out of 5">
                                                 <div class="stars-score" style="width: 88%">
                                                     <i class="fas fa-star"></i>
@@ -1591,39 +1947,39 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/intel-centrino-2200-2200bnhmwdtx1/index.html">Intel
-                                            Centrino 2200 PCI Express Wi-Fi Adapter for Desktop PC</a></div>
+                                            href="../../component-details/wired-network-adapter/qnap-qxg-10g1t/index.html">QNAP
+                                            QXG-10G1T PCIe Gen3 x4 10Gb/s Ethernet Network Expansion Card</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Intel </div>
+                                            <div class="detail__value f_brand"> QNAP </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Centrino 2200 </div>
+                                            <div class="detail__value f_model"> QXG-10G1T </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 10 Gbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> White </div>
+                                            <div class="detail__value f_color"> Black </div>
                                         </div>
                                     </span>
 
                                 </td>
                                 <td class="price">
-                                    N/A </td>
+                                    $108.76 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B007ZW0T3Y?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B07CW2C2J1?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_18"
                                         href="javascript:void(0);" onclick="setid(18)"><i class="fa fa-plus"></i></a>
@@ -1637,11 +1993,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/412rC9a1lFL._SL75_.jpg"
-                                                title="Intel Wireless AC 7260 Dual Band Mini PCIe Network Plus Bluetooth Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel Wireless AC 7260">
-                                            <div class="stars-rating" title="4.5 out of 5">
-                                                <div class="stars-score" style="width: 90%">
+                                                data-src="https://m.media-amazon.com/images/I/41yD00lMf3L._SL75_.jpg"
+                                                title="StarTech USB 2.0 to Gigabit Ethernet NIC Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech USB21000S2">
+                                            <div class="stars-rating" title="3.9 out of 5">
+                                                <div class="stars-score" style="width: 78%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1661,27 +2017,27 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/intel-wireless-ac-7260-7260hmw-an/index.html">Intel
-                                            Wireless AC 7260 Dual Band Mini PCIe Network Plus Bluetooth Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/startech-usb21000s2/index.html">StarTech
+                                            USB 2.0 to Gigabit Ethernet NIC Network Adapter</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Intel </div>
+                                            <div class="detail__value f_brand"> StarTech </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless AC 7260 </div>
+                                            <div class="detail__value f_model"> USB21000S2 </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 2.0 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> Mini-PCIe </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -1691,9 +2047,9 @@
 
                                 </td>
                                 <td class="price">
-                                    $29 </td>
+                                    $54.94 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00N7474CS?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B007U5MGDC?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_19"
                                         href="javascript:void(0);" onclick="setid(19)"><i class="fa fa-plus"></i></a>
@@ -1707,11 +2063,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41I9-ktbmIL._SL75_.jpg"
-                                                title="Hawking Technology Wireless AC1200 Dual-Band USB 2.0 WiFi Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Hawking Technology AC1200">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
+                                                data-src="https://m.media-amazon.com/images/I/51dovzTVhmL._SL75_.jpg"
+                                                title="Intel EXPI9301CT 1 Gigabit CT PCIe x1 Network Adapter for Desktop PC"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel EXPI9301CT">
+                                            <div class="stars-rating" title="4.3 out of 5">
+                                                <div class="stars-score" style="width: 86%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1731,27 +2087,27 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/hawking-technology-ac1200-hw12acu/index.html">Hawking
-                                            Technology Wireless AC1200 Dual-Band USB 2.0 WiFi Network Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/intel-expi9301ct/index.html">Intel
+                                            EXPI9301CT 1 Gigabit CT PCIe x1 Network Adapter for Desktop PC</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Hawking Technology </div>
+                                            <div class="detail__value f_brand"> Intel </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1200 </div>
+                                            <div class="detail__value f_model"> EXPI9301CT </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -1761,9 +2117,10 @@
 
                                 </td>
                                 <td class="price">
-                                    $21.99 </td>
+                                    $38.23 </td>
+
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B077ZYZK41?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B001CXWWBE?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_20"
                                         href="javascript:void(0);" onclick="setid(20)"><i class="fa fa-plus"></i></a>
@@ -1777,11 +2134,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31sxEu90rFL._SL75_.jpg"
-                                                title="D-Link AC600 Dual Band MU-Mimo USB 2.0 Mini Wireless Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, D-Link AC600">
-                                            <div class="stars-rating" title="4.1 out of 5">
-                                                <div class="stars-score" style="width: 82%">
+                                                data-src="https://m.media-amazon.com/images/I/311xXGwJp2L._SL75_.jpg"
+                                                title="TP-Link TL-UE300 USB to Ethernet Adapter, Foldable USB 3.0 to 1000Gb/s Ethernet LAN Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link TL-UE300">
+                                            <div class="stars-rating" title="4.6 out of 5">
+                                                <div class="stars-score" style="width: 92%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -1801,39 +2158,40 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/d-link-ac600-dwa-171/index.html">D-Link
-                                            AC600 Dual Band MU-Mimo USB 2.0 Mini Wireless Network Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/tp-link-tl-ue300/index.html">TP-Link
+                                            TL-UE300 USB to Ethernet Adapter, Foldable USB 3.0 to 1000Gb/s Ethernet LAN
+                                            Network Adapter</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> D-Link </div>
+                                            <div class="detail__value f_brand"> TP-Link </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
+                                            <div class="detail__value f_model"> TL-UE300 </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
+                                            <div class="detail__value f_color"> White </div>
                                         </div>
                                     </span>
 
                                 </td>
                                 <td class="price">
-                                    $16.55 </td>
+                                    $11.99 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00CL58JYQ?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00YUU3KC6?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
                                 <td class="remove"><a class="btn btn-danger component-add-btn" id="p_21"
                                         href="javascript:void(0);" onclick="setid(21)"><i class="fa fa-plus"></i></a>
@@ -1847,1703 +2205,9 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41O8hZLSWyL._SL75_.jpg"
-                                                title="BrosTrend Linux AC3L Dual Band 1200Mbps USB 3.0 WiFi Adapter for Desktop PC with 2 X 5dBi Antennas"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, BrosTrend Linux AC3L">
-                                            <div class="stars-rating" title="4.1 out of 5">
-                                                <div class="stars-score" style="width: 82%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/brostrend-linux-ac3l-ac3l-linux-wi-fi-adapter/index.html">BrosTrend
-                                            Linux AC3L Dual Band 1200Mbps USB 3.0 WiFi Adapter for Desktop PC with 2 X 5dBi
-                                            Antennas</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> BrosTrend </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Linux AC3L </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $36.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07FCN6WGX?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_22"
-                                        href="javascript:void(0);" onclick="setid(22)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41NQHNvQUtL._SL75_.jpg"
-                                                title="TRENDnet AC1200 High Power Dual Band PCIe Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TRENDnet AC1200">
-                                            <div class="stars-rating" title="3.9 out of 5">
-                                                <div class="stars-score" style="width: 78%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/trendnet-ac1200-tew-807ech/index.html">TRENDnet
-                                            AC1200 High Power Dual Band PCIe Network Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TRENDnet </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1200 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $38.99 </td>
-
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00VEH6NFY?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_23"
-                                        href="javascript:void(0);" onclick="setid(23)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41t6kzhQbwL._SL75_.jpg"
-                                                title="D-Link Wireless N300 PCIe x1 WiFi Network Adapter for Desktop PC "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, D-Link Wireless N300">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/d-link-wireless-n300-dwa-548/index.html">D-Link
-                                            Wireless N300 PCIe x1 WiFi Network Adapter for Desktop PC </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> D-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N300 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black / silver </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    N/A </td>
-
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B008L2PREI?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_24"
-                                        href="javascript:void(0);" onclick="setid(24)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31Rcv3qwKCL._SL75_.jpg"
-                                                title="Encore Wireless N150 PCIe x1 Network Adapter with 2dbi Antenna"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Encore Wireless N150">
-                                            <div class="stars-rating" title="3.1 out of 5">
-                                                <div class="stars-score" style="width: 62%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/encore-wireless-n150-enewi-1xn42/index.html">Encore
-                                            Wireless N150 PCIe x1 Network Adapter with 2dbi Antenna</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Encore </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N150 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $23.95 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B005KL7RUK?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_25"
-                                        href="javascript:void(0);" onclick="setid(25)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/3130AKptRBL._SL75_.jpg"
-                                                title="Rosewill AC600 USB 2.0 based Dual Band Wireless WiFi Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill AC600">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/rosewill-ac600-rnx-ac600nubv2/index.html">Rosewill
-                                            AC600 USB 2.0 based Dual Band Wireless WiFi Adapter for Desktop PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Rosewill </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $13.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07FXR7XZB?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_26"
-                                        href="javascript:void(0);" onclick="setid(26)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41TNmM6+eHL._SL75_.jpg"
-                                                title="TP-Link Wireless N300 PCI Adapter 2.4GHz Network Adapter with 300Mb/s Speed"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Wireless N300">
-                                            <div class="stars-rating" title="4.1 out of 5">
-                                                <div class="stars-score" style="width: 82%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-wireless-n300-tl-wn851nd/index.html">TP-Link
-                                            Wireless N300 PCI Adapter 2.4GHz Network Adapter with 300Mb/s Speed</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N300 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    N/A </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B005NHIQ06?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_27"
-                                        href="javascript:void(0);" onclick="setid(27)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/21ID9b50RAL._SL75_.jpg"
-                                                title="Edimax 11AC Dual band USB Adapter with High Gain Antenna and Free USB Extension Cradle"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Edimax 11AC">
-                                            <div class="stars-rating" title="3.9 out of 5">
-                                                <div class="stars-score" style="width: 78%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/edimax-11ac-ew-7811uac/index.html">Edimax
-                                            11AC Dual band USB Adapter with High Gain Antenna and Free USB Extension
-                                            Cradle</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Edimax </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> 11AC </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $18.99 </td>
-
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00LGN8I40?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_28"
-                                        href="javascript:void(0);" onclick="setid(28)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41ZgtBoTXfL._SL75_.jpg"
-                                                title="D-Link AC1900 USB 3.0 Dual Band Long Range Wireless Network for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, D-Link AC1900">
-                                            <div class="stars-rating" title="4.1 out of 5">
-                                                <div class="stars-score" style="width: 82%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/d-link-ac1900-dwa-192/index.html">D-Link
-                                            AC1900 USB 3.0 Dual Band Long Range Wireless Network for Desktop PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> D-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1900 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black / Gray </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $399.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00PVDM6W6?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_29"
-                                        href="javascript:void(0);" onclick="setid(29)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41WBoY-N-0L._SL75_.jpg"
-                                                title="NETGEAR AC600 Dual Band Mini USB 2.0 WiFi Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, NETGEAR AC600">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/netgear-ac600-a6100-100pas/index.html">NETGEAR
-                                            AC600 Dual Band Mini USB 2.0 WiFi Network Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> NETGEAR </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $42.74 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00F6EL6O4?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_30"
-                                        href="javascript:void(0);" onclick="setid(30)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31YX9WgKBLL._SL75_.jpg"
-                                                title="StarTech Wireless N300 PCI Express Wireless N Card Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech Wireless N300">
-                                            <div class="stars-rating" title="3.9 out of 5">
-                                                <div class="stars-score" style="width: 78%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/startech-wireless-n300-pex300wn2x2/index.html">StarTech
-                                            Wireless N300 PCI Express Wireless N Card Network Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> StarTech </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N300 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $22.42 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0090X4FFY?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_31"
-                                        href="javascript:void(0);" onclick="setid(31)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31MhIZ1tCtL._SL75_.jpg"
-                                                title="Rosewill Wireless N150  USB WiFi Nano Adapter with Wireless Speeds up to 150Mbps on 11n Network"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill Wireless N150 ">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/rosewill-wireless-n150-rnx-n150nubv2/index.html">Rosewill
-                                            Wireless N150 USB WiFi Nano Adapter with Wireless Speeds up to 150Mbps on 11n
-                                            Network</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Rosewill </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N150 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $6 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00ZWPPD0K?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_32"
-                                        href="javascript:void(0);" onclick="setid(32)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/310LIEUXGQL._SL75_.jpg"
-                                                title="Linksys AC600 Max-Stream Dual-Band MU-MIMO USB 3.0 Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Linksys AC600">
-                                            <div class="stars-rating" title="4.2 out of 5">
-                                                <div class="stars-score" style="width: 84%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/linksys-ac600-wusb6100m/index.html">Linksys
-                                            AC600 Max-Stream Dual-Band MU-MIMO USB 3.0 Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Linksys </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $43.68 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B01DT48WRQ?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_33"
-                                        href="javascript:void(0);" onclick="setid(33)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31tOMQ+r1tL._SL75_.jpg"
-                                                title="TP-Link AC600 High Gain Dual Band USB 2.0 Wireless WiFi Network Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link AC600">
-                                            <div class="stars-rating" title="4.3 out of 5">
-                                                <div class="stars-score" style="width: 86%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-ac600-archer-t2uh/index.html">TP-Link
-                                            AC600 High Gain Dual Band USB 2.0 Wireless WiFi Network Adapter for Desktop
-                                            PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> White </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    N/A </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00UZRVY12?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_34"
-                                        href="javascript:void(0);" onclick="setid(34)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31mvs6jQEaL._SL75_.jpg"
-                                                title="TP-Link AC1900 High Gain Dual Band USB 3.0 Wireless Network Wifi Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link AC1900">
-                                            <div class="stars-rating" title="4.3 out of 5">
-                                                <div class="stars-score" style="width: 86%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-ac1900-archer-t9uh/index.html">TP-Link
-                                            AC1900 High Gain Dual Band USB 3.0 Wireless Network Wifi Adapter for Desktop
-                                            PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1900 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $51.75 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B01GE9QS0G?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_35"
-                                        href="javascript:void(0);" onclick="setid(35)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31G2BxZ0icL._SL75_.jpg"
-                                                title="TP-Link N300 USB 2.0 Wireless WiFi Network Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Wireless N300">
-                                            <div class="stars-rating" title="3.9 out of 5">
-                                                <div class="stars-score" style="width: 78%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-wireless-n300-tl-wn821n/index.html">TP-Link
-                                            N300 USB 2.0 Wireless WiFi Network Adapter for Desktop PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N300 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> White </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $26.10 </td>
-
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B002T4D3M2?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_36"
-                                        href="javascript:void(0);" onclick="setid(36)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/21-MH8QnCgL._SL75_.jpg"
-                                                title="NETGEAR N900 Dual Band USB 2.0 Wi-Fi Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, NETGEAR Wireless N900">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/netgear-wireless-n900-wnda4100-100nas/index.html">NETGEAR
-                                            N900 Dual Band USB 2.0 Wi-Fi Network Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> NETGEAR </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N900 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $129.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B006V72AE0?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_37"
-                                        href="javascript:void(0);" onclick="setid(37)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/314nHB3mFEL._SL75_.jpg"
-                                                title="NETGEAR AC600 Dual Band USB 2.0 Mini WiFi Network Adapter "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, NETGEAR AC600">
-                                            <div class="stars-rating" title="4.5 out of 5">
-                                                <div class="stars-score" style="width: 90%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/netgear-ac600-a6100-10000s/index.html">NETGEAR
-                                            AC600 Dual Band USB 2.0 Mini WiFi Network Adapter </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> NETGEAR </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $29.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B077HD38VF?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_38"
-                                        href="javascript:void(0);" onclick="setid(38)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31tCxkJnomL._SL75_.jpg"
-                                                title="Linksys AC1200 Dual-Band USB 3.0 Wireless Network Adapter "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Linksys AC1200">
-                                            <div class="stars-rating" title="4.2 out of 5">
-                                                <div class="stars-score" style="width: 84%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/linksys-ac1200-wusb6300/index.html">Linksys
-                                            AC1200 Dual-Band USB 3.0 Wireless Network Adapter </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Linksys </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1200 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $39.97 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00EDOG8NC?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_39"
-                                        href="javascript:void(0);" onclick="setid(39)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31K9boWxyUL._SL75_.jpg"
-                                                title="BrosTrend AC1200USB Dual Band WiFi Network Adapter with 1.2Gb/s for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, BrosTrend AC1200">
-
-                                            <div class="stars-rating" title="4.1 out of 5">
-                                                <div class="stars-score" style="width: 82%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/brostrend-ac1200-ac1/index.html">BrosTrend
-                                            AC1200USB Dual Band WiFi Network Adapter with 1.2Gb/s for Desktop PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> BrosTrend </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1200 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $20.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B01BV91L7Y?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_40"
-                                        href="javascript:void(0);" onclick="setid(40)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41M93WqDkSL._SL75_.jpg"
-                                                title="NETGEAR Wireless N3100 RangeMax Dual Band Wireless-N USB 2.0 Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, NETGEAR Wireless N3100">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/netgear-wireless-n3100-wnda3100-100nas/index.html">NETGEAR
-                                            Wireless N3100 RangeMax Dual Band Wireless-N USB 2.0 Adapter</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> NETGEAR </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N3100 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $92.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B003VWNR2M?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_41"
-                                        href="javascript:void(0);" onclick="setid(41)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41UmhRMliAL._SL75_.jpg"
-                                                title="TP-Link Mini AC600 USB 2.0 Dual Band Wireless Network Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link AC600">
-                                            <div class="stars-rating" title="4.5 out of 5">
-                                                <div class="stars-score" style="width: 90%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-ac600-archer-t2u-nano/index.html">TP-Link
-                                            Mini AC600 USB 2.0 Dual Band Wireless Network Adapter for Desktop PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $14.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07PB1X4CN?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_42"
-                                        href="javascript:void(0);" onclick="setid(42)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31sdJQWd8dL._SL75_.jpg"
-                                                title="Rosewill AC1900 Dual Band PCI-Express Interface Wireless Adapter for Desktop with 3 x External Antennas"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill AC1900">
-
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/rosewill-ac1900-rnx-ac1900pcev2/index.html">Rosewill
-                                            AC1900 Dual Band PCI-Express Interface Wireless Adapter for Desktop with 3 x
-                                            External Antennas</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Rosewill </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1900 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> PCIe x1 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Red / Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    N/A </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07VWL821Q?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_43"
-                                        href="javascript:void(0);" onclick="setid(43)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41A6kGz0D3L._SL75_.jpg"
-                                                title="TRENDnet Wireless N 150 Mbps Mini USB 2.0 Adapter, Wi-Fi Compliant with IEEE 802.11n Standard, "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TRENDnet Wireless N150">
-                                            <div class="stars-rating" title="4.3 out of 5">
-                                                <div class="stars-score" style="width: 86%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/trendnet-wireless-n150-tew-648ub/index.html">TRENDnet
-                                            Wireless N 150 Mbps Mini USB 2.0 Adapter, Wi-Fi Compliant with IEEE 802.11n
-                                            Standard, </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TRENDnet </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N150 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $24.99 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B002RL8I54?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_44"
-                                        href="javascript:void(0);" onclick="setid(44)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/319UN98uKGL._SL75_.jpg"
-                                                title="Asus Wireless N53 Dual Band (2.4GHz 300Mbps & 5GHz 300Mbps) USB 2.0 Adapter with Graphical Easy Interface"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, ASUS Wireless N53">
-                                            <div class="stars-rating" title="4.2 out of 5">
-                                                <div class="stars-score" style="width: 84%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/asus-wireless-n53-usb-n53/index.html">Asus
-                                            Wireless N53 Dual Band (2.4GHz 300Mbps & 5GHz 300Mbps) USB 2.0 Adapter with
-                                            Graphical Easy Interface</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ASUS </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N53 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> White </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $38 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B005SAKW9G?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_45"
-                                        href="javascript:void(0);" onclick="setid(45)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41eBxkCq6fL._SL75_.jpg"
-                                                title="TRENDnet TEW-424UB 54Mb/s USB 2.0 Wireless G Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TRENDnet TEW 424">
+                                                data-src="https://m.media-amazon.com/images/I/419H7vmlAkL._SL75_.jpg"
+                                                title="Intel PRO PCIe x4 Based 2x1000Gb/s Dual Port Network Adapter "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel EXPI9402PTG2P20">
                                             <div class="stars-rating" title="4.4 out of 5">
                                                 <div class="stars-score" style="width: 88%">
                                                     <i class="fas fa-star"></i>
@@ -3565,97 +2229,27 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/trendnet-tew-424ub/index.html">TRENDnet
-                                            TEW-424UB 54Mb/s USB 2.0 Wireless G Network Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/intel-expi9402ptg2p20/index.html">Intel
+                                            PRO PCIe x4 Based 2x1000Gb/s Dual Port Network Adapter </a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TRENDnet </div>
+                                            <div class="detail__value f_brand"> Intel </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> TEW 424 </div>
+                                            <div class="detail__value f_model"> EXPI9402PTG2P20 </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 3 - 802.11b/g </div>
-                                        </div>
                                         <div class="detail">
                                             <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Blue </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $19.84 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B000636JD8?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_46"
-                                        href="javascript:void(0);" onclick="setid(46)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41hc9O--EmL._SL75_.jpg"
-                                                title="BrosTrend Wireless AC3 1200Mb/s Long Range USB 3.0 WiFi Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, BrosTrend Wireless AC3">
-                                            <div class="stars-rating" title="4.1 out of 5">
-                                                <div class="stars-score" style="width: 82%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/brostrend-wireless-ac3/index.html">BrosTrend
-                                            Wireless AC3 1200Mb/s Long Range USB 3.0 WiFi Adapter for Desktop PC</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> BrosTrend </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless AC3 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -3665,12 +2259,12 @@
 
                                 </td>
                                 <td class="price">
-                                    $30.99 </td>
+                                    $73.15 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B01IEU7UZ0?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00154L0KE?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_47"
-                                        href="javascript:void(0);" onclick="setid(47)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_22"
+                                        href="javascript:void(0);" onclick="setid(22)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <tr class="items" data-href="#">
@@ -3681,9 +2275,9 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31PFZti2KwL._SL75_.jpg"
-                                                title="TP-Link Wireless N300 USB Wifi Dongle 300Mb/s Wireless Network Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Wireless N300">
+                                                data-src="https://m.media-amazon.com/images/I/41w2-E38ENL._SL75_.jpg"
+                                                title="Syba SI-PEX24042 4 Port Gigabit Ethernet PCI Express Network Adapter Card with Realtek Chipset"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba SI-PEX24042">
                                             <div class="stars-rating" title="4.1 out of 5">
                                                 <div class="stars-score" style="width: 82%">
                                                     <i class="fas fa-star"></i>
@@ -3705,43 +2299,43 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-wireless-n300-tl-wn822n/index.html">TP-Link
-                                            Wireless N300 USB Wifi Dongle 300Mb/s Wireless Network Adapter for Desktop
-                                            PC</a></div>
+                                            href="../../component-details/wired-network-adapter/syba-si-pex24042/index.html">Syba
+                                            SI-PEX24042 4 Port Gigabit Ethernet PCI Express Network Adapter Card with
+                                            Realtek Chipset</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
+                                            <div class="detail__value f_brand"> Syba </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N300 </div>
+                                            <div class="detail__value f_model"> SI-PEX24042 </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 4 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> White </div>
+                                            <div class="detail__value f_color"> Black </div>
                                         </div>
                                     </span>
 
                                 </td>
                                 <td class="price">
-                                    $21.59 </td>
+                                    $109 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00416Q5KI?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B01HH6WETO?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_48"
-                                        href="javascript:void(0);" onclick="setid(48)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_23"
+                                        href="javascript:void(0);" onclick="setid(23)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <tr class="items" data-href="#">
@@ -3752,10 +2346,1424 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41r+F4LEeFL._SL75_.jpg"
-                                                title="Syba IO Crest X1 Wireless Network Card with Detachable Mini PCIe N300 Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba IO Crest">
+                                                data-src="https://m.media-amazon.com/images/I/41SKQH6+DPL._SL75_.jpg"
+                                                title="TRENDnet TEG-10GECTX 10 Gigabit PCIe Network Adapter, Converts a PCIe Slot into a 10Gb/s Ethernet Port, Supports 802.1Q Vlan"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TRENDnet TEG-10GECTX">
+                                            <div class="stars-rating" title="4.2 out of 5">
+                                                <div class="stars-score" style="width: 84%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/trendnet-teg-10gectx/index.html">TRENDnet
+                                            TEG-10GECTX 10 Gigabit PCIe Network Adapter, Converts a PCIe Slot into a 10Gb/s
+                                            Ethernet Port, Supports 802.1Q Vlan</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> TRENDnet </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> TEG-10GECTX </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
 
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Silver </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $94.86 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B01N5AOWW6?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_24"
+                                        href="javascript:void(0);" onclick="setid(24)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41zJsHecNzL._SL75_.jpg"
+                                                title="Rosewill RC 411v3 PCIe based Ethernet Network Interface Card (NIC) for Desktop PC"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill RC-411v3">
+                                            <div class="stars-rating" title="4.6 out of 5">
+                                                <div class="stars-score" style="width: 92%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/rosewill-rc-411v3/index.html">Rosewill
+                                            RC 411v3 PCIe based Ethernet Network Interface Card (NIC) for Desktop PC</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Rosewill </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> RC-411v3 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $12.99 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B004F34ONC?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_25"
+                                        href="javascript:void(0);" onclick="setid(25)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31FKCM9B-EL._SL75_.jpg"
+                                                title="Rosewill RC 400-LX PCIe Ethernet Network Interface Card (NIC) with 5 Speed control"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill RC-400-LX">
+                                            <div class="stars-rating" title="4.6 out of 5">
+                                                <div class="stars-score" style="width: 92%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/rosewill-rc-400-lx/index.html">Rosewill
+                                            RC 400-LX PCIe Ethernet Network Interface Card (NIC) with 5 Speed control</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Rosewill </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> RC-400-LX </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Silver </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $13.95 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B004F3CO5M?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_26"
+                                        href="javascript:void(0);" onclick="setid(26)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/418bt2FoPDL._SL75_.jpg"
+                                                title="Intel E1G44ET2BLK Gigabit ET2 PCIe x4 Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel E1G44ET2BLK">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/intel-e1g44et2blk/index.html">Intel
+                                            E1G44ET2BLK Gigabit ET2 PCIe x4 Network Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Intel </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> E1G44ET2BLK </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 4 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $376.95 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0042EOA7O?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_27"
+                                        href="javascript:void(0);" onclick="setid(27)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/310jTkr9xaL._SL75_.jpg"
+                                                title="Syba SD-PEX24009 Gigabit LAN Network NIC PCIe x1 Ethernet Card "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba SD-PEX24009">
+                                            <div class="stars-rating" title="4.1 out of 5">
+                                                <div class="stars-score" style="width: 82%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/syba-sd-pex24009/index.html">Syba
+                                            SD-PEX24009 Gigabit LAN Network NIC PCIe x1 Ethernet Card </a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Syba </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> SD-PEX24009 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $13.99 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B004M18EEC?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_28"
+                                        href="javascript:void(0);" onclick="setid(28)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41ZQXwAHr7L._SL75_.jpg"
+                                                title="Rosewill RNG 407 Dual Port RJ45 10/100/1000Mbps Gigabit PCI Express Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill RNG 407 Dual">
+                                            <div class="stars-rating" title="4.6 out of 5">
+                                                <div class="stars-score" style="width: 92%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/rosewill-rng-407-dual-rng-407-dualv2/index.html">Rosewill
+                                            RNG 407 Dual Port RJ45 10/100/1000Mbps Gigabit PCI Express Network Adapter</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Rosewill </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> RNG 407 Dual </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $39.95 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00DODX5MA?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_29"
+                                        href="javascript:void(0);" onclick="setid(29)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41rj6tmPPXL._SL75_.jpg"
+                                                title="Linksys USB3GIG USB 3.0 Ethernet Network Adapter, for Desktop PC, MacBook Air, Chromebook, & Ultrabook"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Linksys USB3GIG">
+                                            <div class="stars-rating" title="4.5 out of 5">
+                                                <div class="stars-score" style="width: 90%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/linksys-usb3gig/index.html">Linksys
+                                            USB3GIG USB 3.0 Ethernet Network Adapter, for Desktop PC, MacBook Air,
+                                            Chromebook, & Ultrabook</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Linksys </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> USB3GIG </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $29.98 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00LIW8TBG?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_30"
+                                        href="javascript:void(0);" onclick="setid(30)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41gv9IjtPCL._SL75_.jpg"
+                                                title="Intel E1G44HT I340-T4 PCIe x4 Ethernet Server Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Intel E1G44HT">
+                                            <div class="stars-rating" title="5.0 out of 5">
+                                                <div class="stars-score" style="width: 100%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/intel-e1g44ht/index.html">Intel
+                                            E1G44HT I340-T4 PCIe x4 Ethernet Server Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Intel </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> E1G44HT </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 4 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $86 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B003A7WPB2?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_31"
+                                        href="javascript:void(0);" onclick="setid(31)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41nV0fjDyoL._SL75_.jpg"
+                                                title="StarTech PCIe x1 32-Bit Gigabit Ethernet Network Adapter Card "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech ST1000BT32">
+                                            <div class="stars-rating" title="4.5 out of 5">
+                                                <div class="stars-score" style="width: 90%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/startech-st1000bt32/index.html">StarTech
+                                            PCIe x1 32-Bit Gigabit Ethernet Network Adapter Card </a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> StarTech </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> ST1000BT32 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $11.10 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0000TO0BQ?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_32"
+                                        href="javascript:void(0);" onclick="setid(32)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41TqdRcixGL._SL75_.jpg"
+                                                title="SIIG CN-GP4011-S1 PCIe x4 Gigabit Ethernet Network Adapter "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, SIIG CN-GP4011-S1">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/siig-cn-gp4011-s1/index.html">SIIG
+                                            CN-GP4011-S1 PCIe x4 Gigabit Ethernet Network Adapter </a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> SIIG </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> CN-GP4011-S1 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 4 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    N/A </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00B4G1CZQ?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_33"
+                                        href="javascript:void(0);" onclick="setid(33)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41HvZRTQlHL._SL75_.jpg"
+                                                title="Syba SD-PEX24055 PCIe x4 10 Gigabit Ethernet Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba SD-PEX24055">
+                                            <div class="stars-rating" title="4.0 out of 5">
+                                                <div class="stars-score" style="width: 80%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/syba-sd-pex24055/index.html">Syba
+                                            SD-PEX24055 PCIe x4 10 Gigabit Ethernet Network Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Syba </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> SD-PEX24055 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 10 Gbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Red / Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $89.69 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B07G2DV9K2?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_34"
+                                        href="javascript:void(0);" onclick="setid(34)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31Ps58kpamL._SL75_.jpg"
+                                                title="Edimax EU4208 USB 2.0 Fast Ethernet Adapter with 1 x 100 Mbit/s Port"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Edimax EU4208">
+                                            <div class="stars-rating" title="4.3 out of 5">
+                                                <div class="stars-score" style="width: 86%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/edimax-eu4208/index.html">Edimax
+                                            EU4208 USB 2.0 Fast Ethernet Adapter with 1 x 100 Mbit/s Port</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Edimax </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> EU4208 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 100 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $13.90 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0094D4X5C?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_35"
+                                        href="javascript:void(0);" onclick="setid(35)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41BzRkY99cL._SL75_.jpg"
+                                                title="Syba SY-PEX24028 Gigabit Ethernet PCIe x1 Network Interface Card "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba SY-PEX24028">
+                                            <div class="stars-rating" title="4.1 out of 5">
+                                                <div class="stars-score" style="width: 82%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/syba-sy-pex24028/index.html">Syba
+                                            SY-PEX24028 Gigabit Ethernet PCIe x1 Network Interface Card </a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Syba </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> SY-PEX24028 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $39.99 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00965J4TS?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_36"
+                                        href="javascript:void(0);" onclick="setid(36)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41ZgU4aQtuL._SL75_.jpg"
+                                                title="StarTech ST1000SPEX2 PCI-Express Gigabit Network Server Adapter with Realtek Chip NIC Card "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech ST1000SPEX2">
+                                            <div class="stars-rating" title="4.2 out of 5">
+                                                <div class="stars-score" style="width: 84%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/startech-st1000spex2/index.html">StarTech
+                                            ST1000SPEX2 PCI-Express Gigabit Network Server Adapter with Realtek Chip NIC
+                                            Card </a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> StarTech </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> ST1000SPEX2 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $18.97 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00ARJLWW4?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_37"
+                                        href="javascript:void(0);" onclick="setid(37)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31L5LUJEzwL._SL75_.jpg"
+                                                title="Belkin B2B145-BLK USB Type-C based Ethernet Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Belkin B2B145-BLK">
+                                            <div class="stars-rating" title="5.0 out of 5">
+                                                <div class="stars-score" style="width: 100%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/belkin-b2b145-blk/index.html">Belkin
+                                            B2B145-BLK USB Type-C based Ethernet Network Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Belkin </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> B2B145-BLK </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB Type C </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $28.76 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B06XP2BK31?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_38"
+                                        href="javascript:void(0);" onclick="setid(38)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41fZ6CPrH2L._SL75_.jpg"
+                                                title="D-Link DUB-E100 USB 2.0 Ethernet Adapter with High Speed Network for Desktop PC"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, D-Link DUB-E100">
+                                            <div class="stars-rating" title="4.3 out of 5">
+                                                <div class="stars-score" style="width: 86%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/d-link-dub-e100/index.html">D-Link
+                                            DUB-E100 USB 2.0 Ethernet Adapter with High Speed Network for Desktop PC</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> D-Link </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> DUB-E100 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 1.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 100 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $16.99 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00006B7D8?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_39"
+                                        href="javascript:void(0);" onclick="setid(39)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31srvpz1a0L._SL75_.jpg"
+                                                title="SYBA SY-ADA24040 USB 3.0 based Ethernet Network Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba SY-ADA24040">
+                                            <div class="stars-rating" title="5.0 out of 5">
+                                                <div class="stars-score" style="width: 100%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/syba-sy-ada24040/index.html">SYBA
+                                            SY-ADA24040 USB 3.0 based Ethernet Network Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Syba </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> SY-ADA24040 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    N/A </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00YBQOCHG?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_40"
+                                        href="javascript:void(0);" onclick="setid(40)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31DYbXxyRbL._SL75_.jpg"
+                                                title="Plugable USB to Ethernet Network Adapter, USB 3.0 to Gigabit Ethernet Card"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Plugable USB3-E1000">
+                                            <div class="stars-rating" title="4.7 out of 5">
+                                                <div class="stars-score" style="width: 94%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/plugable-usb3-e1000/index.html">Plugable
+                                            USB to Ethernet Network Adapter, USB 3.0 to Gigabit Ethernet Card</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Plugable </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> USB3-E1000 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $19.95 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00AQM8586?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_41"
+                                        href="javascript:void(0);" onclick="setid(41)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/411ThYG-WZL._SL75_.jpg"
+                                                title="StarTech PCIe x1 Port Ethernet Network Card with RJ45 Port & Realtek RTL8111H Chipset"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech ST1000SPEX2L">
+                                            <div class="stars-rating" title="4.5 out of 5">
+                                                <div class="stars-score" style="width: 90%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/startech-st1000spex2l/index.html">StarTech
+                                            PCIe x1 Port Ethernet Network Card with RJ45 Port & Realtek RTL8111H Chipset</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> StarTech </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> ST1000SPEX2L </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $20.46 </td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00E4KZDJ0?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_42"
+                                        href="javascript:void(0);" onclick="setid(42)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/31wNE-w0QXL._SL75_.jpg"
+                                                title="Rosewill USB to Ethernet Adapter (USB 3 to Ethernet, USB to Gigabit Ethernet, USB to RJ45) "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Rosewill RNG-406Uv2">
+                                            <div class="stars-rating" title="4.6 out of 5">
+                                                <div class="stars-score" style="width: 92%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/rosewill-rng-406uv2/index.html">Rosewill
+                                            USB to Ethernet Adapter (USB 3 to Ethernet, USB to Gigabit Ethernet, USB to
+                                            RJ45) </a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Rosewill </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> RNG-406Uv2 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $18.95 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00AQU7M82?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_43"
+                                        href="javascript:void(0);" onclick="setid(43)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41AI3nn8p5L._SL75_.jpg"
+                                                title="StarTech Dual Port PCI Express Gigabit Ethernet Network Card Adapter "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech ST2000PEXPSE">
                                             <div class="stars-rating" title="3.6 out of 5">
                                                 <div class="stars-score" style="width: 72%">
                                                     <i class="fas fa-star"></i>
@@ -3777,43 +3785,43 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/syba-io-crest-sy-pex23059/index.html">Syba
-                                            IO Crest X1 Wireless Network Card with Detachable Mini PCIe N300 Adapter</a>
-                                    </div>
+                                            href="../../component-details/wired-network-adapter/startech-st2000pexpse/index.html">StarTech
+                                            Dual Port PCI Express Gigabit Ethernet Network Card Adapter </a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Syba </div>
+                                            <div class="detail__value f_brand"> StarTech </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> IO Crest </div>
+                                            <div class="detail__value f_model"> ST2000PEXPSE </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
-                                        </div>
                                         <div class="detail">
                                             <div class="detail__name">Interface:</div>
                                             <div class="detail__value f_interface"> PCIe x1 </div>
                                         </div>
                                         <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
                                             <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> White / Black </div>
+                                            <div class="detail__value f_color"> Red / Black </div>
                                         </div>
                                     </span>
 
                                 </td>
                                 <td class="price">
-                                    N/A </td>
+                                    $111.97 </td>
+
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00T0Z58YY?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B009X6D2MU?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_49"
-                                        href="javascript:void(0);" onclick="setid(49)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_44"
+                                        href="javascript:void(0);" onclick="setid(44)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <tr class="items" data-href="#">
@@ -3824,11 +3832,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31BUmpWMutL._SL75_.jpg"
-                                                title="Edimax AC600 Dual-Band Mini Size USB Adapter, Supports Both 11AC ( 5GHz Band ) and 11n ( 2.4GHz Band ) Wi-Fi Connectivity"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Edimax AC600">
-                                            <div class="stars-rating" title="3.9 out of 5">
-                                                <div class="stars-score" style="width: 78%">
+                                                data-src="https://m.media-amazon.com/images/I/41ATobnbf3L._SL75_.jpg"
+                                                title="SIIG Dual Profile GigaLAN PCIe Ethernet Adapter for Desktop PC"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, SIIG CN-GP1021-S3">
+                                            <div class="stars-rating" title="2.6 out of 5">
+                                                <div class="stars-score" style="width: 52%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -3848,28 +3856,27 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/edimax-ac600-ew-7811utc/index.html">Edimax
-                                            AC600 Dual-Band Mini Size USB Adapter, Supports Both 11AC ( 5GHz Band ) and 11n
-                                            ( 2.4GHz Band ) Wi-Fi Connectivity</a></div>
+                                            href="../../component-details/wired-network-adapter/siig-cn-gp1021-s3/index.html">SIIG
+                                            Dual Profile GigaLAN PCIe Ethernet Adapter for Desktop PC</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Edimax </div>
+                                            <div class="detail__value f_brand"> SIIG </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC600 </div>
+                                            <div class="detail__value f_model"> CN-GP1021-S3 </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -3879,12 +3886,12 @@
 
                                 </td>
                                 <td class="price">
-                                    $15.10 </td>
+                                    $28.06 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00FW6T36Y?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00B4G1CK6?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_50"
-                                        href="javascript:void(0);" onclick="setid(50)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_45"
+                                        href="javascript:void(0);" onclick="setid(45)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <tr class="items" data-href="#">
@@ -3895,9 +3902,80 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31aqUUIZOOL._SL75_.jpg"
-                                                title="Linksys Wireless AE1200 USB 2.0 Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Linksys Wireless AE1200 ">
+                                                data-src="https://m.media-amazon.com/images/I/51oMEDB1g-L._SL75_.jpg"
+                                                title="Lenovo ThinkSystem NetXtreme PCIe x1 RJ45 Ethernet Adapter"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Lenovo NetXtreme">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/lenovo-netxtreme-7zt7a00482/index.html">Lenovo
+                                            ThinkSystem NetXtreme PCIe x1 RJ45 Ethernet Adapter</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Lenovo </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> NetXtreme </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 2 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $94.26 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B076LTBZGS?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_46"
+                                        href="javascript:void(0);" onclick="setid(46)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41PnBGtDW-L._SL75_.jpg"
+                                                title="StarTech PCI Express based Ethernet Network Interface Adapter Card "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech PEX100S">
                                             <div class="stars-rating" title="4.2 out of 5">
                                                 <div class="stars-score" style="width: 84%">
                                                     <i class="fas fa-star"></i>
@@ -3919,27 +3997,27 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/linksys-wireless-ae1200-ae1200-np/index.html">Linksys
-                                            Wireless AE1200 USB 2.0 Network Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/startech-pex100s/index.html">StarTech
+                                            PCI Express based Ethernet Network Interface Adapter Card </a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Linksys </div>
+                                            <div class="detail__value f_brand"> StarTech </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless AE1200 </div>
+                                            <div class="detail__value f_model"> PEX100S </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 100 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -3949,12 +4027,12 @@
 
                                 </td>
                                 <td class="price">
-                                    $16.41 </td>
+                                    $15.48 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0054YQOM0?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00186YI9Y?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_51"
-                                        href="javascript:void(0);" onclick="setid(51)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_47"
+                                        href="javascript:void(0);" onclick="setid(47)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <tr class="items" data-href="#">
@@ -3965,79 +4043,9 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31Lcei0hxrL._SL75_.jpg"
-                                                title="TP-Link AC1200 Wireless Dual Band USB Network Adapter "
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link AC1200">
-                                            <div class="stars-rating" title="3.7 out of 5">
-                                                <div class="stars-score" style="width: 74%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-ac1200-archer-t4u-v1/index.html">TP-Link
-                                            AC1200 Wireless Dual Band USB Network Adapter </a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1200 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
-
-                                        <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 3.0 </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
-
-                                </td>
-                                <td class="price">
-                                    $30 </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B00JBJ6VG8?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_52"
-                                        href="javascript:void(0);" onclick="setid(52)"><i class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/41afliBzZwL._SL75_.jpg"
-                                                title="ASUS AC1200 USB-AC53 Nano USB Dual-Band Wireless Network Adapter"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, ASUS AC1200">
+                                                data-src="https://m.media-amazon.com/images/I/31ML8LCWD3L._SL75_.jpg"
+                                                title="StarTech USB 3.0 to Gigabit Ethernet Adapter NIC with USB Port (White) "
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, StarTech USB31000SPTW">
                                             <div class="stars-rating" title="4.3 out of 5">
                                                 <div class="stars-score" style="width: 86%">
                                                     <i class="fas fa-star"></i>
@@ -4059,42 +4067,42 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/asus-ac1200-usb-ac53-nano/index.html">ASUS
-                                            AC1200 USB-AC53 Nano USB Dual-Band Wireless Network Adapter</a></div>
+                                            href="../../component-details/wired-network-adapter/startech-usb31000sptw/index.html">StarTech
+                                            USB 3.0 to Gigabit Ethernet Adapter NIC with USB Port (White) </a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ASUS </div>
+                                            <div class="detail__value f_brand"> StarTech </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> AC1200 </div>
+                                            <div class="detail__value f_model"> USB31000SPTW </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 5 - 802.11a/b/g/n/ac </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
+                                            <div class="detail__value f_color"> White </div>
                                         </div>
                                     </span>
 
                                 </td>
                                 <td class="price">
-                                    $26.99 </td>
+                                    $34.24 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B071KV2SMV?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00E4KZCIM?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_53"
-                                        href="javascript:void(0);" onclick="setid(53)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_48"
+                                        href="javascript:void(0);" onclick="setid(48)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             <tr class="items" data-href="#">
@@ -4105,11 +4113,11 @@
                                     <div class="logo-name">
                                         <div class="item-logo">
                                             <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
-                                                data-src="https://m.media-amazon.com/images/I/31DrWTYZPrL._SL75_.jpg"
-                                                title="TP-Link Wireless N300 Mini USB WiFi Network Adapter for Desktop PC"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, TP-Link Wireless N300">
-                                            <div class="stars-rating" title="4.0 out of 5">
-                                                <div class="stars-score" style="width: 80%">
+                                                data-src="https://m.media-amazon.com/images/I/31bzwqFe7zL._SL75_.jpg"
+                                                title="D-Link USB 3.0 to Gigabit Ethernet Adapter with USB to RJ45 for 10/100/1000 Network"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, D-Link DUB-1312">
+                                            <div class="stars-rating" title="4.3 out of 5">
+                                                <div class="stars-score" style="width: 86%">
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
@@ -4129,27 +4137,28 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-wireless-n300-tl-wn823n/index.html">TP-Link
-                                            Wireless N300 Mini USB WiFi Network Adapter for Desktop PC</a></div>
+                                            href="../../component-details/wired-network-adapter/d-link-dub-1312/index.html">D-Link
+                                            USB 3.0 to Gigabit Ethernet Adapter with USB to RJ45 for 10/100/1000 Network</a>
+                                    </div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
+                                            <div class="detail__value f_brand"> D-Link </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Wireless N300 </div>
+                                            <div class="detail__value f_model"> DUB-1312 </div>
                                         </div>
                                     </span>
                                     <span class="table_span">
 
                                         <div class="detail">
-                                            <div class="detail__name">Protocol:</div>
-                                            <div class="detail__value f_protocol"> WiFi 4 - 802.11a/b/g/n </div>
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> USB 3.0 </div>
                                         </div>
                                         <div class="detail">
-                                            <div class="detail__name">Interface:</div>
-                                            <div class="detail__value f_interface"> USB 2.0 </div>
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Color:</div>
@@ -4159,15 +4168,86 @@
 
                                 </td>
                                 <td class="price">
-                                    $8 </td>
+                                    $27.99 </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0088TKTY2?tag=pcbuilder00-20" target="_blank"><i
+                                        href="https://amazon.com/dp/B00H09E5KK?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_54"
-                                        href="javascript:void(0);" onclick="setid(54)"><i class="fa fa-plus"></i></a>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_49"
+                                        href="javascript:void(0);" onclick="setid(49)"><i class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
-                        </tbody>  
+                            <tr class="items" data-href="#">
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <img src="../../assets/images/blank.jpg" class="img-responsive lazy img-fluid"
+                                                data-src="https://m.media-amazon.com/images/I/41tlVrjatYL._SL75_.jpg"
+                                                title="Syba Gigabit Ethernet PCIe x1 Interface Based Card with Realtek Chipset"
+                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Syba SY-PEX24030">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="../../component-details/wired-network-adapter/syba-sy-pex24030/index.html">Syba
+                                            Gigabit Ethernet PCIe x1 Interface Based Card with Realtek Chipset</a></div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand"> Syba </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model"> SY-PEX24030 </div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe x1 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Ports:</div>
+                                            <div class="detail__value f_ports"> 1 x 1000 Mbit/s </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Color:</div>
+                                            <div class="detail__value f_color"> Black </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">
+                                    $17.65 </td>
+
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B00C56TN5U?tag=pcbuilder00-20" target="_blank"><i
+                                            class="fab fa-amazon"></i> View on Amazon</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_50"
+                                        href="javascript:void(0);" onclick="setid(50)"><i class="fa fa-plus"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
                         @endforeach
                         
                     </table>
@@ -4261,8 +4341,8 @@
                     "@type": "ListItem",
                     "position": 3,
                     "item": {
-                        "@id": "https://pcbuilder.net/product/wireless-network-adapter/",
-                        "name": "Wireless Network Adapter"
+                        "@id": "https://pcbuilder.net/product/wired-network-adapter/",
+                        "name": "Wired Network Adapter"
                     }
                 }
             ]
@@ -4321,6 +4401,66 @@
                                 tr[i].classList.remove("c_interface");
                             } else {
                                 tr[i].classList.remove("c_interface");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        function f_ports(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("ports");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[2];
+                    if (td) {
+                        td = td.getElementsByClassName("f_ports")['0'];
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].classList.remove("c_ports");
+                        } else {
+                            tr[i].classList.remove("c_ports");
+                        }
+                    }
+                }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ports")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ports");
+                            } else {
+                                tr[i].classList.add("c_ports");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_ports")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_ports");
+                            } else {
+                                tr[i].classList.remove("c_ports");
                             }
                         }
                     }

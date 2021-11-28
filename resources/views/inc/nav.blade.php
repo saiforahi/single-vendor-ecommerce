@@ -214,10 +214,10 @@
                                         <li itemprop="name"><a itemprop="url"
                                                 href="{{route('sound-card-list')}}">Sound Cards</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/wired-network-adapter/index.html">Wired Networking</a>
+                                                href="{{route('wired-network-adapter-list')}}">Wired Networking</a>
                                         </li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/wireless-network-adapter/index.html">Wireless
+                                                href="{{route('wireless-network-adapter-list')}}">Wireless
                                                 Networking</a></li>
                                     </ul>
                                     <ul class="list-unstyled">

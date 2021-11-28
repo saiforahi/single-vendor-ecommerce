@@ -182,10 +182,10 @@
 @section('content')
     <section class="pcb-breadcrumb">
         <h2>TP-Link TL-N150 (TL-WN725N)</h2>
-        <span><a href="../../../index.html">Home</a>
+        <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/wireless-network-adapter/index.html">Wireless Network
                 Adapter</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">TP-Link TL-N150</a></span>
+            <i class="fa fa-angle-right"></i><a href="wireless-network-adapter-list">TP-Link TL-N150</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

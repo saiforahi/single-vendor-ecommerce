@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('ups')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductController::class,'create']);
+    Route::post('/create',[App\Http\Controllers\api\UpsController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\UpsController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\UpsController::class,'delete_laptop']);
     Route::put('/update',[App\Http\Controllers\api\UpsController::class,'update']);

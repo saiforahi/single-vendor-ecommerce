@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('motherboards')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductsController::class,'add_motherboard']);
+    Route::post('/create',[App\Http\Controllers\api\MotherBoardsController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\MotherBoardsController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\MotherBoardsController::class,'delete']);
     Route::put('/update',[App\Http\Controllers\api\MotherBoardsController::class,'update']);

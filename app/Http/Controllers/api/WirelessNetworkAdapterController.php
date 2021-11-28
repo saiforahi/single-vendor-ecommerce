@@ -4,17 +4,17 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\WebCam;
+use App\Models\WirelessNetworkAdapter;
 use App\Models\Product;
-use App\Http\Requests\v1\CreateWebCamsRequest;
+use App\Http\Requests\v1\CreateWirelessNetworkAdaptersRequest;
 use App\Events\UploadImageEvent;
-class WebCamController extends Controller
+class WirelessNetworkAdapterController extends Controller
 {
     
-    public function create(CreateWebCamsRequest $req){
+    public function create(CreateWirelessNetworkAdaptersRequest $req){
         try{
             $new_product = Product::create($req->only('price'));
-            $new_web_cam = WebCam::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
+            $new_wirelessnetworkadapter = WirelessNetworkAdapter::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
@@ -24,7 +24,7 @@ class WebCamController extends Controller
                 }
             }
             event(new UploadImageEvent($new_product,$images));
-            if($new_web_cam){
+            if($new_wirelessnetworkadapter){
                 return response()->json(['success'=>true,'message'=>'New KeyBoard has been created'],201);
             }
             else{
@@ -42,10 +42,10 @@ class WebCamController extends Controller
         // ->groupBy('brand')
         // ->get();
         
-        return view('pages.webcams.list')->with('web_cams',WebCam::with('product')->get())->with('brands',WebCam::select('brand')->distinct()->get());
+        return view('pages.wireless-network-adapter.list')->with('wireless_network_adapters',WirelessNetworkAdapter::with('product')->get())->with('brands',WirelessNetworkAdapter::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.webcams.details')->with('web_cams',WebCam::findOrFail($id));
+        return view('pages.wireless-network-adapter.details')->with('wireless_network_adapters',WirelessNetworkAdapter::findOrFail($id));
     }
     
 }
