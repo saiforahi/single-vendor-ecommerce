@@ -393,7 +393,7 @@
         <h1><span>Select</span> Your Graphics Card</h1>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="{{ route('graphics-card-list') }}">Graphics Card</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('graphics-cards-list')}}">Graphics Card</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -929,11 +929,11 @@
                                     <td class="box">
                                         <div class="logo-name">
                                             <div class="item-logo">
-                                                <img src="../../assets/images/blank.jpg"
+                                                <?php $images = $graphic->product->getMedia('main_image'); ?>
+                                                <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
-                                                    data-src="https://m.media-amazon.com/images/I/41t1VU+qlYL._SL75_.jpg"
-                                                    title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                                    alt="pc builder, custom pc builder, pc part picker, build my pc, MSI RTX 3090 GAMING X TRIO 24G">
+                                                    data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    title="{{ $graphic->name }}" alt="{{ $graphic->name }}">
                                                 <div class="stars-rating" title="4.3 out of 5">
                                                     <div class="stars-score" style="width: 86%">
                                                         <i class="fas fa-star"></i>
@@ -960,48 +960,48 @@
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> MSI </div>
+                                                <div class="detail__value f_brand"> {{ $graphic->brand }} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> RTX 3090 GAMING X TRIO 24G </div>
+                                                <div class="detail__value f_model"> {{ $graphic->brand }}</div>
                                             </div>
                                         </span>
                                         <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Memory:</div>
-                                                <div class="detail__value f_memory"> 24 GB </div>
+                                                <div class="detail__value f_memory"> {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory'] }} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Memory Interface:</div>
-                                                <div class="detail__value f_memory_interface"> GDRR6X </div>
+                                                <div class="detail__value f_memory_interface"> {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory_interface'] }}</div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Length:</div>
-                                                <div class="detail__value f_length"> 335 mm </div>
+                                                <div class="detail__value f_length"> {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['length'] }}</div>
                                             </div>
                                         </span><span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Interface:</div>
-                                                <div class="detail__value f_interface"> PCIe x16 </div>
+                                                <div class="detail__value f_interface">  {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['interface'] }} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Chipset:</div>
-                                                <div class="detail__value f_chipset"> GeForce RTX 3090 </div>
+                                                <div class="detail__value f_chipset"> {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['chipset'] }} </div>
                                             </div>
                                         </span><span class="table_span view-more-108" style="display: none;">
                                             <div class="detail">
                                                 <div class="detail__name">Base Clock:</div>
-                                                <div class="detail__value f_base_clock"> 1395 MHz </div>
+                                                <div class="detail__value f_base_clock"> {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['base_clock'] }}  </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Clock Speed:</div>
-                                                <div class="detail__value f_clock_speed"> 1785 MHz </div>
+                                                <div class="detail__value f_clock_speed"> {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['clock_speed'] }}   </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Frame Sync:</div>
-                                                <div class="detail__value f_frame_sync"> G-Sync </div>
+                                                <div class="detail__value f_frame_sync"> {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['frame_sync'] }} </div>
                                             </div>
                                         </span>
 
@@ -1011,13 +1011,13 @@
                                                     Details</span> <i class="fas fa-chevron-circle-down"></i></div>
                                         </span>
                                     </td>
-                                    <td class="price">
-                                        $3,299 </td>
+                                    <td class="price">৳ {{ $graphic->product->price }}</td>
                                     <td><a class="btn btn-primary component-btn"
-                                            href="https://amazon.com/dp/B08HRBW6VB?tag=pcbuilder00-20" target="_blank"><i
-                                                class="fab fa-amazon"></i> View on Amazon</a></td>
-                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_108"
-                                            href="javascript:void(0);" onclick="setid(108)"><i
+                                            href="{{ route('graphics-cards-details', ['id' => $graphic->id]) }}"
+                                            target="_blank">View
+                                            details</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
+                                            href="{{route('add-storage-to-system',['graphic_id'=>$graphic->id])}}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
                                 </tr>

@@ -42,10 +42,10 @@ class CasesController extends Controller
         // ->groupBy('brand')
         // ->get();
         
-        return view('pages.cases.list')->with('cases',Casing::with('product')->get())->with('brands',Casing::select('brand')->distinct()->get());
+        return view('pages.cases.list')->with('casings',Casing::with('product')->get())->with('brands',Casing::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.cases.details')->with('cases',Casing::findOrFail($id));
+        return view('pages.cases.details')->with('casings',Casing::findOrFail($id));
     }
     
 }

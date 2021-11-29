@@ -128,7 +128,7 @@
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('graphics-card-list')}}">
+                                    <a itemprop="url" href="{{route('graphics-cards-list')}}">
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/graphics-card.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"

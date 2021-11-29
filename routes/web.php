@@ -63,11 +63,10 @@ Route::prefix('storages')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\StoragesController::class,'show_list'])->name('storage-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\StoragesController::class,'show_details'])->name('storage-details');
 });
+
 Route::prefix('graphics')->group(function(){
-    Route::get('/list',[App\Http\Controllers\api\GraphicsController::class,'show_list'])->name('graphics-card-list');
-    Route::get('/details/{id}',function(){ //storage list view
-        return view('pages.graphics-cards.details');
-    })->name('graphics-card-details');
+    Route::get('/list',[App\Http\Controllers\api\GraphicsController::class,'show_list'])->name('graphics-cards-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\GraphicsController::class,'show_details'])->name('graphics-cards-details');
 });
 Route::prefix('processors')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\ProcessorsController::class,'show_list'])->name('processor-list');

@@ -185,7 +185,7 @@
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/external-hard-drive/index.html">External Hard
                 Drive</a>
-            <i class="fa fa-angle-right"></i><a href="external-hard-drive-details">Western Digital WD 1TB</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('external-hard-drive-details')}}">Western Digital WD 1TB</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

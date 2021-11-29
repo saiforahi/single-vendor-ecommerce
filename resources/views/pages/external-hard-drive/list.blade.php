@@ -412,7 +412,7 @@
         <h1><span>Select</span> Your External Hard Drive</h1>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="external-hard-drive-list">External Hard Drive</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('external-hard-drive-list')}}">External Hard Drive</a>
         </span>
     </section>
     <a href="#open-modal" class="float">

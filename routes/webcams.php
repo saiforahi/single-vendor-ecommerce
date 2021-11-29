@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('webcams')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductController::class,'create']);
+    Route::post('/create',[App\Http\Controllers\api\WebCamController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\WebCamController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\WebCamController::class,'delete_laptop']);
     Route::put('/update',[App\Http\Controllers\api\WebCamController::class,'update']);

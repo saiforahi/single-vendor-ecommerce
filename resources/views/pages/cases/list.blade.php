@@ -1192,7 +1192,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($cases as $case)
+                            @foreach ($casings as $casing)
                                 <tr class="items" data-href="#">
                                     <td scope="row" class="component d-sm-none">
                                         <a href="index.html">#</a>
@@ -1200,12 +1200,12 @@
                                     <td class="box">
                                         <div class="logo-name">
                                             <div class="item-logo">
-                                                <?php $images = $case->product->getMedia('main_image'); ?>
+                                                <?php $images = $casing->product->getMedia('main_image'); ?>
                                                 <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                    title="{{ $memory->name }}" alt="{{ $memory->name }}">
-                                                <div class="stars-rating" title="4.7 out of 5">
+                                                    title="{{ $casing->name }}" alt="{{ $casing->name }}">
+                                                {{-- <div class="stars-rating" title="4.7 out of 5">
                                                     <div class="stars-score" style="width: 94%">
                                                         <i class="fas fa-star"></i>
                                                         <i class="fas fa-star"></i>
@@ -1219,37 +1219,33 @@
                                                         <i class="far fa-star"></i>
                                                         <i class="far fa-star"></i>
                                                         <i class="far fa-star"></i>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="comp-details">
-                                        <div class="table_title"><a href="{{ route('case-details') }}">NZXT
-                                                H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB
-                                                Type-C
-                                                Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling
-                                                Ready
+                                        <div class="table_title"><a href="{{ route('case-details', ['id' => $casing->id]) }}">{{ $casing->name }}
                                             </a></div>
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> NZXT </div>
+                                                <div class="detail__value f_brand"> {{ $casing->brand }} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> H510B-W1 </div>
+                                                <div class="detail__value f_model"> {{ $casing->model }} </div>
                                             </div>
                                         </span>
                                         <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Side Panel:</div>
-                                                <div class="detail__value f_side_panel"> Tempered Glass, Steel </div>
+                                                <div class="detail__value f_side_panel"> {{ empty(json_decode($casing->physical_specs, true)) ? '' : json_decode($casing->physical_specs, true)['side_panel'] }} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Cabinet Type:</div>
-                                                <div class="detail__value f_cabinet_type"> ATX Mid Tower </div>
+                                                <div class="detail__value f_cabinet_type"> {{ empty(json_decode($casing->compatibility_specs, true)) ? '' : json_decode($casing->compatibility_specs, true)['cabinet_type'] }} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Color:</div>
@@ -1258,13 +1254,13 @@
                                         </span>
 
                                     </td>
-                                    <td class="price">
-                                        $74.99 </td>
+                                    <td class="price">৳ {{ $casing->product->price }}</td>
                                     <td><a class="btn btn-primary component-btn"
-                                            href="https://amazon.com/dp/B07TC76671?tag=pcbuilder00-20" target="_blank"><i
-                                                class="fab fa-amazon"></i> View on Amazon</a></td>
+                                            href="{{ route('case-details', ['id' => $casing->id]) }}"
+                                            target="_blank">View
+                                            details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="javascript:void(0);" onclick="setid(1)"><i
+                                            href="{{route('add-casing-to-system',['case_id'=>$casing->id])}}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
                                 </tr>

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('cases')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductController::class,'create']);
+    Route::post('/create',[App\Http\Controllers\api\CasesController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\CasesController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\CasesController::class,'delete_laptop']);
     Route::put('/update',[App\Http\Controllers\api\CasesController::class,'update']);

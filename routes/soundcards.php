@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('soundcards')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductController::class,'create']);
+    Route::post('/create',[App\Http\Controllers\api\SoundCardController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\SoundCardController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\SoundCardController::class,'delete_laptop']);
     Route::put('/update',[App\Http\Controllers\api\SoundCardController::class,'update']);

@@ -917,7 +917,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($cpucoolers as $cpucooler)
+                            @foreach ($cpu_coolers as $cpu_cooler)
                                 <tr class="items" data-href="#">
                                     <td scope="row" class="component d-sm-none">
                                         <a href="index.html">#</a>
@@ -925,11 +925,11 @@
                                     <td class="box">
                                         <div class="logo-name">
                                             <div class="item-logo">
-                                                <?php $images = $cpucooler->product->getMedia('main_image'); ?>
+                                                <?php $images = $cpu_cooler->product->getMedia('main_image'); ?>
                                                 <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                    title="{{ $cpucooler->name }}" alt="{{ $cpucooler->name }}">
+                                                    title="{{ $cpu_cooler->name }}" alt="{{ $cpu_cooler->name }}">
                                                 <div class="stars-rating" title="4.6 out of 5">
                                                     <div class="stars-score" style="width: 92%">
                                                         <i class="fas fa-star"></i>
@@ -951,7 +951,7 @@
                                     </td>
                                     <td class="comp-details">
                                         <div class="table_title"><a
-                                                href="{{ route('cpu-coolers-details', ['id' => $cpucooler->id]) }}">Cooler
+                                                href="{{ route('cpu-coolers-details', ['id' => $cpu_cooler->id]) }}">Cooler
                                                 Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum
                                                 Fins</a></div>
                                         <span class="table_span">
@@ -982,13 +982,13 @@
 
                                     </td>
                                     <td class="price">
-                                        {{ $cpucooler->product->price }} </td>
+                                        {{ $cpu_cooler->product->price }} </td>
 
                                     <td><a class="btn btn-primary component-btn"
                                             href="https://amazon.com/dp/B005O65JXI?tag=pcbuilder00-20" target="_blank">View
                                             Details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="{{ route('add-cooler-to-system', ['cooler_id' => $cpucooler->id]) }}"><i
+                                            href="{{ route('add-cooler-to-system', ['cooler_id' => $cpu_cooler->id]) }}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
                                 </tr>

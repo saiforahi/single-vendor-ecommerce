@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('external-hard-drive')->group(function(){
-    Route::post('/create',[App\Http\Controllers\api\ProductController::class,'create']);
+Route::prefix('externalharddrives')->group(function(){
+    Route::post('/create',[App\Http\Controllers\api\ExternalHardDriveController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\ExternalHardDriveController::class,'get_all']);
     Route::delete('/delete/{id}',[App\Http\Controllers\api\ExternalHardDriveController::class,'delete_laptop']);
     Route::put('/update',[App\Http\Controllers\api\ExternalHardDriveController::class,'update']);

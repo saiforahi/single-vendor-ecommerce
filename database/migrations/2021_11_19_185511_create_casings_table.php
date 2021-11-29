@@ -24,7 +24,7 @@ class CreateCasingsTable extends Migration
             //common part ends here
             $table->json('compatibility_specs')->nullable();
             $table->json('cooling_specs')->nullable();
-            $table->json('i/o_specs')->nullable();
+            $table->json('io_specs')->nullable();
             $table->json('physical_specs')->nullable();
             $table->json('packaging_specs')->nullable();
             // $table->integer('price')->nullable();

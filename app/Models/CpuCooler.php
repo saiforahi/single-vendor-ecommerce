@@ -12,6 +12,7 @@ class CpuCooler extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
     protected $fillable=['product_id','brand','model','name','short_name','general_specs','cooling_specs','packaging_specs'];
+    protected $table="cpu_coolers";
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
