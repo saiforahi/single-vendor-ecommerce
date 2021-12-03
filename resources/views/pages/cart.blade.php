@@ -429,10 +429,10 @@
                             <tr>
                                 <th class="d-sm-none" scope="col" width="12%">#</th>
                                 <th scope="col" width="15%">Product</th>
-                                <th scope="col" width="37%">Name</th>
-                                <th scope="col" width="12%">Price</th>
-                                <th scope="col" width="28%">Quantity</th>
-                                <th scope="col" width="12%">Action</th>
+                                <th scope="col" width="25%">Name</th>
+                                <th scope="col" width="15%">Price</th>
+                                <th scope="col" width="35%">Quantity</th>
+                                <th scope="col" width="10%">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -561,18 +561,17 @@
                                                 <form>
                                                     {{-- <input class="form-control mb-3" /> --}}
                                                     <div class="input-group" style="width: 130px;">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-number" type="button" data-type="minus"
-                                                                data-field="quantity" disabled="disabled">
+                                                        <span class="input-group-btn mr-1">
+                                                            <button class="btn btn-number" onclick="update_qty('{{$loop->index}}','{{ $item->rowId }}',document.getElementById('quantity'+'{{$loop->index}}').value,'minus')" id="decrement_btn" type="button" data-type="minus">
                                                                 <i class="fa fa-minus"></i>
                                                             </button>
+                                                            
                                                         </span>
-                                                        <input type="text" name="quantity"
+                                                        <input type="text" id="quantity{{$loop->index}}"
                                                             class="form-control h-auto input-number text-center"
-                                                            placeholder="1" value="1" min="1" max="10">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn btn-number" type="button" data-type="plus"
-                                                                data-field="quantity">
+                                                            placeholder="1" value="{{$item->qty}}" min="1" max="10">
+                                                        <span class="input-group-btn ml-1" >
+                                                            <button class="btn btn-number" onclick="update_qty('{{$loop->index}}','{{ $item->rowId }}',document.getElementById('quantity'+'{{$loop->index}}').value,'plus')" id="increment_btn" type="button" data-type="plus">
                                                                 <i class="fa fa-plus"></i>
                                                             </button>
                                                         </span>
@@ -601,7 +600,22 @@
                             <span style="float:right; color:#ffffff!important;"><i style="color:#ffffff!important;"
                                     class="fa fa-filter"></i></span>
                         </div>
-                        <div class="card-group" id="accordion1" aria-multiselectable="false">
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="text pl-1" id="sub_total_text">Sub Total : {{Cart::subtotal()}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="text pl-1">Tax : {{Cart::tax()}}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="text pl-1">Total : {{Cart::total()}}</span>
+                            </div>
+                        </div>
+                        <div class="card-group mt-5" id="accordion1" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <button type="submit" value="submit" name="login" class="btn-md btn-login"
                                     id="do-login">Checkout</button>
@@ -616,3 +630,20 @@
             </div>
     </section>
 @endsection
+@push('script')
+<script>
+    function update_qty(idx,row_id,value,type){
+        if(type == 'minus'){
+            document.getElementById('quantity'+idx).value = (parseInt(document.getElementById('quantity'+idx).value)-1) >0 ? (parseInt(document.getElementById('quantity'+idx).value)-1) : 1
+        }
+        else{
+            document.getElementById('quantity'+idx).value = parseInt(document.getElementById('quantity'+idx).value)+1
+        }
+        $.post('{{ route('update_cart_item_quantity') }}', {_token:'{{ @csrf_token() }}',row_id:row_id,qty:value}, function(data){
+            console.log('res',data.data)
+            // document.getElementById('sub_total_text').innerText('Sub Total : '+data.data)
+        });
+    }
+    
+</script>
+@endpush

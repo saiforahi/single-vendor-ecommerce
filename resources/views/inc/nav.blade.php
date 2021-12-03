@@ -110,7 +110,7 @@
             <li class="nav-item dropdown megamenu-li ">
                 <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="navbarDropdownMenuLink2"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                        class="lazy" src="https://images.pcbuilder.dev/assets/images/icons/cpu.svg" height="24"
+                        class="lazy" src="{{asset('images/icons/cpu.svg')}}" height="24"
                         width="24">
                     Browse Products</a>
                 <div class="dropdown-menu megamenu" aria-labelledby="navbarDropdownMenuLink2">
@@ -120,7 +120,7 @@
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('storage-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/megamenu/storage.png"
+                                            <img src="{{asset('images/megamenu/storage.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="storage, pc builder, pc part picker, build my pc">
                                             <p>Storage</p>
@@ -130,7 +130,7 @@
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('graphics-cards-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/megamenu/graphics-card.png"
+                                            <img src="{{asset('images/megamenu/graphics-card.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="graphics card, video card, pc builder, pc part picker, build my pc">
                                             <p>Graphics Card </p>
@@ -140,7 +140,7 @@
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('power-supply-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/megamenu/power-supply.png"
+                                            <img src="{{asset('images/megamenu/power-supply.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="power supply, psu, pc builder, pc part picker, build my pc">
                                             <p>Power Supply</p>
@@ -150,7 +150,7 @@
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('case-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/megamenu/case.png"
+                                            <img src="{{asset('images/megamenu/case.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="case, cabinet, pc builder, pc part picker, build my pc">
                                             <p>Case</p>
@@ -160,7 +160,7 @@
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('processor-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/mega-menu/nav-processor.png"
+                                            <img src="{{asset('images/megamenu/nav-processor.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="cpu, processor, pc builder, pc part picker, build my pc">
                                             <p>CPU</p>
@@ -170,7 +170,7 @@
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('cpu-coolers-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/megamenu/cpu-cooler.png"
+                                            <img src="{{asset('images/megamenu/cpu-cooler.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="cpu cooler, pc builder, pc part picker, build my pc">
                                             <p>CPU Cooler</p>
@@ -180,7 +180,7 @@
                                 <div itemprop="name" class="col-6 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('motherboard-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/megamenu/motherboard.png"
+                                            <img src="{{asset('images/megamenu/motherboard.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="motherboard, pc builder, pc part picker, build my pc">
                                             <p>Motherboard</p>
@@ -190,7 +190,7 @@
                                 <div itemprop="name" class="col-6 col-md-3 col-lg-3 pcb-components">
                                     <a itemprop="url" href="{{route('memory-list')}}">
                                         <div class="box">
-                                            <img src="https://images.pcbuilder.dev/assets/images/megamenu/memory.png"
+                                            <img src="{{asset('images/megamenu/memory.png')}}"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
                                                 alt="memory, ram, pc builder, pc part picker, build my pc">
                                             <p>Memory</p>
