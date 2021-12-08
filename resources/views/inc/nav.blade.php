@@ -122,7 +122,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/storage.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="storage, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>Storage</p>
                                         </div>
                                     </a>
@@ -132,7 +132,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/graphics-card.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="graphics card, video card, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>Graphics Card </p>
                                         </div>
                                     </a>
@@ -142,7 +142,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/power-supply.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="power supply, psu, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>Power Supply</p>
                                         </div>
                                     </a>
@@ -152,7 +152,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/case.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="case, cabinet, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>Case</p>
                                         </div>
                                     </a>
@@ -162,7 +162,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/mega-menu/nav-processor.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="cpu, processor, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>CPU</p>
                                         </div>
                                     </a>
@@ -172,7 +172,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/cpu-cooler.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="cpu cooler, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>CPU Cooler</p>
                                         </div>
                                     </a>
@@ -182,7 +182,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/motherboard.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="motherboard, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>Motherboard</p>
                                         </div>
                                     </a>
@@ -192,7 +192,7 @@
                                         <div class="box">
                                             <img src="https://images.pcbuilder.dev/assets/images/megamenu/memory.png"
                                                 class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="memory, ram, pc builder, pc part picker, build my pc">
+                                                alt="">
                                             <p>Memory</p>
                                         </div>
                                     </a>

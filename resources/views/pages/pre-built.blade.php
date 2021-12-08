@@ -322,8 +322,8 @@
                                     always end up choosing the best one among the rest.</p>
                             </div>
                             <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
-                                    src="../../images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
-                                    alt="Gaming PC"></div>
+                                    src="https://images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
+                                    alt=""></div>
                             <a href="gaming-pc/index.html" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
                                     class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Gaming PC</a>
                         </div>
@@ -342,8 +342,8 @@
                                     explore all the cheap PCs which is ideal for doing these works efficiently.</p>
                             </div>
                             <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
-                                    src="../../images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
-                                    alt="Cheap PC"></div>
+                                    src="https://images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
+                                    alt=""></div>
                             <a href="cheap-pc/index.html" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
                                     class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Cheap PC</a>
                         </div>
@@ -361,8 +361,8 @@
                                     which are exclusively picked by our editorial team for extreme performance.</p>
                             </div>
                             <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
-                                    src="../../images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
-                                    alt="AIO PC"></div>
+                                    src="https://images.pcbuilder.dev/assets/images/builds/pc-builds.jpg"
+                                    alt=""></div>
                             <a href="aio-pc/index.html" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
                                     class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built AIO PC</a>
                         </div>

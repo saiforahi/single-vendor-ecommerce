@@ -15,22 +15,23 @@
                             <div data-toggle="tooltip" title="Copy Link!" id="selectable"
                                 onclick="selectText('selectable','link')" class="copy-link"><i class="fa fa-link"
                                     aria-hidden="true"></i>
-                                <div class="link px-2">{{Request::url()}}</div>
+                                <div class="link px-2">{{ Request::url() }}</div>
                                 <i class="fa fa-clone pl-2" aria-hidden="true"></i>
                             </div>
-                            
+
                             <div class="history-box">
-                                <div class="action-box-item"><span
-                                        class="px-2" id="newList" onclick="newList();"> Total (BDT)
+                                <div class="action-box-item"><span class="px-2" id="newList" onclick="newList();">
+                                        Total (BDT)
                                     </span>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="bottom-box">
                             <div class="compatibility"><i class="inline-icon fa fa-check-circle pr-2"
                                     aria-hidden="true"></i>
-                                <a href="{{route('cart')}}">Add components to cart and proceed to checkout</a></div>
+                                <a href="{{ route('cart') }}">Add components to cart and proceed to checkout</a>
+                            </div>
                             {{-- <div class="estimation"><i class="fa fa-bolt px-2" aria-hidden="true"></i>
                                 Estimated Wattage: 0W</div> --}}
                         </div>
@@ -150,8 +151,7 @@
                                     </span>
 
                                     <span class="view-more">
-                                        <div class="view-More6" onclick="viewMore(6);"><span
-                                                class="viewMore6">View
+                                        <div class="view-More6" onclick="viewMore(6);"><span class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
                                     </span>
                                 </td>
@@ -175,35 +175,481 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/motherboard/index.html">Motherboard</a>
+                                <a href="{{ route('motherboard-list') }}">Motherboard</a>
                             </td>
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/motherboard/index.html"><i class="fa fa-plus"></i> ADD Component
-                                </a></td>
+                            @if (Session::has('system') && Session::get('system')->get_motherboard() != '')
+                                <?php $motherboard = Session::get('system')->get_motherboard(); ?>
+                                <td>
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $motherboard->product->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('thumb') }}"
+                                                title="{{ $motherboard->name }}" class="img-responsive"
+                                                alt="{{ $motherboard->name }}">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $motherboard->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value">{{ $motherboard->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value">{{ $motherboard->model }}</div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Cores:</div>
+                                            <div class="detail__value f_cores"> 64 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Threads:</div>
+                                            <div class="detail__value f_threads"> 128 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Socket Type:</div>
+                                            <div class="detail__value f_socket_type"> sTRX4 </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Base Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Turbo Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Architechture:</div>
+                                            <div class="detail__value f_micro_architecture"> Zen 2 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Core Family:</div>
+                                            <div class="detail__value f_core_family"> Castle Peak </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Integrated Graphics:</div>
+                                            <div class="detail__value f_integrated_graphics"> None </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Memory Type:</div>
+                                            <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
+                                        </div>
+                                    </span><span style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Series:</div>
+                                            <div class="detail__value f_series"> Threadripper </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Generation:</div>
+                                            <div class="detail__value f_generation"> 3 </div>
+                                        </div>
+                                    </span>
+
+                                    <span class="view-more">
+                                        <div class="view-More6" onclick="viewMore(6);"><span
+                                                class="viewMore6">View
+                                                More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
+                                    </span>
+                                </td>
+                                <td class="price">
+                                    ৳ {{ $motherboard->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
+                                        System Builder</a></td>
+                                <td class="remove"><a class="btn btn-danger component-delete-btn"
+                                        id="motherboard0" href="{{ route('remove-motherboard-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{ route('motherboard-list') }}"><i class="fa fa-plus"></i> ADD
+                                        Component
+                                    </a>
+                                </td>
+                            @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/cpu-cooler/index.html">CPU Cooler</a>
+                                <a href="{{ route('cpu-coolers-list') }}">CPU Cooler</a>
                             </td>
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/cpu-cooler/index.html"><i class="fa fa-plus"></i> ADD Component
-                                </a></td>
+                            @if (Session::has('system') && Session::get('system')->get_cooler() != '')
+                                <?php $cooler = Session::get('system')->get_cooler(); ?>
+                                <td>
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $cooler->product->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('thumb') }}" title="{{ $cooler->name }}"
+                                                class="img-responsive" alt="{{ $cooler->name }}">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $cooler->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value">{{ $cooler->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value">{{ $cooler->model }}</div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Cores:</div>
+                                            <div class="detail__value f_cores"> 64 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Threads:</div>
+                                            <div class="detail__value f_threads"> 128 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Socket Type:</div>
+                                            <div class="detail__value f_socket_type"> sTRX4 </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Base Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Turbo Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Architechture:</div>
+                                            <div class="detail__value f_micro_architecture"> Zen 2 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Core Family:</div>
+                                            <div class="detail__value f_core_family"> Castle Peak </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Integrated Graphics:</div>
+                                            <div class="detail__value f_integrated_graphics"> None </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Memory Type:</div>
+                                            <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
+                                        </div>
+                                    </span><span style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Series:</div>
+                                            <div class="detail__value f_series"> Threadripper </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Generation:</div>
+                                            <div class="detail__value f_generation"> 3 </div>
+                                        </div>
+                                    </span>
+
+                                    <span class="view-more">
+                                        <div class="view-More6" onclick="viewMore(6);"><span
+                                                class="viewMore6">View
+                                                More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
+                                    </span>
+                                </td>
+                                <td class="price">
+                                    ৳ {{ $cooler->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
+                                        System Builder</a></td>
+                                <td class="remove"><a class="btn btn-danger component-delete-btn"
+                                        id="motherboard0" href="{{ route('remove-cooler-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{ route('cpu-coolers-list') }}"><i class="fa fa-plus"></i> ADD
+                                        Component
+                                    </a>
+                                </td>
+                            @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/case/index.html">Case</a>
+                                <a href="{{ route('case-list') }}">Case</a>
                             </td>
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/case/index.html"><i class="fa fa-plus"></i> ADD Component </a>
-                            </td>
+                            @if (Session::has('system') && Session::get('system')->get_casing() != '')
+                                <?php $casing = Session::get('system')->get_casing(); ?>
+                                <td>
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $casing->product->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('thumb') }}" title="{{ $casing->name }}"
+                                                class="img-responsive" alt="{{ $casing->name }}">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $casing->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value">{{ $casing->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value">{{ $casing->model }}</div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Cores:</div>
+                                            <div class="detail__value f_cores"> 64 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Threads:</div>
+                                            <div class="detail__value f_threads"> 128 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Socket Type:</div>
+                                            <div class="detail__value f_socket_type"> sTRX4 </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Base Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Turbo Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Architechture:</div>
+                                            <div class="detail__value f_micro_architecture"> Zen 2 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Core Family:</div>
+                                            <div class="detail__value f_core_family"> Castle Peak </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Integrated Graphics:</div>
+                                            <div class="detail__value f_integrated_graphics"> None </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Memory Type:</div>
+                                            <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
+                                        </div>
+                                    </span><span style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Series:</div>
+                                            <div class="detail__value f_series"> Threadripper </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Generation:</div>
+                                            <div class="detail__value f_generation"> 3 </div>
+                                        </div>
+                                    </span>
+
+                                    <span class="view-more">
+                                        <div class="view-More6" onclick="viewMore(6);"><span
+                                                class="viewMore6">View
+                                                More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
+                                    </span>
+                                </td>
+                                <td class="price">
+                                    ৳ {{ $casing->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
+                                        System Builder</a></td>
+                                <td class="remove"><a class="btn btn-danger component-delete-btn"
+                                        id="motherboard0" href="{{ route('remove-casing-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{ route('case-list') }}"><i class="fa fa-plus"></i> ADD Component
+                                    </a>
+                                </td>
+                            @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/graphics-card/index.html">Graphics Card</a>
+                                <a href="{{ route('graphics-cards-list') }}">Graphics Card</a>
                             </td>
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/graphics-card/index.html"><i class="fa fa-plus"></i> ADD Component
-                                </a></td>
+                            @if (Session::has('system') && Session::get('system')->get_graphic() != '')
+                                <?php $graphic = Session::get('system')->get_graphic(); ?>
+                                <td>
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $graphic->product->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('thumb') }}" title="{{ $graphic->name }}"
+                                                class="img-responsive" alt="{{ $graphic->name }}">
+                                            <div class="stars-rating" title="4.4 out of 5">
+                                                <div class="stars-score" style="width: 88%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $graphic->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value">{{ $graphic->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value">{{ $graphic->model }}</div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Cores:</div>
+                                            <div class="detail__value f_cores"> 64 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Threads:</div>
+                                            <div class="detail__value f_threads"> 128 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Socket Type:</div>
+                                            <div class="detail__value f_socket_type"> sTRX4 </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Base Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Turbo Speed:</div>
+                                            <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Architechture:</div>
+                                            <div class="detail__value f_micro_architecture"> Zen 2 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Core Family:</div>
+                                            <div class="detail__value f_core_family"> Castle Peak </div>
+                                        </div>
+                                    </span><span class="table_span view-more-6" style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Integrated Graphics:</div>
+                                            <div class="detail__value f_integrated_graphics"> None </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Memory Type:</div>
+                                            <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
+                                        </div>
+                                    </span><span style="display: none;">
+                                        <div class="detail">
+                                            <div class="detail__name">Series:</div>
+                                            <div class="detail__value f_series"> Threadripper </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Generation:</div>
+                                            <div class="detail__value f_generation"> 3 </div>
+                                        </div>
+                                    </span>
+
+                                    <span class="view-more">
+                                        <div class="view-More6" onclick="viewMore(6);"><span
+                                                class="viewMore6">View
+                                                More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
+                                    </span>
+                                </td>
+                                <td class="price">
+                                    ৳ {{ $graphic->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
+                                        System Builder</a></td>
+                                <td class="remove"><a class="btn btn-danger component-delete-btn"
+                                        id="motherboard0" href="{{ route('remove-graphic-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{ route('graphics-cards-list') }}"><i class="fa fa-plus"></i> ADD
+                                        Component
+                                    </a>
+                                </td>
+                            @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
@@ -297,7 +743,8 @@
                                         href="{{ route('memory-details', ['id' => $memory->id]) }}" target="_blank">View
                                         Details</a></td>
                                 <td class="remove">
-                                    <a class="btn btn-danger component-add-btn" href="{{route('remove-memory-from-system')}}" id="p_185"><i
+                                    <a class="btn btn-danger component-add-btn"
+                                        href="{{ route('remove-memory-from-system') }}" id="p_185"><i
                                             class="fa fa-trash"></i></a>
                                 </td>
                             @else
@@ -411,7 +858,7 @@
                                 <a href="{{ route('cpu-coolers-list') }}">CPU Cooler</a>
                             </td>
                             @if (Session::has('system') && Session::get('system')->get_cooler() != '')
-                                <?php $cooler = Session::get('system')->get_storage(); ?>
+                                <?php $cooler = Session::get('system')->get_cooler(); ?>
 
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -425,21 +872,21 @@
                                                 data-src="{{ $images[0]->getUrl('main_image') }}"
                                                 title="{{ $cooler->name }}" alt="{{ $cooler->name }}">
                                             {{-- <div class="stars-rating" title="4.9 out of 5">
-                                            <div class="stars-score" style="width: 98%">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <div class="stars-scale">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </div> --}}
+                                                <div class="stars-score" style="width: 98%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div> --}}
                                         </div>
                                     </div>
                                 </td>
@@ -507,19 +954,217 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/power-supply/index.html">Power Supply</a>
+                                <a href="{{ route('power-supply-list') }}">Power Supply</a>
                             </td>
-                            <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/power-supply/index.html"><i class="fa fa-plus"></i> ADD Component
-                                </a></td>
+                            @if (Session::has('system') && Session::get('system')->get_power_supplier() != '')
+                                <?php $power_supplier = Session::get('system')->get_power_supplier(); ?>
+
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="index.html">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $power_supplier->product->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                class="img-responsive lazy img-fluid"
+                                                data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                title="{{ $power_supplier->name }}" alt="{{ $power_supplier->name }}">
+                                            <div class="stars-rating" title="4.9 out of 5">
+                                                <div class="stars-score" style="width: 98%">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="stars-scale">
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="{{ route('cpu-coolers-details', ['id' => $power_supplier->id]) }}">{{ $power_supplier->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand">{{ $power_supplier->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model">{{ $power_supplier->model }}</div>
+                                        </div>
+                                    </span>
+                                    <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Capacity:</div>
+                                            <div class="detail__value f_capacity"> 1 TB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Type:</div>
+                                            <div class="detail__value f_storage_type"> SSD </div>
+                                        </div>
+                                        <div class="detail d-none">
+                                            <div class="detail__name">RPM:</div>
+                                            <div class="detail__value f_rpm"> </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe 3.0 x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Cache Memory:</div>
+                                            <div class="detail__value f_cache_memory"> 1024 MB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Form Factor:</div>
+                                            <div class="detail__value f_form_factor"> M.2-2280 </div>
+                                        </div>
+                                    </span>
+
+                                </td>
+                                <td class="price">৳{{ $power_supplier->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="{{ route('cooler-details', ['id' => $power_supplier->id]) }}" target="_blank">View
+                                        details</a></td>
+
+                                <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
+                                        href="{{ route('remove-power_supplier-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{ route('power-supply-list') }}"><i class="fa fa-plus"></i> ADD
+                                        Component
+                                    </a>
+                                </td>
+                            @endif
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="../product/monitor/index.html">Monitor</a>
+                                <a href="{{route('monitor-list')}}">Monitor</a>
                             </td>
+                            @if (Session::has('system') && Session::get('system')->get_monitor() != '')
+                            <?php $graphic = Session::get('system')->get_monitor(); ?>
+                            <td>
+                                <div class="logo-name">
+                                    <div class="item-logo">
+                                        <?php $images = $monitor->product->getMedia('main_image'); ?>
+                                        <img src="{{ $images[0]->getUrl('thumb') }}" title="{{ $monitor->name }}"
+                                            class="img-responsive" alt="{{ $monitor->name }}">
+                                        <div class="stars-rating" title="4.4 out of 5">
+                                            <div class="stars-score" style="width: 88%">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="stars-scale">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="comp-details">
+                                <div class="table_title"><a
+                                        href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $monitor->name }}</a>
+                                </div>
+                                <span class="table_span">
+                                    <div class="detail">
+                                        <div class="detail__name">Brand:</div>
+                                        <div class="detail__value">{{ $monitor->brand }}</div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Model:</div>
+                                        <div class="detail__value">{{ $monitor->model }}</div>
+                                    </div>
+                                </span>
+                                <span class="table_span">
+
+                                    <div class="detail">
+                                        <div class="detail__name">Cores:</div>
+                                        <div class="detail__value f_cores"> 64 </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Threads:</div>
+                                        <div class="detail__value f_threads"> 128 </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Socket Type:</div>
+                                        <div class="detail__value f_socket_type"> sTRX4 </div>
+                                    </div>
+                                </span><span class="table_span">
+                                    <div class="detail">
+                                        <div class="detail__name">Base Speed:</div>
+                                        <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Turbo Speed:</div>
+                                        <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
+                                    </div>
+                                </span><span class="table_span view-more-6" style="display: none;">
+                                    <div class="detail">
+                                        <div class="detail__name">Architechture:</div>
+                                        <div class="detail__value f_micro_architecture"> Zen 2 </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Core Family:</div>
+                                        <div class="detail__value f_core_family"> Castle Peak </div>
+                                    </div>
+                                </span><span class="table_span view-more-6" style="display: none;">
+                                    <div class="detail">
+                                        <div class="detail__name">Integrated Graphics:</div>
+                                        <div class="detail__value f_integrated_graphics"> None </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Memory Type:</div>
+                                        <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
+                                    </div>
+                                </span><span style="display: none;">
+                                    <div class="detail">
+                                        <div class="detail__name">Series:</div>
+                                        <div class="detail__value f_series"> Threadripper </div>
+                                    </div>
+                                    <div class="detail">
+                                        <div class="detail__name">Generation:</div>
+                                        <div class="detail__value f_generation"> 3 </div>
+                                    </div>
+                                </span>
+
+                                <span class="view-more">
+                                    <div class="view-More6" onclick="viewMore(6);"><span
+                                            class="viewMore6">View
+                                            More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
+                                </span>
+                            </td>
+                            <td class="price">
+                                ৳ {{ $monitor->product->price }}</td>
+                            <td><a class="btn btn-primary component-btn"
+                                    href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
+                                    System Builder</a></td>
+                            <td class="remove"><a class="btn btn-danger component-delete-btn"
+                                    id="motherboard0" href="{{ route('remove-monitor-from-system') }}"><i
+                                        class="fa fa-trash"></i></a></td>
+                            @else
                             <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                    href="../product/monitor/index.html"><i class="fa fa-plus"></i> ADD Component </a>
+                                    href="{{route('monitor-list')}}"><i class="fa fa-plus"></i> ADD Component </a>
                             </td>
+                            @endif
                         </tr>
                         </td>
                         </td>
@@ -541,15 +1186,15 @@
                                 <a>Accessories</a>
                             </td>
                             <td colspan="6" class="comps">
-                                <a href="{{route('keyboard-list')}}">Keyboard</a>, <a
-                                    href="{{route('mouse-list')}}">Mouse</a>, <a
-                                    href="{{route('thermalpaste-list')}}">Thermal Paste</a>, <a
-                                    href="{{route('speakers-list')}}">Speakers</a>, <a
-                                    href="{{route('ups-list')}}">UPS</a>, <a
-                                    href="{{route('headphones-list')}}">Headphone</a>, <a
-                                    href="{{route('external-hard-drive-list')}}">External Hard Drive</a>, <a
-                                    href="{{route('webcams-list')}}">Webcam</a>, <a
-                                    href="{{route('optical-drives-list')}}">Optical Drive</a>
+                                <a href="{{ route('keyboard-list') }}">Keyboard</a>, <a
+                                    href="{{ route('mouse-list') }}">Mouse</a>, <a
+                                    href="{{ route('thermalpaste-list') }}">Thermal Paste</a>, <a
+                                    href="{{ route('speakers-list') }}">Speakers</a>, <a
+                                    href="{{ route('ups-list') }}">UPS</a>, <a
+                                    href="{{ route('headphones-list') }}">Headphone</a>, <a
+                                    href="{{ route('external-hard-drive-list') }}">External Hard Drive</a>, <a
+                                    href="{{ route('webcams-list') }}">Webcam</a>, <a
+                                    href="{{ route('optical-drives-list') }}">Optical Drive</a>
                             </td>
                         </tr>
                         <tr class="items extra">
@@ -575,7 +1220,7 @@
                     </tbody>
                 </table>
             </div>
-            
+
         </div>
     </section>
 @endsection

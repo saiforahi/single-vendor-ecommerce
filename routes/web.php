@@ -150,10 +150,22 @@ Route::prefix('wired-network-adapter')->group(function(){
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');
+    Route::get('/add-motherboard/{motherboard_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_motherboard_web'])->name('add-motherboard-to-system');
+    Route::get('/remove-motherboard',[App\Http\Controllers\api\SystemBuilderController::class,'remove_motherboard_web'])->name('remove-motherboard-from-system');
+    Route::get('/add-cooler/{cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_cooler_web'])->name('add-cooler-to-system');
+    Route::get('/remove-cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_cooler_web'])->name('remove-cooler-from-system');
+    Route::get('/add-casing/{casing_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_casing_web'])->name('add-casing-to-system');
+    Route::get('/remove-casing',[App\Http\Controllers\api\SystemBuilderController::class,'remove_casing_web'])->name('remove-casing-from-system');
+    Route::get('/add-graphic/{graphic_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_graphic_web'])->name('add-graphic-to-system');
+    Route::get('/remove-graphic',[App\Http\Controllers\api\SystemBuilderController::class,'remove_graphic_web'])->name('remove-graphic-from-system');
     Route::get('/add-storage/{storage_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_storage_web'])->name('add-storage-to-system');
     Route::get('/remove-storage',[App\Http\Controllers\api\SystemBuilderController::class,'remove_storage_web'])->name('remove-storage-from-system');
     Route::get('/add-memory/{memory_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_memory_web'])->name('add-memory-to-system');
     Route::get('/remove-memory',[App\Http\Controllers\api\SystemBuilderController::class,'remove_memory_web'])->name('remove-memory-from-system');
+    Route::get('/add-power_supplier/{power_supplier_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_power_supplier_web'])->name('add-power_supplier-to-system');
+    Route::get('/remove-power_supplier',[App\Http\Controllers\api\SystemBuilderController::class,'remove_power_supplier_web'])->name('remove-power_supplier-from-system');
+    Route::get('/add-monitor/{monitor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_monitor_web'])->name('add-monitor-to-system');
+    Route::get('/remove-monitor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_monitor_web'])->name('remove-monitor-from-system');
     //cooler
     Route::get('/add-cooler/{cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_cooler_web'])->name('add-cooler-to-system');
     Route::get('/remove-cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_cooler_web'])->name('remove-cooler-from-system');

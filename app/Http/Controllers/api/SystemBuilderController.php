@@ -42,6 +42,157 @@ class SystemBuilderController extends Controller
         }
         return redirect('/system-builder');
     }
+    //case
+    public function add_casing(Request $req){
+        
+        $system = new SystemBuilder();
+        $system->set_casing($req->casing_id);
+        session('system',$system);
+        return $system->get_casing();
+        // dd($req->all());
+    }
+    public function add_casing_web($casing_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_casing($casing_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_casing($casing_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+    }
+    public function remove_casing_web(){
+        if(Session::has('system') && Session::get('system')->get_casing()!=''){
+            $system = Session::get('system');
+            $system->remove_casing();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
+    //graphics card
+    public function add_graphic(Request $req){
+        
+        $system = new SystemBuilder();
+        $system->set_graphic($req->graphic_id);
+        session('system',$system);
+        return $system->get_graphic();
+        // dd($req->all());
+    }
+    public function add_graphic_web($graphic_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_graphic($graphic_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_graphic($graphic_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+    }
+    public function remove_graphic_web(){
+        if(Session::has('system') && Session::get('system')->get_graphic()!=''){
+            $system = Session::get('system');
+            $system->remove_graphic();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
+    //power supply
+    public function add_power_supplier(Request $req){
+        
+        $system = new SystemBuilder();
+        $system->set_power_supplier($req->power_supplier_id);
+        session('system',$system);
+        return $system->get_power_supplier();
+        // dd($req->all());
+    }
+    public function add_power_supplier_web($power_supplier_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_power_supplier($power_supplier_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_power_supplier($power_supplier_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+    }
+    public function remove_power_supplier_web(){
+        if(Session::has('system') && Session::get('system')->get_power_supplier()!=''){
+            $system = Session::get('system');
+            $system->remove_power_supplier();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
+    //monitor
+    public function add_monitor(Request $req){
+        
+        $system = new SystemBuilder();
+        $system->set_monitor($req->monitor_id);
+        session('system',$system);
+        return $system->get_monitor();
+        // dd($req->all());
+    }
+    public function add_monitor_web($monitor_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_monitor($monitor_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_monitor($monitor_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+    }
+    public function remove_monitor_web(){
+        if(Session::has('system') && Session::get('system')->get_monitor()!=''){
+            $system = Session::get('system');
+            $system->remove_monitor();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
+
+    //motherboard
+    public function add_motherboard(Request $req){
+        
+        $system = new SystemBuilder();
+        $system->set_motherboard($req->motherboard_id);
+        session('system',$system);
+        return $system->get_motherboard();
+        // dd($req->all());
+    }
+    public function add_motherboard_web($motherboard_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_motherboard($motherboard_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_motherboard($motherboard_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+    }
+    public function remove_motherboard_web(){
+        if(Session::has('system') && Session::get('system')->get_motherboard()!=''){
+            $system = Session::get('system');
+            $system->remove_motherboard();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
 
     //storage
     public function add_storage_web($storage_id){
