@@ -16,6 +16,9 @@ class MemoriesController extends Controller
             $new_product = Product::create($req->all());
             $new_storage = Memory::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             // event(new UploadImageEvent());
+            $new_product->extendable_id=$new_storage->id;
+            $new_product->extendable_type = $new_storage->getMorphClass();
+            $new_product->save();
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){

@@ -371,8 +371,11 @@
 
                     <div class="budget-price">৳ {{ $memory->product->price }}</div>
                     <div class="align-button">
-                        <a href="{{route('add-product-to-cart',['product_id'=>$memory->product->id])}}" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to Cart</a>
+                        <a href="javascript::void(0)" onclick="document.getElementById('add_product_form').submit()" class="btn btn-primary btn2 "><i
+                            class="fa fa-plus"></i> Add Product to Cart</a>
+                        <form style="display: none;" action="{{route('add-product-to-cart',['product_id'=>$memory->product->id])}}" method="GET" id="add_product_form">
+                            @csrf
+                        </form>
                         <a href="{{ route('add-memory-to-system', ['memory_id' => $memory->id]) }}"
                             class="btn btn-primary btn1 "><i class="fa fa-plus"></i>Add to Sytem Builder</a>
                     </div>
