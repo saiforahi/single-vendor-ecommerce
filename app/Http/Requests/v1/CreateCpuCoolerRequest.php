@@ -32,7 +32,8 @@ class CreateCpuCoolerRequest extends FormRequest
             'short_name'=>'sometimes|nullable|string',
             'general_specs'=>'sometimes|nullable|json',
             'cooling_specs'=>'sometimes|nullable|json',
-            'packaging_specs'=>'sometimes|nullable|json'
+            'packaging_specs'=>'sometimes|nullable|json',
+            'total_images'=>'sometimes|nullable'
         ];
     }
 }

@@ -936,7 +936,7 @@
                                 </td>
                                 <td class="price">৳{{ $cooler->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{ route('cooler-details', ['id' => $cooler->id]) }}" target="_blank">View
+                                        href="{{ route('cpu-coolers-details', ['id' => $cooler->id]) }}" target="_blank">View
                                         details</a></td>
 
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
@@ -991,7 +991,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{ route('cpu-coolers-details', ['id' => $power_supplier->id]) }}">{{ $power_supplier->name }}</a>
+                                            href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}">{{ $power_supplier->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -1035,7 +1035,7 @@
                                 </td>
                                 <td class="price">৳{{ $power_supplier->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{ route('cooler-details', ['id' => $power_supplier->id]) }}" target="_blank">View
+                                        href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}" target="_blank">View
                                         details</a></td>
 
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
@@ -1054,7 +1054,7 @@
                                 <a href="{{route('monitor-list')}}">Monitor</a>
                             </td>
                             @if (Session::has('system') && Session::get('system')->get_monitor() != '')
-                            <?php $graphic = Session::get('system')->get_monitor(); ?>
+                            <?php $monitor = Session::get('system')->get_monitor(); ?>
                             <td>
                                 <div class="logo-name">
                                     <div class="item-logo">
@@ -1152,14 +1152,14 @@
                                             More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
                                 </span>
                             </td>
-                            <td class="price">
-                                ৳ {{ $monitor->product->price }}</td>
-                            <td><a class="btn btn-primary component-btn"
-                                    href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
-                                    System Builder</a></td>
-                            <td class="remove"><a class="btn btn-danger component-delete-btn"
-                                    id="motherboard0" href="{{ route('remove-monitor-from-system') }}"><i
-                                        class="fa fa-trash"></i></a></td>
+                            <td class="price">৳{{ $monitor->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="{{ route('monitor-details', ['id' => $monitor->id]) }}" target="_blank">View
+                                        details</a></td>
+
+                                <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
+                                        href="{{ route('remove-monitor-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
                             @else
                             <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
                                     href="{{route('monitor-list')}}"><i class="fa fa-plus"></i> ADD Component </a>

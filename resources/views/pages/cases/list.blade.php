@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-            letter-spacing: 1px;
-            word-spacing: 3px;
-            text-decoration: none**/
+                letter-spacing: 1px;
+                word-spacing: 3px;
+                text-decoration: none**/
         }
 
         .checkbox label,
@@ -335,8 +335,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                          transform: translate(-50%, -50%);
-                          */
+                              transform: translate(-50%, -50%);
+                              */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -360,10 +360,10 @@
             }
 
             /*
-                .modal-window div:not(:last-of-type) {
-                  margin-bottom: 15px;
-                }
-                */
+                    .modal-window div:not(:last-of-type) {
+                      margin-bottom: 15px;
+                    }
+                    */
 
         }
 
@@ -1220,57 +1220,59 @@
                                                         <i class="far fa-star"></i>
                                                         <i class="far fa-star"></i>
                                                     </div> --}}
-                                                </div>
                                             </div>
                                         </div>
-                                    </td>
-                                    <td class="comp-details">
-                                        <div class="table_title"><a href="{{ route('case-details', ['id' => $casing->id]) }}">{{ $casing->name }}
-                                            </a></div>
-                                        <span class="table_span">
-                                            <div class="detail">
-                                                <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> {{ $casing->brand }} </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> {{ $casing->model }} </div>
-                                            </div>
-                                        </span>
-                                        <span class="table_span">
-
-                                            <div class="detail">
-                                                <div class="detail__name">Side Panel:</div>
-                                                <div class="detail__value f_side_panel"> {{ empty(json_decode($casing->physical_specs, true)) ? '' : json_decode($casing->physical_specs, true)['side_panel'] }} </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail__name">Cabinet Type:</div>
-                                                <div class="detail__value f_cabinet_type"> {{ empty(json_decode($casing->compatibility_specs, true)) ? '' : json_decode($casing->compatibility_specs, true)['cabinet_type'] }} </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail__name">Color:</div>
-                                                <div class="detail__value f_color"> White </div>
-                                            </div>
-                                        </span>
-
-                                    </td>
-                                    <td class="price">৳ {{ $casing->product->price }}</td>
-                                    <td><a class="btn btn-primary component-btn"
-                                            href="{{ route('case-details', ['id' => $casing->id]) }}"
-                                            target="_blank">View
-                                            details</a></td>
-                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="{{route('add-casing-to-system',['case_id'=>$casing->id])}}"><i
-                                                class="fa fa-plus"></i></a>
-                                    </td>
-                                </tr>
-                            @endforeach
-
-                        </tbody>
-
-                    </table>
                 </div>
+                </td>
+                <td class="comp-details">
+                    <div class="table_title"><a
+                            href="{{ route('case-details', ['id' => $casing->id]) }}">{{ $casing->name }}
+                        </a></div>
+                    <span class="table_span">
+                        <div class="detail">
+                            <div class="detail__name">Brand:</div>
+                            <div class="detail__value f_brand"> {{ $casing->brand }} </div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail__name">Model:</div>
+                            <div class="detail__value f_model"> {{ $casing->model }} </div>
+                        </div>
+                    </span>
+                    <span class="table_span">
+
+                        <div class="detail">
+                            <div class="detail__name">Side Panel:</div>
+                            <div class="detail__value f_side_panel">
+                                {{ empty(json_decode($casing->physical_specs, true)) ? '' : json_decode($casing->physical_specs, true)['side_panel'] }}
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="detail__name">Cabinet Type:</div>
+                            {{-- <div class="detail__value f_cabinet_type"> {{ empty(json_decode($casing->compatibility_specs, true)) ? '' : json_decode($casing->compatibility_specs, true)['cabinet_type'] }} </div> --}}
+                        </div>
+                        <div class="detail">
+                            <div class="detail__name">Color:</div>
+                            <div class="detail__value f_color"> White </div>
+                        </div>
+                    </span>
+
+                </td>
+                <td class="price">৳ {{ $casing->product->price }}</td>
+                <td><a class="btn btn-primary component-btn" href="{{ route('case-details', ['id' => $casing->id]) }}"
+                        target="_blank">View
+                        details</a></td>
+                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
+                        href="{{ route('add-casing-to-system', ['casing_id' => $casing->id]) }}"><i
+                            class="fa fa-plus"></i></a>
+                </td>
+                </tr>
+                @endforeach
+
+                </tbody>
+
+                </table>
             </div>
+        </div>
     </section>
 @endsection
 

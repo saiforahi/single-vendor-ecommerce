@@ -1051,10 +1051,10 @@
                 <td><a class="btn btn-primary component-btn"
                         href="{{ route('motherboard-details', ['id' => $motherboard->id]) }}" target="_blank">View
                         Details</a></td>
-                {{-- <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
+                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
                         href="{{ route('add-motherboard-to-system', ['motherboard_id' => $motherboard->id]) }}"><i
                             class="fa fa-plus"></i></a>
-                </td> --}}
+                </td>
                 </tr>
                 @endforeach
 

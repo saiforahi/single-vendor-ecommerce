@@ -1014,7 +1014,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($power_supplies as $powersupply)
+                            @foreach ($power_supplies as $power_supplier)
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -1022,7 +1022,7 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $powersupply->product->getMedia('main_image'); ?>
+                                            <?php $images = $power_supplier->product->getMedia('main_image'); ?>
                                             <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}" class="img-responsive lazy img-fluid"
                                                 data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                 title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
@@ -1047,7 +1047,7 @@
                                     </div>
                                 </td>
                                 <td class="comp-details">
-                                    <div class="table_title"><a href="{{ route('power-supply-details',['id'=>$powersupply->id]) }}">Corsair
+                                    <div class="table_title"><a href="{{ route('power-supply-details',['id'=>$power_supplier->id]) }}">Corsair
                                             RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply</a></div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -1077,12 +1077,13 @@
 
                                 </td>
                                 <td class="price">
-                                    $119.12 </td>
+                                    ৳ {{ $power_supplier->product->price }} </td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B07RF237B1?tag=pcbuilder00-20" target="_blank"><i
-                                            class="fab fa-amazon"></i> View on Amazon</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                        href="javascript:void(0);" onclick="setid(1)"><i class="fa fa-plus"></i></a>
+                                        href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}"
+                                        target="_blank">View Details</a></td>
+                                <td class="remove"><a class="btn btn-danger component-add-btn"
+                                        id="{{ 'p_' . $power_supplier->id }}" href="{{route('add-power_supplier-to-system',['power_supplier_id'=>$power_supplier->id])}}"><i
+                                            class="fa fa-plus"></i></a>
                                 </td>
                             </tr>
                             @endforeach

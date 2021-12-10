@@ -86,9 +86,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                    letter-spacing: 1px;
-                    word-spacing: 3px;
-                    text-decoration: none**/
+                        letter-spacing: 1px;
+                        word-spacing: 3px;
+                        text-decoration: none**/
         }
 
         .checkbox label,
@@ -328,8 +328,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                  transform: translate(-50%, -50%);
-                                  */
+                                      transform: translate(-50%, -50%);
+                                      */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -353,10 +353,10 @@
             }
 
             /*
-                        .modal-window div:not(:last-of-type) {
-                          margin-bottom: 15px;
-                        }
-                        */
+                            .modal-window div:not(:last-of-type) {
+                              margin-bottom: 15px;
+                            }
+                            */
 
         }
 
@@ -1868,10 +1868,11 @@
                                     </td>
                                     <td class="price">{{ $monitor->product->price }}</td>
                                     <td><a class="btn btn-primary component-btn"
-                                            href="https://amazon.com/dp/B07GD7H18F?tag=pcbuilder00-20" target="_blank"><i
-                                                class="fab fa-amazon"></i> View on Amazon</a></td>
-                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="javascript:void(0);" onclick="setid(1)"><i
+                                            href="{{ route('monitor-details', ['id' => $monitor->id]) }}"
+                                            target="_blank">View
+                                            Details</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_185"
+                                            href="{{ route('add-monitor-to-system', ['monitor_id' => $monitor->id]) }}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
                                 </tr>

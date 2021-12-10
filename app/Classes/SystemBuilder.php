@@ -20,7 +20,8 @@ class SystemBuilder
     private $casing = '';
     private $graphic = '';
     private $monitor = '';
-    private $power_supply = '';
+    private $power_supplier = '';
+    //processor
     public function set_processor($processor_id){
         $this->processor = $processor_id;
     }
@@ -35,6 +36,7 @@ class SystemBuilder
     public function remove_processor(){
         $this->processor="";
     }
+    //monitor
     public function set_monitor($monitor_id){
         $this->monitor = $monitor_id;
     }
@@ -49,20 +51,22 @@ class SystemBuilder
     public function remove_monitor(){
         $this->monitor="";
     }
-    public function set_power_supply($power_supply_id){
-        $this->processor = $processor_id;
+    //power supply
+    public function set_power_supplier($power_supplier_id){
+        $this->power_supplier = $power_supplier_id;
     }
 
-    public function get_power_supply(){
-        if($this->power_supply!=''){
-            return PowerSupply::findOrFail($this->power_supply);
+    public function get_power_supplier(){
+        if($this->power_supplier!=''){
+            return PowerSupply::findOrFail($this->power_supplier);
         }
-        return $this->power_supply;
+        return $this->power_supplier;
     }
 
-    public function remove_power_supply(){
-        $this->power_supply="";
+    public function remove_power_supplier(){
+        $this->power_supplier="";
     }
+    //graphic
     public function set_graphic($graphic_id){
         $this->graphic = $graphic_id;
     }
@@ -77,8 +81,9 @@ class SystemBuilder
     public function remove_graphic(){
         $this->graphic="";
     }
+    //case
 
-    public function set_casing($casing){
+    public function set_casing($casing_id){
         $this->casing = $casing_id;
     }
 
@@ -92,6 +97,7 @@ class SystemBuilder
     public function remove_casing(){
         $this->casing="";
     }
+    //motherboard
     public function set_motherboard($motherboard_id){
         $this->motherboard = $motherboard_id;
     }
@@ -106,6 +112,7 @@ class SystemBuilder
     public function remove_motherboard(){
         $this->motherboard="";
     }
+    //storage
     public function set_storage($storage_id){
         $this->storage = $storage_id;
     }
@@ -151,4 +158,5 @@ class SystemBuilder
     public function remove_cooler(){
         $this->cooler="";
     }
+    //power supply
 }

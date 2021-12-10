@@ -11,12 +11,12 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class MotherBoard extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','short_name','product_specs','back_panel_specs','memory_specs','storage_specs','internal_specs','front_panel_specs','audio_specs','wireless_specs','software_specs','physical_specs','packaging_specs',];
+    protected $fillable=['product_id','brand','model','name','short_name','back_panel_specs','memory_specs','storage_specs','internal_specs','front_panel_specs','audio_specs','wireless_specs','software_specs','physical_specs','packaging_specs',];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
-        'product_specs' => 'array',
+        //'product_specs' => 'array',
         'back_panel_specs' => 'array',
         'storage_specs' => 'array',
         'memory_specs' => 'array',

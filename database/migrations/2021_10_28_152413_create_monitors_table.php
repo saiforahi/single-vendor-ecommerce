@@ -21,8 +21,8 @@ class CreateMonitorsTable extends Migration
             $table->string('model')->nullable();
             $table->string('name');
             $table->string('short_name')->nullable();
-            $table->json('specifications')->nullable();
-            $table->json('features')->nullable();
+            //$table->json('specifications')->nullable();
+           // $table->json('features')->nullable();
             $table->string('type')->nullable();
             $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();

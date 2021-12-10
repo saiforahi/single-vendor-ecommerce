@@ -1017,7 +1017,7 @@
                                             target="_blank">View
                                             details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="{{route('add-storage-to-system',['graphic_id'=>$graphic->id])}}"><i
+                                            href="{{route('add-graphic-to-system',['graphic_id'=>$graphic->id])}}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
                                 </tr>

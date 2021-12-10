@@ -27,6 +27,7 @@ class CreateStoragesTable extends Migration
             $table->json('physical_specs')->nullable();
             $table->json('ssd_specs')->nullable();
             $table->json('reliability_specs')->nullable();
+            $table->json('packaging_specs')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
