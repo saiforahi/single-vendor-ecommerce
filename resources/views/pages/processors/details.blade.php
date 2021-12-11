@@ -472,8 +472,8 @@
 
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('processor',6)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
+                        <a href="{{route('add-product-to-cart',['product_id'=>$processor->product->id])}}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i> Add Product to Cart</a>
                         <a href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>

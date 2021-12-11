@@ -45,7 +45,7 @@ class ExternalHardDriveController extends Controller
         return view('pages.external-hard-drive.list')->with('external_hard_drives',ExternalHardDrive::with('product')->get())->with('brands',ExternalHardDrive::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.external-hard-drive.details')->with('external_hard_drives',ExternalHardDrive::findOrFail($id));
+        return view('pages.external-hard-drive.details')->with('external_hard_drive',ExternalHardDrive::findOrFail($id));
     }
     
 }

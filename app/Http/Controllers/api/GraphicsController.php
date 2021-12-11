@@ -45,7 +45,7 @@ class GraphicsController extends Controller
         return view('pages.graphics-cards.list')->with('graphics',Graphic::with('product')->get())->with('brands',Graphic::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.graphics-cards.details')->with('graphics',Graphic::findOrFail($id));
+        return view('pages.graphics-cards.details')->with('graphic',Graphic::findOrFail($id));
     }
     
 }

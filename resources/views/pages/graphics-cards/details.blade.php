@@ -282,7 +282,7 @@
         <h2>MSI RTX 3090 GAMING X TRIO 24G (3090GAMINGXTRIO24G)</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/graphics-card/index.html">Graphics Card</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('graphics-cards-details')}}">MSI RTX 3090 GAMING X TRIO 24G</a></span>
+            <i class="fa fa-angle-right"></i><a href="index.html">MSI RTX 3090 GAMING X TRIO 24G</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -442,8 +442,8 @@
                     <div class="budget-price">$3,299</div>
                    
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('graphics-card',108)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
+                        <a href="{{route('add-product-to-cart',['product_id'=>$graphic->product->id])}}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i> Add Product to cart</a>
                         <a href="https://amazon.com/dp/B08HRBW6VB?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
                     </div>

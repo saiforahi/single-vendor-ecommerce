@@ -445,8 +445,8 @@
                     <div class="budget-price">$35</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('cpu-cooler',1)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
+                        <a href="{{route('add-product-to-cart',['product_id'=>$cpu_cooler->product->id])}}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i> Add Product to Cart</a>
                         <a href="https://amazon.com/dp/B005O65JXI?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
                     </div>

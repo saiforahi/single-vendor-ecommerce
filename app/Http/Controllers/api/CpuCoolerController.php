@@ -45,7 +45,7 @@ class CpuCoolerController extends Controller
         return view('pages.cpu-coolers.list')->with('cpu_coolers',CpuCooler::with('product')->get())->with('brands',CpuCooler::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.cpu-coolers.details')->with('cpu_coolers',CpuCooler::findOrFail($id));
+        return view('pages.cpu-coolers.details')->with('cpu_cooler',CpuCooler::findOrFail($id));
     }
     
 }

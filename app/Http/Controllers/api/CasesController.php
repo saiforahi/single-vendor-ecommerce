@@ -45,7 +45,7 @@ class CasesController extends Controller
         return view('pages.cases.list')->with('casings',Casing::with('product')->get())->with('brands',Casing::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.cases.details')->with('casings',Casing::findOrFail($id));
+        return view('pages.cases.details')->with('casing',Casing::findOrFail($id));
     }
     
 }

@@ -45,7 +45,7 @@ class CaseCoolerController extends Controller
         return view('pages.case-cooler.list')->with('case_coolers',CaseCooler::with('product')->get())->with('brands',CaseCooler::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.case-cooler.details')->with('case_coolers',CaseCooler::findOrFail($id));
+        return view('pages.case-cooler.details')->with('case_cooler',CaseCooler::findOrFail($id));
     }
     
 }

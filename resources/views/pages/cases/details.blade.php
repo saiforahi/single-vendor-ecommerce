@@ -496,8 +496,8 @@
                     <div class="budget-price">$74.99</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('case',1)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
+                        <a href="{{route('add-product-to-cart',['product_id'=>$casing->product->id])}}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i> Add Product to Cart</a>
                         <a href="https://amazon.com/dp/B07TC76671?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
                     </div>

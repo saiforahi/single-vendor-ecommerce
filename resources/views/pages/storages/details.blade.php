@@ -411,8 +411,8 @@
                     <div class="budget-price">${{$storage->product->price}}</div>
 
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('storage',1)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
+                        <a href="{{route('add-product-to-cart',['product_id'=>$storage->product->id])}}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i> Add Product to Cart</a>
                         <a href="https://amazon.com/dp/B07BN217QG?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn2 "><i class="fab fa-plus"></i> View on Amazon </a>
                     </div>
