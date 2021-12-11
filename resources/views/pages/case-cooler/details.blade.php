@@ -177,6 +177,89 @@
         }
 
     </style>
+    <style>
+        .component-details {
+            padding: 40px;
+            color: rgba(255, 255, 255, 0.8);
+            background-color: #1d2b36;
+        }
+        .component-details .big-image {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+        .small-image {
+            min-height: 50px;
+            min-width: 50px;
+            
+        }
+        .carousel-indicators {
+            position: relative;
+        }
+        .carousel-indicators li {
+            background-color: white;
+        }
+        .component-details h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .component-details h2,.component-details h3,.component-details h4 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        span.carousel-control-prev-icon, span.carousel-control-next-icon {
+            background-color: #373737;
+        }
+        span.carousel-control-prev-icon:after, span.carousel-control-next-icon:after {
+            color: #fff;
+        }
+        
+    </style>
+    <style>
+    
+    .pcb-product-summary {
+        display: flex;
+        align-items: center;
+    }
+    
+    .hot-selling {
+        margin-left: auto;
+        margin-right: 10px;
+        display: flex;
+        align-items:center;
+    }
+    .hot {
+    background-color: #ff4e00;
+    background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+    
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 26px;
+    }
+    </style>
+    <style>
+        .stars-rating {
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .stars-rating .stars-score {
+          color: rgba(255, 255, 255, 0.9);
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          width: 20%;
+          white-space: nowrap;
+        }
+    </style>
+    <style>
+        ul {
+            padding-inline-start: 40px;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -184,7 +267,7 @@
         <h2>Cooler Master MasterFan MF120R (R4-120R-203C-R1)</h2>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/case-cooler/index.html">Case Cooler</a>
-            <i class="fa fa-angle-right"></i><a href="{{ route('case-cooler-details') }}">Cooler Master MasterFan MF120R</a></span>
+            <i class="fa fa-angle-right"></i><a href="index.html">Cooler Master MasterFan MF120R</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
