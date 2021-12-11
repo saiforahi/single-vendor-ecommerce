@@ -12,6 +12,7 @@ use App\Models\Graphic;
 use App\Models\PowerSupply;
 class SystemBuilder
 {
+    private $total_price=0;
     private $processor = '';
     private $motherboard = '';
     private $storage = '';
@@ -22,7 +23,11 @@ class SystemBuilder
     private $monitor = '';
     private $power_supplier = '';
     //processor
+    public function get_total_price(){
+        return $this->total_price;
+    }
     public function set_processor($processor_id){
+        $this->total_price+=Processor::find($processor_id)->product->price;
         $this->processor = $processor_id;
     }
 
@@ -34,10 +39,12 @@ class SystemBuilder
     }
 
     public function remove_processor(){
+        $this->total_price-=Processor::find($this->processor)->product->price;
         $this->processor="";
     }
     //monitor
     public function set_monitor($monitor_id){
+        $this->total_price+=Monitor::find($monitor_id)->product->price;
         $this->monitor = $monitor_id;
     }
 
@@ -49,10 +56,12 @@ class SystemBuilder
     }
 
     public function remove_monitor(){
+        $this->total_price-=Monitor::find($this->monitor)->product->price;
         $this->monitor="";
     }
     //power supply
     public function set_power_supplier($power_supplier_id){
+        $this->total_price+=PowerSupply::find($power_supplier_id)->product->price;
         $this->power_supplier = $power_supplier_id;
     }
 
@@ -64,10 +73,12 @@ class SystemBuilder
     }
 
     public function remove_power_supplier(){
+        $this->total_price-=PowerSupply::find($this->power_supplier)->product->price;
         $this->power_supplier="";
     }
     //graphic
     public function set_graphic($graphic_id){
+        $this->total_price+=Graphic::find($graphic_id)->product->price;
         $this->graphic = $graphic_id;
     }
 
@@ -79,11 +90,13 @@ class SystemBuilder
     }
 
     public function remove_graphic(){
+        $this->total_price-=Graphic::find($this->graphic)->product->price;
         $this->graphic="";
     }
     //case
 
     public function set_casing($casing_id){
+        $this->total_price+=Casing::find($casing_id)->product->price;
         $this->casing = $casing_id;
     }
 
@@ -95,10 +108,12 @@ class SystemBuilder
     }
 
     public function remove_casing(){
+        $this->total_price-=Casing::find($this->casing)->product->price;
         $this->casing="";
     }
     //motherboard
     public function set_motherboard($motherboard_id){
+        $this->total_price+=MotherBoard::find($motherboard_id)->product->price;
         $this->motherboard = $motherboard_id;
     }
 
@@ -110,10 +125,12 @@ class SystemBuilder
     }
 
     public function remove_motherboard(){
+        $this->total_price-=MotherBoard::find($this->motherboard)->product->price;
         $this->motherboard="";
     }
     //storage
     public function set_storage($storage_id){
+        $this->total_price+=Storage::find($storage_id)->product->price;
         $this->storage = $storage_id;
     }
     
@@ -126,10 +143,12 @@ class SystemBuilder
     }
 
     public function remove_storage(){
+        $this->total_price-=Storage::find($this->storage)->product->price;
         $this->storage="";
     }
     //memory
     public function set_memory($memory_id){
+        $this->total_price+=Memory::find($memory_id)->product->price;
         $this->memory = $memory_id;
     }
 
@@ -141,10 +160,12 @@ class SystemBuilder
     }
 
     public function remove_memory(){
+        $this->total_price-=Memory::find($this->memory)->product->price;
         $this->memory="";
     }
     //cooler
     public function set_cooler($cooler_id){
+        $this->total_price+=CpuCooler::find($cooler_id)->product->price;
         $this->cooler = $cooler_id;
     }
 
@@ -156,7 +177,8 @@ class SystemBuilder
     }
 
     public function remove_cooler(){
+        $this->total_price-=CpuCooler::find($this->cooler)->product->price;
         $this->cooler="";
     }
-    //power supply
+   
 }

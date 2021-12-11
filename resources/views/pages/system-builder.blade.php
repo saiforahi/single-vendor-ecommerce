@@ -21,7 +21,7 @@
 
                             <div class="history-box">
                                 <div class="action-box-item"><span class="px-2" id="newList" onclick="newList();">
-                                        Total (BDT)
+                                        Total (BDT) {{Session::has('system')?Session::get('system')->get_total_price():''}}
                                     </span>
                                 </div>
                             </div>
