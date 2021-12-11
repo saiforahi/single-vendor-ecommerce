@@ -205,7 +205,7 @@
                                     <ul class="list-unstyled">
                                         <li class="heading top-padding">Cooling</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="product/case-cooler/index.html">Case Fans</a></li>
+                                                href="{{route('case-cooler-list')}}">Case Fans</a></li>
                                         <li itemprop="name"><a itemprop="url"
                                                 href="{{route('thermalpaste-list')}}">Thermal Compound</a></li>
                                     </ul>

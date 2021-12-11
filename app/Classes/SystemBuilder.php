@@ -10,6 +10,8 @@ use App\Models\MotherBoard;
 use App\Models\Casing;
 use App\Models\Graphic;
 use App\Models\PowerSupply;
+use App\Models\CaseCooler;
+
 class SystemBuilder
 {
     private $total_price=0;
@@ -22,6 +24,7 @@ class SystemBuilder
     private $graphic = '';
     private $monitor = '';
     private $power_supplier = '';
+    private $case_cooler = '';
     //processor
     public function get_total_price(){
         return $this->total_price;
@@ -179,6 +182,23 @@ class SystemBuilder
     public function remove_cooler(){
         $this->total_price-=CpuCooler::find($this->cooler)->product->price;
         $this->cooler="";
+    }
+    //case cooler
+    public function set_case_cooler($case_cooler_id){
+        $this->total_price+=CaseCooler::find($case_cooler_id)->product->price;
+        $this->case_cooler = $case_cooler_id;
+    }
+
+    public function get_case_cooler(){
+        if($this->case_cooler!=''){
+            return CaseCooler::findOrFail($this->case_cooler);
+        }
+        return $this->case_cooler;
+    }
+
+    public function remove_case_cooler(){
+        $this->total_price-=CaseCooler::find($this->case_cooler)->product->price;
+        $this->case_cooler="";
     }
    
 }

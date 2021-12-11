@@ -855,10 +855,10 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="{{ route('cpu-coolers-list') }}">CPU Cooler</a>
+                                <a href="{{ route('case-cooler-list') }}">Case Cooler</a>
                             </td>
-                            @if (Session::has('system') && Session::get('system')->get_cooler() != '')
-                                <?php $cooler = Session::get('system')->get_cooler(); ?>
+                            @if (Session::has('system') && Session::get('system')->get_case_cooler() != '')
+                                <?php $case_cooler = Session::get('system')->get_case_cooler(); ?>
 
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -866,11 +866,11 @@
                                 <td class="box">
                                     <div class="logo-name">
                                         <div class="item-logo">
-                                            <?php $images = $cooler->product->getMedia('main_image'); ?>
+                                            <?php $images = $case_cooler->product->getMedia('main_image'); ?>
                                             <img src="{{ $images[0]->getUrl('main_image') }}"
                                                 class="img-responsive lazy img-fluid"
                                                 data-src="{{ $images[0]->getUrl('main_image') }}"
-                                                title="{{ $cooler->name }}" alt="{{ $cooler->name }}">
+                                                title="{{ $case_cooler->name }}" alt="{{ $case_cooler->name }}">
                                             {{-- <div class="stars-rating" title="4.9 out of 5">
                                                 <div class="stars-score" style="width: 98%">
                                                     <i class="fas fa-star"></i>
@@ -892,16 +892,16 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{ route('cpu-coolers-details', ['id' => $cooler->id]) }}">{{ $cooler->name }}</a>
+                                            href="{{ route('case-cooler-details', ['id' => $case_cooler->id]) }}">{{ $case_cooler->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand">{{ $cooler->brand }}</div>
+                                            <div class="detail__value f_brand">{{ $case_cooler->brand }}</div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model">{{ $cooler->model }}</div>
+                                            <div class="detail__value f_model">{{ $case_cooler->model }}</div>
                                         </div>
                                     </span>
                                     <span class="table_span">
@@ -934,19 +934,19 @@
                                     </span>
 
                                 </td>
-                                <td class="price">৳{{ $cooler->product->price }}</td>
+                                <td class="price">৳{{ $case_cooler->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{ route('cpu-coolers-details', ['id' => $cooler->id]) }}" target="_blank">View
+                                        href="{{ route('case-cooler-details', ['id' => $case_cooler->id]) }}" target="_blank">View
                                         details</a></td>
 
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
-                                        href="{{ route('remove-cooler-from-system') }}"><i
+                                        href="{{ route('remove-case_cooler-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
 
 
                             @else
                                 <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                        href="{{ route('cpu-coolers-list') }}"><i class="fa fa-plus"></i> ADD
+                                        href="{{ route('case-cooler-list') }}"><i class="fa fa-plus"></i> ADD
                                         Component
                                     </a>
                                 </td>

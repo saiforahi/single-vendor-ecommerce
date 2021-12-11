@@ -147,6 +147,11 @@ Route::prefix('wired-network-adapter')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\WiredNetworkAdapterController::class,'show_list'])->name('wired-network-adapter-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\WiredNetworkAdapterController::class,'show_details'])->name('wired-network-adapter-details');
 });
+Route::prefix('casecooler')->group(function(){
+    Route::get('/list',[App\Http\Controllers\api\CaseCoolerController::class,'show_list'])->name('case-cooler-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\CaseCoolerController::class,'show_details'])->name('case-cooler-details');
+
+});
 Route::prefix('system-builder')->group(function(){
     Route::get('/add-processor/{processor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_processor_web'])->name('add-processor-to-system');
     Route::get('/remove-processor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_processor_web'])->name('remove-processor-from-system');
@@ -169,6 +174,9 @@ Route::prefix('system-builder')->group(function(){
     //cooler
     Route::get('/add-cooler/{cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_cooler_web'])->name('add-cooler-to-system');
     Route::get('/remove-cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_cooler_web'])->name('remove-cooler-from-system');
+
+    Route::get('/add-case_cooler/{case_cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_case_cooler_web'])->name('add-case_cooler-to-system');
+    Route::get('/remove-case_cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_case_cooler_web'])->name('remove-case_cooler-from-system');
 });
 
 Route::get('/remove-memory',[App\Http\Controllers\api\SystemBuilderController::class,'remove_memory_ajax']);

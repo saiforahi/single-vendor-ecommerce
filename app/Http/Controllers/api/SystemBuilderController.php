@@ -275,4 +275,28 @@ class SystemBuilderController extends Controller
         }
         return redirect('/system-builder');
     }
+    //case cooler
+    public function add_case_cooler_web($case_cooler_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_case_cooler($case_cooler_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+            // return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_case_cooler($case_cooler_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+        // dd($req->all());
+    }
+    public function remove_case_cooler_web(){
+        if(Session::has('system') && Session::get('system')->get_case_cooler()!=''){
+            $system = Session::get('system');
+            $system->remove_case_cooler();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
 }
