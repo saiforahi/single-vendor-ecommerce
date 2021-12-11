@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use \Cart as Cart;
+use Auth;
+use App\Models\Memory;
+use Session;
 use Validator;
 class CartController extends Controller
 {
@@ -31,10 +34,11 @@ class CartController extends Controller
         }
         Cart::update($req->row_id, ['qty' => $req->qty]);
         $subtotal = Cart::subTotal();
-        foreach(Cart::content() as $item){
-            array_push($items,$item);
-        }
-        return response()->json(['success'=>true,'message'=>'Quantity updated','data'=>$items],200);
+        $total = Cart::total();
+        // foreach(Cart::content() as $item){
+        //     array_push($items,$item);
+        // }
+        return response()->json(['success'=>true,'message'=>'Quantity updated','subtotal'=>$subtotal,'total'=>$total],200);
     }
     public function add_product_to_cart($product_id){
         $product = Product::findOrFail($product_id);
@@ -55,6 +59,39 @@ class CartController extends Controller
         }
         catch(Exception $e){
             return response()->json(['success'=>false,'message'=>$e]);
+        }
+    }
+
+    public function add_system_to_cart(){
+        try{
+            //memory adding
+            if(Session::get('system')->get_memory()!=''){
+                $product = Product::find(Session::get('system')->get_memory()->product_id);
+                Cart::add([
+                    'id' => $product->id, 
+                    'name' => $product->name, 
+                    'qty' => 1, 
+                    'price' => $product->price,
+                    'weight'=>0
+                    ]
+                );
+            }
+            //processor adding
+            if(Session::get('system')->get_processor()!=''){
+                $product = Product::find(Session::get('system')->get_processor()->product_id);
+                Cart::add([
+                    'id' => $product->id, 
+                    'name' => $product->name, 
+                    'qty' => 1, 
+                    'price' => $product->price,
+                    'weight'=>0
+                    ]
+                );
+            }
+            return redirect()->route('cart');
+        }
+        catch(Exception $e){
+
         }
     }
 }

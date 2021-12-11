@@ -315,6 +315,7 @@
         .view-more i {
             cursor: pointer;
         }
+
         .stars-rating {
             color: #d0e8f0;
             position: relative;
@@ -335,6 +336,7 @@
         .stars-scale {
             white-space: nowrap;
         }
+
         .pcb-breadcrumb {
             padding-left: 10px;
             padding-right: 10px;
@@ -462,11 +464,11 @@
 @endpush
 @section('content')
     <section class="pcb-breadcrumb">
-        <h1>Register to PC Builder</h1>
+        <h1>Place Your Order</h1>
         <span>
-            <a href="../../index.html">Home</a>
+            <a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i>
-            <a href="index.html">Register</a>
+            <a href="{{ route('place_order') }}">Place Your Order</a>
         </span>
     </section>
     <section class="page-content">
@@ -476,30 +478,32 @@
                     <section class="login-page" id="login-page">
                         <div class='head'>
                             <img src="{{ asset('images/logo-80.png') }}">
-                            <h1 class='company'>Welcome to PC Builder</h1>
+                            <h1 class='company'>Shipping information</h1>
                         </div>
-                        <p class='msg'>Create Your Account</p>
+                        {{-- <p class='msg'>Create Your Account</p> --}}
                         <div class='form'>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
                                 @endforeach
                             </ul>
-                            <form method="POST" action="{{ route('register') }}" id="idForm">
+                            <form method="POST" action="{{ route('place_order') }}" id="idForm">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <input type="text" class="form-control mb-3" placeholder="Name" name="name" id="name"
-                                            required>
+                                            value="{{ Auth::user()->name }}" readonly>
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <input type="email" class="form-control mb-3" placeholder="Email" name="email"
-                                            autocomplete="email" required>
+                                            value="{{ Auth::user()->email }}" autocomplete="email" readonly>
                                     </div>
-                                    {{-- <div class="col-12 col-md-6">
-                                    <input type="text" class="form-control mb-3" placeholder="Last Name"
-                                        name="last_name" required>
-                                </div> --}}
+
+                                    <div class="col-12 col-md-6">
+                                        <input type="text" class="form-control mb-3" placeholder="Phone" name="phone"
+                                            value="{{ Auth::user()->phone }}" required>
+                                    </div>
+
                                 </div>
                                 {{-- <div class="row">
                                 <div class="col-12 col-md-6">
@@ -512,23 +516,37 @@
                                 </div>
                             </div> --}}
                                 <div class="row">
-                                    <div class="col-12 col-md-6">
-                                        <input type="password" class="form-control mb-3" placeholder="Password"
-                                            name="password" id="p1" required>
+                                    <div class="col-12 col-md-12">
+                                        <textarea type="text" class="form-control mb-3" placeholder="Shipping Address"
+                                            name="shipping_address" required></textarea>
                                     </div>
-                                    {{-- @error('password')
-                                    <div class="error">{{ $message }}</div>
-                                @enderror --}}
-                                    <div class="col-12 col-md-6">
-                                        <input type="password" class="form-control mb-3" placeholder="Confirm Password"
-                                            name="password_confirmation" id="p2" required>
-                                    </div>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                        value="option1" required>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Cash On Delivery *
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                        value="option1" disabled>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Bkash
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                        value="option1" disabled>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Nagad
+                                    </label>
                                 </div>
                                 <br>
                                 <button type="submit" value="submit" name="login" class="btn-md btn-login"
-                                    id="do-login">Register</button>
+                                    id="do-login">Place Your Order</button>
                             </form>
-                            <a href="{{ route('login') }}" class="forgot">Already Have an Account?</a>
+                            <a href="{{ route('cart') }}" class="forgot">Forgot something?</a>
                         </div>
                     </section>
                 </div>

@@ -30,7 +30,7 @@
                         <div class="bottom-box">
                             <div class="compatibility"><i class="inline-icon fa fa-check-circle pr-2"
                                     aria-hidden="true"></i>
-                                <a href="{{ route('cart') }}">Add components to cart and proceed to checkout</a>
+                                <a href="{{ route('add_system_to_cart') }}">Add components to cart and proceed to checkout</a>
                             </div>
                             {{-- <div class="estimation"><i class="fa fa-bolt px-2" aria-hidden="true"></i>
                                 Estimated Wattage: 0W</div> --}}

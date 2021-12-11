@@ -140,7 +140,7 @@ class SystemBuilder
 
     public function get_storage(){
         if($this->storage!=''){
-            return Storage::findOrFail($this->storage);
+            return Storage::with('product')->findOrFail($this->storage);
         }
         return $this->storage;
     }

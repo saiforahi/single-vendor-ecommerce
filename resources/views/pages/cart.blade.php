@@ -612,12 +612,12 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <span class="text pl-1">Total : {{Cart::total()}}</span>
+                                <span class="text pl-1" id="total_text">Total : {{Cart::total()}}</span>
                             </div>
                         </div>
                         <div class="card-group mt-5" id="accordion1" aria-multiselectable="false">
                             <div class="card panel-default">
-                                <button type="submit" value="submit" name="login" class="btn-md btn-login"
+                                <button type="button" onclick="window.location.href='/place-order'" <?php if (Cart::count() < 1){ ?> disabled <?php   } ?> class="btn-md btn-login"
                                     id="do-login">Checkout</button>
                             </div>
                         </div>
@@ -639,9 +639,10 @@
         else{
             document.getElementById('quantity'+idx).value = parseInt(document.getElementById('quantity'+idx).value)+1
         }
-        $.post('{{ route('update_cart_item_quantity') }}', {_token:'{{ @csrf_token() }}',row_id:row_id,qty:value}, function(data){
-            console.log('res',data.data)
-            // document.getElementById('sub_total_text').innerText('Sub Total : '+data.data)
+        $.post('{{ route('update_cart_item_quantity') }}', {_token:'{{ @csrf_token() }}',row_id:row_id,qty:type=='minus'?(parseInt(value)-1):(parseInt(value)+1)}, function(data){
+            console.log('res',data)
+            document.getElementById('sub_total_text').innerText='Sub Total : '+data.subtotal
+            document.getElementById('total_text').innerText='Total : '+data.total
         });
     }
     

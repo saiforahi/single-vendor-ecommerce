@@ -177,6 +177,10 @@ Route::prefix('system-builder')->group(function(){
 
     Route::get('/add-case_cooler/{case_cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_case_cooler_web'])->name('add-case_cooler-to-system');
     Route::get('/remove-case_cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_case_cooler_web'])->name('remove-case_cooler-from-system');
+
+    Route::get('/add_system_to_cart',[App\Http\Controllers\api\CartController::class,'add_system_to_cart'])->name('add_system_to_cart');
 });
 
 Route::get('/remove-memory',[App\Http\Controllers\api\SystemBuilderController::class,'remove_memory_ajax']);
+
+Route::get('/place-order',[App\Http\Controllers\api\OrderController::class,'place_order'])->middleware('auth')->name('place_order');
