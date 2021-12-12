@@ -17,12 +17,21 @@ class CreatePaymentTypesTable extends Migration
             $table->id();
             $table->string('name');
             $table->boolean('is_configured')->default(false);
+            $table->softDeletes();
             $table->timestamps();
         });
 
         PaymentType::create([
             'name'=>'Cash On Delivery',
             'is_configured'=>'1'
+        ]);
+        PaymentType::create([
+            'name'=>'Bkash',
+            'is_configured'=>'0'
+        ]);
+        PaymentType::create([
+            'name'=>'Nagad',
+            'is_configured'=>'0'
         ]);
     }
 

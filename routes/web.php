@@ -184,3 +184,4 @@ Route::prefix('system-builder')->group(function(){
 Route::get('/remove-memory',[App\Http\Controllers\api\SystemBuilderController::class,'remove_memory_ajax']);
 
 Route::get('/place-order',[App\Http\Controllers\api\OrderController::class,'place_order'])->middleware('auth')->name('place_order');
+Route::post('/place-order',[App\Http\Controllers\api\OrderController::class,'create'])->middleware('auth')->name('create_order');

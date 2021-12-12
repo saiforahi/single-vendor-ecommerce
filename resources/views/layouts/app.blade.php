@@ -79,9 +79,14 @@
         <!-- Scripts -->
         {{-- @routes
         <script src="{{ mix('js/app.js') }}" defer></script> --}}
+        <style>
+            .swalaction{
+                background-color: #18ae91 !important;
+            }
+        </style>
     </head>
     <body>
-        
+        @include('sweetalert::alert')
         @include('inc.nav')
         @yield('content')
         @include('inc.footer')

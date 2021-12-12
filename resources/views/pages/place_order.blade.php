@@ -487,20 +487,20 @@
                                     <li>{{ $error }}</li>
                                 @endforeach
                             </ul>
-                            <form method="POST" action="{{ route('place_order') }}" id="idForm">
+                            <form method="POST" action="{{ route('create_order') }}" id="idForm">
                                 @csrf
                                 <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <input type="text" class="form-control mb-3" placeholder="Name" name="name" id="name"
+                                        <input type="text" class="form-control mb-3" placeholder="Name" name="customer_name" id="customer_name"
                                             value="{{ Auth::user()->name }}" readonly>
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <input type="email" class="form-control mb-3" placeholder="Email" name="email"
+                                        <input type="email" class="form-control mb-3" placeholder="Email" name="customer_email"
                                             value="{{ Auth::user()->email }}" autocomplete="email" readonly>
                                     </div>
 
                                     <div class="col-12 col-md-6">
-                                        <input type="text" class="form-control mb-3" placeholder="Phone" name="phone"
+                                        <input type="text" class="form-control mb-3" placeholder="Phone" name="customer_phone"
                                             value="{{ Auth::user()->phone }}" required>
                                     </div>
 
@@ -515,14 +515,29 @@
                                         required>
                                 </div>
                             </div> --}}
+                            
                                 <div class="row">
                                     <div class="col-12 col-md-12">
                                         <textarea type="text" class="form-control mb-3" placeholder="Shipping Address"
                                             name="shipping_address" required></textarea>
                                     </div>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                @foreach ($payment_types as $item)
+                                    <div class="form-check">
+                                        @if($item->is_configured == 1)
+                                        <input class="form-check-input" type="radio" name="payment_type" id="payment_type"
+                                            value="{{$item->id}}" required>
+                                        @else
+                                        <input class="form-check-input" type="radio" name="payment_type" id="payment_type"
+                                            value="{{$item->id}}" disabled>
+                                        @endif
+                                        <label class="form-check-label" for="payment_type">
+                                            {{$item->name}} *
+                                        </label>
+                                    </div>
+                                @endforeach
+                                {{-- <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="payment_type" id="exampleRadios1"
                                         value="option1" required>
                                     <label class="form-check-label" for="exampleRadios1">
                                         Cash On Delivery *
@@ -541,7 +556,7 @@
                                     <label class="form-check-label" for="exampleRadios1">
                                         Nagad
                                     </label>
-                                </div>
+                                </div> --}}
                                 <br>
                                 <button type="submit" value="submit" name="login" class="btn-md btn-login"
                                     id="do-login">Place Your Order</button>
