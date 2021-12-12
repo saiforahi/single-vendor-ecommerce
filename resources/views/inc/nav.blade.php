@@ -1,52 +1,55 @@
 @push('style')
-<style>
-    .hero .carousel-item-next,
-    .hero .carousel-item-prev,
-    .hero .carousel-item.active {
-        height: 100vh;
-        display: flex !important;
-    }
-
-    .hero {
-        background-image: url('../images.pcbuilder.dev/assets/images/banner/bg-banner.png'), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-    }
-
-    @media screen and (max-width: 767.98px) {
-
+    <style>
         .hero .carousel-item-next,
         .hero .carousel-item-prev,
         .hero .carousel-item.active {
-            height: 550px;
+            height: 100vh;
+            display: flex !important;
         }
-    }
 
-    @media screen and (min-width: 768px) and (max-width: 991.98px) {
-        .hero .carousel-item-next,
-        .hero .carousel-item-prev,
-        .hero .carousel-item.active {
-            height: 550px;
+        .hero {
+            background-image: url('../images.pcbuilder.dev/assets/images/banner/bg-banner.png'), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
         }
-    }
-</style>
+
+        @media screen and (max-width: 767.98px) {
+
+            .hero .carousel-item-next,
+            .hero .carousel-item-prev,
+            .hero .carousel-item.active {
+                height: 550px;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 991.98px) {
+
+            .hero .carousel-item-next,
+            .hero .carousel-item-prev,
+            .hero .carousel-item.active {
+                height: 550px;
+            }
+        }
+
+    </style>
 @endpush
 @auth
-<form method="POST" action="{{route('logout')}}" id="logout_form">
-    @csrf
-</form>
+    <form method="POST" action="{{ route('logout') }}" id="logout_form">
+        @csrf
+    </form>
 @endauth
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <header>
         <div class="logo">
             <a href="/">
-                <img src="{{asset('images/logo-80.png')}}" alt="PC Builder" height="80" width="80"/>
+                <img src="{{ asset('images/logo-80.png') }}" alt="PC Builder" height="80" width="80" />
                 <p class="hide-mobile"><span>PC</span>Builder</p>
             </a>
         </div>
         <div class="d-none d-md-flex pbc-border"></div>
         <form method="POST" action="" class="search">
-            <div><i class="fa fa-search" aria-hidden="true"></i><input autocomplete="off" name="s" type="text" placeholder="Search..." id="search"></div>
+            <div><i class="fa fa-search" aria-hidden="true"></i><input autocomplete="off" name="s" type="text"
+                    placeholder="Search..." id="search"></div>
         </form>
         <div class="login">
             <div class="mobile dropdown">
@@ -54,22 +57,36 @@
             </div>
             <div class="pc">
                 @auth
-                <span><i class="fa fa-user-circle" style="margin-right: 15px;"></i></span>
+                    <span><i class="fa fa-user-circle" style="margin-right: 15px;"></i></span>
                 @endauth
-                <span>Welcome
+                <span>
                     <div>
                         @auth
-                            <a href="#" tabindex="0" html="true" class="example-popover" role="button" data-toggle="popover" title="Menu" template="<a >Logout</a>" data-placement="bottom" >{{Auth::user()->name}}</a>
+                            <div class="dropdown show">
+                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a style="color:black !important;" class="dropdown-item" href="#">Action</a>
+                                    <a style="color:black !important;" class="dropdown-item" href="#">Another action</a>
+                                    <a style="color:black !important;" onclick="getElementById('logout_form').submit()"
+                                        class="dropdown-item" href="#">Logout</a>
+                                </div>
+                            </div>
+                            <!--<a href="#" tabindex="0" html="true" class="example-popover" role="button" data-toggle="popover" title="Menu" template="<a >Logout</a>" data-placement="bottom" >{{ Auth::user()->name }}</a>-->
                         @endauth
                         @guest
-                            <a href="{{route('login')}}">Sign In / Register</a>
+                            <a href="{{ route('login') }}">Sign In / Register</a>
                         @endguest
                     </div>
                 </span>
             </div>
         </div>
         <div class="d-none d-lg-flex cart">
-            <a href="{{route('cart')}}"><img class="lazy" src="https://images.pcbuilder.dev/assets/images/icons/cart.svg" height="32" width="32"/></a>
+            <a href="{{ route('cart') }}"><img class="lazy"
+                    src="https://images.pcbuilder.dev/assets/images/icons/cart.svg" height="32" width="32" /></a>
             <div><span>Cart</span></div>
         </div>
         <div class="d-none d-lg-flex mode">
@@ -89,110 +106,104 @@
                 </path>
             </svg>
         </button>
-        
+
     </header>
 
 
     <div id="my-nav" class="collapse navbar-collapse">
         <ul itemscope itemtype="http://schema.org/SiteNavigationElement" class="navbar-nav mr-auto">
             <li itemprop="name" class="nav-item ">
-                <a itemprop="url" class="nav-link" href="{{route('system-builder')}}"><i class="fa fa-tools"></i>System Builder
+                <a itemprop="url" class="nav-link" href="{{ route('system-builder') }}"><i
+                        class="fa fa-tools"></i>System Builder
                 </a>
             </li>
             <li itemprop="name" class="nav-item ">
-                <a itemprop="url" class="nav-link" href="{{route('pre-built')}}"><i class="fa fa-server"></i>Pre-Build
+                <a itemprop="url" class="nav-link" href="{{ route('pre-built') }}"><i
+                        class="fa fa-server"></i>Pre-Build
                     PC</a>
             </li>
             <li itemprop="name" class="nav-item ">
-                <a itemprop="url" class="nav-link" href="{{route('laptops')}}"><i class="fa fa-laptop"></i>Laptops</a>
+                <a itemprop="url" class="nav-link" href="{{ route('laptops') }}"><i
+                        class="fa fa-laptop"></i>Laptops</a>
             </li>
 
             <li class="nav-item dropdown megamenu-li ">
                 <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="navbarDropdownMenuLink2"
                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                        class="lazy" src="{{asset('images/icons/cpu.svg')}}" height="24"
-                        width="24">
+                        class="lazy" src="{{ asset('images/icons/cpu.svg') }}" height="24" width="24">
                     Browse Products</a>
                 <div class="dropdown-menu megamenu" aria-labelledby="navbarDropdownMenuLink2">
                     <div class="row">
                         <div class="col-12 col-lg-6 ipad">
                             <div class="row">
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('storage-list')}}">
+                                    <a itemprop="url" href="{{ route('storage-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/storage.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/storage.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>Storage</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('graphics-cards-list')}}">
+                                    <a itemprop="url" href="{{ route('graphics-cards-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/graphics-card.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/graphics-card.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>Graphics Card </p>
                                         </div>
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('power-supply-list')}}">
+                                    <a itemprop="url" href="{{ route('power-supply-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/power-supply.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/power-supply.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>Power Supply</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('case-list')}}">
+                                    <a itemprop="url" href="{{ route('case-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/case.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/case.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>Case</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('processor-list')}}">
+                                    <a itemprop="url" href="{{ route('processor-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/nav-processor.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/nav-processor.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>CPU</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-sm-4 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('cpu-coolers-list')}}">
+                                    <a itemprop="url" href="{{ route('cpu-coolers-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/cpu-cooler.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/cpu-cooler.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>CPU Cooler</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('motherboard-list')}}">
+                                    <a itemprop="url" href="{{ route('motherboard-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/motherboard.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/motherboard.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>Motherboard</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div itemprop="name" class="col-6 col-md-3 col-lg-3 pcb-components">
-                                    <a itemprop="url" href="{{route('memory-list')}}">
+                                    <a itemprop="url" href="{{ route('memory-list') }}">
                                         <div class="box">
-                                            <img src="{{asset('images/megamenu/memory.png')}}"
-                                                class="img-fluid mx-auto d-block mega-image lazy"
-                                                alt="">
+                                            <img src="{{ asset('images/megamenu/memory.png') }}"
+                                                class="img-fluid mx-auto d-block mega-image lazy" alt="">
                                             <p>Memory</p>
                                         </div>
                                     </a>
@@ -205,77 +216,73 @@
                                     <ul class="list-unstyled">
                                         <li class="heading top-padding">Cooling</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('case-cooler-list')}}">Case Fans</a></li>
+                                                href="{{ route('case-cooler-list') }}">Case Fans</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('thermalpaste-list')}}">Thermal Compound</a></li>
+                                                href="{{ route('thermalpaste-list') }}">Thermal Compound</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Expansion</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('sound-card-list')}}">Sound Cards</a></li>
+                                                href="{{ route('sound-card-list') }}">Sound Cards</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('wired-network-adapter-list')}}">Wired Networking</a>
+                                                href="{{ route('wired-network-adapter-list') }}">Wired Networking</a>
                                         </li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('wireless-network-adapter-list')}}">Wireless
+                                                href="{{ route('wireless-network-adapter-list') }}">Wireless
                                                 Networking</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Displays</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('monitor-list')}}">Monitors</a></li>
+                                                href="{{ route('monitor-list') }}">Monitors</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('webcams-list')}}">Webcam</a></li>
+                                                href="{{ route('webcams-list') }}">Webcam</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-6 col-sm-4">
                                     <ul class="list-unstyled">
                                         <li class="heading top-padding">Peripherals</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('headphones-list')}}">Headphones</a></li>
+                                                href="{{ route('headphones-list') }}">Headphones</a></li>
                                         <li itemprop="name">
-                                            <a itemprop="url"
-                                                href="{{route('keyboard-list')}}">Keyboards</a></li>
+                                            <a itemprop="url" href="{{ route('keyboard-list') }}">Keyboards</a>
+                                        </li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('mouse-list')}}">Mouse</a></li>
+                                                href="{{ route('mouse-list') }}">Mouse</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('speakers-list')}}">Speakers</a></li>
+                                                href="{{ route('speakers-list') }}">Speakers</a></li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('ups-list')}}">Uninteraptable Power Supplies</a></li>
+                                                href="{{ route('ups-list') }}">Uninteraptable Power Supplies</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">External Storage</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('external-hard-drive-list')}}">External Hard
+                                                href="{{ route('external-hard-drive-list') }}">External Hard
                                                 Drives</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Drivers</li>
                                         <li itemprop="name"><a itemprop="url"
-                                                href="{{route('optical-drives-list')}}">Optical Drive</a></li>
+                                                href="{{ route('optical-drives-list') }}">Optical Drive</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-6 col-sm-4">
                                     <ul class="list-unstyled">
                                         <li class="heading top-padding">Software</li>
-                                        <li itemprop="name"><a itemprop="url"
-                                                href="#">Antivirus</a></li>
-                                        <li itemprop="name"><a itemprop="url"
-                                                href="#">Utilities</a></li>
-                                        <li itemprop="name"><a itemprop="url"
-                                                href="#">Operating Systems</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="#">Antivirus</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="#">Utilities</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="#">Operating Systems</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Pre-Built PCs</li>
-                                        <li itemprop="name"><a itemprop="url"
-                                                href="#">Gaming Desktops</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="#">Gaming Desktops</a></li>
                                         <li itemprop="name"><a itemprop="url" href="#">Cheap Desktops</a></li>
                                         <li itemprop="name"><a itemprop="url" href="#">AIO
                                                 Desktops</a></li>
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Others</li>
-                                        <li itemprop="name"><a itemprop="url" href="{{route('laptops')}}">Laptops</a>
+                                        <li itemprop="name"><a itemprop="url" href="{{ route('laptops') }}">Laptops</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -332,8 +339,8 @@
                 <a class="dropdown-item" href="#" onclick="getElementById('logout_form').submit()">Logout</a>
             @endauth
             @guest
-                <a class="dropdown-item" href="{{route('login')}}">Login</a>
-                <a class="dropdown-item" href="{{route('register')}}">Sign up</a>
+                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+                <a class="dropdown-item" href="{{ route('register') }}">Sign up</a>
             @endguest
             <a class="dropdown-item d-none" href="#">Forum</a>
             <a class="dropdown-item d-none" href="#">Blog</a>
