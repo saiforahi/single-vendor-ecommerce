@@ -200,5 +200,4 @@ class SystemBuilder
         $this->total_price-=CaseCooler::find($this->case_cooler)->product->price;
         $this->case_cooler="";
     }
-   
 }
