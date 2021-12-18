@@ -46,3 +46,4 @@ require __DIR__.'/soundcards.php';
 require __DIR__.'/wirelessnetworkadapters.php';
 require __DIR__.'/wirednetworkadapters.php';
 require __DIR__.'/casecooler.php';
+require __DIR__.'/orders.php';

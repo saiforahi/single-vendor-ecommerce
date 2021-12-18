@@ -43,4 +43,14 @@ class OrderController extends Controller
         
     }
 
+    public function all_orders(){
+        try{
+            $orders=Order::with('customer')->with('payment_type')->get();
+            return response()->json(['status'=>true,'data'=>$orders]);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+
 }

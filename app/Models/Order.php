@@ -16,4 +16,12 @@ class Order extends Model
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
     ];
+
+    public function customer(){
+        return $this->belongsTo(User::class,'user_id','id');
+    }
+
+    public function payment_type(){
+        return $this->belongsTo(PaymentType::class,'payment_type','id');
+    }
 }
