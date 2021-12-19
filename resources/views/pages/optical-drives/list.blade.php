@@ -416,70 +416,15 @@
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="1" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ASUS"> <span class="ml-10">ASUS
-                                                    (8) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="BUSlink"> <span
-                                                    class="ml-10">BUSlink (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="HEWLETT PACKARD"> <span
-                                                    class="ml-10">HEWLETT PACKARD (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="HP"> <span class="ml-10">HP (1)
-                                                </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="I/OMagic"> <span
-                                                    class="ml-10">I/OMagic (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="6" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="LG"> <span class="ml-10">LG (10)
-                                                </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Lenovo"> <span
-                                                    class="ml-10">Lenovo (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="8" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Lite-On"> <span
-                                                    class="ml-10">Lite-On (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="9" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Memorex"> <span
-                                                    class="ml-10">Memorex (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="10" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="PLDS CORPORATION"> <span
-                                                    class="ml-10">PLDS CORPORATION (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="11" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Pioneer"> <span
-                                                    class="ml-10">Pioneer (4) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="12" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Plextor"> <span
-                                                    class="ml-10">Plextor (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="13" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Samsung"> <span
-                                                    class="ml-10">Samsung (5) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="14" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SilverStone Technology"> <span
-                                                    class="ml-10">SilverStone Technology (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="15" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Sony"> <span class="ml-10">Sony
-                                                    (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="16" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Supermicro"> <span
-                                                    class="ml-10">Supermicro (1) </span></label> </div>
+                                                    @foreach ($brands as $brand)
+                                                    <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
+                                                                type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
+                                                                class="option-input checkbox brand" name="filter['brand']"
+                                                                value="{{ $brand->brand }}"> <span
+                                                                class="ml-10">{{ $brand->brand }}
+                                                                ({{ \App\Models\OpticalDrive::where('brand', $brand->brand)->count() }})
+                                                            </span></label> </div>
+                                                @endforeach
                                     </div>
                                 </div>
                             </div>

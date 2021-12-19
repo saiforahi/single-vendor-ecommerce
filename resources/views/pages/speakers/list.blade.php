@@ -395,114 +395,15 @@
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="1" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="AmazonBasics"> <span
-                                                    class="ml-10">AmazonBasics (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Audioengine"> <span
-                                                    class="ml-10">Audioengine (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Bose"> <span class="ml-10">Bose
-                                                    (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Creative"> <span
-                                                    class="ml-10">Creative (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Creative Labs"> <span
-                                                    class="ml-10">Creative Labs (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="6" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Cyber Acoustics"> <span
-                                                    class="ml-10">Cyber Acoustics (9) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="DOLBY"> <span class="ml-10">DOLBY
-                                                    (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="8" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Edifier"> <span
-                                                    class="ml-10">Edifier (7) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="9" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Fluance"> <span
-                                                    class="ml-10">Fluance (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="10" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Gear Head"> <span
-                                                    class="ml-10">Gear Head (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="11" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Harman Kardon"> <span
-                                                    class="ml-10">Harman Kardon (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="12" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="IK Multimedia"> <span
-                                                    class="ml-10">IK Multimedia (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="13" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="JBL Professional"> <span
-                                                    class="ml-10">JBL Professional (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="14" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Jaybird"> <span
-                                                    class="ml-10">Jaybird (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="15" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="KEF"> <span class="ml-10">KEF (2)
-                                                </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="16" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Kanto"> <span class="ml-10">Kanto
-                                                    (4) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="17" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Klipsch"> <span
-                                                    class="ml-10">Klipsch (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="18" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Lenovo"> <span
-                                                    class="ml-10">Lenovo (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="19" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Logitech"> <span
-                                                    class="ml-10">Logitech (19) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="20" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="M-Audio"> <span
-                                                    class="ml-10">M-Audio (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="21" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Mackie"> <span
-                                                    class="ml-10">Mackie (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="22" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Micca"> <span class="ml-10">Micca
-                                                    (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="23" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="PreSonus"> <span
-                                                    class="ml-10">PreSonus (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="24" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Razer"> <span class="ml-10">Razer
-                                                    (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="25" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Sony"> <span class="ml-10">Sony
-                                                    (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="26" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Swan Speakers"> <span
-                                                    class="ml-10">Swan Speakers (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="27" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="YAMAHA"> <span
-                                                    class="ml-10">YAMAHA (4) </span></label> </div>
+                                                    @foreach ($brands as $brand)
+                                                    <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
+                                                                type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
+                                                                class="option-input checkbox brand" name="filter['brand']"
+                                                                value="{{ $brand->brand }}"> <span
+                                                                class="ml-10">{{ $brand->brand }}
+                                                                ({{ \App\Models\Speaker::where('brand', $brand->brand)->count() }})
+                                                            </span></label> </div>
+                                                @endforeach
                                     </div>
                                 </div>
                             </div>

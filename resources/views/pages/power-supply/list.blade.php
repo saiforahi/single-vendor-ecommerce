@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                letter-spacing: 1px;
-                word-spacing: 3px;
-                text-decoration: none**/
+                    letter-spacing: 1px;
+                    word-spacing: 3px;
+                    text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                              transform: translate(-50%, -50%);
-                              */
+                                  transform: translate(-50%, -50%);
+                                  */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,10 +354,10 @@
             }
 
             /*
-                    .modal-window div:not(:last-of-type) {
-                      margin-bottom: 15px;
-                    }
-                    */
+                        .modal-window div:not(:last-of-type) {
+                          margin-bottom: 15px;
+                        }
+                        */
 
         }
 
@@ -368,7 +368,7 @@
         }
 
     </style>
-     <style>
+    <style>
         .c_power {
             display: none !important;
         }
@@ -428,202 +428,21 @@
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="1" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ADATA"> <span class="ml-10">ADATA
-                                                    (4) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ARESGAME"> <span
-                                                    class="ml-10">ARESGAME (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ASUS"> <span class="ml-10">ASUS
-                                                    (7) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="AZZA"> <span class="ml-10">AZZA
-                                                    (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="AeroCool"> <span
-                                                    class="ml-10">AeroCool (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="6" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Antec"> <span class="ml-10">Antec
-                                                    (19) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Apevia"> <span
-                                                    class="ml-10">Apevia (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="8" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Athena"> <span
-                                                    class="ml-10">Athena (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="9" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="BEQUIET"> <span
-                                                    class="ml-10">BEQUIET (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="10" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="BITFENIX"> <span
-                                                    class="ml-10">BITFENIX (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="11" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="COUGAR"> <span
-                                                    class="ml-10">COUGAR (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="12" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Chieftec"> <span
-                                                    class="ml-10">Chieftec (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="13" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Cooler"> <span
-                                                    class="ml-10">Cooler (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="14" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Cooler Master"> <span
-                                                    class="ml-10">Cooler Master (25) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="15" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Coolmax"> <span
-                                                    class="ml-10">Coolmax (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="16" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Corsair"> <span
-                                                    class="ml-10">Corsair (79) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="17" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="DEEP COOL"> <span
-                                                    class="ml-10">DEEP COOL (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="18" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="EVGA"> <span class="ml-10">EVGA
-                                                    (65) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="19" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Enermax"> <span
-                                                    class="ml-10">Enermax (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="20" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="FSP"> <span class="ml-10">FSP (8)
-                                                </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="21" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Fractal Design"> <span
-                                                    class="ml-10">Fractal Design (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="22" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="GAMDIAS"> <span
-                                                    class="ml-10">GAMDIAS (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="23" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Gigabyte"> <span
-                                                    class="ml-10">Gigabyte (7) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="24" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="IN WIN"> <span class="ml-10">IN
-                                                    WIN (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="25" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="IN-WIN Development Inc"> <span
-                                                    class="ml-10">IN-WIN Development Inc (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="26" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="LEPA"> <span class="ml-10">LEPA
-                                                    (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="27" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="LETANG"> <span
-                                                    class="ml-10">LETANG (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="28" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="MSI"> <span class="ml-10">MSI
-                                                    (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="29" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="NZXT"> <span class="ml-10">NZXT
-                                                    (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="30" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="PC Power &amp; Cooling"> <span
-                                                    class="ml-10">PC Power & Cooling (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="31" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Phanteks"> <span
-                                                    class="ml-10">Phanteks (7) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="32" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Raidmax"> <span
-                                                    class="ml-10">Raidmax (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="33" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Rosewill"> <span
-                                                    class="ml-10">Rosewill (31) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="34" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SUPER FLOWER"> <span
-                                                    class="ml-10">SUPER FLOWER (15) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="35" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Sea Sonic"> <span
-                                                    class="ml-10">Sea Sonic (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="36" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Seasonic"> <span
-                                                    class="ml-10">Seasonic (49) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="37" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Segotep"> <span
-                                                    class="ml-10">Segotep (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="38" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Sharkoon"> <span
-                                                    class="ml-10">Sharkoon (4) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="39" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Silver Stone Technologies"> <span
-                                                    class="ml-10">Silver Stone Technologies (1) </span></label>
-                                        </div>
-                                        <div class="checkbox"> <label> <input id="40" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SilverStone Technology"> <span
-                                                    class="ml-10">SilverStone Technology (40) </span></label>
-                                        </div>
-                                        <div class="checkbox"> <label> <input id="41" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Solid Gear"> <span
-                                                    class="ml-10">Solid Gear (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="42" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Sparkle"> <span
-                                                    class="ml-10">Sparkle (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="43" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Thermaltake"> <span
-                                                    class="ml-10">Thermaltake (57) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="44" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="XFX"> <span class="ml-10">XFX
-                                                    (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="45" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="XPG"> <span class="ml-10">XPG
-                                                    (3) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="46" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Xilence"> <span
-                                                    class="ml-10">Xilence (5) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="47" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="be quiet!"> <span
-                                                    class="ml-10">be quiet! (33) </span></label> </div>
+                                        @foreach ($brands as $brand)
+                                            <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
+                                                        type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
+                                                        class="option-input checkbox brand" name="filter['brand']"
+                                                        value="{{ $brand->brand }}"> <span
+                                                        class="ml-10">{{ $brand->brand }}
+                                                        ({{ \App\Models\PowerSupply::where('brand', $brand->brand)->count() }})
+                                                    </span></label> </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                       
+
+
                         <div class="card-group" id="accordion2" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading2">
@@ -639,40 +458,40 @@
                                                     class="ml-10">All </span></label> </div>
                                         <div class="checkbox"> <label> <input id="1" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1000 W"> <span
-                                                    class="ml-10">1000 W (35) </span></label> </div>
+                                                    name="filter['power']" value="1000 W"> <span class="ml-10">1000
+                                                    W (35) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="2" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1050 W"> <span
-                                                    class="ml-10">1050 W (5) </span></label> </div>
+                                                    name="filter['power']" value="1050 W"> <span class="ml-10">1050
+                                                    W (5) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="3" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1200 W"> <span
-                                                    class="ml-10">1200 W (16) </span></label> </div>
+                                                    name="filter['power']" value="1200 W"> <span class="ml-10">1200
+                                                    W (16) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="4" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
                                                     name="filter['power']" value="12000 W"> <span
                                                     class="ml-10">12000 W (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="5" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1250 W"> <span
-                                                    class="ml-10">1250 W (1) </span></label> </div>
+                                                    name="filter['power']" value="1250 W"> <span class="ml-10">1250
+                                                    W (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="6" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1300 W"> <span
-                                                    class="ml-10">1300 W (2) </span></label> </div>
+                                                    name="filter['power']" value="1300 W"> <span class="ml-10">1300
+                                                    W (2) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="7" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1350 W"> <span
-                                                    class="ml-10">1350 W (1) </span></label> </div>
+                                                    name="filter['power']" value="1350 W"> <span class="ml-10">1350
+                                                    W (1) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="8" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1500 W"> <span
-                                                    class="ml-10">1500 W (5) </span></label> </div>
+                                                    name="filter['power']" value="1500 W"> <span class="ml-10">1500
+                                                    W (5) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="9" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
-                                                    name="filter['power']" value="1600 W"> <span
-                                                    class="ml-10">1600 W (4) </span></label> </div>
+                                                    name="filter['power']" value="1600 W"> <span class="ml-10">1600
+                                                    W (4) </span></label> </div>
                                         <div class="checkbox"> <label> <input id="10" type="checkbox"
                                                     onclick="f_power(this.id);" class="option-input checkbox power"
                                                     name="filter['power']" value="220 W"> <span class="ml-10">220
@@ -765,8 +584,8 @@
                                 </div>
                             </div>
                         </div>
-                       
-                        
+
+
                         <div class="card-group" id="accordion3" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading3">
@@ -840,8 +659,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="card-group" id="accordion4" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading4">
@@ -890,8 +709,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                       
+
+
                         <div class="card-group" id="accordion5" role="tablist" aria-multiselectable="false">
                             <div class="card panel-default">
                                 <div class="card-header" role="tab" id="heading5">
@@ -935,8 +754,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="modal-bottom">
                             <a href="#" title="Close" class="d-md-none modal-close btn btn-primary">Close</a>
                             <a href="#" class="d-md-none modal-close btn btn-primary">Apply Filters</a>
@@ -1015,77 +834,80 @@
                         </thead>
                         <tbody>
                             @foreach ($power_supplies as $power_supplier)
-                            <tr class="items" data-href="#">
-                                <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
-                                </td>
-                                <td class="box">
-                                    <div class="logo-name">
-                                        <div class="item-logo">
-                                            <?php $images = $power_supplier->product->getMedia('main_image'); ?>
-                                            <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}" class="img-responsive lazy img-fluid"
-                                                data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
-                                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                                alt="pc builder, custom pc builder, pc part picker, build my pc, Corsair RM750">
-                                            <div class="stars-rating" title="4.6 out of 5">
-                                                <div class="stars-score" style="width: 92%">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="stars-scale">
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
+                                <tr class="items" data-href="#">
+                                    <td scope="row" class="component d-sm-none">
+                                        <a href="index.html">#</a>
+                                    </td>
+                                    <td class="box">
+                                        <div class="logo-name">
+                                            <div class="item-logo">
+                                                <?php $images = $power_supplier->product->getMedia('main_image'); ?>
+                                                <img src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    class="img-responsive lazy img-fluid"
+                                                    data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
+                                                    title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
+                                                    alt="pc builder, custom pc builder, pc part picker, build my pc, Corsair RM750">
+                                                <div class="stars-rating" title="4.6 out of 5">
+                                                    <div class="stars-score" style="width: 92%">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="stars-scale">
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="comp-details">
-                                    <div class="table_title"><a href="{{ route('power-supply-details',['id'=>$power_supplier->id]) }}">Corsair
-                                            RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply</a></div>
-                                    <span class="table_span">
-                                        <div class="detail">
-                                            <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Corsair </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> RM750 </div>
-                                        </div>
-                                    </span>
-                                    <span class="table_span">
+                                    </td>
+                                    <td class="comp-details">
+                                        <div class="table_title"><a
+                                                href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}">Corsair
+                                                RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply</a></div>
+                                        <span class="table_span">
+                                            <div class="detail">
+                                                <div class="detail__name">Brand:</div>
+                                                <div class="detail__value f_brand"> Corsair </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Model:</div>
+                                                <div class="detail__value f_model"> RM750 </div>
+                                            </div>
+                                        </span>
+                                        <span class="table_span">
 
-                                        <div class="detail">
-                                            <div class="detail__name">Power:</div>
-                                            <div class="detail__value f_power"> 750 W </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Efficiency:</div>
-                                            <div class="detail__value f_efficiency"> 80+ Gold </div>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="detail__name">Color:</div>
-                                            <div class="detail__value f_color"> Black </div>
-                                        </div>
-                                    </span>
+                                            <div class="detail">
+                                                <div class="detail__name">Power:</div>
+                                                <div class="detail__value f_power"> 750 W </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Efficiency:</div>
+                                                <div class="detail__value f_efficiency"> 80+ Gold </div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Color:</div>
+                                                <div class="detail__value f_color"> Black </div>
+                                            </div>
+                                        </span>
 
-                                </td>
-                                <td class="price">
-                                    ৳ {{ $power_supplier->product->price }} </td>
-                                <td><a class="btn btn-primary component-btn"
-                                        href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}"
-                                        target="_blank">View Details</a></td>
-                                <td class="remove"><a class="btn btn-danger component-add-btn"
-                                        id="{{ 'p_' . $power_supplier->id }}" href="{{route('add-power_supplier-to-system',['power_supplier_id'=>$power_supplier->id])}}"><i
-                                            class="fa fa-plus"></i></a>
-                                </td>
-                            </tr>
+                                    </td>
+                                    <td class="price">
+                                        ৳ {{ $power_supplier->product->price }} </td>
+                                    <td><a class="btn btn-primary component-btn"
+                                            href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}"
+                                            target="_blank">View Details</a></td>
+                                    <td class="remove"><a class="btn btn-danger component-add-btn"
+                                            id="{{ 'p_' . $power_supplier->id }}"
+                                            href="{{ route('add-power_supplier-to-system', ['power_supplier_id' => $power_supplier->id]) }}"><i
+                                                class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
 
@@ -1096,37 +918,22 @@
 @endsection
 
 @push('script')
-<script>
-    function f_power(id) {
+    <script>
+        function f_power(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("power");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_power")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_power");
-                    } else {
-                        tr[i].classList.remove("c_power");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("power");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1135,94 +942,89 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_power");
                         } else {
-                            tr[i].classList.add("c_power");
+                            tr[i].classList.remove("c_power");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_power")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_power");
-                        } else {
-                            tr[i].classList.remove("c_power");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_power")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_power");
+                            } else {
+                                tr[i].classList.add("c_power");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_power")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_power");
+                            } else {
+                                tr[i].classList.remove("c_power");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script> 
-<script type="application/ld+json">
-    {
-     "@context": "http://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement":
-     [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "item":
-       {
-        "@id": "https://pcbuilder.net/",
-        "name": "PC Builder"
-        }
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "item":
-       {
-        "@id": "https://pcbuilder.net/product/",
-        "name": "Product"
-        }
-      },
-      {
-       "@type": "ListItem",
-      "position": 3,
-      "item":
-       {
-         "@id": "https://pcbuilder.net/product/power-supply/",
-         "name": "Power Supply"
-       }
-      }
-     ]
-    }
     </script>
-<script>
-    function f_color(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("color");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_color")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_color");
-                    } else {
-                        tr[i].classList.remove("c_color");
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://pcbuilder.net/",
+                        "name": "PC Builder"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/",
+                        "name": "Product"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/power-supply/",
+                        "name": "Power Supply"
                     }
                 }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+            ]
+        }
+    </script>
+    <script>
+        function f_color(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("color");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1231,71 +1033,58 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_color");
                         } else {
-                            tr[i].classList.add("c_color");
+                            tr[i].classList.remove("c_color");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_color")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_color");
-                        } else {
-                            tr[i].classList.remove("c_color");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_color")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_color");
+                            } else {
+                                tr[i].classList.add("c_color");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_color")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_color");
+                            } else {
+                                tr[i].classList.remove("c_color");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
-<script>
-    function f_brand(id) {
+    </script>
+    <script>
+        function f_brand(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("brand");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_brand")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_brand");
-                    } else {
-                        tr[i].classList.remove("c_brand");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_brand")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_brand");
-                        } else {
-                            tr[i].classList.add("c_brand");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("brand");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1308,41 +1097,54 @@
                         }
                     }
                 }
-            }
-        }
-    }
-</script>
-<script>
-    function f_efficiency(id) {
-
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
-
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("efficiency");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_efficiency")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_efficiency");
-                    } else {
-                        tr[i].classList.remove("c_efficiency");
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.add("c_brand");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_brand")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_brand");
+                            } else {
+                                tr[i].classList.remove("c_brand");
+                            }
+                        }
                     }
                 }
             }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
+        }
+    </script>
+    <script>
+        function f_efficiency(id) {
+
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
+
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("efficiency");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1351,71 +1153,58 @@
                         if (txtValue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].classList.remove("c_efficiency");
                         } else {
-                            tr[i].classList.add("c_efficiency");
+                            tr[i].classList.remove("c_efficiency");
                         }
                     }
                 }
             } else {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_efficiency")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_efficiency");
-                        } else {
-                            tr[i].classList.remove("c_efficiency");
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_efficiency")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_efficiency");
+                            } else {
+                                tr[i].classList.add("c_efficiency");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_efficiency")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_efficiency");
+                            } else {
+                                tr[i].classList.remove("c_efficiency");
+                            }
                         }
                     }
                 }
             }
         }
-    }
-</script>
-<script>
-    function f_form_factor(id) {
+    </script>
+    <script>
+        function f_form_factor(id) {
 
-        /*
-        $('html, body').animate({
-            scrollTop: $("#myTable").offset().top - 100
-        }, 2000);
-        */
+            /*
+            $('html, body').animate({
+                scrollTop: $("#myTable").offset().top - 100
+            }, 2000);
+            */
 
-        var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementsByClassName("form_factor");
-        input = input[id];
-        filter = input.value.toUpperCase();
-        table = document.getElementById("myTable");
-        tr = table.getElementsByTagName("tr");
-        if (filter == 'ALL') {
-            for (i = 0; i < tr.length; i++) {
-                td = tr[i].getElementsByTagName("td")[2];
-                if (td) {
-                    td = td.getElementsByClassName("f_form_factor")['0'];
-                    txtValue = td.textContent || td.innerText;
-                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                        tr[i].classList.remove("c_form_factor");
-                    } else {
-                        tr[i].classList.remove("c_form_factor");
-                    }
-                }
-            }
-        } else {
-            filter = ' ' + filter + ' ';
-            if (input.checked) {
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        td = td.getElementsByClassName("f_form_factor")['0'];
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].classList.remove("c_form_factor");
-                        } else {
-                            tr[i].classList.add("c_form_factor");
-                        }
-                    }
-                }
-            } else {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementsByClassName("form_factor");
+            input = input[id];
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            if (filter == 'ALL') {
                 for (i = 0; i < tr.length; i++) {
                     td = tr[i].getElementsByTagName("td")[2];
                     if (td) {
@@ -1428,8 +1217,36 @@
                         }
                     }
                 }
+            } else {
+                filter = ' ' + filter + ' ';
+                if (input.checked) {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_form_factor")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_form_factor");
+                            } else {
+                                tr[i].classList.add("c_form_factor");
+                            }
+                        }
+                    }
+                } else {
+                    for (i = 0; i < tr.length; i++) {
+                        td = tr[i].getElementsByTagName("td")[2];
+                        if (td) {
+                            td = td.getElementsByClassName("f_form_factor")['0'];
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[i].classList.remove("c_form_factor");
+                            } else {
+                                tr[i].classList.remove("c_form_factor");
+                            }
+                        }
+                    }
+                }
             }
         }
-    }
-</script>
+    </script>
 @endpush

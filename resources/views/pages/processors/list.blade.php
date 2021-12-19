@@ -86,9 +86,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                                                                                        letter-spacing: 1px;
-                                                                                        word-spacing: 3px;
-                                                                                        text-decoration: none**/
+                                                                                            letter-spacing: 1px;
+                                                                                            word-spacing: 3px;
+                                                                                            text-decoration: none**/
         }
 
         .checkbox label,
@@ -328,8 +328,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                                                                                      transform: translate(-50%, -50%);
-                                                                                                      */
+                                                                                                          transform: translate(-50%, -50%);
+                                                                                                          */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -353,10 +353,10 @@
             }
 
             /*
-                                                                                            .modal-window div:not(:last-of-type) {
-                                                                                              margin-bottom: 15px;
-                                                                                            }
-                                                                                            */
+                                                                                                .modal-window div:not(:last-of-type) {
+                                                                                                  margin-bottom: 15px;
+                                                                                                }
+                                                                                                */
 
         }
 
@@ -433,12 +433,12 @@
                                                     class="ml-10">All </span></label> </div>
                                         @foreach ($brands as $brand)
                                             <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
-                                                        type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
-                                                        class="option-input checkbox brand" name="filter['brand']"
-                                                        value="{{ $brand->brand }}"> <span
-                                                        class="ml-10">{{ $brand->brand }}
-                                                        ({{ \App\Models\Processor::where('brand', $brand->brand)->count() }})
-                                                    </span></label> </div>
+                                                type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
+                                                class="option-input checkbox brand" name="filter['brand']"
+                                                value="{{ $brand->brand }}"> <span
+                                                class="ml-10">{{ $brand->brand }}
+                                                ({{ \App\Models\Processor::where('brand', $brand->brand)->count() }})
+                                            </span></label> </div>
                                         @endforeach
                                         {{-- <div class="checkbox"> <label> <input id="1" type="checkbox"
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
@@ -1166,7 +1166,8 @@
                                             href="{{ route('processor-details', ['id' => $processor->id]) }}"
                                             target="_blank">View Details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn"
-                                            id="{{ 'p_' . $processor->id }}" href="{{route('add-processor-to-system',['processor_id'=>$processor->id])}}"><i
+                                            id="{{ 'p_' . $processor->id }}"
+                                            href="{{ route('add-processor-to-system', ['processor_id' => $processor->id]) }}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
 
@@ -1768,38 +1769,33 @@
     </script> --}}
     <script type="application/ld+json">
         {
-         "@context": "http://schema.org",
-         "@type": "BreadcrumbList",
-         "itemListElement":
-         [
-          {
-           "@type": "ListItem",
-           "position": 1,
-           "item":
-           {
-            "@id": "https://pcbuilder.net/",
-            "name": "PC Builder"
-            }
-          },
-          {
-           "@type": "ListItem",
-           "position": 2,
-           "item":
-           {
-            "@id": "https://pcbuilder.net/product/",
-            "name": "Product"
-            }
-          },
-          {
-           "@type": "ListItem",
-          "position": 3,
-          "item":
-           {
-             "@id": "https://pcbuilder.net/product/processor/",
-             "name": "Processor"
-           }
-          }
-         ]
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@id": "https://pcbuilder.net/",
+                        "name": "PC Builder"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/",
+                        "name": "Product"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "item": {
+                        "@id": "https://pcbuilder.net/product/processor/",
+                        "name": "Processor"
+                    }
+                }
+            ]
         }
-        </script>
+    </script>
 @endpush

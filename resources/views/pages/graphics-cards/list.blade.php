@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-         letter-spacing: 1px;
-         word-spacing: 3px;
-         text-decoration: none**/
+                     letter-spacing: 1px;
+                     word-spacing: 3px;
+                     text-decoration: none**/
         }
 
         .checkbox label,
@@ -341,8 +341,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                          transform: translate(-50%, -50%);
-                          */
+                                      transform: translate(-50%, -50%);
+                                      */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -366,10 +366,10 @@
             }
 
             /*
-                .modal-window div:not(:last-of-type) {
-                  margin-bottom: 15px;
-                }
-                */
+                            .modal-window div:not(:last-of-type) {
+                              margin-bottom: 15px;
+                            }
+                            */
 
         }
 
@@ -393,7 +393,7 @@
         <h1><span>Select</span> Your Graphics Card</h1>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('graphics-cards-list')}}">Graphics Card</a>
+            <i class="fa fa-angle-right"></i><a href="{{ route('graphics-cards-list') }}">Graphics Card</a>
         </span>
     </section>
     <a href="#open-modal" class="float">
@@ -423,82 +423,16 @@
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="1" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="AMD"> <span class="ml-10">AMD (1)
-                                                </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="2" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ASRock"> <span
-                                                    class="ml-10">ASRock (8) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="3" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ASUS"> <span class="ml-10">ASUS
-                                                    (37) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="4" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Diamond Multimedia"> <span
-                                                    class="ml-10">Diamond Multimedia (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="5" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="EVGA"> <span class="ml-10">EVGA
-                                                    (25) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="6" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Gigabyte"> <span
-                                                    class="ml-10">Gigabyte (27) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="7" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="HIS"> <span class="ml-10">HIS (2)
-                                                </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="8" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Inno 3D"> <span
-                                                    class="ml-10">Inno 3D (1) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="9" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="MSI"> <span class="ml-10">MSI
-                                                    (50) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="10" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="NVIDIA"> <span
-                                                    class="ml-10">NVIDIA (6) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="11" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="NekidCow"> <span
-                                                    class="ml-10">NekidCow (5) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="12" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="PNY"> <span class="ml-10">PNY (5)
-                                                </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="13" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="PowerColor"> <span
-                                                    class="ml-10">PowerColor (17) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="14" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="SAPPHIRE"> <span
-                                                    class="ml-10">SAPPHIRE (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="15" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="Sapphire Technology"> <span
-                                                    class="ml-10">Sapphire Technology (13) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="16" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="VisionTek"> <span
-                                                    class="ml-10">VisionTek (2) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="17" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="XFX"> <span class="ml-10">XFX
-                                                    (15) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="18" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ZOTAC"> <span class="ml-10">ZOTAC
-                                                    (14) </span></label> </div>
-                                        <div class="checkbox"> <label> <input id="19" type="checkbox"
-                                                    onclick="f_brand(this.id);" class="option-input checkbox brand"
-                                                    name="filter['brand']" value="ZOTAC GAMING"> <span
-                                                    class="ml-10">ZOTAC GAMING (1) </span></label> </div>
+
+                                        @foreach ($brands as $brand)
+                                            <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
+                                                        type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
+                                                        class="option-input checkbox brand" name="filter['brand']"
+                                                        value="{{ $brand->brand }}"> <span
+                                                        class="ml-10">{{ $brand->brand }}
+                                                        ({{ \App\Models\Graphic::where('brand', $brand->brand)->count() }})
+                                                    </span></label> </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -971,37 +905,57 @@
 
                                             <div class="detail">
                                                 <div class="detail__name">Memory:</div>
-                                                <div class="detail__value f_memory"> {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory'] }} </div>
+                                                <div class="detail__value f_memory">
+                                                    {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory'] }}
+                                                </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Memory Interface:</div>
-                                                <div class="detail__value f_memory_interface"> {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory_interface'] }}</div>
+                                                <div class="detail__value f_memory_interface">
+                                                    {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory_interface'] }}
+                                                </div>
                                             </div>
                                             <div class="detail">
-                                                <div class="detail__name">Length:</div>
-                                                <div class="detail__value f_length"> {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['length'] }}</div>
+                                                <div
+                                                    class="d
+                                                
+                                                etail__name">
+                                                    Length:</div>
+                                                <div class="detail__value f_length">
+                                                    {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['length'] }}
+                                                </div>
                                             </div>
                                         </span><span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Interface:</div>
-                                                <div class="detail__value f_interface">  {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['interface'] }} </div>
+                                                <div class="detail__value f_interface">
+                                                    {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['interface'] }}
+                                                </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Chipset:</div>
-                                                <div class="detail__value f_chipset"> {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['chipset'] }} </div>
+                                                <div class="detail__value f_chipset">
+                                                    {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['chipset'] }}
+                                                </div>
                                             </div>
                                         </span><span class="table_span view-more-108" style="display: none;">
                                             <div class="detail">
                                                 <div class="detail__name">Base Clock:</div>
-                                                <div class="detail__value f_base_clock"> {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['base_clock'] }}  </div>
+                                                <div class="detail__value f_base_clock">
+                                                    {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['base_clock'] }}
+                                                </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Clock Speed:</div>
-                                                <div class="detail__value f_clock_speed"> {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['clock_speed'] }}   </div>
+                                                <div class="detail__value f_clock_speed">
+                                                    {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['clock_speed'] }}
+                                                </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Frame Sync:</div>
-                                                <div class="detail__value f_frame_sync"> {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['frame_sync'] }} </div>
+                                                <div class="detail__value f_frame_sync">
+                                                    {{ empty(json_decode($graphic->additional_specs, true)) ? '' : json_decode($graphic->additional_specs, true)['frame_sync'] }}
+                                                </div>
                                             </div>
                                         </span>
 
@@ -1017,7 +971,7 @@
                                             target="_blank">View
                                             details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="{{route('add-graphic-to-system',['graphic_id'=>$graphic->id])}}"><i
+                                            href="{{ route('add-graphic-to-system', ['graphic_id' => $graphic->id]) }}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
                                 </tr>
