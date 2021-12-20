@@ -40,7 +40,8 @@ class CreateMotherBoardRequest extends FormRequest
             'wireless_specs'=>'sometimes|nullable|json',
             'software_specs'=>'sometimes|nullable|json',
             'physical_specs'=>'sometimes|nullable|json',
-            'packaging_specs'=>'sometimes|nullable|json'
+            'packaging_specs'=>'sometimes|nullable|json',
+            'stock' => 'required|numeric',
         ];
     }
 }

@@ -31,7 +31,7 @@ class CreatePowerSupplyRequest extends FormRequest
             
             'total_images'=>'sometimes|nullable',
             'short_name'=>'sometimes|nullable|string',
-
+            'stock' => 'required|numeric',
             'specifications'=>'sometimes|nullable|json',
             
         ];

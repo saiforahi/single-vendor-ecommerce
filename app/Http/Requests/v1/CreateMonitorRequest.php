@@ -31,7 +31,8 @@ class CreateMonitorRequest extends FormRequest
             //'specifications'=>'sometimes|nullable|json',
             //'features'=>'sometimes|nullable|json',
             'short_name'=>'sometimes|nullable|string',
-            'total_images'=>'sometimes|nullable'
+            'total_images'=>'sometimes|nullable',
+            'stock' => 'required|numeric',
         ];
     }
 }

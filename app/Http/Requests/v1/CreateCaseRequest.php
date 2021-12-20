@@ -33,7 +33,8 @@ class CreateCaseRequest extends FormRequest
             'short_name'=>'sometimes|nullable|string',
             'io_specs'=>'sometimes|nullable',
             'packaging_specs'=>'sometimes|nullable',
-            'physical_specs'=>'sometimes|nullable'
+            'physical_specs'=>'sometimes|nullable',
+            'stock' => 'required|numeric',
         ];
     }
 }

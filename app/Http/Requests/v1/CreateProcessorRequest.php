@@ -30,7 +30,8 @@ class CreateProcessorRequest extends FormRequest
             'price'=> 'required|numeric',
             'general_specs'=>'required|json',
             'total_images'=>'sometimes|nullable',
-            'short_name'=> 'sometimes|nullable|string'
+            'short_name'=> 'sometimes|nullable|string',
+            'stock' => 'required|numeric',
         ];
     }
 }

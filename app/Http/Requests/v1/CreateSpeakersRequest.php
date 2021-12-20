@@ -30,7 +30,8 @@ class CreateSpeakersRequest extends FormRequest
             'price'=> 'required|numeric',
             'specifications'=>'sometimes|nullable|json',
             'total_images'=>'sometimes|nullable',
-            'short_name'=>'required|string|max:255'
+            'short_name'=>'required|string|max:255',
+            'stock' => 'required|numeric',
         ];
     }
 }

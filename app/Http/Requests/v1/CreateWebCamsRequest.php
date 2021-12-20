@@ -31,6 +31,7 @@ class CreateWebCamsRequest extends FormRequest
             'specifications'=>'sometimes|nullable|json',
             'total_images'=>'sometimes|nullable',
             'short_name'=>'required|string|max:255',
+            'stock' => 'required|numeric',
         ];
     }
 }

@@ -28,7 +28,7 @@ class CreateCaseCoolerRequest extends FormRequest
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
-            
+            'stock' => 'required|numeric',
             'short_name'=>'sometimes|nullable|string|',
             'total_images'=>'sometimes|nullable'
         ];

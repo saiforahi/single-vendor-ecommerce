@@ -30,7 +30,8 @@ class CreaOpticalDrivesRequest extends FormRequest
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
             'specifications'=>'sometimes|nullable|json',
-            'total_images'=>'sometimes|nullable'
+            'total_images'=>'sometimes|nullable',
+            'stock' => 'required|numeric'
         ];
     }
 }

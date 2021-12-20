@@ -32,7 +32,8 @@ class CreateMemoryRequest extends FormRequest
             'memory_specs'=>'sometimes|nullable|json',
             'additional_specs'=>'sometimes|nullable|json',
             'short_name'=>'sometimes|nullable|string',
-            'total_images'=>'sometimes|nullable'
+            'total_images'=>'sometimes|nullable',
+            'stock' => 'required|numeric',
         ];
     }
 }

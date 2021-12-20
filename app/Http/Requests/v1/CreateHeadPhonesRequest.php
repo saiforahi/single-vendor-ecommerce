@@ -30,7 +30,8 @@ class CreateHeadPhonesRequest extends FormRequest
             'price'=> 'required|numeric',
             'specifications'=>'sometimes|nullable|json',
             'short_name'=>'required|string|max:255',
-            'total_images'=>'sometimes|nullable'
+            'total_images'=>'sometimes|nullable',
+            'stock' => 'required|numeric',
         ];
     }
 }
