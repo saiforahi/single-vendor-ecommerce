@@ -21,7 +21,6 @@ Route::prefix('motherboards')->group(function(){
     Route::put('/update',[App\Http\Controllers\api\MotherBoardsController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\MotherBoardsController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\MotherBoardsController::class,'show_details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\MotherBoardsController::class,'get_motherboard_create_options']);
-
+    Route::get('/specification/list/{parent}/{child}',[App\Http\Controllers\api\MotherBoardsController::class,'get_motherboard_create_options']);
     Route::get('/images/{id}',[App\Http\Controllers\api\MotherBoardsController::class,'get_all_media']);
 });

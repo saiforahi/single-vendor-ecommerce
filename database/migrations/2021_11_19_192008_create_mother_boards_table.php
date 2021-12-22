@@ -22,6 +22,7 @@ class CreateMotherBoardsTable extends Migration
             $table->string('model')->nullable();
             //common part ends here
             //$table->json('product_specs')->nullable();
+            $table->json('cpu_specs')->nullable();
             $table->json('back_panel_specs')->nullable();
             $table->json('storage_specs')->nullable();
             $table->json('memory_specs')->nullable();
