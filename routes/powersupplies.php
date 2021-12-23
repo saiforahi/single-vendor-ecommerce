@@ -21,7 +21,7 @@ Route::prefix('powersupplies')->group(function(){
     Route::put('/update',[App\Http\Controllers\api\PowerSupplyController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\PowerSupplyController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\PowerSupplyController::class,'show_details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\PowerSupplyController::class,'get_powersupply_create_options']);
+    Route::get('/specification/list/{parent}/{child}',[App\Http\Controllers\api\PowerSupplyController::class,'get_power_supply_create_options']);
 
     Route::get('/images/{id}',[App\Http\Controllers\api\PowerSupplyController::class,'get_all_media']);
 });

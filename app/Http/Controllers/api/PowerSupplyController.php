@@ -35,6 +35,15 @@ class PowerSupplyController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
+    public function delete($id){
+        try{
+            PowerSupply::findOrFail($id)->delete();
+            return response()->json(['success'=>true,'message'=>'Power Supply has been deleted'],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
     public function show_list(){
         // $brands = DB::table('processors')
         // ->select('id','name', 'brand')
@@ -46,5 +55,35 @@ class PowerSupplyController extends Controller
     public function show_details($id){
         return view('pages.power-supply.details')->with('power_supplies',PowerSupply::findOrFail($id));
     }
-    
+    public function get_power_supply_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'specifications':
+                    foreach( PowerSupply::all() as $powersupply ){
+                        if(isset(json_decode($powersupply->specifications,true)[$child])){
+                            array_push($list,json_decode($powersupply->specifications,true)[$child]);
+                        }
+                    }
+                    break;
+
+                case 'brand':
+                    foreach( PowerSupply::all() as $powersupply ){
+                        array_push($list,$powersupply->brand);
+                    }
+                    break;
+                
+                case 'model':
+                    foreach( PowerSupply::all() as $powersupply ){
+                        array_push($list,$powersupply->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

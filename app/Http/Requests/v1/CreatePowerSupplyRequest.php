@@ -33,7 +33,6 @@ class CreatePowerSupplyRequest extends FormRequest
             'short_name'=>'sometimes|nullable|string',
             'stock' => 'required|numeric',
             'specifications'=>'sometimes|nullable|json',
-            
         ];
     }
 }
