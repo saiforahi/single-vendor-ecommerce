@@ -21,7 +21,7 @@ Route::prefix('cases')->group(function(){
     Route::put('/update',[App\Http\Controllers\api\CasesController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\CasesController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\CasesController::class,'details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\CasesController::class,'get_laptop_create_options']);
+    Route::get('/specification/list/{parent}/{child}',[App\Http\Controllers\api\CasesController::class,'get_create_options']);
 
     Route::get('/images/{id}',[App\Http\Controllers\api\CasesController::class,'get_all_media']);
 

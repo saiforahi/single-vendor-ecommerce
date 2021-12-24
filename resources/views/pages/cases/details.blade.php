@@ -279,78 +279,16 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>NZXT H510B-W1 (CA-H510B-W1)</h2>
+        <h2>{{$casing->short_name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/case/index.html">Case</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">NZXT H510B-W1</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('case-list')}}">Case</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('case-list',['id'=>$casing->id])}}">{{$casing->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
             <div class="col-12 col-md-3">
-                <div class="carousel slide" id="main-carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready "
-                                data-src="https://m.media-amazon.com/images/I/41m2uJiS03L.jpg"
-                                alt="Build My PC, PC Builder, NZXT H510B-W1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready "
-                                data-src="https://m.media-amazon.com/images/I/41eysGGC7zL.jpg"
-                                alt="Build My PC, PC Builder, NZXT H510B-W1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready "
-                                data-src="https://m.media-amazon.com/images/I/41HrcmUi88L.jpg"
-                                alt="Build My PC, PC Builder, NZXT H510B-W1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready "
-                                data-src="https://m.media-amazon.com/images/I/41h6g3SzNhL.jpg"
-                                alt="Build My PC, PC Builder, NZXT H510B-W1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready "
-                                data-src="https://m.media-amazon.com/images/I/41v8l-duzfL.jpg"
-                                alt="Build My PC, PC Builder, NZXT H510B-W1">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered Glass Side Panel - Cable Management System - Water-Cooling Ready "
-                                data-src="https://m.media-amazon.com/images/I/41l9zfe4JgL.jpg"
-                                alt="Build My PC, PC Builder, NZXT H510B-W1">
-                        </div>
-                    </div>
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
-                    <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                    </ol>
-                </div>
-                
-
+                <?php $product = $casing->product; ?>
+                @include('components.product-media')
                 <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">Compatibility</span>
@@ -493,13 +431,13 @@
                     </ul>
 
                     
-                    <div class="budget-price">$74.99</div>
+                    <div class="budget-price">${{$casing->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$casing->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B07TC76671?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{ route('add-casing-to-system', ['casing_id' => $casing->id]) }}"
+                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> Add to System Builder </a>
                     </div>
                 </div>
             </div>

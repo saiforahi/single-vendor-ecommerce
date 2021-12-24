@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('orders')->group(function(){
     Route::get('/all',[App\Http\Controllers\api\OrderController::class,'all_orders']);
+    Route::get('/sales/{from}/{to}',[App\Http\Controllers\api\OrderController::class,'find_sales']);
+    Route::get('/make-paid/{id}',[App\Http\Controllers\api\OrderController::class,'make_paid']);
 });

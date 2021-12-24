@@ -24,4 +24,8 @@ class Order extends Model
     public function payment_type(){
         return $this->belongsTo(PaymentType::class,'payment_type','id');
     }
+
+    public function product(){
+        return $this->hasOne(Product::class,'id','product_id');
+    }
 }

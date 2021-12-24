@@ -28,8 +28,7 @@ class CreateOrderRequest extends FormRequest
             'customer_email'=> 'required|email|max:255',
             'customer_phone'=> 'required|string|max:11|min:11',
             'shipping_address'=> 'sometimes|nullable||string',
-            'payment_type'=> 'required|string|exists:payment_types,id',
-            'stock' => 'required|numeric',
+            'payment_type'=> 'required|string|exists:payment_types,id'
         ];
     }
 }

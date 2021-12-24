@@ -48,4 +48,52 @@ class CasesController extends Controller
         return view('pages.cases.details')->with('casing',Casing::findOrFail($id));
     }
     
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>Casing::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    
+    public function get_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'physical':
+                    foreach( Casing::all() as $casing ){
+                        if(isset(json_decode($casing->physical_specs,true)[$child])){
+                            array_push($list,json_decode($casing->physical_specs,true)[$child]);
+                        }
+                    }
+                    break;
+                
+                case 'compatibility':
+                    foreach( Casing::all() as $casing ){
+                        if(isset(json_decode($casing->compatibility_specs,true)[$child])){
+                            array_push($list,json_decode($casing->compatibility_specs,true)[$child]);
+                        }
+                    }
+                    break;
+                
+                case 'brand':
+                    foreach( Casing::all() as $casing ){
+                        array_push($list,$casing->brand);
+                    }
+                    break;
+
+                case 'model':
+                    foreach( Casing::all() as $casing ){
+                        array_push($list,$casing->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

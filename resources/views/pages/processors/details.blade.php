@@ -298,42 +298,7 @@
                                 alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
                         </div>
                         @endforeach
-                        {{-- <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                data-src="https://m.media-amazon.com/images/I/41cAAdXKoeL.jpg"
-                                alt="Build My PC, PC Builder, AMD Ryzen Threadripper 3990X">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                data-src="https://m.media-amazon.com/images/I/41zp1SoYZGL.jpg"
-                                alt="Build My PC, PC Builder, AMD Ryzen Threadripper 3990X">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                data-src="https://m.media-amazon.com/images/I/412Eqy1a7KL.jpg"
-                                alt="Build My PC, PC Builder, AMD Ryzen Threadripper 3990X">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                data-src="https://m.media-amazon.com/images/I/51oXMVxBXfL.jpg"
-                                alt="Build My PC, PC Builder, AMD Ryzen Threadripper 3990X">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                data-src="https://m.media-amazon.com/images/I/51A4NR+-gTL.jpg"
-                                alt="Build My PC, PC Builder, AMD Ryzen Threadripper 3990X">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                data-src="https://m.media-amazon.com/images/I/31QPsRQDBrL.jpg"
-                                alt="Build My PC, PC Builder, AMD Ryzen Threadripper 3990X">
-                        </div> --}}
+                        
                     </div>
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
@@ -348,17 +313,6 @@
                         <li data-target="#main-carousel" data-slide-to="{{$loop->index}}" class="{{$loop->index==0?'active':''}}">
                         </li>
                         @endforeach
-                        
-                        {{-- <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li> --}}
                     </ol>
                 </div>
                 
@@ -474,8 +428,7 @@
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$processor->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 ">Add to System Builder</a>
+                        <a href="{{ route('add-processor-to-system', ['processor_id' => $processor->id]) }}" class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
             </div>

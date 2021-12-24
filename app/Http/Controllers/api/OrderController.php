@@ -32,7 +32,7 @@ class OrderController extends Controller
         
         foreach(Cart::content() as $item){
             $additional=array(
-                'tracking_code'=>$tracking_code,'product_id'=>$item->id,'product_qty'=>$item->qty,'user_id'=>Auth::user()->id
+                'tracking_code'=>$tracking_code,'product_id'=>$item->id,'product_qty'=>$item->qty,'user_id'=>Auth::user()->id,'payment_status'=>'unpaid'
             );
             Order::create(array_merge($req->all(),$additional));
         }
@@ -53,4 +53,27 @@ class OrderController extends Controller
         }
     }
 
+    public function find_sales($from,$to){
+        try{
+            $orders=Order::with('customer')->with('payment_type')->where('payment_status','=','paid')->whereBetween('updated_at', [$from, $to])->get();
+            $total_sale=0;
+            foreach($orders as $order){
+                $total_sale += $order->product->price * $order->product_qty;
+            }
+            return response()->json(['status'=>true,'data'=>$orders,'total_sale'=>$total_sale]);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+
+    public function make_paid($order_id){
+        try{
+            Order::find($order_id)->update(['payment_status'=>'paid']);
+            return response()->json(['status'=>true,'message'=>"Payment Status has been updated"]);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

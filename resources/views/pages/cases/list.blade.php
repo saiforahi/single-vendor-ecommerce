@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                            letter-spacing: 1px;
-                            word-spacing: 3px;
-                            text-decoration: none**/
+                                letter-spacing: 1px;
+                                word-spacing: 3px;
+                                text-decoration: none**/
         }
 
         .checkbox label,
@@ -335,8 +335,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                          transform: translate(-50%, -50%);
-                                          */
+                                              transform: translate(-50%, -50%);
+                                              */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -360,10 +360,10 @@
             }
 
             /*
-                                .modal-window div:not(:last-of-type) {
-                                  margin-bottom: 15px;
-                                }
-                                */
+                                    .modal-window div:not(:last-of-type) {
+                                      margin-bottom: 15px;
+                                    }
+                                    */
 
         }
 
@@ -431,8 +431,8 @@
                                                         ({{ \App\Models\Casing::where('brand', $brand->brand)->count() }})
                                                     </span></label> </div>
                                         @endforeach
-                                            
-                                        
+
+
                                     </div>
                                 </div>
                             </div>
@@ -1012,12 +1012,12 @@
                         <div class="detail">
                             <div class="detail__name">Side Panel:</div>
                             <div class="detail__value f_side_panel">
-                                {{ empty(json_decode($casing->physical_specs, true)) ? '' : json_decode($casing->physical_specs, true)['side_panel'] }}
+                                {{ empty(json_decode($casing->physical_specs, true)) ? '' : json_decode($casing->physical_specs, true)['material'] }}
                             </div>
                         </div>
                         <div class="detail">
-                            <div class="detail__name">Cabinet Type:</div>
-                            {{-- <div class="detail__value f_cabinet_type"> {{ empty(json_decode($casing->compatibility_specs, true)) ? '' : json_decode($casing->compatibility_specs, true)['cabinet_type'] }} </div> --}}
+                            <div class="detail__name">Motherboard support:</div>
+                            <div class="detail__value f_cabinet_type"> {{ empty(json_decode($casing->compatibility_specs, true)) ? '' : json_decode($casing->compatibility_specs, true)['motherboard_support'] }} </div>
                         </div>
                         <div class="detail">
                             <div class="detail__name">Color:</div>
