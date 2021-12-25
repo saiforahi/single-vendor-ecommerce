@@ -50,6 +50,9 @@ Route::get('/storage-link', function () {
 Route::get('system-builder',function(){
     return view('pages.system-builder');
 })->name('system-builder');
+Route::get('dashboard',function(){
+    return view('pages.dashboard');
+})->name('dashboard');
 Route::get('pre-built',function(){
     return view('pages.pre-built');
 })->name('pre-built');
@@ -171,6 +174,8 @@ Route::prefix('system-builder')->group(function(){
     Route::get('/remove-power_supplier',[App\Http\Controllers\api\SystemBuilderController::class,'remove_power_supplier_web'])->name('remove-power_supplier-from-system');
     Route::get('/add-monitor/{monitor_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_monitor_web'])->name('add-monitor-to-system');
     Route::get('/remove-monitor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_monitor_web'])->name('remove-monitor-from-system');
+    Route::get('/add-keyboard/{keyboard_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_keyboard_web'])->name('add-keyboard-to-system');
+    Route::get('/remove-keyboard',[App\Http\Controllers\api\SystemBuilderController::class,'remove_keyboard_web'])->name('remove-keyboard-from-system');
     //cooler
     Route::get('/add-cooler/{cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_cooler_web'])->name('add-cooler-to-system');
     Route::get('/remove-cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_cooler_web'])->name('remove-cooler-from-system');

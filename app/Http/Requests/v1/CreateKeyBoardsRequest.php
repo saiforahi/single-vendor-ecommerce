@@ -28,8 +28,8 @@ class CreateKeyBoardsRequest extends FormRequest
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
-            'general_specs'=>'sometimes|nullable|json',
-            'memory_specs'=>'sometimes|nullable|json',
+            
+            
             'short_name'=>'sometimes|nullable|string',
             'total_images'=>'sometimes|nullable',
             'stock' => 'required|numeric',

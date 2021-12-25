@@ -11,13 +11,13 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class KeyBoard extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','specifications','short_name'];
+    protected $fillable=['product_id','brand','model','name','short_name'];
     protected $table="keyboards";
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
-        'specifications' => 'array',
+        
         
     ];
     public function registerMediaConversions(Media $media = null): void

@@ -417,7 +417,7 @@
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
                                                     @foreach ($brands as $brand)
-                                                    <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
+                                A                    <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
                                                                 type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
                                                                 class="option-input checkbox brand" name="filter['brand']"
                                                                 value="{{ $brand->brand }}"> <span

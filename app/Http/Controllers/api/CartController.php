@@ -175,7 +175,20 @@ class CartController extends Controller
             //case cooler
             if(Session::get('system')->get_case_cooler()!=''){
                 $product = Product::find(Session::get('system')->get_case_cooler()->product_id);
-                dd($product);
+                
+                Cart::add([
+                    'id' => $product->id, 
+                    'name' => $product->name, 
+                    'qty' => 1, 
+                    'price' => $product->price,
+                    'weight'=>0
+                    ]
+                );
+            }
+            //keyboard
+            if(Session::get('system')->get_keyboard()!=''){
+                $product = Product::find(Session::get('system')->get_keyboard()->product_id);
+                
                 Cart::add([
                     'id' => $product->id, 
                     'name' => $product->name, 

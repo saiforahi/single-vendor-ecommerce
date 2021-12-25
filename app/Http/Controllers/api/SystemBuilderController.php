@@ -299,4 +299,30 @@ class SystemBuilderController extends Controller
         }
         return redirect('/system-builder');
     }
+    //keyboard
+    public function add_keyboard_web($keyboard_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_keyboard($keyboard_id);
+            session(['system'=>$system]);
+            //dd(Session::get('system'));
+            return redirect('/system-builder');
+            // return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_keyboard($keyboard_id);
+        session(['system'=>$system]);
+        
+        return redirect('/system-builder');
+        // dd($req->all());
+    }
+    public function remove_keyboard_web(){
+        if(Session::has('system') && Session::get('system')->get_keyboard()!=''){
+            $system = Session::get('system');
+            $system->remove_keyboard();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
 }

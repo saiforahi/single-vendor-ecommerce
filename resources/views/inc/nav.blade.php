@@ -70,7 +70,7 @@
 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a style="color:black !important;" class="dropdown-item" href="#">Action</a>
-                                    <a style="color:black !important;" class="dropdown-item" href="#">Another action</a>
+                                    <a style="color:black !important;" class="dropdown-item" href="{{route('dashboard')}}">Dashboard</a>
                                     <a style="color:black !important;" onclick="getElementById('logout_form').submit()"
                                         class="dropdown-item" href="#">Logout</a>
                                 </div>

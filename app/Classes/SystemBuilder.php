@@ -11,6 +11,7 @@ use App\Models\Casing;
 use App\Models\Graphic;
 use App\Models\PowerSupply;
 use App\Models\CaseCooler;
+use App\Models\Keyboard;
 
 class SystemBuilder
 {
@@ -25,6 +26,7 @@ class SystemBuilder
     private $monitor = '';
     private $power_supplier = '';
     private $case_cooler = '';
+    private $keyboard = '';
     //processor
     public function get_total_price(){
         return $this->total_price;
@@ -44,6 +46,23 @@ class SystemBuilder
     public function remove_processor(){
         $this->total_price-=Processor::find($this->processor)->product->price;
         $this->processor="";
+    }
+    //keyboard
+    public function set_keyboard($keyboard_id){
+        $this->total_price+=Keyboard::find($keyboard_id)->product->price;
+        $this->keyboard = $keyboard_id;
+    }
+
+    public function get_keyboard(){
+        if($this->keyboard!=''){
+            return Keyboard::findOrFail($this->keyboard);
+        }
+        return $this->keyboard;
+    }
+
+    public function remove_keyboard(){
+        $this->total_price-=Keyboard::find($this->keyboard)->product->price;
+        $this->keyboard="";
     }
     //monitor
     public function set_monitor($monitor_id){
