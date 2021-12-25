@@ -47,5 +47,12 @@ class CaseCoolerController extends Controller
     public function show_details($id){
         return view('pages.case-cooler.details')->with('case_cooler',CaseCooler::findOrFail($id));
     }
-    
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>CaseCooler::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

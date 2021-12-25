@@ -32,9 +32,11 @@ class OrderController extends Controller
         
         foreach(Cart::content() as $item){
             $additional=array(
-                'tracking_code'=>$tracking_code,'product_id'=>$item->id,'product_qty'=>$item->qty,'user_id'=>Auth::user()->id,'payment_status'=>'unpaid'
+                'tracking_code'=>$tracking_code,'product_id'=>$item->id,'product_qty'=>$item->qty,'user_id'=>Auth::user()->id
             );
-            Order::create(array_merge($req->all(),$additional));
+            $new_order=Order::create(array_merge($req->all(),$additional));
+            $new_order->payment_status='unpaid';
+            $new_order->save();
         }
         // $new_order = Order::create(array_merge(['tracking_code'=>$tracking_code],$req->all()));
         Cart::destroy();
@@ -45,7 +47,8 @@ class OrderController extends Controller
 
     public function all_orders(){
         try{
-            $orders=Order::with('customer')->with('payment_type')->get();
+            $orders=Order::with('product')->with('customer')->with('payment_type')->get()->groupBy('tracking_code')->toArray();
+            // $orders=$orders->groupBy('tracking_code')->toArray();
             return response()->json(['status'=>true,'data'=>$orders]);
         }
         catch(Exception $e){

@@ -47,5 +47,12 @@ class CpuCoolerController extends Controller
     public function show_details($id){
         return view('pages.cpu-coolers.details')->with('cpu_cooler',CpuCooler::findOrFail($id));
     }
-    
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>CpuCooler::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

@@ -46,5 +46,35 @@ class MonitorsController extends Controller
     public function show_details($id){
         return view('pages.monitors.details')->with('monitor',Monitor::findOrFail($id));
     }
-    
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>Monitor::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function get_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'brand':
+                    foreach( Monitor::all() as $memory ){
+                        array_push($list,$memory->brand);
+                    }
+                    break;
+
+                case 'model':
+                    foreach( Monitor::all() as $memory ){
+                        array_push($list,$memory->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }
