@@ -14,7 +14,7 @@ class MousesController extends Controller
     public function create(CreateMousesRequest $req){
         try{
             $new_product = Product::create($req->only('price'));
-            $new_mouse = Mouses::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
+            $new_mouse = Mouse::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
@@ -42,10 +42,10 @@ class MousesController extends Controller
         // ->groupBy('brand')
         // ->get();
         
-        return view('pages.mouses.list')->with('mouses',Mouse::with('product')->get())->with('brands',Mouse::select('brand')->distinct()->get());
+        return view('pages.mouses.list')->with('mice',Mouse::with('product')->get())->with('brands',Mouse::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.mouses.details')->with('mouses',Mouse::findOrFail($id));
+        return view('pages.mouses.details')->with('mice',Mouse::findOrFail($id));
     }
     
 }

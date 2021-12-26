@@ -22,7 +22,7 @@ class CreateMiceTable extends Migration
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
             //common part ends here
-            $table->json('specifications')->nullable();
+           
     
             // $table->integer('price')->nullable();
             $table->string('type')->nullable();
