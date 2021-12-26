@@ -11,13 +11,16 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class SoundCard extends Model implements HasMedia
 {
     use HasFactory, InteractsWithMedia, SoftDeletes;
-    protected $fillable=['product_id','brand','model','name','specifications','short_name'];
+    protected $fillable=['product_id','brand','model','name','general_specs','physical_specs','packaging_specs','short_name','software_specs'];
     protected $table="sound_cards";
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
         'deleted_at' => 'datetime:Y-m-d h:i:s A',
-        'specifications' => 'array',
+        'general_specs' => 'array',
+        'physical_specs' => 'array',
+        'packaging_specs' => 'array',
+        'software_specs' => 'array',
         
     ];
     public function registerMediaConversions(Media $media = null): void

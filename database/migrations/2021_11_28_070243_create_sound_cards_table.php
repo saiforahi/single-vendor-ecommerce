@@ -22,8 +22,10 @@ class CreateSoundCardsTable extends Migration
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
             //common part ends here
-            $table->json('specifications')->nullable();
-    
+            $table->json('general_specs')->nullable();
+            $table->json('physical_specs')->nullable();
+            $table->json('packaging_specs')->nullable();
+            $table->json('software_specs')->nullable();
             // $table->integer('price')->nullable();
             $table->string('type')->nullable();
             $table->enum('status',['active','inactive'])->default('active');

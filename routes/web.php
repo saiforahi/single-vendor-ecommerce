@@ -176,6 +176,8 @@ Route::prefix('system-builder')->group(function(){
     Route::get('/remove-monitor',[App\Http\Controllers\api\SystemBuilderController::class,'remove_monitor_web'])->name('remove-monitor-from-system');
     Route::get('/add-keyboard/{keyboard_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_keyboard_web'])->name('add-keyboard-to-system');
     Route::get('/remove-keyboard',[App\Http\Controllers\api\SystemBuilderController::class,'remove_keyboard_web'])->name('remove-keyboard-from-system');
+    Route::get('/add-mouse/{mouse_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_mouse_web'])->name('add-mouse-to-system');
+    Route::get('/remove-mouse',[App\Http\Controllers\api\SystemBuilderController::class,'remove_mouse_web'])->name('remove-mouse-from-system');
     //cooler
     Route::get('/add-cooler/{cooler_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_cooler_web'])->name('add-cooler-to-system');
     Route::get('/remove-cooler',[App\Http\Controllers\api\SystemBuilderController::class,'remove_cooler_web'])->name('remove-cooler-from-system');

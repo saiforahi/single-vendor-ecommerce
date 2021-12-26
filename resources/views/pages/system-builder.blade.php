@@ -1202,7 +1202,7 @@
                                 <a>Expensions / Networking</a>
                             </td>
                             <td colspan="6" class="comps">
-                                <a href="../product/sound-card/index.html">Sound Card</a>, <a
+                                <a href="{{ route('sound-card-list') }}">Sound Card</a>, <a
                                     href="../product/wireless-network-adapter/index.html">Wireless Network Adapter</a>,
                                 <a href="../product/wired-network-adapter/index.html">Wired Network Adapter</a>
                             </td>

@@ -12,6 +12,7 @@ use App\Models\Graphic;
 use App\Models\PowerSupply;
 use App\Models\CaseCooler;
 use App\Models\Keyboard;
+use App\Models\Mouse;
 
 class SystemBuilder
 {
@@ -27,6 +28,7 @@ class SystemBuilder
     private $power_supplier = '';
     private $case_cooler = '';
     private $keyboard = '';
+    private $mouse = '';
     //processor
     public function get_total_price(){
         return $this->total_price;
@@ -63,6 +65,23 @@ class SystemBuilder
     public function remove_keyboard(){
         $this->total_price-=Keyboard::find($this->keyboard)->product->price;
         $this->keyboard="";
+    }
+    //mouse
+    public function set_mouse($mouse_id){
+        $this->total_price+=Mouse::find($mouse_id)->product->price;
+        $this->mouse = $mouse_id;
+    }
+
+    public function get_mouse(){
+        if($this->mouse!=''){
+            return Mouse::findOrFail($this->mouse);
+        }
+        return $this->mouse;
+    }
+
+    public function remove_mouse(){
+        $this->total_price-=Mouse::find($this->mouse)->product->price;
+        $this->mouse="";
     }
     //monitor
     public function set_monitor($monitor_id){

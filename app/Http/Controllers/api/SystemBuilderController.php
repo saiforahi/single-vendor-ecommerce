@@ -325,4 +325,30 @@ class SystemBuilderController extends Controller
         }
         return redirect('/system-builder');
     }
+    //mouse
+    public function add_mouse_web($mouse_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_mouse($mouse_id);
+            session(['system'=>$system]);
+            //dd(Session::get('system'));
+            return redirect('/system-builder');
+            // return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_mouse($mouse_id);
+        session(['system'=>$system]);
+        
+        return redirect('/system-builder');
+        // dd($req->all());
+    }
+    public function remove_mouse_web(){
+        if(Session::has('system') && Session::get('system')->get_mouse()!=''){
+            $system = Session::get('system');
+            $system->remove_mouse();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
 }
