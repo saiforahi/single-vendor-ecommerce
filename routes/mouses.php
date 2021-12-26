@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('mouses')->group(function(){
     Route::post('/create',[App\Http\Controllers\api\MousesController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\MousesController::class,'get_all']);
-    Route::delete('/delete/{id}',[App\Http\Controllers\api\MousesController::class,'delete_laptop']);
+    Route::delete('/delete/{id}',[App\Http\Controllers\api\MousesController::class,'delete']);
     Route::put('/update',[App\Http\Controllers\api\MousesController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\MousesController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\MousesController::class,'details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\MousesController::class,'get_laptop_create_options']);
+    Route::get('/specification/list/{type}',[App\Http\Controllers\api\MousesController::class,'get_create_options']);
 
     Route::get('/images/{id}',[App\Http\Controllers\api\MousesController::class,'get_all_media']);
 

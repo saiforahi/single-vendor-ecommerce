@@ -47,5 +47,52 @@ class MousesController extends Controller
     public function show_details($id){
         return view('pages.mouses.details')->with('mice',Mouse::findOrFail($id));
     }
-    
+    public function delete($id){
+        try{
+            Mouse::findOrFail($id)->delete();
+            return response()->json(['success'=>true,'message'=>'Mouse has been deleted'],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>Mouse::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function get_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'cpu':
+                    foreach( Mouse::all() as $motherboard ){
+                        if(isset(json_decode($motherboard->cpu_specs,true)[$child])){
+                            array_push($list,json_decode($motherboard->cpu_specs,true)[$child]);
+                        }
+                    }
+                    break;
+
+                case 'brand':
+                    foreach( Mouse::all() as $motherboard ){
+                        array_push($list,$motherboard->brand);
+                    }
+                    break;
+                
+                case 'model':
+                    foreach( Mouse::all() as $motherboard ){
+                        array_push($list,$motherboard->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }
