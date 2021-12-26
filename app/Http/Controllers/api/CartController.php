@@ -213,6 +213,19 @@ class CartController extends Controller
                         ]
                     );
                 }
+                //soundcard
+                if(Session::get('system')->get_soundcard()!=''){
+                    
+                    $product = Product::find(Session::get('system')->get_soundcard()->product_id);
+                    Cart::add([
+                        'id' => $product->id, 
+                        'name' => $product->name, 
+                        'qty' => 1, 
+                        'price' => $product->price,
+                        'weight'=>0
+                        ]
+                    );
+                }
                 return redirect()->route('cart');
             }
             Alert::warning('No item to add', 'Your system is empty'); 

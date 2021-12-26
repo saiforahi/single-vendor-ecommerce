@@ -351,4 +351,30 @@ class SystemBuilderController extends Controller
         }
         return redirect('/system-builder');
     }
+    //sound card
+    public function add_soundcard_web($soundcard_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_soundcard($soundcard_id);
+            session(['system'=>$system]);
+            //dd(Session::get('system'));
+            return redirect('/system-builder');
+            // return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_soundcard($soundcard_id);
+        session(['system'=>$system]);
+        
+        return redirect('/system-builder');
+        // dd($req->all());
+    }
+    public function remove_soundcard_web(){
+        if(Session::has('system') && Session::get('system')->get_soundcard()!=''){
+            $system = Session::get('system');
+            $system->remove_soundcard();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
 }

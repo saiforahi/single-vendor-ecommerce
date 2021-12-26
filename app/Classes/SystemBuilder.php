@@ -13,6 +13,7 @@ use App\Models\PowerSupply;
 use App\Models\CaseCooler;
 use App\Models\Keyboard;
 use App\Models\Mouse;
+use App\Models\SoundCard;
 
 class SystemBuilder
 {
@@ -29,6 +30,7 @@ class SystemBuilder
     private $case_cooler = '';
     private $keyboard = '';
     private $mouse = '';
+    private $soundcard = '';
     //processor
     public function get_total_price(){
         return $this->total_price;
@@ -82,6 +84,23 @@ class SystemBuilder
     public function remove_mouse(){
         $this->total_price-=Mouse::find($this->mouse)->product->price;
         $this->mouse="";
+    }
+    //sound card
+    public function set_soundcard($soundcard_id){
+        $this->total_price+=SoundCard::find($soundcard_id)->product->price;
+        $this->soundcard = $soundcard_id;
+    }
+
+    public function get_soundcard(){
+        if($this->soundcard!=''){
+            return SoundCard::findOrFail($this->soundcard);
+        }
+        return $this->soundcard;
+    }
+
+    public function remove_soundcard(){
+        $this->total_price-=SoundCard::find($this->soundcard)->product->price;
+        $this->soundcard="";
     }
     //monitor
     public function set_monitor($monitor_id){
