@@ -58,11 +58,13 @@ class OrderController extends Controller
 
     public function find_sales($from,$to){
         try{
-            $orders=Order::with('customer')->with('payment_type')->where('payment_status','=','paid')->whereBetween('updated_at', [$from, $to])->get();
+            $orders=Order::with('product')->with('customer')->with('payment_type')->where('payment_status','=','paid')->whereBetween('updated_at', [$from, $to])->get();
+            // $orders=Order::with('product')->with('customer')->with('payment_type')->get()->groupBy('tracking_code')->toArray();
             $total_sale=0;
             foreach($orders as $order){
                 $total_sale += $order->product->price * $order->product_qty;
             }
+            $orders=$orders->groupBy('tracking_code')->toArray();
             return response()->json(['status'=>true,'data'=>$orders,'total_sale'=>$total_sale]);
         }
         catch(Exception $e){
