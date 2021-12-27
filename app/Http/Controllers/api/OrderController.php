@@ -72,9 +72,9 @@ class OrderController extends Controller
         }
     }
 
-    public function make_paid($order_id){
+    public function make_paid($tracking_code){
         try{
-            Order::find($order_id)->update(['payment_status'=>'paid']);
+            Order::where('tracking_code',$tracking_code)->update(['payment_status'=>'paid']);
             return response()->json(['status'=>true,'message'=>"Payment Status has been updated"]);
         }
         catch(Exception $e){
