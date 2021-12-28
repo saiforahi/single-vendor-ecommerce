@@ -32,6 +32,7 @@ class CreateExternalHardDrivesRequest extends FormRequest
             'short_name'=>'required|string|max:255',
             'total_images'=>'sometimes|nullable',
             'stock' => 'required|numeric',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }

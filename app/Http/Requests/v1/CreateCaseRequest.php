@@ -35,6 +35,7 @@ class CreateCaseRequest extends FormRequest
             'packaging_specs'=>'sometimes|nullable',
             'physical_specs'=>'sometimes|nullable',
             'stock' => 'required|numeric',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }

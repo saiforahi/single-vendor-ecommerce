@@ -34,6 +34,7 @@ class CreateGraphicsCardRequest extends FormRequest
             'clock_specs'=>'sometimes|nullable|json',
             'additional_specs'=>'sometimes|nullable|json',
             'stock' => 'required|numeric',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }

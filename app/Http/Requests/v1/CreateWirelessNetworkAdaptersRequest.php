@@ -31,6 +31,7 @@ class CreateWirelessNetworkAdaptersRequest extends FormRequest
             'specifications'=>'sometimes|nullable|json',
             'total_images'=>'sometimes|nullable',
             'stock' => 'required|numeric',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }

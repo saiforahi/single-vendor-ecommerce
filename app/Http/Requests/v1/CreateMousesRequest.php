@@ -28,7 +28,7 @@ class CreateMousesRequest extends FormRequest
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
-            
+            'description'=>'sometimes|nullable|string',
             'short_name'=>'required|string|max:255',
             'total_images'=>'sometimes|nullable',
             'stock' => 'required|numeric',

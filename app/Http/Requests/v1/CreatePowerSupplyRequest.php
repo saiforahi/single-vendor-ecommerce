@@ -28,7 +28,7 @@ class CreatePowerSupplyRequest extends FormRequest
             'brand'=> 'required|string|max:255',
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
-            
+            'description'=>'sometimes|nullable|string',
             'total_images'=>'sometimes|nullable',
             'short_name'=>'sometimes|nullable|string',
             'stock' => 'required|numeric',

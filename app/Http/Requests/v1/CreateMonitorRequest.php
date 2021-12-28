@@ -33,6 +33,7 @@ class CreateMonitorRequest extends FormRequest
             'short_name'=>'sometimes|nullable|string',
             'total_images'=>'sometimes|nullable',
             'stock' => 'required|numeric',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }

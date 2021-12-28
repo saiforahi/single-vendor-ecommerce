@@ -37,6 +37,7 @@ class CreateStorageRequest extends FormRequest
             'packaging_specs'=>'sometimes|nullable|json',
             'total_images'=>'sometimes|nullable',
             'stock' => 'required|numeric',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }

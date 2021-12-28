@@ -29,7 +29,7 @@ class CreateKeyBoardsRequest extends FormRequest
             'model'=> 'required|string|max:255',
             'price'=> 'required|numeric',
             
-            
+            'description'=>'sometimes|nullable|string',
             'short_name'=>'sometimes|nullable|string',
             'total_images'=>'sometimes|nullable',
             'stock' => 'required|numeric',

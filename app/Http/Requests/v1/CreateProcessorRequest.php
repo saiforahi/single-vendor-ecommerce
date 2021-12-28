@@ -32,6 +32,7 @@ class CreateProcessorRequest extends FormRequest
             'total_images'=>'sometimes|nullable',
             'short_name'=> 'sometimes|nullable|string',
             'stock' => 'required|numeric',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }

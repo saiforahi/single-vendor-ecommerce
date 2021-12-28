@@ -30,7 +30,8 @@ class CreateCaseCoolerRequest extends FormRequest
             'price'=> 'required|numeric',
             'stock' => 'required|numeric',
             'short_name'=>'sometimes|nullable|string|',
-            'total_images'=>'sometimes|nullable'
+            'total_images'=>'sometimes|nullable',
+            'description'=>'sometimes|nullable|string',
         ];
     }
 }
