@@ -8,6 +8,7 @@ use App\Http\Requests\v1\CreateOrderRequest;
 use Cart;
 use Auth;
 use App\Models\Order;
+use App\Models\Product;
 use App\Models\PaymentType;
 use Alert;
 
@@ -37,6 +38,10 @@ class OrderController extends Controller
             $new_order=Order::create(array_merge($req->all(),$additional));
             $new_order->payment_status='unpaid';
             $new_order->save();
+            //updating stock
+            $product=Product::find($item->id);
+            $product->stock=(int)$product->stock-1;
+            $product->save();
         }
         // $new_order = Order::create(array_merge(['tracking_code'=>$tracking_code],$req->all()));
         Cart::destroy();

@@ -47,5 +47,44 @@ class KeyBoardsController extends Controller
     public function show_details($id){
         return view('pages.keyboards.details')->with('keyboards',KeyBoard::findOrFail($id));
     }
-    
+    public function delete($id){
+        try{
+            Keyboard::findOrFail($id)->delete();
+            return response()->json(['success'=>true,'message'=>'Keyboard has been deleted'],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>Keyboard::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function get_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'brand':
+                    foreach( Keyboard::all() as $keyboard ){
+                        array_push($list,$keyboard->brand);
+                    }
+                    break;
+                
+                case 'model':
+                    foreach( Keyboard::all() as $keyboard ){
+                        array_push($list,$keyboard->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

@@ -68,23 +68,15 @@ class MousesController extends Controller
         try{
             $list = array();
             switch($parent){
-                case 'cpu':
-                    foreach( Mouse::all() as $motherboard ){
-                        if(isset(json_decode($motherboard->cpu_specs,true)[$child])){
-                            array_push($list,json_decode($motherboard->cpu_specs,true)[$child]);
-                        }
-                    }
-                    break;
-
                 case 'brand':
-                    foreach( Mouse::all() as $motherboard ){
-                        array_push($list,$motherboard->brand);
+                    foreach( Mouse::all() as $mouse ){
+                        array_push($list,$mouse->brand);
                     }
                     break;
                 
                 case 'model':
-                    foreach( Mouse::all() as $motherboard ){
-                        array_push($list,$motherboard->model);
+                    foreach( Mouse::all() as $mouse ){
+                        array_push($list,$mouse->model);
                     }
                     break;
                     
