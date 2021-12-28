@@ -17,11 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('cpucoolers')->group(function(){
     Route::post('/create',[App\Http\Controllers\api\CpuCoolerController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\CpuCoolerController::class,'get_all']);
-    Route::delete('/delete/{id}',[App\Http\Controllers\api\CpuCoolerController::class,'delete_laptop']);
+    Route::delete('/delete/{id}',[App\Http\Controllers\api\CpuCoolerController::class,'delete']);
     Route::put('/update',[App\Http\Controllers\api\CpuCoolerController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\CpuCoolerController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\CpuCoolerController::class,'details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\CpuCoolerController::class,'get_laptop_create_options']);
+    Route::get('/specification/list/{parent}/{child}',[App\Http\Controllers\api\CpuCoolerController::class,'get_create_options']);
 
     Route::get('/images/{id}',[App\Http\Controllers\api\CpuCoolerController::class,'get_all_media']);
 

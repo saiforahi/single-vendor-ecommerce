@@ -34,7 +34,15 @@ class MonitorsController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
-    
+    public function delete($id){
+        try{
+            Monitor::findOrFail($id)->delete();
+            return response()->json(['success'=>true,'message'=>'Monitor has been deleted'],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
     public function show_list(){
         // $brands = DB::table('processors')
         // ->select('id','name', 'brand')

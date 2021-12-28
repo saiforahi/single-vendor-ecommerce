@@ -55,4 +55,36 @@ class CpuCoolerController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
+    public function delete($id){
+        try{
+            Mouse::findOrFail($id)->delete();
+            return response()->json(['success'=>true,'message'=>'Mouse has been deleted'],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function get_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'brand':
+                    foreach( Mouse::all() as $mouse ){
+                        array_push($list,$mouse->brand);
+                    }
+                    break;
+                
+                case 'model':
+                    foreach( Mouse::all() as $mouse ){
+                        array_push($list,$mouse->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

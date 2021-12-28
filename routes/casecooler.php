@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('casecoolers')->group(function(){
     Route::post('/create',[App\Http\Controllers\api\CaseCoolerController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\CaseCoolerController::class,'get_all']);
-    Route::delete('/delete/{id}',[App\Http\Controllers\api\CaseCoolerController::class,'delete_laptop']);
+    Route::delete('/delete/{id}',[App\Http\Controllers\api\CaseCoolerController::class,'delete']);
     Route::put('/update',[App\Http\Controllers\api\CaseCoolerController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\CaseCoolerController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\CaseCoolerController::class,'details']);

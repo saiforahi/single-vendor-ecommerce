@@ -57,7 +57,7 @@ class LaptopController extends Controller
 
     public function get_all(){
         try{
-            return response()->json(['success'=>true,'data'=>Laptop::withTrashed()->get()],200);
+            return response()->json(['success'=>true,'data'=>Laptop::with('product')->withTrashed()->get()],200);
         }
         catch(Exception $e){
             return response()->json(['success'=>false,'message'=>$e],500);

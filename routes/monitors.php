@@ -18,7 +18,7 @@ Route::prefix('monitors')->group(function(){
     // Route::post('/create',function(Request $req){return $req->all();});
     Route::post('/create',[App\Http\Controllers\api\MonitorsController::class,'create']);
     Route::get('/all',[App\Http\Controllers\api\MonitorsController::class,'get_all']);
-    Route::delete('/delete/{id}',[App\Http\Controllers\api\MonitorsController::class,'delete_laptop']);
+    Route::delete('/delete/{id}',[App\Http\Controllers\api\MonitorsController::class,'delete']);
     Route::put('/update',[App\Http\Controllers\api\MonitorsController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\MonitorsController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\MonitorsController::class,'details']);
