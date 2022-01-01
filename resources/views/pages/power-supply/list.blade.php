@@ -398,7 +398,7 @@
     <section class="pcb-breadcrumb">
         <h1><span>Select</span> Your Power Supply</h1>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../index.html">Product</a>
+            <i class="fa fa-angle-right"></i><a href="#">Product</a>
             <i class="fa fa-angle-right"></i><a href="{{ route('power-supply-list') }}">Power Supply</a>
         </span>
     </section>
@@ -836,7 +836,7 @@
                             @foreach ($power_supplies as $power_supplier)
                                 <tr class="items" data-href="#">
                                     <td scope="row" class="component d-sm-none">
-                                        <a href="index.html">#</a>
+                                        <a href="#">#</a>
                                     </td>
                                     <td class="box">
                                         <div class="logo-name">
@@ -846,7 +846,7 @@
                                                     class="img-responsive lazy img-fluid"
                                                     data-src="{{ count($images) > 0 ? $images[0]->getUrl('main_image') : asset('images/dummy-thumbnail') }}"
                                                     title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                                    alt="pc builder, custom pc builder, pc part picker, build my pc, Corsair RM750">
+                                                    >
                                                 <div class="stars-rating" title="4.6 out of 5">
                                                     <div class="stars-score" style="width: 92%">
                                                         <i class="fas fa-star"></i>
@@ -868,16 +868,15 @@
                                     </td>
                                     <td class="comp-details">
                                         <div class="table_title"><a
-                                                href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}">Corsair
-                                                RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply</a></div>
+                                                href="{{ route('power-supply-details', ['id' => $power_supplier->id]) }}">{{$power_supplier->name}}</a></div>
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> Corsair </div>
+                                                <div class="detail__value f_brand">{{$power_supplier->product->brand}}</div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> RM750 </div>
+                                                <div class="detail__value f_model">{{$power_supplier->product->model}}</div>
                                             </div>
                                         </span>
                                         <span class="table_span">

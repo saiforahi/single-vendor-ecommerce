@@ -264,7 +264,7 @@
     <style>
         .sticky {
             /*position: sticky!important;
-            top: 80px;*/
+                top: 80px;*/
         }
 
     </style>
@@ -280,10 +280,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>AMD Ryzen Threadripper 3990X (100-100000163WOF)</h2>
-        <span><a href="../../../index.html">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/processor/index.html">Processor</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">AMD Ryzen Threadripper 3990X</a></span>
+        <h2>{{$processor->name}}</h2>
+        <span><a href="{{route('home')}}">Home</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('processor-list')}}">Processor</a>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$processor->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -291,14 +291,15 @@
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($processor->product->getMedia('main_image') as $image)
-                        <div class="{{ $loop->index == 0 ? 'carousel-item img-gradient active':'carousel-item img-gradient' }}">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                data-src="{{$image->getUrl('main_image')}}"
-                                alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
-                        </div>
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                    data-src="{{ $image->getUrl('main_image') }}"
+                                    alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
+                            </div>
                         @endforeach
-                        
+
                     </div>
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
@@ -310,12 +311,13 @@
                     </a>
                     <ol class="carousel-indicators">
                         @foreach ($processor->getMedia('main_image') as $image)
-                        <li data-target="#main-carousel" data-slide-to="{{$loop->index}}" class="{{$loop->index==0?'active':''}}">
-                        </li>
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
                         @endforeach
                     </ol>
                 </div>
-                
+
                 <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">General</span>
@@ -326,7 +328,8 @@
                                 nm</span></div>
                         <div class="level2"><span class="key">Maximum Number of PCIe Lanes</span> :
                             <span>88 (Revision
-                                4.0)</span></div>
+                                4.0)</span>
+                        </div>
                         <div class="level2"><span class="key">Unlocked</span> : <span>Yes</span></div>
                     </div>
                     <div class="level1"><span class="title">Performance</span>
@@ -369,9 +372,9 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>{{$processor->name}}</h1>
+                <h1>{{ $processor->name }}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.4 out of 5">
                         <div class="stars-score" style="width: 88%">
@@ -396,18 +399,9 @@
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
                 <div class="description">
-                    <p>Engineered for the enthusiast and professionals, the AMD Ryzen Threadripper 3990X comes up with
-                        world-beating 64 Cores & 128 processing threads for ultimate performance. The processor is
-                        suitable for professional gamers and for heavy video editing.
-                    </p>
-                    <p>
-                        With the AMD Ryzen Threadripper 3990X Processor, you can smoothly run any CPU-intensive tasks
-                        like post-processing, 3D Modeling, etc., and the 3990X's 64 cores and 128 threads help
-                        streamline and speed up the process. Apart from this, the processor has a base clock of 2.9 GHz
-                        and a max boost clock of 4.3 GHz.
-                    </p>
+                    {{$processor->product->description}}
                 </div>
-                
+
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
                     <ul>
@@ -424,11 +418,12 @@
                         <li><span>The Ryzen Threadripper 3990X isn't Bundled with any Default Cooler.</span></li>
                     </ul>
 
-                    
+
                     <div class="align-button">
-                        <a href="{{route('add-product-to-cart',['product_id'=>$processor->product->id])}}" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="{{ route('add-processor-to-system', ['processor_id' => $processor->id]) }}" class="btn btn-primary btn1 ">Add to System Builder</a>
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $processor->product->id]) }}"
+                            class="btn btn-primary btn2 "><i class="fa fa-plus"></i> Add Product to Cart</a>
+                        <a href="{{ route('add-processor-to-system', ['processor_id' => $processor->id]) }}"
+                            class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
             </div>
@@ -443,7 +438,8 @@
                             nm</span></div>
                     <div class="level2"><span class="key">Maximum Number of PCIe Lanes</span> :
                         <span>88 (Revision
-                            4.0)</span></div>
+                            4.0)</span>
+                    </div>
                     <div class="level2"><span class="key">Unlocked</span> : <span>Yes</span></div>
                 </div>
                 <div class="level1"><span class="title">Performance</span>

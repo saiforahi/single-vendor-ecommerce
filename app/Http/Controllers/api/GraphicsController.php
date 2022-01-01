@@ -35,7 +35,23 @@ class GraphicsController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
-    
+    public function delete($id){
+        try{
+            Graphic::findOrFail($id)->delete();
+            return response()->json(['success'=>true,'message'=>'Graphic has been deleted'],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>Graphic::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
     public function show_list(){
         // $brands = DB::table('processors')
         // ->select('id','name', 'brand')
@@ -47,5 +63,27 @@ class GraphicsController extends Controller
     public function show_details($id){
         return view('pages.graphics-cards.details')->with('graphic',Graphic::findOrFail($id));
     }
-    
+    public function get_create_options($parent,$child){
+        try{
+            $list = array();
+            switch($parent){
+                case 'brand':
+                    foreach( Graphic::all() as $graphic ){
+                        array_push($list,$graphic->brand);
+                    }
+                    break;
+                
+                case 'model':
+                    foreach( Graphic::all() as $graphic ){
+                        array_push($list,$graphic->model);
+                    }
+                    break;
+                    
+            }
+            return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
 }

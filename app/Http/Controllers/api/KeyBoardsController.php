@@ -45,7 +45,7 @@ class KeyBoardsController extends Controller
         return view('pages.keyboards.list')->with('keyboards',KeyBoard::with('product')->get())->with('brands',KeyBoard::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.keyboards.details')->with('keyboards',KeyBoard::findOrFail($id));
+        return view('pages.keyboards.details')->with('keyboard',KeyBoard::findOrFail($id));
     }
     public function delete($id){
         try{
@@ -87,4 +87,5 @@ class KeyBoardsController extends Controller
             return response()->json(['success'=>false,'message'=>$e],500);
         }
     }
+    
 }

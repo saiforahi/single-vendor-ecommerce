@@ -818,18 +818,15 @@
                                     </td>
                                     <td class="comp-details">
                                         <div class="table_title"><a
-                                                href="../../component-details/keyboard/corsair-k55-rgb-ch-9206015-na/index.html">Corsair
-                                                K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable
-                                                Macro
-                                                Keys, and Dedicated Media Keys</a></div>
+                                                href="{{route('keyboard-details',['id'=>$keyboard->id])}}">{{$keyboard->name}}</a></div>
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> Corsair </div>
+                                                <div class="detail__value f_brand">{{$keyboard->product->brand}}</div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> K55 RGB </div>
+                                                <div class="detail__value f_model">{{$keyboard->product->model}}</div>
                                             </div>
                                         </span>
                                         <span class="table_span">

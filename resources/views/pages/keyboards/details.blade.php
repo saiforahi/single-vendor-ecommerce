@@ -279,65 +279,26 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Corsair K55 RGB (CH-9206015-NA)</h2>
+        <h2>{{$keyboard->product->name}}</h2>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/keyboard/index.html">Keyboard</a>
-            <i class="fa fa-angle-right"></i><a href="keyboard-details">Corsair K55 RGB</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('keyboard-list')}}">Keyboard</a>
+            <i class="fa fa-angle-right"></i><a href="keyboard-details">{{$keyboard->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
             <div class="col-12 col-md-3">
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/41SIjKK4BKL.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/51whyCAgh3L.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/51cyhxilDtL.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/514ZRBbUTLL.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/51JURF+timL.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/51PISIyXGtL.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/51ns1kyTdmL.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and Dedicated Media Keys"
-                                data-src="https://m.media-amazon.com/images/I/41I+98IiNlL.jpg"
-                                alt="Build My PC, PC Builder, Corsair K55 RGB">
-                        </div>
+                        @foreach ($keyboard->product->getMedia('main_image') as $image)
+                            <div class="{{ $loop->index == 0 ? 'carousel-item img-gradient active':'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="G.SKILL Trident Z Royal Series, 16GB (2 x 8GB) 288-Pin DDR4-4800MHz Desktop Memory Model with CL18"
+                                    data-src="{{$image->getUrl('main_image')}}"
+                                    alt="Build My PC, System Builder, G.Skill Trident Z Royal">
+                            </div>
+                        @endforeach
                     </div>
+                    @if(count($keyboard->product->getMedia('main_image'))>1)
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
                         <span class="sr-only" aria-hidden="true">Prev</span>
@@ -346,24 +307,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
+                    @endif
 
                     <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="6">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="7">
-                        </li>
+                        @foreach ($keyboard->product->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
                     </ol>
                 </div>
                 

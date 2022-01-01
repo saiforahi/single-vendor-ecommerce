@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('brand')->nullable();
             $table->string('model')->nullable();
             $table->longText('description')->nullable();
+            $table->longText('features')->nullable();
             $table->nullableMorphs('extendable');
             $table->integer('price')->nullable();
             $table->float('weight',8,2)->default(0.0);

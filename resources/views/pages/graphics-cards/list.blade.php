@@ -909,12 +909,12 @@
                                                     {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory'] }}
                                                 </div>
                                             </div>
-                                            <div class="detail">
+                                            {{-- <div class="detail">
                                                 <div class="detail__name">Memory Interface:</div>
                                                 <div class="detail__value f_memory_interface">
                                                     {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory_interface'] }}
                                                 </div>
-                                            </div>
+                                            </div> --}}
                                             <div class="detail">
                                                 <div
                                                     class="d
@@ -942,7 +942,7 @@
                                             <div class="detail">
                                                 <div class="detail__name">Base Clock:</div>
                                                 <div class="detail__value f_base_clock">
-                                                    {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['base_clock'] }}
+                                                    {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['base_clock_speed'] }}
                                                 </div>
                                             </div>
                                             <div class="detail">
