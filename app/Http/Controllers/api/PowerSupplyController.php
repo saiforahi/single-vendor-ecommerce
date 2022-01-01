@@ -55,6 +55,14 @@ class PowerSupplyController extends Controller
     public function show_details($id){
         return view('pages.power-supply.details')->with('power_supplies',PowerSupply::findOrFail($id));
     }
+    public function get_all(){
+        try{
+            return response()->json(['success'=>true,'data'=>PowerSupply::with('product')->withTrashed()->get()],200);
+        }
+        catch(Exception $e){
+            return response()->json(['success'=>false,'message'=>$e],500);
+        }
+    }
     public function get_power_supply_create_options($parent,$child){
         try{
             $list = array();
