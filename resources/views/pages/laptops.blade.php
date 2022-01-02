@@ -691,7 +691,7 @@
                                     <p>Do you know what makes a business laptop different from other laptops? Its the
                                         way they work and handle the data for you. It should be smaller in size, so you
                                         can carry it easily with you.</p>
-                                    <p>So if you're here to buy a professional laptop, then here at PC Builder; we've
+                                    <p>So if you're here to buy a professional laptop, then here at System Builder; we've
                                         also picked some of the best laptops which are handy for your work.</p>
                                 </div>
                                 <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"

@@ -15,7 +15,7 @@
                     <p>Building your own PC is a rewarding experience. With our new approach, <br>we'll help you to
                         be sure that the compatibility of your selected PC parts is just right.</p>
                     <div class="">
-                        <a class="btn btn-create-now" href="list/index.html">Create Now</a>
+                        <a class="btn btn-create-now" href="{{route('system-builder')}}">Create Now</a>
                         <a class="btn btn-pre-built" href="builts/index.html">Buy Pre-built PC</a>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <p>We handle the toughest task of PC compatibility with easeand provide <br>you with the best
                         compatibility that's available.</p>
                     <div class="">
-                        <a class="btn btn-create-now" href="list/index.html">Create Now</a>
+                        <a class="btn btn-create-now" href="{{route('system-builder')}}">Create Now</a>
                         <a class="btn btn-pre-built" href="builts/index.html">Buy Pre-built PC</a>
                     </div>
                 </div>

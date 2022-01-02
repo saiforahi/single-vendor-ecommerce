@@ -290,73 +290,17 @@
             <div class="col-12 col-md-3">
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51GC1-pJzWL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51RuXezRg1L.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51LhqgpUJGL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51fhuOovLGL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51GuzIOgqDL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51-jWnnr7DL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/41wvTROEKOL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51jXJZKiNbL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51UE77wF4fL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51AJ2MdxJrL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="ASRock MB TRX40 Creator AMD Ryzen Threadripper sTRX4 TRX40 Max256GB DR4 ATX"
-                                data-src="https://m.media-amazon.com/images/I/51XSrz01FAL.jpg"
-                                alt="Build My PC, PC Builder, ASRock TRX40 CREATOR">
-                        </div>
+                        @foreach ($motherboard->product->getMedia('main_image') as $image)
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                    data-src="{{ $image->getUrl('main_image') }}"
+                                    alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
+                            </div>
+                        @endforeach
                     </div>
+                    @if(count($motherboard->product->getMedia('main_image'))>1)
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
                         <span class="sr-only" aria-hidden="true">Prev</span>
@@ -365,29 +309,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
-                    <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="6">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="7">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="8">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="9">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="10">
-                        </li>
+                    @endif
+                    <ol>
+                        @foreach ($motherboard->product->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
+
                     </ol>
                 </div>
                 
@@ -558,7 +487,7 @@
                         <li><span>Chipset AMD TRX40 (CPU Socket Type sTRX4)</span></li>
                         <li><span>Supports DDR4 4666(OC)+/ 4600(OC)/ 4533(OC)/ 4466(OC)/ 4400(OC)/ 4333(OC)/ 4266(OC)/
                                 4200(OC)/ 4133(OC)/ 4000(OC)/ 3866(OC)/ 3800(OC)/ 3733(OC)/ 3600(OC)/ 3466(OC)/ 3200/ 2933/
-                                2667/ 2400/ 2133 ECC & non-ECC, un-buffered memory (U-DIMM)</span></li>
+                                2667/ 2400/ 2133 ECC & non-ECC, un-buffered motherboard (U-DIMM)</span></li>
                         <li><span>Maximum Memory Supported 256GB</span></li>
                         <li><span>Channel Supported Quad Channel</span></li>
                         <li><span>Number of Memory Slots 8×288pin</span></li>
@@ -568,10 +497,9 @@
                     <div class="budget-price">$786.86(Used)</div>
                     
                     <div class="align-button">
-                        <a href="{{route('add-product-to-cart',['product_id'=>$motherboard->product->id])}}" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B081JX35ZK?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $motherboard->product->id]) }}" class="btn btn-primary btn2 ">Add Product to Cart</a>
+                        <a href="{{ route('add-motherboard-to-system', ['mouse_id' => $motherboard->id]) }}"
+                            class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
             </div>

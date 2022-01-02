@@ -321,8 +321,7 @@
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>Corsair K55 RGB Gaming Keyboard with IP42 Dust, Water Resistance, 6 Programmable Macro Keys, and
-                    Dedicated Media Keys</h1>
+                <h1>{{$keyboard->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.6 out of 5">
                         <div class="stars-score" style="width: 92%">
@@ -371,16 +370,35 @@
                     </ul>
 
                     
-                    <div class="budget-price">$38</div>
+                    <div class="budget-price">{{$keyboard->product->price}}</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('keyboard',1)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
-                        <a href="https://amazon.com/dp/B01M4LIKLI?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $keyboard->product->id]) }}" class="btn btn-primary btn2 "> Add Product to Cart</a>
+                        <a href="{{ route('add-keyboard-to-system', ['keyboard_id' => $keyboard->id]) }}"
+                            class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 @endsection
+
+
+@if(count($keyboard->product->getMedia('main_image'))>1)
+                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon temp"></span>
+                        <span class="sr-only" aria-hidden="true">Prev</span>
+                    </a>
+                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only" aria-hidden="true">Next</span>
+                    </a>
+                    @endif
+                    <ol>
+                        @foreach ($keyboard->product->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
+
+                    </ol>

@@ -279,83 +279,27 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Logitech G502 Hero (910-005469)</h2>
+        <h2>{{$mouse->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/mouse/index.html">Mouse</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('mouse-details')}}">Logitech G502 Hero</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('mouse-details',['id'=>$mouse->id])}}">{{$mouse->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
             <div class="col-12 col-md-3">
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/31BzhyIRe5L.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/5119Ir6HMnL.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41x-NpMYPGL.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41dGl0VSuUL.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41toTtSU-9L.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41p1qzxbQUL.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41+5w8Vw6VL.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41xgFsyVL5L.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41xJD6KPuVL.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/41XDi16a0ML.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Logitech G502 Hero High Performance Gaming Mouse"
-                                data-src="https://m.media-amazon.com/images/I/51mfqMdTOFL.jpg"
-                                alt="Build My PC, PC Builder, Logitech G502 Hero">
-                        </div>
+                        @foreach ($mouse->product->getMedia('main_image') as $image)
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                    data-src="{{ $image->getUrl('main_image') }}"
+                                    alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
+                            </div>
+                        @endforeach
                     </div>
+                    @if(count($mouse->product->getMedia('main_image'))>1)
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
                         <span class="sr-only" aria-hidden="true">Prev</span>
@@ -364,36 +308,21 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
-                    <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="6">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="7">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="8">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="9">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="10">
-                        </li>
+                    @endif
+                    <ol>
+                        @foreach ($mouse->product->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
+
                     </ol>
                 </div>
 
             </div>
 
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>Logitech G502 Hero High Performance Gaming Mouse</h1>
+                <h1>{{$mouse->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.4 out of 5">
                         <div class="stars-score" style="width: 88%">
@@ -424,7 +353,7 @@
                         <li><span>High performance Hero 16K sensor: Logitech's most accurate sensor yet with up to 16,000
                                 DPI for the ultimate in gaming speed, accuracy and responsiveness across entire DPI
                                 range</span></li>
-                        <li><span>11 customizable buttons and onboard memory: Assign custom commands to the buttons and save
+                        <li><span>11 customizable buttons and onboard mouse: Assign custom commands to the buttons and save
                                 up to five ready to play profiles directly to the mouse</span></li>
                         <li><span>Adjustable weight system: Arrange up to five removable 3.6 grams weights inside the mouse
                                 for personalized weight and balance tuning</span></li>
@@ -437,13 +366,13 @@
                     </ul>
 
 
-                    <div class="budget-price">$44.22</div>
+                    <div class="budget-price">{{$mouse->product->price}}</div>
 
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('mouse',1)" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
-                        <a href="https://amazon.com/dp/B07GBZ4Q68?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $mouse->product->id]) }}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i> Add Product to Cart</a>
+                        <a href="{{ route('add-mouse-to-system', ['mouse_id' => $mouse->id]) }}"
+                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i>Add to System Builder</a>
                     </div>
                 </div>
             </div>

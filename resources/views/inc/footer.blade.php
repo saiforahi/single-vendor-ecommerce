@@ -29,10 +29,10 @@
                 <div class="logo">
                     <a href="index.html">
                         <img class="ml-auto mx-lg-0 lazy" src="https://images.pcbuilder.dev/assets/images/logo-80.png" alt="PC Builder">
-                        <p class="mr-auto mx-lg-0"><span>PC</span>Builder</p>
+                        <p class="mr-auto mx-lg-0"><span>System</span>Builder</p>
                     </a>
                 </div>
-                <p>PC Builder is a tool that makes PC building easier than ever. You can choose from a range of
+                <p>System Builder is a tool that makes PC building easier than ever. You can choose from a range of
                     components and check the compatibility with your system to build your perfect PC.
                 </p>
                 <p>
@@ -109,7 +109,7 @@
         </div>
         <hr style="margin: 0 15%; background-color:#ffffff2b;" class="mt-1 mb-4">
 
-        <p class="text-center">PC Builder is a participant of the Amazon Associates Program, through which we earn
+        <p class="text-center">System Builder is a participant of the Amazon Associates Program, through which we earn
             advertising commission on qualified sales by linking to the Amazon products.</p>
     </div>
 
@@ -117,7 +117,7 @@
     <div class="footer-copyright py-2">
         <div class="px-md-3 text-center copyright-flex d-md-block">
             <div class="float-lg-left order-2">
-                Copyright © 2020 <a href="index.html">PC Builder</a> | All Rights Reserved.
+                Copyright © 2022 <a href="index.html">System Builder</a> | All Rights Reserved.
             </div>
             <div class="float-lg-right order-1">
                 <a href="disclosure/index.html">Disclosure</a> | <a href="privacy-policy/index.html">Privacy

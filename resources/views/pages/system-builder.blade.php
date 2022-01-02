@@ -88,7 +88,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $processor->name }}</a>
+                                            href="{{route('processor-details',['id'=>$processor->id])}}">{{ $processor->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -160,8 +160,7 @@
                                 <td class="price">
                                     ৳ {{ $processor->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
-                                        System Builder</a></td>
+                                        href="{{route('processor-details',['id'=>$processor->id])}}" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="processor0"
                                         href="{{ route('remove-processor-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -209,7 +208,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $motherboard->name }}</a>
+                                            href="{{route('motherboard-details',['id'=>$processor->id])}}">{{ $motherboard->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -282,8 +281,7 @@
                                 <td class="price">
                                     ৳ {{ $motherboard->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
-                                        System Builder</a></td>
+                                        href="{{route('motherboard-details',['id'=>$processor->id])}}" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-motherboard-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -329,7 +327,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $cooler->name }}</a>
+                                            href="{{route('cpu-coolers-details',['id'=>$cooler->id])}}">{{ $cooler->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -402,8 +400,7 @@
                                 <td class="price">
                                     ৳ {{ $cooler->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
-                                        System Builder</a></td>
+                                        href="{{route('cpu-coolers-details',['id'=>$cooler->id])}}" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-cooler-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -448,7 +445,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $casing->name }}</a>
+                                            href="{{route('case-details',['id'=>$casing->id])}}">{{ $casing->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -521,8 +518,7 @@
                                 <td class="price">
                                     ৳ {{ $casing->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
-                                        System Builder</a></td>
+                                        href="{{route('case-details',['id'=>$casing->id])}}" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-casing-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -567,7 +563,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="/component-details/processor/amd-ryzen-threadripper-3990x-100-100000163wof/">{{ $graphic->name }}</a>
+                                            href="{{route('graphics-cards-details',['id'=>$graphic->id])}}">{{ $graphic->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -640,8 +636,7 @@
                                 <td class="price">
                                     ৳ {{ $graphic->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="https://amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20" target="_blank">Buy from
-                                        System Builder</a></td>
+                                        href="{{route('graphics-cards-details',['id'=>$graphic->id])}}" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-graphic-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -660,7 +655,7 @@
                             @if (Session::has('system') && Session::get('system')->get_memory() != '')
                                 <?php $memory = Session::get('system')->get_memory(); ?>
                                 <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
+                                    <a href="#">#</a>
                                 </td>
                                 <td class="box">
                                     <div class="logo-name">
@@ -764,7 +759,7 @@
                                 <?php $storage = Session::get('system')->get_storage(); ?>
 
                                 <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
+                                    <a href="#">#</a>
                                 </td>
                                 <td class="box">
                                     <div class="logo-name">
@@ -863,7 +858,7 @@
                                 <?php $case_cooler = Session::get('system')->get_case_cooler(); ?>
 
                                 <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
+                                    <a href="#">#</a>
                                 </td>
                                 <td class="box">
                                     <div class="logo-name">
@@ -963,7 +958,7 @@
                                 <?php $power_supplier = Session::get('system')->get_power_supplier(); ?>
 
                                 <td scope="row" class="component d-sm-none">
-                                    <a href="index.html">#</a>
+                                    <a href="#">#</a>
                                 </td>
                                 <td class="box">
                                     <div class="logo-name">
@@ -1316,9 +1311,9 @@
                                 <a>Expensions / Networking</a>
                             </td>
                             <td colspan="6" class="comps">
-                                <a href="{{ route('sound-card-list') }}">Sound Card</a>, <a
-                                    href="../product/wireless-network-adapter/index.html">Wireless Network Adapter</a>,
-                                <a href="../product/wired-network-adapter/index.html">Wired Network Adapter</a>
+                                <a href="{{ route('sound-card-list') }}">Sound Card</a>, 
+                                <a href="../product/wireless-network-adapter/#">Wireless Network Adapter</a>,
+                                <a href="../product/wired-network-adapter/#">Wired Network Adapter</a>
                             </td>
                         </tr>
                         <tr class="items extra">
@@ -1326,9 +1321,9 @@
                                 <a>Softwares</a>
                             </td>
                             <td colspan="6" class="comps">
-                                <a href="../product/softwares/index.html#operating-system">Operating System</a>, <a
-                                    href="../product/softwares/index.html#antivirus">Antivirus</a>, <a
-                                    href="../product/softwares/index.html#utilities">Utilities</a>
+                                <a href="../product/softwares/##operating-system">Operating System</a>, <a
+                                    href="../product/softwares/##antivirus">Antivirus</a>, <a
+                                    href="../product/softwares/##utilities">Utilities</a>
                             </td>
                         </tr>
                     </tbody>

@@ -45,7 +45,7 @@ class MousesController extends Controller
         return view('pages.mouses.list')->with('mice',Mouse::with('product')->get())->with('brands',Mouse::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.mouses.details')->with('mice',Mouse::findOrFail($id));
+        return view('pages.mouses.details')->with('mouse',Mouse::findOrFail($id));
     }
     public function delete($id){
         try{
