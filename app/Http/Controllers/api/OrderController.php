@@ -11,6 +11,7 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\PaymentType;
 use Alert;
+use Session;
 
 class OrderController extends Controller
 {
@@ -45,6 +46,11 @@ class OrderController extends Controller
         }
         // $new_order = Order::create(array_merge(['tracking_code'=>$tracking_code],$req->all()));
         Cart::destroy();
+        if(Session::get('system')!=null){
+            $system = Session::get('system');
+            $system->reset();
+            session(['system'=>$system]);
+        }
         Alert::success('Thank you!', 'Your order has been placed'); 
         return redirect()->route('home');
         

@@ -31,6 +31,23 @@ class SystemBuilder
     private $keyboard = '';
     private $mouse = '';
     private $soundcard = '';
+    //reset system builder
+    public function reset(){
+        $this->total_price=0;
+        $this->processor = '';
+        $this->motherboard = '';
+        $this->storage = '';
+        $this->memory = '';
+        $this->cooler = '';
+        $this->casing = '';
+        $this->graphic = '';
+        $this->monitor = '';
+        $this->power_supplier = '';
+        $this->case_cooler = '';
+        $this->keyboard = '';
+        $this->mouse = '';
+        $this->soundcard = '';
+    }
     //processor
     public function get_total_price(){
         return $this->total_price;
