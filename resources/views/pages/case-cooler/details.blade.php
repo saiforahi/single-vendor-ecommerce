@@ -367,22 +367,10 @@
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Addressable RGB color- addressable RGB that achieves full Color customization. Certified
-                                compatible with as US aura, ASROCK RGB, and MSI RGB.. Air flow - 59 CFM. Noise level - 25.0
-                                decibels</span></li>
-                        <li><span>Silent cooling Technology - a mix of noise reduction technology and sound absorbing rubber
-                                pads for peace and quiet even when your PC is working overtime.</span></li>
-                        <li><span>Hybrid design- a combination of both Jet engine and helicopter blade designs gives you the
-                                static air pressure you need without sacrificing airflow.</span></li>
-                        <li><span>Smart Fan sensor for jam protection - never worry about your cables getting snagged or
-                                components being mucked up ever again.</span></li>
-                        <li><span>Wired addressable RGB Controller– even without an addressable RGB Capable motherboard, the
-                                included controller allows customize colors, brightness and effects</span></li>
-                    </ul>
+                   {{$case_cooler->product->features}}
 
 
-                    <div class="budget-price">$105.99</div>
+                    <div class="budget-price">৳ {{ $case_cooler->product->price }}</div>
 
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$case_cooler->product->id])}}" class="btn btn-primary btn2 "><i

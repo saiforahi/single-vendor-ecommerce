@@ -349,24 +349,10 @@
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>High performance Hero 16K sensor: Logitech's most accurate sensor yet with up to 16,000
-                                DPI for the ultimate in gaming speed, accuracy and responsiveness across entire DPI
-                                range</span></li>
-                        <li><span>11 customizable buttons and onboard mouse: Assign custom commands to the buttons and save
-                                up to five ready to play profiles directly to the mouse</span></li>
-                        <li><span>Adjustable weight system: Arrange up to five removable 3.6 grams weights inside the mouse
-                                for personalized weight and balance tuning</span></li>
-                        <li><span>Programmable RGB Lighting and Lightsync technology: Customize lighting from nearly 16.8
-                                million colors to match your team's colors, sport your own or sync colors with other
-                                Logitech G gear</span></li>
-                        <li><span>Mechanical switch button tensioning: Metal spring tensioning system and pivot hinges are
-                                built into left and right gaming mouse buttons for a crisp, clean click feel with rapid
-                                click feedback</span></li>
-                    </ul>
+                    {{$mouse->product->features}}
 
 
-                    <div class="budget-price">{{$mouse->product->price}}</div>
+                    <div class="budget-price">৳ {{$mouse->product->price}}</div>
 
                     <div class="align-button">
                         <a href="{{ route('add-product-to-cart', ['product_id' => $mouse->product->id]) }}" class="btn btn-primary btn2 "><i

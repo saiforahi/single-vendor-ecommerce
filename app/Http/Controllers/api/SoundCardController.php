@@ -45,7 +45,7 @@ class SoundCardController extends Controller
         return view('pages.sound-card.list')->with('sound_cards',SoundCard::with('product')->get())->with('brands',SoundCard::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.sound-card.details')->with('sound_cards',SoundCard::findOrFail($id));
+        return view('pages.sound-card.details')->with('sound_card',SoundCard::findOrFail($id));
     }
     
 }

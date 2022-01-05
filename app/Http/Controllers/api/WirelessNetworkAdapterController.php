@@ -45,7 +45,7 @@ class WirelessNetworkAdapterController extends Controller
         return view('pages.wireless-network-adapter.list')->with('wireless_network_adapters',WirelessNetworkAdapter::with('product')->get())->with('brands',WirelessNetworkAdapter::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.wireless-network-adapter.details')->with('wireless_network_adapters',WirelessNetworkAdapter::findOrFail($id));
+        return view('pages.wireless-network-adapter.details')->with('wireless_network_adapter',WirelessNetworkAdapter::findOrFail($id));
     }
     
 }

@@ -418,20 +418,10 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>New features: Front I/O USB Type-C Port and Tempered glass side panel with single screw
-                                installation</span></li>
-                        <li><span>Enhanced cable management: Our patented cable routing kit with pre-installed channels and
-                                straps makes wiring easy and intuitive</span></li>
-                        <li><span>STREAMLINED COOLING: Two Aer F120mm fans included for optimal internal airflow and the
-                                front panel and PSU intakes include removable filters, removable bracket designed for
-                                radiators up to 240mm - simplifies the installation of either closed-loop or custom-loop
-                                water cooling</span></li>
-                        <li><span>Motherboard support: Mini-ITX, MicroATX, and ATX</span></li>
-                    </ul>
+                    {{$casing->product->features}}
 
                     
-                    <div class="budget-price">${{$casing->product->price}}</div>
+                    <div class="budget-price">৳ {{$casing->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$casing->product->id])}}" class="btn btn-primary btn2 "><i

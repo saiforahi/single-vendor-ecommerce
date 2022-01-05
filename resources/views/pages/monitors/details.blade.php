@@ -179,20 +179,10 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>This 24" screen has a Full HD 1920x1080 resolution.</span></li>
-                        <li><span>The 1500R curved monitor (VA panel) wrapping around your vision for an immersive gaming
-                                experience.</span></li>
-                        <li><span>The height adjustable stand for optimum ergonomics.</span></li>
-                        <li><span>It has 3-Sided frameless design with ultra-narrow borders for the ultimate multi-monitor
-                                setup.</span></li>
-                        <li><span>It has 1ms response time, so you can view fast moving scenes without any lag or ghosting
-                                effect.</span></li>
-                        <li><span>The refresh of this display is 144Hz which is quite good.</span></li>
-                    </ul>
+                    {{$monitor->product->features}}
 
                     
-                    <div class="budget-price">$199.99</div>
+                    <div class="budget-price">৳ {{$monitor->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$monitor->product->id])}}" class="btn btn-primary btn2 "><i

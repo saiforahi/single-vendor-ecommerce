@@ -45,7 +45,7 @@ class WiredNetworkAdapterController extends Controller
         return view('pages.wired-network-adapter.list')->with('wired_network_adapters',WiredNetworkAdapter::with('product')->get())->with('brands',WiredNetworkAdapter::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.wired-network-adapter.details')->with('wired_network_adapters',WiredNetworkAdapter::findOrFail($id));
+        return view('pages.wired-network-adapter.details')->with('wired_network_adapter',WiredNetworkAdapter::findOrFail($id));
     }
     
 }

@@ -430,16 +430,10 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Chipset: NVIDIA GeForce RTX 3090</span></li>
-                        <li><span>TRI FROZR 2 Thermal Design</span></li>
-                        <li><span>Video Memory: 24GB GDDR6X</span></li>
-                        <li><span>Memory Interface: 384-bit</span></li>
-                        <li><span>Output: DisplayPort x 3 (v1.4a) / HDMI 2.1 x 1</span></li>
-                    </ul>
+                    {{$graphic->product->features}}
 
                     
-                    <div class="budget-price">$3,299</div>
+                    <div class="budget-price">৳ {{$graphic->product->price}}</div>
                    
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$graphic->product->id])}}" class="btn btn-primary btn2 "><i

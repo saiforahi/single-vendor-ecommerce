@@ -359,18 +359,10 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>USB 3.0 and USB 2.0 Compatibility</span></li>
-                        <li><span>Fast data transfers</span></li>
-                        <li><span>Improve PC Performance</span></li>
-                        <li><span>High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7;
-                                Reformatting may be required for other operating systems; Compatibility may vary depending
-                                on user’s hardware configuration and operating system</span></li>
-                        <li><span>2 year manufacturer's limited warranty</span></li>
-                    </ul>
+                    {{$external_hard_drive->product->features}}
 
                     
-                    <div class="budget-price">$49.99</div>
+                    <div class="budget-price">৳ {{$external_hard_drive->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$external_hard_drive->product->id])}}"

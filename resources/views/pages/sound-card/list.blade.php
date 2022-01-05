@@ -683,16 +683,15 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/sound-card/creative-sb1780/index.html">Creative
-                                            Sound Blaster AE-9 PCIe x1 7.1 Channel High Performance Sound Card</a></div>
+                                            href="{{ route('sound-card-details', ['id' => $sound_card->id]) }}">{{ $sound_card->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Creative </div>
+                                            <div class="detail__value f_brand"> {{ $sound_card->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> SB1780 </div>
+                                            <div class="detail__value f_model"> {{ $sound_card->brand }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

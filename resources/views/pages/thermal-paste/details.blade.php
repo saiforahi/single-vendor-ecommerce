@@ -332,23 +332,13 @@ font-size: 26px;
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>It guarantees that heat generated from the CPU or GPU is dissipated efficiently.</span>
-                        </li>
-                        <li><span>In contrast to metal and silicon thermal compound, the MX-4 does not compromise over
-                                time.</span></li>
-                        <li><span>With an ideal consistency, the MX-4 is very easy to use, even for beginners.</span></li>
-                        <li><span>Formula, the MX-4 guarantees exceptional heat dissipation from the components and supports
-                                the stability needed to push your system to its limit.</span></li>
-                        <li><span>Composed of carbon micro-particles which lead to an extremely high thermal
-                                conductivity.</span></li>
-                    </ul>
+                    {{$thermalpaste->product->features}}
 
                     
-                    <div class="budget-price">Out of Stock</div>
+                    <div class="budget-price">৳ {{$thermalpaste->product->price}}</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('thermal-paste',1)" class="btn btn-primary btn2 "><i
+                        <a href="{{route('add-product-to-cart',['product_id'=>$thermalpaste->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B0795DP124?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

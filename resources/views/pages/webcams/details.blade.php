@@ -279,10 +279,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Logitech BRIO (960-001105)</h2>
+        <h2>{{$web_cam->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/webcam/index.html">Webcam</a>
-            <i class="fa fa-angle-right"></i><a href="webcams-details">Logitech BRIO</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('webcams-list')}}">Webcam</a>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$web_cam->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -380,28 +380,13 @@
                 x
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Spectacular video quality: A premium glass lens, 4k image sensor, high dynamic range
-                                (Hdr), and autofocus deliver beautiful, true to life video</span></li>
-                        <li><span>Look great in any light: Right light 3 automatically adjusts exposure and contrast to
-                                compensate for glare and backlighting. Supports multiple connection types, including USB 2.0
-                                type a and USB 3.0 type a and C connections</span></li>
-                        <li><span>4k streaming and recording windows: Works with camera for windows 10, xsplit, obs. Mac:
-                                Works with swift capture. Windows hello certified: Powered by both optical and infrared
-                                sensors, BRIO delivers fast and secure facial recognition for windows hello. No need to type
-                                a password for windows 10: Simply look into BRIO’s lens to login</span></li>
-                        <li><span>HD 5X zoom: Digitally zoom, pan, and choose from three field of view options while
-                                maintaining HD resolution</span></li>
-                        <li><span>Enterprise ready: Certified for Skype for Business and Cisco, and compatible with popular
-                                video meeting apps including Zoom, WebEx, BlueJeans, Facebook Messenger, and more</span>
-                        </li>
-                    </ul>
+                    {{$web_cam->product->features}}
 
 
-                    <div class="budget-price">$155.39</div>
+                    <div class="budget-price">৳ {{$web_cam->product->price}}</div>
 
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('webcam',6)" class="btn btn-primary btn2 "><i
+                        <a href="{{route('add-product-to-cart',['product_id'=>$web_cam->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B01N5UOYC4?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

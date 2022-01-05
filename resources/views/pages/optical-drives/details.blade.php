@@ -252,27 +252,13 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Allows you to permanently delete the data on rewritable discs</span></li>
-                        <li><span>Power saving drive</span></li>
-                        <li><span>Provides you with flexibility and efficiency in terms of multimedia data storage and
-                                sharing</span></li>
-                        <li><span>It is a revision of 90 D4CHVV UB1080</span></li>
-                        <li><span>Drive Type: Internal DVD+/-RW Dual Layer Drive</span></li>
-                        <li><span>Write:DVD+R/-R: 24X DVD+RW/-RW: 8X/6X DVD+R/-R DL: 12X</span></li>
-                        <li><span>Read:DVD+R/-R(Single): 16X DVD+R/-R DL: 12X DVD+RW/-RW(Single): 12X</span></li>
-                        <li><span>DVD-R & DVD-R(DL): DAO/Incremental Recording</span></li>
-                        <li><span>DVD-RW: DAO/Restricted Overwriting/Incremental Recording</span></li>
-                        <li><span>CD-R/RW: DAO/TAO/SAO/Packet Write</span></li>
-                        <li><span>Interface: SATA</span></li>
-                        <li><span>Random Access Time: DVD - 150ms; CD - 150ms</span></li>
-                    </ul>
+                   {{$optical_drive->product->features}}
 
                     
-                    <div class="budget-price">$19.99</div>
+                    <div class="budget-price">৳ {{$optical_drive->product->price}}</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('optical-drive',1)" class="btn btn-primary btn2 "><i
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $optical_drive->product->id]) }}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B0033Z2BAQ?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

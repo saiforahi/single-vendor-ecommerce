@@ -483,18 +483,9 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Chipset AMD TRX40 (CPU Socket Type sTRX4)</span></li>
-                        <li><span>Supports DDR4 4666(OC)+/ 4600(OC)/ 4533(OC)/ 4466(OC)/ 4400(OC)/ 4333(OC)/ 4266(OC)/
-                                4200(OC)/ 4133(OC)/ 4000(OC)/ 3866(OC)/ 3800(OC)/ 3733(OC)/ 3600(OC)/ 3466(OC)/ 3200/ 2933/
-                                2667/ 2400/ 2133 ECC & non-ECC, un-buffered motherboard (U-DIMM)</span></li>
-                        <li><span>Maximum Memory Supported 256GB</span></li>
-                        <li><span>Channel Supported Quad Channel</span></li>
-                        <li><span>Number of Memory Slots 8×288pin</span></li>
-                    </ul>
-
+                   {{$motherboard->product->features}}
                    
-                    <div class="budget-price">$786.86(Used)</div>
+                    <div class="budget-price">৳ {{$motherboard->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{ route('add-product-to-cart', ['product_id' => $motherboard->product->id]) }}" class="btn btn-primary btn2 ">Add Product to Cart</a>

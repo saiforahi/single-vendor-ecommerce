@@ -628,16 +628,15 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wireless-network-adapter/tp-link-tl-n150-tl-wn725n/index.html">TP-Link
-                                            TL-N150 USB 2.0 based WiFi Adapter for Desktop PC</a></div>
+                                            href="{{ route('wireless-network-adapter-details', ['id' => $wireless_network_adapter->id]) }}">{{ $wireless_network_adapter->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
+                                            <div class="detail__value f_brand"> {{ $wireless_network_adapter->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> TL-N150 </div>
+                                            <div class="detail__value f_model"> {{ $wireless_network_adapter->brand }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

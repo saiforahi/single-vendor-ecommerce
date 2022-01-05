@@ -348,29 +348,10 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Dynamic RGB backlighting across three zones, with full customization of colors and
-                                lighting effects</span></li>
-                        <li><span>Dust and spill resistant design rated up to IP42 protection guards against accidents so
-                                your gameplay never has to stop</span></li>
-                        <li><span>Six programmable macro keys give you the in-game advantage of powerful macros or key
-                                remaps</span></li>
-                        <li><span>Detachable, soft rubber palm rest reduces stress on your wrists so you can play longer in
-                                comfort</span></li>
-                        <li><span>Dedicated volume and media controls give you direct control over your audio without having
-                                to interrupt your game</span></li>
-                        <li><span>Powerful corsair iCUE software enables vivid dynamic RGB lighting control, sophisticated
-                                macro programming and full-system lighting synchronization across all iCUE-compatible
-                                Corsair devices</span></li>
-                        <li><span>Quiet and responsive keys for comfortable typing during both work and play</span></li>
-                        <li><span>Anti-ghosting with selective key rollover means your inputs register in-game even with
-                                simultaneous key presses</span></li>
-                        <li><span>Windows key lock mode ensures you’ll never accidentally interrupt your game at critical
-                                moments</span></li>
-                    </ul>
+                    {{$keyboard->product->features}}
 
                     
-                    <div class="budget-price">{{$keyboard->product->price}}</div>
+                    <div class="budget-price">৳ {{$keyboard->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{ route('add-product-to-cart', ['product_id' => $keyboard->product->id]) }}" class="btn btn-primary btn2 "> Add Product to Cart</a>

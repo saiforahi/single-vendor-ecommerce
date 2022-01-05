@@ -404,21 +404,10 @@
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>A World-Beating 64 Cores and 128 Processing Threads Processor for Visual Effects,
-                                Gaming, and Professional Video Editing.</span></li>
-                        <li><span>Threadripper 3990X has an Incredible 4.3 GHz Max Boost Frequency and a huge Cache of
-                                288MB.</span></li>
-                        <li><span>The Threadripper Processor is Unlocked and Comes with New Automatic Overclocking
-                                Feature.</span></li>
-                        <li><span>Quad-Channel DDR4 and 88 total PCIe 4. 0 lanes, the most bandwidth and I/O you can get
-                                on Desktop Processor</span></li>
-                        <li><span>The Ryzen Threadripper 3990X Processor has an TDP (Thermal Design Power) of
-                                280W.</span></li>
-                        <li><span>The Ryzen Threadripper 3990X isn't Bundled with any Default Cooler.</span></li>
-                    </ul>
+                    {{$processor->product->features}}
 
-
+                    <div class="budget-price">৳ {{$processor->product->price}}</div>
+                    
                     <div class="align-button">
                         <a href="{{ route('add-product-to-cart', ['product_id' => $processor->product->id]) }}"
                             class="btn btn-primary btn2 "><i class="fa fa-plus"></i> Add Product to Cart</a>

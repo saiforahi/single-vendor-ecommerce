@@ -435,14 +435,10 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Air flow: 82.9 CFM; Noise level:36.0 decibels</span></li>
-                        <li><span>Fan Dimensions:120 x 120 x 25 millimeter (4.7 x 4.7 x 1 inches)</span></li>
-                        <li><span>Heat sink Dimensions: 116 x 51 x 159 millimeter (4.6 x 2 x 6.2 inch)</span></li>
-                    </ul>
+                    {{$cpu_cooler->product->features}}
 
                     
-                    <div class="budget-price">$35</div>
+                    <div class="budget-price">৳ {{$cpu_cooler->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$cpu_cooler->product->id])}}" class="btn btn-primary btn2 "><i

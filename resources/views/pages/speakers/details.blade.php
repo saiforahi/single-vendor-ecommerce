@@ -374,32 +374,13 @@ font-size: 26px;
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>CUSTOM POWERED BOOKSHELF SPEAKERS: Clear, full and powerful audio that fills any room. The
-                                A5+ Powered Speakers are constructed with custom Audioengine components: aramid fiber
-                                woofers, silk tweeters, and built-in power amps wrapped in precision-tuned and hand-crafted
-                                cabinets.</span></li>
-                        <li><span>FEATURES: RCA and 3.5mm inputs, subwoofer output, small speakers with a big sound to fill
-                                any room, custom aramid fiber woofers and silk tweeters, built-in power amps wrapped in
-                                hand-built wood cabinets, no network setup, no passwords, no hassle.</span></li>
-                        <li><span>WORKS WITH: Turntables with built-in or external preamps, all music players: phones,
-                                desktop computers, laptops, notebooks, TVs with an analog output, CD and DVD players, video
-                                game consoles and all products with 1/8</span></li>
-                        <li><span>WHAT’S INCLUDED: Pair of Audioengine A5+ Powered Speakers, 3.75m speaker wire, power
-                                supply & cord, 2m 3.5mm mini-jack audio cable, solid aluminum remote control, microfiber
-                                speaker bags and cable bags, setup guide, brochure.</span></li>
-                        <li><span>WARRANTY: Audioengine builds quality speakers that they stand behind. All Audioengine
-                                products come with a 3-year transferable warranty. COVERAGE: Stellar US based customer
-                                support and 3 year product coverage is included. Based in Austin, TX, Audioengine has been
-                                changing the way people listen to music since 2005. Our passion is creating products that
-                                sound great, are easy to use, and make people want to listen to music every day.</span></li>
-                    </ul>
+                   {{$speaker->product->features}}
 
                     
-                    <div class="budget-price">$469</div>
+                    <div class="budget-price">৳ {{$speaker->product->price}}</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('speakers',1)" class="btn btn-primary btn2 "><i
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $speaker->product->id]) }}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B005SE6QBU?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

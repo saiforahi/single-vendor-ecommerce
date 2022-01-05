@@ -181,11 +181,11 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>TP-Link TL-N150 (TL-WN725N)</h2>
+        <h2>{{$wireless_network_adapter->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/wireless-network-adapter/index.html">Wireless Network
+            <i class="fa fa-angle-right"></i><a href="{{route('wireless-network-adapter-list')}}">Wireless Network
                 Adapter</a>
-            <i class="fa fa-angle-right"></i><a href="wireless-network-adapter-list">TP-Link TL-N150</a></span>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$wireless_network_adapter->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -298,25 +298,13 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>TP-Link N150 (TL-WN725N) supports WiFi speed up to 150 MBPS for lag free video streaming
-                                and online gaming.</span></li>
-                        <li><span>It supports the 2.4 GHz of WiFi band and allows you to simply plug it in and use.</span>
-                        </li>
-                        <li><span>It supports 64/128 WEP, WPA/WPA2, WPA psk/WPA2 psk (TKIP/AES), and IEEE 802. 1x wireless
-                                security.</span></li>
-                        <li><span>The TP Link N150 comes with 2 years warranty and 24/7 technical support.</span></li>
-                        <li><span>The component is compatible with Windows (XP/7/8/8. 1/10) Mac OS (10. 9 - 10. 15) Linux
-                                Kernel (2. 6. 18 - 4. 4. 3)</span></li>
-                        <li><span>Driver installation may be required, Please go to to Link website for the latest driver
-                                for your operating systems</span></li>
-                    </ul>
+                    {{$wireless_network_adapter->product->features}}
 
                    
-                    <div class="budget-price">$9.89</div>
+                    <div class="budget-price">৳ {{$wireless_network_adapter->product->price}}</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('wireless-network-adapter',1)"
+                        <a href="{{route('add-product-to-cart',['product_id'=>$wireless_network_adapter->product->id])}}"
                             class="btn btn-primary btn2 "><i class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B008IFXQFU?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

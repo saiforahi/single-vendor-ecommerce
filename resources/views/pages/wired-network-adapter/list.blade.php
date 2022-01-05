@@ -689,16 +689,15 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/wired-network-adapter/tp-link-tg-3468/index.html">TP-Link
-                                            TG-3468 1Gb/s Ethernet PCI Express Network Adapter for Desktop PC</a></div>
+                                            href="{{ route('wired-network-adapter-details', ['id' => $wired_network_adapter->id]) }}">{{ $wired_network_adapter->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> TP-Link </div>
+                                            <div class="detail__value f_brand"> {{ $wired_network_adapter->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> TG-3468 </div>
+                                            <div class="detail__value f_model"> {{ $wired_network_adapter->brand }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

@@ -279,11 +279,11 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>TP-Link TG-3468</h2>
+        <h2>{{$wired_network_adapter->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/wired-network-adapter/index.html">Wired Network
+            <i class="fa fa-angle-right"></i><a href="{{route('wired-network-adapter-list')}}">Wired Network
                 Adapter</a>
-            <i class="fa fa-angle-right"></i><a href="wired-network-adapter-details">TP-Link TG-3468</a></span>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$wired_network_adapter->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -357,26 +357,13 @@
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Ultra Fast: 10/100/1000Mbps PCIe Adapter upgrade your Ethernet speed to Gigabit</span>
-                        </li>
-                        <li><span>Automation: Wake on LAN supporting Auto Negotiation and Auto MDI/MDIX</span></li>
-                        <li><span>Supports: IEEE802.3x Flow Control for Full duplex Mode and backpressure for Half duplex
-                                Mode; 4k Bytes Port: 1x 10/100/1000Mbps RJ45 Network Media</span></li>
-                        <li><span>Compatibility: Windows 10, 8.1, 8, 7, Vista, XP</span></li>
-                        <li><span>Dual Bracket: Low profile and standard profile bracket inside works with both mini and
-                                standard size PCs</span></li>
-                        <li><span>Industry Leading Support: 2 year warranty and free 24/7 technical support</span></li>
-                        <li><span>From Reliable Brand: TP Link has been ranked as the World’s No. 1 provider of WLAN
-                                products for the past consecutive 7 years by IDC. In 2017</span></li>
-                        <li><span>To be eligible for TP Link's Warranty, please confirm and purchase from </span></li>
-                    </ul>
+                    {{$wired_network_adapter->product->features}}
 
 
-                    <div class="budget-price">$14.63</div>
+                    <div class="budget-price">৳ {{$wired_network_adapter->product->price}}</div>
 
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('wired-network-adapter',1)"
+                        <a href="{{route('add-product-to-cart',['product_id'=>$wired_network_adapter->product->id])}}"
                             class="btn btn-primary btn2 "><i class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B003CFATNI?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

@@ -534,31 +534,13 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Designed for comfort – Exceptionally comfortable memory foam ear cushions and padded
-                                leatherette headband help keep you focused on gaming</span></li>
-                        <li><span>Supreme audio quality – Large 53 millimeter drivers provide high-quality audio. Hear
-                                in-game details better and get the in-game advantage on your opponents</span></li>
-                        <li><span>7.1 virtual surround sound – Truly immerse yourself in your games with hardware-driven
-                                virtual 7.1 surround sound for precisely located audio</span></li>
-                        <li><span>Passive noise cancellation – The closed ear cup design blocks out outside distractions to
-                                keep you in the game</span></li>
-                        <li><span>Built to last – The solid, durable aluminum frame is built to withstand the blows of daily
-                                use</span></li>
-                        <li><span>Detachable, noise-cancelling microphone – TeamSpeak and Discord certified so you can chat
-                                with your friends and your callouts will be heard loud and clear</span></li>
-                        <li><span>Compatibility: 7.1 virtual surround sound on PC & Mac. Stereo on PS4, Xbox One, Nintendo
-                                Switch, and mobile devices</span></li>
-                        <li><span>#1 best-selling PC gaming headset brand in the US. source: The NPD group, inc., U.S.
-                                retail tracking service, PC headset / PC microphone, gaming designed, Jan. 2018-Dec.
-                                2019</span></li>
-                    </ul>
+                    {{$head_phone->product->features}}
 
                     
-                    <div class="budget-price">$87.97</div>
+                    <div class="budget-price">৳ {{$head_phone->product->features}}</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('headphone',2)" class="btn btn-primary btn2 "><i
+                        <a href="{{route('add-product-to-cart',['product_id'=>$head_phone->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B00SAYCXWG?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

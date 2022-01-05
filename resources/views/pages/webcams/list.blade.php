@@ -678,17 +678,16 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/webcam/logitech-brio-960-001105/index.html">Logitech
-                                            BRIO Ultra HD 4K Webcam for Video Conferencing, Recording, and Streaming</a>
+                                            href="{{ route('webcams-details', ['id' => $web_cam->id]) }}">{{ $web_cam->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Logitech </div>
+                                            <div class="detail__value f_brand"> {{ $web_cam->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> BRIO </div>
+                                            <div class="detail__value f_model">{{ $web_cam->brand }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

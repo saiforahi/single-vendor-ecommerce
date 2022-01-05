@@ -388,21 +388,10 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>80+ Gold certified high efficiency operation for lower power consumption less noise and
-                                cooler temperatures</span></li>
-                        <li><span>Tuned for low noise operation a 140mm rifle Bearing fan with a specially calculated fan
-                                curve ensures that fan noise is kept to minimum even at full load</span></li>
-                        <li><span>105°C-rated capacitors industrial-grade capacitors deliver solid electrical performance
-                                and reliability</span></li>
-                        <li><span>Microsoft modern standby compatible extremely fast wake-from-sleep times and better
-                                low-load efficiency</span></li>
-                        <li><span>Zero RPM fan mode at low and medium loads The cooling fan switches off entirely for
-                                near-silent operation</span></li>
-                    </ul>
+                   {{$power_supplies->product->features}}
 
                     
-                    <div class="budget-price">$119.12</div>
+                    <div class="budget-price">৳ {{$power_supplies->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$power_supplies->product->id])}}" class="btn btn-primary btn2 "><i

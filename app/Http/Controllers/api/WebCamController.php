@@ -45,7 +45,7 @@ class WebCamController extends Controller
         return view('pages.webcams.list')->with('web_cams',WebCam::with('product')->get())->with('brands',WebCam::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.webcams.details')->with('web_cams',WebCam::findOrFail($id));
+        return view('pages.webcams.details')->with('web_cam',WebCam::findOrFail($id));
     }
     
 }

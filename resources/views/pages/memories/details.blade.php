@@ -360,13 +360,7 @@
                 </div>
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>This desktop memory has 18-22-22-42 timing.</span></li>
-                        <li><span>It delivers a high-quality performance of 4800MHz that can be easily and effortlessly
-                                overclocked for an even better gaming experience.</span></li>
-                        <li><span>It comes in 16GB (2 x 8GB) capacity.</span></li>
-                        <li><span>This DDR4 RAM comes with CL18 CAS latency at 1.35V tested voltage.</span></li>
-                    </ul>
+                    {{ $memory->product->features }}
 
 
                     <div class="budget-price">৳ {{ $memory->product->price }}</div>

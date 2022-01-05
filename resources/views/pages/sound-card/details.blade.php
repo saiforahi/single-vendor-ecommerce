@@ -265,10 +265,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Creative SB1780</h2>
+        <h2>{{$sound_card->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/sound-card/index.html">Sound Card</a>
-            <i class="fa fa-angle-right"></i><a href="sound-card-details">Creative SB1780</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('sound-card-list')}}">Sound Card</a>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$sound_card->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -453,21 +453,13 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Interface: PCI Express × 1 / Power Supply: (Main Card): PCI-E Bus Power</span></li>
-                        <li><span>System Requirements (Windows): Intel Core i3 or AMD Equivalent or Better Processor / Intel
-                                or AMD Compatible Motherboard</span></li>
-                        <li><span>External Size: (Main Card): about 178 × 22 × 127 mm / (ACM): about 150 × 128 × 65 mm /
-                                Weight: (Main Card): about 230 g / (ACM): about 480 g</span></li>
-                        <li><span>Product Contents: Sound Blaster AE-9 Main Card / Audio Control Module / Stereo-RCA Cable ×
-                                2</span></li>
-                    </ul>
+                    {{$sound_card->product->features}}
 
                     
-                    <div class="budget-price">$390.55</div>
+                    <div class="budget-price">৳ {{$sound_card->product->price}}</div>
                     
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('sound-card',1)" class="btn btn-primary btn2 "><i
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $sound_card->product->id]) }}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B07M8SRBPH?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

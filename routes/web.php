@@ -150,7 +150,7 @@ Route::prefix('wired-network-adapter')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\WiredNetworkAdapterController::class,'show_list'])->name('wired-network-adapter-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\WiredNetworkAdapterController::class,'show_details'])->name('wired-network-adapter-details');
 });
-Route::prefix('casecooler')->group(function(){
+Route::prefix('casecoolers')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\CaseCoolerController::class,'show_list'])->name('case-cooler-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\CaseCoolerController::class,'show_details'])->name('case-cooler-details');
 

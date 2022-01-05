@@ -250,23 +250,13 @@
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>American Power Conversion (APC) Smart-UPS X 3000VA 4U Short Depth Tower/Rack Convertible
-                                LCD - CD with Software - Documentation CD - Rack Mounting Brackets - Smart UPS Signaling
-                                RS-232 Cable - USB Cable - User Manual - American Power Conversion (APC) 3 Year Repair or
-                                Replace Warranty (Excluding Battery) - American Power Conversion (APC) 2 Year Battery
-                                Warranty</span></li>
-                        <li><span>Max Configurable Power: 2700W/3000VA</span></li>
-                        <li><span>Nominal Output Voltage: 208V</span></li>
-                        <li><span>Output Voltage Distortion: Less than 5%</span></li>
-                        <li><span>Output Frequency: 50/60Hz +/- 3Hz (sync to mains)</span></li>
-                    </ul>
+                    {{$ups->product->features}}
 
 
-                    <div class="budget-price">$1,717.85</div>
+                    <div class="budget-price">৳ {{$ups->product->price}}</div>
 
                     <div class="align-button">
-                        <a href="javascript:void(0);" onclick="setid('ups',199)" class="btn btn-primary btn2 "><i
+                        <a href="{{route('add-product-to-cart',['product_id'=>$ups->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B00O8W9G3I?tag=pcbuilder00-20" target="_blank"
                             class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>

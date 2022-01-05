@@ -250,6 +250,15 @@
         }
 
     </style>
+    <style>
+        .budget-price {
+            color: #fff !important;
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+    </style>
 @endpush
 
 @section('content')
@@ -385,30 +394,10 @@
                 </style>
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    <ul>
-                        <li><span>Powered by Samsung V NAND Technology, the 970 EVO SSD’s NVMe interface (PCIe M.2 2280)
-                                offers enhanced bandwidth, low latency, and power efficiency ideal for tech enthusiasts,
-                                high end gamers, and 4K & 3D content designers</span></li>
-                        <li><span>Sequential read and write performance levels of up to 3,500MB/s and 2,500MB/s,
-                                respectively; Random Read (4KB, QD32): Up to 500,000 IOPS Random Read</span></li>
-                        <li><span>Performance optimization and data security: Seamless cloning and file transfers with
-                                Samsung Magician Software, the ideal SSD management solution for performance
-                                optimization and data security with automatic firmware updates</span></li>
-                        <li><span>Samsung’s dynamic thermal guard automatically monitors and maintains optimal operating
-                                temperatures to minimize performance drops. Secure Encryption</span></li>
-                        <li><span>5-year limited warranty or 600 TBW (Terabytes Written)</span></li>
-                    </ul>
+                   {{$storage->product->features}}
 
-                    <style>
-                        .budget-price {
-                            color: #fff !important;
-                            font-size: 35px;
-                            font-weight: 600;
-                            margin-bottom: 20px;
-                        }
-
-                    </style>
-                    <div class="budget-price">${{$storage->product->price}}</div>
+                    
+                    <div class="budget-price">৳ {{$storage->product->price}}</div>
 
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$storage->product->id])}}" class="btn btn-primary btn2 "><i
