@@ -283,7 +283,7 @@
         <h2>{{$processor->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('processor-list')}}">Processor</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$processor->product->short_name}}</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('processor-details',['id'=>$processor->id])}}">{{$processor->product->short_name}}</a>
         </span>
     </section>
     <div class="container-fluid component-details">
@@ -319,7 +319,7 @@
                     </ol>
                 </div>
 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">General</span>
                         <div class="level2"><span class="key">CPU Model</span> : <span>AMD Ryzen
@@ -371,7 +371,7 @@
                                 x 7.7 x
                                 4.2"</span></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
@@ -400,12 +400,12 @@
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
                 <div class="description">
-                    {{$processor->product->description}}
+                    {!!$processor->product->description!!}
                 </div>
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{$processor->product->features}}
+                    {!!$processor->product->features!!}
 
                     <div class="budget-price">৳ {{$processor->product->price}}</div>
                     
@@ -417,7 +417,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">General</span>
                     <div class="level2"><span class="key">CPU Model</span> : <span>AMD Ryzen
@@ -467,7 +467,7 @@
                             7.7 x 4.2"</span>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

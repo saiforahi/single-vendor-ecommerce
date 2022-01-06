@@ -166,6 +166,7 @@ Route::prefix('system-builder')->group(function(){
     Route::get('/remove-casing',[App\Http\Controllers\api\SystemBuilderController::class,'remove_casing_web'])->name('remove-casing-from-system');
     Route::get('/add-graphic/{graphic_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_graphic_web'])->name('add-graphic-to-system');
     Route::get('/remove-graphic',[App\Http\Controllers\api\SystemBuilderController::class,'remove_graphic_web'])->name('remove-graphic-from-system');
+    //storage
     Route::get('/add-storage/{storage_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_storage_web'])->name('add-storage-to-system');
     Route::get('/remove-storage',[App\Http\Controllers\api\SystemBuilderController::class,'remove_storage_web'])->name('remove-storage-from-system');
     Route::get('/add-memory/{memory_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_memory_web'])->name('add-memory-to-system');

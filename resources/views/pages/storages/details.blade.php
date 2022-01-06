@@ -224,7 +224,11 @@
                 width: 100%;
             }
         }
-
+        @media screen and (min-width: 768px) {
+            ul {
+                padding-right: 100px;
+            }
+        }
     </style>
     <style>
         .stars-rating {
@@ -371,30 +375,18 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(12940 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
                 <div class="description">
-                    <p>Looking for the best SSD? The new Samsung 970 EVO (1 TB) NVMe M.2 Internal SSD from Samsung is
-                        built with its 4th generation VNAND technology in an M.2 form factor with PCIe Gen3 x4
-                        connectivity. </p>
-                    <p>The Samsung EVO 970 supports 3400 and 2500 MB/s read and write speeds respectively. This SSD is
-                        ideal for faster boot and load timing and it comes with a 5-years warranty.</p>
+                    {!!$storage->product->description!!}
                 </div>
-                <style>
-                    @media screen and (min-width: 768px) {
-                        ul {
-                            padding-right: 100px;
-                        }
-                    }
-
-                </style>
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                   {{$storage->product->features}}
+                   {!!$storage->product->features!!}
 
                     
                     <div class="budget-price">৳ {{$storage->product->price}}</div>
@@ -402,8 +394,8 @@
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$storage->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B07BN217QG?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn2 "><i class="fab fa-plus"></i> View on Amazon </a>
+                        <a href="{{route('add-storage-to-system',['storage_id'=>$storage->id])}}" target="_blank"
+                            class="btn btn-primary btn2 "><i class="fab fa-plus"></i>Add to System Builder</a>
                     </div>
                 </div>
             </div>

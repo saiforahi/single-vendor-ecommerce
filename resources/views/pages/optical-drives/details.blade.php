@@ -110,7 +110,7 @@
     <style>
         .sticky {
             /*position: sticky!important;
-                        top: 80px;*/
+                            top: 80px;*/
         }
 
     </style>
@@ -182,10 +182,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>{{$optical_drive->name}}</h2>
-        <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/optical-drive/index.html">Optical Drive</a>
-            <i class="fa fa-angle-right"></i><a href="optical-drives-details">ASUS DRW 24 B1STA </a></span>
+        <h2>{{ $optical_drive->name }}</h2>
+        <span><a href="{{ route('home') }}">Home</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('optical-drives-list')}}">Optical Drive</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('optical-drives-details',['id'=>$optical_drive->id])}}">{{$optical_drive->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -193,18 +193,15 @@
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
 
                     <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Asus 24x DVD-RW Serial-ATA Internal OEM Optical Drive DRW"
-                                data-src="https://m.media-amazon.com/images/I/31JpWsniizL.jpg"
-                                alt="Build My PC, PC Builder, ASUS DRW 24 B1STA ">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Asus 24x DVD-RW Serial-ATA Internal OEM Optical Drive DRW"
-                                data-src="https://m.media-amazon.com/images/I/310SUnMHJnL.jpg"
-                                alt="Build My PC, PC Builder, ASUS DRW 24 B1STA ">
-                        </div>
+                        @foreach ($optical_drive->product->getMedia('main_image') as $image)
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                    data-src="{{ $image->getUrl('main_image') }}"
+                                    alt="{{$optical_drive->name}}">
+                            </div>
+                        @endforeach
                     </div>
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
@@ -215,17 +212,18 @@
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
                     <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
+                        @foreach ($optical_drive->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
                     </ol>
                 </div>
 
             </div>
-            
+
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>Asus 24x DVD-RW Serial-ATA Internal OEM Optical Drive DRW</h1>
+                <h1>{{$optical_drive->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.5 out of 5">
                         <div class="stars-score" style="width: 90%">
@@ -243,29 +241,31 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(5384 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
-                
+                <div class="description">
+                    {!!$optical_drive->product->description!!}
+                </div>
                 <div class="sticky-top" style="top: 80px">
-                    <h4 class="price">Product Features </h4>
-                   {{$optical_drive->product->features}}
+                    <h4 class="price">Product Features</h4>
+                    {!! $optical_drive->product->features !!}
 
-                    
-                    <div class="budget-price">৳ {{$optical_drive->product->price}}</div>
-                    
+
+                    <div class="budget-price">৳ {{ $optical_drive->product->price }}</div>
+
                     <div class="align-button">
-                        <a href="{{ route('add-product-to-cart', ['product_id' => $optical_drive->product->id]) }}" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to List</a>
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $optical_drive->product->id]) }}"
+                            class="btn btn-primary btn2 "><i class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B0033Z2BAQ?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i>Add to System Builder</a>
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">General</span>
                     <div class="level2"><span class="key">Enclosure Type</span> : <span>Internal</span>
@@ -313,7 +313,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>8.9 x
                             6.3 x 3"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection
