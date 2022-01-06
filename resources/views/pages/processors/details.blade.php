@@ -283,7 +283,8 @@
         <h2>{{$processor->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('processor-list')}}">Processor</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$processor->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$processor->product->short_name}}</a>
+        </span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
