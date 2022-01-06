@@ -13,6 +13,7 @@ html {
   --headerText: #3a4c56;
   --headerElementColor: #dae2e5;
   --headerBorderColor: rgba(255,255,255,0.15);
+  --myNavColor: #dae2e5;
 }
 
 html[data-theme='dark'] {
@@ -20,6 +21,7 @@ html[data-theme='dark'] {
   --headerText: #3a4c56;
   --headerElementColor: #001119;
   --headerBorderColor: rgba(0,0,0,0.15);
+  --myNavColor: #3a4c56;
 }
 
 html.transition,
@@ -34,7 +36,6 @@ html.transition *:after {
 
 html {
   --navbarBgColor: #04151f;
-  /* --navbarBgColor: #18ae91; */
   --navbarText: #3a4c56;
   --navbarElementColor: #dae2e5;
   --navbarBorderColor: rgba(255,255,255,0.15);
@@ -561,7 +562,12 @@ nav #my-nav {
   border-bottom: 1px solid var(--headerBorderColor);
   padding: 0 1rem !important;
 }
-
+#my-nav>ul>li>a{
+  color: var(--myNavColor) !important;
+}
+#my-nav{
+  background-color: var(--headerBgColor);
+}
 nav .navbar-nav li {
   height: 100%;
   border-right: 1px solid var(--headerBorderColor);
@@ -2918,17 +2924,22 @@ footer .footer-top {
 }
 
 footer.page-footer a {
-  color: #fff;
+  color: var(--myNavColor) !important;
 }
 
 footer {
-  background-color: #151e29 !important;
+  background-color: var(--headerBgColor) !important;
 }
 
 .footer-copyright {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
-
+footer>div>div>div>h5,p{
+  color: var(--headerText) !important;
+}
+.footer-tags>a{
+  color: var(--headerText) !important;
+}
 .footer-copyright .copyright-flex {
   display: -webkit-box;
   display: -ms-flexbox;

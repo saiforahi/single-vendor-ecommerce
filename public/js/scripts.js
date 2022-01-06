@@ -35,11 +35,13 @@ var checkbox = document.querySelector('input[name=theme]');
 checkbox.addEventListener('change', function () {
     if (this.checked) {
         trans()
+        sessionStorage.setItem('theme','dark')
         document.documentElement.setAttribute('data-theme', 'dark')
-        alert('Paint is still wet :( We will launch it soon.')
-        location.reload()
+        // alert('Paint is still wet :( We will launch it soon.')
+        // location.reload()
     } else {
         trans()
+        sessionStorage.setItem('theme','light')
         document.documentElement.setAttribute('data-theme', 'light')
     }
 })
@@ -87,7 +89,13 @@ $(document).ready(function () {
         }
 
     });
-
+    if(sessionStorage.getItem('theme')=='dark'){
+        console.log('darkkkk')
+        document.getElementById('switch').checked=true
+    }
+    else{
+        document.getElementById('switch').checked=false
+    }
 });
 
 var lazyLoadInstance = new LazyLoad({

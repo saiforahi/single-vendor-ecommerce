@@ -71,6 +71,16 @@
         <script>
             window.auth_user = {!! json_encode(Auth::user()); !!};  //retrieving auth user in a global script variable, it can be accessed in any vue component's script tag
         </script>
+        <script>
+            if(sessionStorage.getItem('theme')=='dark'){
+                console.log('dark')
+                document.documentElement.setAttribute('data-theme', 'dark')
+            }
+            else{
+                console.log('light')
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        </script>
         <script async src="{{asset('js/analytics.js')}}"></script>
         <script src="{{(asset('js/analytics-code.js'))}}"></script>
         <!-- Styles -->

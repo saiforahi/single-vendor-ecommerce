@@ -91,7 +91,7 @@
         </div>
         <div class="d-none d-lg-flex mode">
             <label class="switch">
-                <input type="checkbox" id="switch" name="theme">
+                <input type="checkbox" id="switch" name="theme" >
                 <span class="slider round"></span>
             </label>
         </div>
