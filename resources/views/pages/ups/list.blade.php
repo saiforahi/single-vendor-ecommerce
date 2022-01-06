@@ -1197,16 +1197,15 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/ups/apc-srt10kxli-4e20026/index.html">APC
-                                            Smart-UPS SRT 10000VA 230V</a></div>
+                                            href="{{ route('ups-details', ['id' => $ups->id]) }}">{{ $ups->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> APC </div>
+                                            <div class="detail__value f_brand"> {{ $ups->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> SRT10KXLI </div>
+                                            <div class="detail__value f_model"> {{ $ups->brand }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

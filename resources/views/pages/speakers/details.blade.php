@@ -264,10 +264,10 @@ font-size: 26px;
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Audioengine A5 Plus Classic (FBA_A5PLUSN)</h2>
+        <h2>{{$speaker->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/speakers/index.html">Speakers</a>
-            <i class="fa fa-angle-right"></i><a href="speakers-details">Audioengine A5 Plus Classic</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('speakers-list')}}">Speakers</a>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$speaker->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

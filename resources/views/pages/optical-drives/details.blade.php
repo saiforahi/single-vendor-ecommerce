@@ -182,7 +182,7 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>ASUS DRW 24 B1STA (DRW-24B1STA BLACK/BULK)</h2>
+        <h2>{{$optical_drive->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="../../../product/optical-drive/index.html">Optical Drive</a>
             <i class="fa fa-angle-right"></i><a href="optical-drives-details">ASUS DRW 24 B1STA </a></span>

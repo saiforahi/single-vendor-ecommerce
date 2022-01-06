@@ -644,17 +644,15 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/speakers/audioengine-a5-plus-classic-fba-a5plusn/index.html">Audioengine
-                                            A5 Plus Classic 150W Powered Bookshelf Speakers with Remote Control, Built in
-                                            Analog Amplifier - Bamboo</a></div>
+                                            href="{{ route('speakers-details', ['id' => $speaker->id]) }}">{{ $speaker->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> Audioengine </div>
+                                            <div class="detail__value f_brand"> {{ $speaker->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> A5 Plus Classic </div>
+                                            <div class="detail__value f_model"> {{ $speaker->brand }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

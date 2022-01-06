@@ -53,7 +53,7 @@ class PowerSupplyController extends Controller
         return view('pages.power-supply.list')->with('power_supplies',PowerSupply::with('product')->get())->with('brands',PowerSupply::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.power-supply.details')->with('power_supplies',PowerSupply::findOrFail($id));
+        return view('pages.power-supply.details')->with('power_supplier',PowerSupply::findOrFail($id));
     }
     public function get_all(){
         try{

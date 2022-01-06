@@ -45,7 +45,7 @@ class ThermalPasteController extends Controller
         return view('pages.thermal-paste.list')->with('thermalpastes',ThermalPaste::with('product')->get())->with('brands',ThermalPaste::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.thermal-paste.details')->with('thermalpastes',ThermalPaste::findOrFail($id));
+        return view('pages.thermal-paste.details')->with('thermalpaste',ThermalPaste::findOrFail($id));
     }
     
 }

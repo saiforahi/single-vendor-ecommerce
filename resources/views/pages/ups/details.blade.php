@@ -181,10 +181,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>APC Smart-UPS X (SMX3000HVT)</h2>
+        <h2>{{$ups->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/ups/index.html">Ups</a>
-            <i class="fa fa-angle-right"></i><a href="ups-details">APC Smart-UPS X</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('ups-list')}}">Ups</a>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$ups->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

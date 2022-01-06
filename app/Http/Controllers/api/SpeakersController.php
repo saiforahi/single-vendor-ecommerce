@@ -45,7 +45,7 @@ class SpeakersController extends Controller
         return view('pages.speakers.list')->with('speakers',Speaker::with('product')->get())->with('brands',Speaker::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.speakers.details')->with('speakers',Speaker::findOrFail($id));
+        return view('pages.speakers.details')->with('speaker',Speaker::findOrFail($id));
     }
     
 }

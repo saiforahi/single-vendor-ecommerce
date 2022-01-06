@@ -638,17 +638,15 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/thermal-paste/arctic-mx-4/index.html">ARCTIC MX-4
-                                            - Thermal Compound Paste for Coolers, Composed of Carbon Micro-Particles & High
-                                            Durability (4 Grams)</a></div>
+                                            href="{{ route('thermalpaste-details', ['id' => $thermalpaste->id]) }}">{{ $thermalpaste->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ARCTIC </div>
+                                            <div class="detail__value f_brand"> {{ $thermalpaste->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> MX-4 </div>
+                                            <div class="detail__value f_model"> {{ $thermalpaste->brand }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

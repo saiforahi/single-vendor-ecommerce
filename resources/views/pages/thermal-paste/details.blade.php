@@ -264,10 +264,10 @@ font-size: 26px;
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>ARCTIC MX-4 (ARCTIC MX-4)</h2>
+        <h2>{{$thermalpaste->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/thermal-paste/index.html">Thermal Paste</a>
-            <i class="fa fa-angle-right"></i><a href="thermalpaste-details">ARCTIC MX-4</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('thermalpaste-list')}}">Thermal Paste</a>
+            <i class="fa fa-angle-right"></i><a href="index.html">{{$thermalpaste->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
