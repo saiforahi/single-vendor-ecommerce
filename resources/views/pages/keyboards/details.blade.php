@@ -282,7 +282,7 @@
         <h2>{{$keyboard->product->name}}</h2>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('keyboard-list')}}">Keyboard</a>
-            <i class="fa fa-angle-right"></i><a href="keyboard-details">{{$keyboard->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('keyboard-details',['id'=>$keyboard->id])}}">{{$keyboard->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

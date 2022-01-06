@@ -979,11 +979,11 @@
                 <span class="table_span">
                     <div class="detail">
                         <div class="detail__name">Brand:</div>
-                        <div class="detail__value f_brand"> ASRock </div>
+                        <div class="detail__value f_brand"> {{$motherboard->product->brand}} </div>
                     </div>
                     <div class="detail">
                         <div class="detail__name">Model:</div>
-                        <div class="detail__value f_model"> TRX40 CREATOR </div>
+                        <div class="detail__value f_model"> {{$motherboard->product->model}} </div>
                     </div>
                 </span>
                 <span class="table_span">

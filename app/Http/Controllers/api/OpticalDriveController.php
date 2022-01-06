@@ -45,7 +45,7 @@ class OpticalDriveController extends Controller
         return view('pages.optical-drives.list')->with('optical_drives',OpticalDrive::with('product')->get())->with('brands',OpticalDrive::select('brand')->distinct()->get());
     }
     public function show_details($id){
-        return view('pages.optical-drives.details')->with('optical_drives',OpticalDrive::findOrFail($id));
+        return view('pages.optical-drives.details')->with('optical_drive',OpticalDrive::findOrFail($id));
     }
     
 }

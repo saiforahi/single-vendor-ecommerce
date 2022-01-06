@@ -267,7 +267,7 @@ font-size: 26px;
         <h2>{{$speaker->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('speakers-list')}}">Speakers</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$speaker->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('speakers-details',['id'=>$speaker->id])}}">{{$speaker->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

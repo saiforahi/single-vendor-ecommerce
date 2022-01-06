@@ -267,7 +267,7 @@ font-size: 26px;
         <h2>{{$thermalpaste->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('thermalpaste-list')}}">Thermal Paste</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$thermalpaste->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('thermalpaste-details',['id'=>$thermalpaste->id])}}">{{$thermalpaste->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

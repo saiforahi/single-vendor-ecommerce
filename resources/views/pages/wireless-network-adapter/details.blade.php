@@ -185,7 +185,7 @@
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('wireless-network-adapter-list')}}">Wireless Network
                 Adapter</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$wireless_network_adapter->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('wireless-network-adapter-details',['id'=>$wireless_network_adapter->id])}}">{{$wireless_network_adapter->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

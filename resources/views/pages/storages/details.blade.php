@@ -270,7 +270,7 @@
         <h2>{{ $storage->name }}</h2>
         <span><a href="{{ route('home') }}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('storage-list')}}">Storage</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('storage-details',['id'=>$storage->id])}}">Samsung 970 EVO</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('storage-details',['id'=>$storage->id])}}">{{$storage->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

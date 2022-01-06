@@ -282,7 +282,7 @@
         <h2>{{$power_supplier->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('power-supply-list')}}">Power Supply</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$power_supplier->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('power-supply-details',['id'=>$power_supplier->id])}}">{{$power_supplier->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

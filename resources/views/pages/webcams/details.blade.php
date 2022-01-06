@@ -282,7 +282,7 @@
         <h2>{{$web_cam->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('webcams-list')}}">Webcam</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$web_cam->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('webcams-details',['id'=>$web_cam->id])}}">{{$web_cam->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

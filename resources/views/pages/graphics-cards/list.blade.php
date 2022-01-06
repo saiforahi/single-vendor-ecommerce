@@ -898,7 +898,7 @@
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> {{ $graphic->brand }}</div>
+                                                <div class="detail__value f_model"> {{ $graphic->model }}</div>
                                             </div>
                                         </span>
                                         <span class="table_span">

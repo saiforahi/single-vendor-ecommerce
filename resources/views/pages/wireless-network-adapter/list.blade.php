@@ -636,7 +636,7 @@
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> {{ $wireless_network_adapter->brand }} </div>
+                                            <div class="detail__value f_model"> {{ $wireless_network_adapter->model }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

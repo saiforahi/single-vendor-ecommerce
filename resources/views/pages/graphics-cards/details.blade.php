@@ -279,10 +279,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>MSI RTX 3090 GAMING X TRIO 24G (3090GAMINGXTRIO24G)</h2>
+        <h2>{{$graphic->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/graphics-card/index.html">Graphics Card</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">MSI RTX 3090 GAMING X TRIO 24G</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('graphics-cards-list')}}">Graphics Card</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('graphics-details',['id'=>$graphic->id])}}">{{$graphic->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
