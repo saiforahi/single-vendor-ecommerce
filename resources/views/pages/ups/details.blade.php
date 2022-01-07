@@ -263,9 +263,9 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

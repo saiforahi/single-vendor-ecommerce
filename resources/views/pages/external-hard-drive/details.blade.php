@@ -181,11 +181,11 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Western Digital WD 1TB (WDBUZG0010BBK-WESN)</h2>
+        <h2>{{$external_hard_drive->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/external-hard-drive/index.html">External Hard
+            <i class="fa fa-angle-right"></i><a href="{{route('external-hard-drive-list')}}">External Hard
                 Drive</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('external-hard-drive-details')}}">Western Digital WD 1TB</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('external-hard-drive-details',['id'=>$external_hard_drive->id])}}">{{$external_hard_drive->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -293,7 +293,7 @@
                     </ol>
                 </div>
 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">General</span>
                         <div class="level2"><span class="key">Storage Capacity</span> : <span>1 TB</span>
@@ -328,7 +328,7 @@
                         <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>5.75
                                 x 4.8 x 1.7"</span></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
@@ -372,7 +372,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">General</span>
                     <div class="level2"><span class="key">Storage Capacity</span> : <span>1 TB</span>
@@ -407,7 +407,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>5.75 x
                             4.8 x 1.7"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

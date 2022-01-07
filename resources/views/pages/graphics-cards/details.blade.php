@@ -282,7 +282,7 @@
         <h2>{{$graphic->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('graphics-cards-list')}}">Graphics Card</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('graphics-details',['id'=>$graphic->id])}}">{{$graphic->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('graphics-cards-details',['id'=>$graphic->id])}}">{{$graphic->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -367,7 +367,7 @@
                     </ol>
                 </div>
                 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">General</span>
                         <div class="level2"><span class="key">Brand</span> : <span>MSI</span></div>
@@ -398,7 +398,7 @@
                         <div class="level2"><span class="key">Supported API</span> : <span>DirectX 12,
                                 OpenGL 4.6, Vulkan</span></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">

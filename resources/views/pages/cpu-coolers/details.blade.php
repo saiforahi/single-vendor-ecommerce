@@ -280,10 +280,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Cooler Master Hyper 212 EVO (RR-212E-20PK-R2)</h2>
+        <h2>{{$cpu_cooler->name}}</h2>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/cpu-cooler/index.html">Cpu Cooler</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Cooler Master Hyper 212 EVO</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('cpu-coolers-list')}}">Cpu Cooler</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('cpu-coolers-details',['id'=>$cpu_cooler->id])}}">{{$cpu_cooler->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -359,7 +359,7 @@
                     </ol>
                 </div>
 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">General</span>
                         <div class="level2"><span class="key">Cooler Type</span> : <span>CPU Air
@@ -397,7 +397,7 @@
                         <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>8.9 x
                                 6.2 x 3.7"</span></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
@@ -448,7 +448,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">General</span>
                     <div class="level2"><span class="key">Cooler Type</span> : <span>CPU Air
@@ -482,7 +482,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>8.9 x
                             6.2 x 3.7"</span></div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>

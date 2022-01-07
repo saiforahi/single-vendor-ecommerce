@@ -305,7 +305,7 @@
                     </ol>
                 </div>
                 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">Storage</span>
                         <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ empty(json_decode($storage->storage_specs, true)) ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
@@ -347,7 +347,7 @@
                                 6.25 x
                                 6.15"</span></div>
                     </div> --}}
-                </div>
+                </div> --}}
             </div>
             <style>
                 .sticky {
@@ -399,7 +399,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">Storage</span>
                     <div class="level2"><span class="key">Drive Capacity</span> : <span>{{ empty(json_decode($storage->storage_specs, true)) ? '' : json_decode($storage->storage_specs, true)['drive_capacity'] }}</span>
@@ -439,7 +439,7 @@
                             6.25 x
                             6.15"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

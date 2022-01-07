@@ -942,7 +942,7 @@
                                             <div class="detail">
                                                 <div class="detail__name">Base Clock:</div>
                                                 <div class="detail__value f_base_clock">
-                                                    {{ empty(json_decode($graphic->clock_specs, true)) ? '' : json_decode($graphic->clock_specs, true)['base_clock_speed'] }}
+                                                    {{ empty(json_decode($graphic->base_clock_speed, true)) ? '' : json_decode($graphic->base_clock_speed, true)['base_clock_speed'] }}
                                                 </div>
                                             </div>
                                             <div class="detail">

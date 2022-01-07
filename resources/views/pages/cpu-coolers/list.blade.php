@@ -951,17 +951,15 @@
                                     </td>
                                     <td class="comp-details">
                                         <div class="table_title"><a
-                                                href="{{ route('cpu-coolers-details', ['id' => $cpu_cooler->id]) }}">Cooler
-                                                Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum
-                                                Fins</a></div>
+                                                href="{{ route('cpu-coolers-details', ['id' => $cpu_cooler->id]) }}">{{ $cpu_cooler->name }}</a></div>
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> Cooler Master </div>
+                                                <div class="detail__value f_brand"> {{$cpu_cooler->product->brand}} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> Hyper 212 EVO </div>
+                                                <div class="detail__value f_model"> {{$cpu_cooler->product->model}} </div>
                                             </div>
                                         </span>
                                         <span class="table_span">

@@ -853,16 +853,15 @@
                                     </td>
                                     <td class="comp-details">
                                         <div class="table_title"><a
-                                                href="../../component-details/external-hard-drive/western-digital-wd-1tb-wdbuzg0010bbk-wesn/index.html">Western
-                                                Digital WD Elements 1TB Portable External Hard Drive</a></div>
+                                                href="{{ route('external-hard-drive-details', ['id' => $external_hard_drive->id]) }}">{{ $external_hard_drive->name </a></div>
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> Western Digital </div>
+                                                <div class="detail__value f_brand"> {{$external_hard_drive->product->brand}} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> WD 1TB </div>
+                                                <div class="detail__value f_model"> {{$external_hard_drive->product->model}} </div>
                                             </div>
                                         </span>
                                         <span class="table_span">

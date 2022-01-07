@@ -752,7 +752,7 @@
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> {{ $case_cooler->brand }} </div>
+                                                <div class="detail__value f_model"> {{ $case_cooler->model }} </div>
                                             </div>
                                         </span>
                                         <span class="table_span">

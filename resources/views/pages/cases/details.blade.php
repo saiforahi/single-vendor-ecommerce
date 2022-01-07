@@ -282,11 +282,11 @@
         <h2>{{$casing->short_name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('case-list')}}">Case</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('case-list',['id'=>$casing->id])}}">{{$casing->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('case-details',['id'=>$casing->id])}}">{{$casing->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
-            <div class="col-12 col-md-3">
+            {{-- <div class="col-12 col-md-3">
                 <?php $product = $casing->product; ?>
                 @include('components.product-media')
                 <div class="product-info d-none d-md-block">
@@ -387,7 +387,7 @@
                             <span>19.75 x 19.25 x 11"</span></div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
                 <h1>NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered
@@ -431,7 +431,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">Compatibility</span>
                     <div class="level2"><span class="key">Motherboard Support</span> : <span>ATX,
@@ -528,7 +528,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>19.75 x
                             19.25 x 11"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

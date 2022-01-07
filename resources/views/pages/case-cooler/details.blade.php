@@ -264,10 +264,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>Cooler Master MasterFan MF120R (R4-120R-203C-R1)</h2>
+        <h2>{{$case_cooler->name}}</h2>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/case-cooler/index.html">Case Cooler</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">Cooler Master MasterFan MF120R</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('case-cooler-list')}}">Case Cooler</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('case-cooler-details',['id'=>$case_cooler->id])}}">{{$case_cooler->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -380,7 +380,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">General</span>
                     <div class="level2"><span class="key">Cooler Type</span> : <span>Case Fan</span>
@@ -403,7 +403,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>6.7 x
                             5.35 x 1.29"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

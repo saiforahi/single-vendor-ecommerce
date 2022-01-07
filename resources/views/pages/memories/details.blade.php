@@ -76,6 +76,86 @@
 
     </style>
     <style>
+        .stars-rating {
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            display: inline-block;
+        }
+
+        .stars-rating .stars-score {
+            color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            width: 20%;
+            white-space: nowrap;
+        }
+
+    </style>
+    <style>
+        ul {
+            padding-inline-start: 40px;
+        }
+
+    </style>
+    <style>
+        .budget-price {
+            color: #fff !important;
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+    </style>
+    <div class="budget-price">$6,499.77</div>
+    <style>
+        a.disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+
+
+        .btn2 {
+            background: linear-gradient(to bottom, #95ffce, #08b18a);
+            border: none;
+            color: #1d2b36;
+            font-weight: 600;
+            padding: 15px 30px;
+            margin-right: 10px;
+        }
+
+        .btn1 {
+            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+            border: none;
+            color: #1d2b36;
+            font-weight: 600;
+            padding: 15px 30px;
+        }
+
+
+
+        .btn2:hover {
+            color: #4a008e;
+        }
+
+        .btn1:hover {
+            color: #630000;
+        }
+
+        @media screen and (max-width: 768px) {
+            .btn1 {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            .btn2 {
+                width: 100%;
+            }
+        }
+
+    </style>
+    <style>
         .product-info {
             /*box-shadow: 0 2px 4px #fff, -2px 0 4px #fff;*/
             padding: 10px;
@@ -182,72 +262,17 @@
 
     </style>
     <style>
-        a.disabled {
-            pointer-events: none;
-            cursor: default;
-        }
-
-
-        .btn2 {
-            background: linear-gradient(to bottom, #95ffce, #08b18a);
-            border: none;
-            color: #1d2b36;
-            font-weight: 600;
-            padding: 15px 30px;
-            margin-right: 10px;
-        }
-
-        .btn1 {
-            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
-            border: none;
-            color: #1d2b36;
-            font-weight: 600;
-            padding: 15px 30px;
-        }
-
-
-
-        .btn2:hover {
-            color: #4a008e;
-        }
-
-        .btn1:hover {
-            color: #630000;
-        }
-
-        @media screen and (max-width: 768px) {
-            .btn1 {
-                margin-top: 10px;
-                width: 100%;
-            }
-
-            .btn2 {
-                width: 100%;
-            }
+        .sticky {
+            /*position: sticky!important;
+                top: 80px;*/
         }
 
     </style>
     <style>
-        .stars-rating {
-            color: rgba(255, 255, 255, 0.9);
-            position: relative;
-            display: inline-block;
-        }
-
-        .stars-rating .stars-score {
-            color: rgba(255, 255, 255, 0.9);
-            position: absolute;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            width: 20%;
-            white-space: nowrap;
-        }
-
-    </style>
-    <style>
-        ul {
-            padding-inline-start: 40px;
+        @media screen and (min-width: 768px) {
+            ul {
+                padding-right: 100px;
+            }
         }
 
     </style>
@@ -255,10 +280,11 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>{{ $memory->name }}</h2>
-        <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('memory-list')}}">Ram</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('memory-details',['id'=>$memory->id])}}">{{$memory->product->short_name}}</a></span>
+        <h2>{{$memory->name}}</h2>
+        <span><a href="{{route('home')}}">Home</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('memory-list')}}">Processor</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('memory-details',['id'=>$memory->id])}}">{{$memory->product->short_name}}</a>
+        </span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -266,15 +292,17 @@
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($memory->product->getMedia('main_image') as $image)
-                            <div class="{{ $loop->index == 0 ? 'carousel-item img-gradient active':'carousel-item img-gradient' }}">
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
                                 <img class="d-block img-fluid big-image lazy"
-                                    title="G.SKILL Trident Z Royal Series, 16GB (2 x 8GB) 288-Pin DDR4-4800MHz Desktop Memory Model with CL18"
-                                    data-src="{{$image->getUrl('main_image')}}"
-                                    alt="Build My PC, System Builder, G.Skill Trident Z Royal">
+                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                    data-src="{{ $image->getUrl('main_image') }}"
+                                    alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
                             </div>
                         @endforeach
+
                     </div>
-                    @if(count($memory->product->getMedia('main_image'))>1)
+                    @if(count($memory->product->getMedia('main_image'))>0)
                     <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
                         <span class="carousel-control-prev-icon temp"></span>
                         <span class="sr-only" aria-hidden="true">Prev</span>
@@ -284,52 +312,75 @@
                         <span class="sr-only" aria-hidden="true">Next</span>
                     </a>
                     @endif
-                    <ol>
-                        @foreach ($memory->product->getMedia('main_image') as $image)
+                    <ol class="carousel-indicators">
+                        @foreach ($memory->getMedia('main_image') as $image)
                             <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
                                 class="{{ $loop->index == 0 ? 'active' : '' }}">
                             </li>
                         @endforeach
-
                     </ol>
-
                 </div>
 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">General</span>
-                        <div class="level2"><span class="key">Brand</span> :
-                            <span>{{ $memory->brand }}</span>
+                        <div class="level2"><span class="key">CPU Model</span> : <span>AMD Ryzen
+                                Threadripper 3990X</span></div>
+                        <div class="level2"><span class="key">CPU Socket</span> : <span>TRX4</span></div>
+                        <div class="level2"><span class="key">Manufacturing Process</span> : <span>7
+                                nm</span></div>
+                        <div class="level2"><span class="key">Maximum Number of PCIe Lanes</span> :
+                            <span>88 (Revision
+                                4.0)</span>
                         </div>
-                        <div class="level2"><span class="key">Model</span> :
-                            <span>{{ $memory->model }}</span>
-                        </div>
-                        <div class="level2"><span class="key">Warranty</span> : <span>Limited
-                                Lifetime</span></div>
-                        <div class="level2"><span class="key">Part Number</span> :
-                            <span>F4-4800C18D-16GTRS</span>
-                        </div>
+                        <div class="level2"><span class="key">Unlocked</span> : <span>Yes</span></div>
                     </div>
-                    <div class="level1"><span class="title">Memory</span>
-                        <div class="level2"><span class="key">Memory</span> : <span>16 GB (2 x 8
-                                GB)</span></div>
-                        <div class="level2"><span class="key">RAM Type</span> : <span>DDR4 - 4800
+                    <div class="level1"><span class="title">Performance</span>
+                        <div class="level2"><span class="key">Number of Cores</span> : <span>64</span>
+                        </div>
+                        <div class="level2"><span class="key">Number of Threads</span> : <span>128</span>
+                        </div>
+                        <div class="level2"><span class="key">Base Clock Speed</span> : <span>2.9
+                                GHz</span></div>
+                        <div class="level2"><span class="key">Maximum Boost Speed</span> : <span>4.3
+                                GHz</span></div>
+                        <div class="level2"><span class="key">L3 Cache</span> : <span>256 MB</span></div>
+                    </div>
+                    <div class="level1"><span class="title">Memory Support</span>
+                        <div class="level2"><span class="key">Memory Support</span> : <span>DDR4 3200
                                 MHz</span></div>
-                        <div class="level2"><span class="key">CAS Latency</span> : <span>CL18</span>
+                        <div class="level2"><span class="key">ECC Memory</span> : <span>Yes</span></div>
+                        <div class="level2"><span class="key">Channel Architecture</span> : <span>Quad
+                                Channel</span>
                         </div>
                     </div>
-                    <div class="level1"><span class="title">Additional Information</span>
-                        <div class="level2"><span class="key">DIMM Type</span> : <span>288-Pin</span>
+                    <div class="level1"><span class="title">Power</span>
+                        <div class="level2"><span class="key">Thermal Design Power (TDP)</span> :
+                            <span>280 W</span>
                         </div>
-                        <div class="level2"><span class="key">Voltage</span> : <span>1.35 V</span></div>
+                        <div class="level2"><span class="key">Maximum Temperature</span> : <span>154.4°F
+                                / 68°C</span>
+                        </div>
                     </div>
-                </div>
+                    <div class="level1"><span class="title">Integrated Graphics</span>
+                        <div class="level2"><span class="key">Graphics Chipset</span> : <span>None</span>
+                        </div>
+                    </div>
+                    <div class="level1"><span class="title">Packaging Info</span>
+                        <div class="level2"><span class="key">Package Weight</span> : <span>1.955
+                                lb</span></div>
+                        <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>11.4
+                                x 7.7 x
+                                4.2"</span></div>
+                    </div>
+                </div> --}}
             </div>
+
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
                 <h1>{{ $memory->name }}</h1>
                 <div class="pcb-product-summary">
-                    <div class="stars-rating" title="5.0 out of 5">
-                        <div class="stars-score" style="width: 100%">
+                    <div class="stars-rating" title="4.4 out of 5">
+                        <div class="stars-score" style="width: 88%">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -344,37 +395,81 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(1 Total Review)</div>
+                    <div>&nbsp;&nbsp;(27 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
                 <div class="description">
-                    <p>The G.SKILL Trident Z Royal Series 16GB (2 x 8GB) DDR4 memory comes with a frequency of 4800MHz,
-                        which is perfect for those who want to experience the next level in gaming performance. It also
-                        supports CL18 CAS latency at 1.35v operating voltage.</p>
-                    <p>This is actually a great product that supports advanced performance and overclocking, and it is
-                        compatible with the latest AMD and Intel motherboards. It can also be easily overclocked without any
-                        complications, giving you the chance to boost.</p>
+                    {!!$memory->product->description!!}
                 </div>
+
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{ $memory->product->features }}
+                    {!!$memory->product->features!!}
 
-
-                    <div class="budget-price">৳ {{ $memory->product->price }}</div>
+                    <div class="budget-price">৳ {{$memory->product->price}}</div>
+                    
                     <div class="align-button">
-                        <a href="javascript::void(0)" onclick="document.getElementById('add_product_form').submit()" class="btn btn-primary btn2 "><i
-                            class="fa fa-plus"></i> Add Product to Cart</a>
-                        <form style="display: none;" action="{{route('add-product-to-cart',['product_id'=>$memory->product->id])}}" method="GET" id="add_product_form">
-                            @csrf
-                        </form>
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $memory->product->id]) }}"
+                            class="btn btn-primary btn2 "><i class="fa fa-plus"></i> Add Product to Cart</a>
                         <a href="{{ route('add-memory-to-system', ['memory_id' => $memory->id]) }}"
-                            class="btn btn-primary btn1 "><i class="fa fa-plus"></i>Add to Sytem Builder</a>
+                            class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
             </div>
+            {{-- <div class="product-info d-md-none">
+                <h4><strong>Product Specification</strong></h4>
+                <div class="level1"><span class="title">General</span>
+                    <div class="level2"><span class="key">CPU Model</span> : <span>AMD Ryzen
+                            Threadripper 3990X</span>
+                    </div>
+                    <div class="level2"><span class="key">CPU Socket</span> : <span>TRX4</span></div>
+                    <div class="level2"><span class="key">Manufacturing Process</span> : <span>7
+                            nm</span></div>
+                    <div class="level2"><span class="key">Maximum Number of PCIe Lanes</span> :
+                        <span>88 (Revision
+                            4.0)</span>
+                    </div>
+                    <div class="level2"><span class="key">Unlocked</span> : <span>Yes</span></div>
+                </div>
+                <div class="level1"><span class="title">Performance</span>
+                    <div class="level2"><span class="key">Number of Cores</span> : <span>64</span>
+                    </div>
+                    <div class="level2"><span class="key">Number of Threads</span> : <span>128</span>
+                    </div>
+                    <div class="level2"><span class="key">Base Clock Speed</span> : <span>2.9
+                            GHz</span></div>
+                    <div class="level2"><span class="key">Maximum Boost Speed</span> : <span>4.3
+                            GHz</span></div>
+                    <div class="level2"><span class="key">L3 Cache</span> : <span>256 MB</span></div>
+                </div>
+                <div class="level1"><span class="title">Memory Support</span>
+                    <div class="level2"><span class="key">Memory Support</span> : <span>DDR4 3200
+                            MHz</span></div>
+                    <div class="level2"><span class="key">ECC Memory</span> : <span>Yes</span></div>
+                    <div class="level2"><span class="key">Channel Architecture</span> : <span>Quad
+                            Channel</span></div>
+                </div>
+                <div class="level1"><span class="title">Power</span>
+                    <div class="level2"><span class="key">Thermal Design Power (TDP)</span> : <span>280
+                            W</span></div>
+                    <div class="level2"><span class="key">Maximum Temperature</span> : <span>154.4°F /
+                            68°C</span></div>
+                </div>
+                <div class="level1"><span class="title">Integrated Graphics</span>
+                    <div class="level2"><span class="key">Graphics Chipset</span> : <span>None</span>
+                    </div>
+                </div>
+                <div class="level1"><span class="title">Packaging Info</span>
+                    <div class="level2"><span class="key">Package Weight</span> : <span>1.955 lb</span>
+                    </div>
+                    <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>11.4 x
+                            7.7 x 4.2"</span>
+                    </div>
+                </div>
+            </div> --}}
         </div>
     </div>
 @endsection

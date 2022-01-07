@@ -311,7 +311,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">General</span>
                     <div class="level2"><span class="key">Interface</span> : <span>USB 2.0</span></div>
@@ -375,7 +375,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>5.9 x
                             5.45 x 1.2"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

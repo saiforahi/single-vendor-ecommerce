@@ -370,7 +370,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">General</span>
                     <div class="level2"><span class="key">Standards</span> : <span>IEEE 802.3, 802.3u,
@@ -430,7 +430,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>6.3 x
                             5.4 x 1.1"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

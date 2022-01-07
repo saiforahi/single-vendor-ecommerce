@@ -352,7 +352,7 @@
                     </ol>
                 </div>
 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">General</span>
                         <div class="level2"><span class="key">Host Interface</span> : <span>PCIe</span>
@@ -422,7 +422,7 @@
                         <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>8.5
                                 x 7.8 x 4.7"</span></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">

@@ -320,7 +320,7 @@
                     </ol>
                 </div>
                 
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">CPU</span>
                         <div class="level2"><span class="key">Chipset</span> : <span>AMD X570</span>
@@ -452,7 +452,7 @@
                         <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> :
                             <span>14.55 x 12.4 x 3.8"</span></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
@@ -489,7 +489,7 @@
                     
                     <div class="align-button">
                         <a href="{{ route('add-product-to-cart', ['product_id' => $motherboard->product->id]) }}" class="btn btn-primary btn2 ">Add Product to Cart</a>
-                        <a href="{{ route('add-motherboard-to-system', ['mouse_id' => $motherboard->id]) }}"
+                        <a href="{{ route('add-motherboard-to-system', ['motherboard_id' => $motherboard->id]) }}"
                             class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
