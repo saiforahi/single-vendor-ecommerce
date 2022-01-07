@@ -257,8 +257,8 @@
     <section class="pcb-breadcrumb">
         <h2>{{ $memory->name }}</h2>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/ram/index.html">Ram</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">G.Skill Trident Z Royal</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('memory-list')}}">Ram</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('memory-details',['id'=>$memory->id])}}">{{$memory->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

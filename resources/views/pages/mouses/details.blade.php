@@ -281,7 +281,7 @@
     <section class="pcb-breadcrumb">
         <h2>{{$mouse->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/mouse/index.html">Mouse</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('mouse-list')}}">Mouse</a>
             <i class="fa fa-angle-right"></i><a href="{{route('mouse-details',['id'=>$mouse->id])}}">{{$mouse->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">

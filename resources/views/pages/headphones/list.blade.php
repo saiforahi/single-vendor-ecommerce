@@ -813,18 +813,16 @@
                                     </td>
                                     <td class="comp-details">
                                         <div class="table_title"><a
-                                                href="../../component-details/headphone/hyperx-cloud-ii-khx-hscp-rd/index.html">HyperX
-                                                Cloud II - Gaming Headset, 7.1 Surround Sound, Memory Foam Ear Pads, Durable
-                                                Aluminum Frame, Detachable Microphone, Works with PC, PS4, Xbox One</a>
+                                                href="{{ route('headphones-details', ['id' => $head_phone->id]) }}">{{ $head_phone->name }}</a>
                                         </div>
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> HyperX </div>
+                                                <div class="detail__value f_brand"> {{$head_phone->product->brand}} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> Cloud II </div>
+                                                <div class="detail__value f_model"> {{$head_phone->product->model}} </div>
                                             </div>
                                         </span>
                                         <span class="table_span">

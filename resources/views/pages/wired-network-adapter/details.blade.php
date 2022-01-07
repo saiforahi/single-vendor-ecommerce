@@ -283,7 +283,7 @@
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('wired-network-adapter-list')}}">Wired Network
                 Adapter</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$wired_network_adapter->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('wired-network-adapter-details',['id'=>$wired_network_adapter->id])}}">{{$wired_network_adapter->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

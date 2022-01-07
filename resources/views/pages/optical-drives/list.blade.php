@@ -616,16 +616,15 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="../../component-details/optical-drive/asus-drw-24-b1sta-drw-24b1sta-black-bulk/index.html">Asus
-                                            24x DVD-RW Serial-ATA Internal OEM Optical Drive DRW</a></div>
+                                            href="{{ route('optical-drives-details', ['id' => $optical_drive->id]) }}">{{ $optical_drive->name }}</a></div>
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> ASUS </div>
+                                            <div class="detail__value f_brand"> {{ $optical_drive->brand }} </div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> DRW 24 B1STA </div>
+                                            <div class="detail__value f_model"> {{ $optical_drive->model }} </div>
                                         </div>
                                     </span>
                                     <span class="table_span">

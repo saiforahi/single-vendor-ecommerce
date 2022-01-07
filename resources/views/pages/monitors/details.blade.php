@@ -102,10 +102,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>AOC C24G1</h2>
+        <h2>{{$monitor->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/monitor/index.html">Monitor</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">AOC C24G1</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('monitor-list')}}">Monitor</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('monitor-details',['id'=>$monitor->id])}}">{{$monitor->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

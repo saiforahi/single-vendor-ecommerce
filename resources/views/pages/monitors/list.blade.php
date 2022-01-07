@@ -1690,11 +1690,11 @@
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> AOC </div>
+                                                <div class="detail__value f_brand"> {{$monitor->product->brand}} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> C24G1 </div>
+                                                <div class="detail__value f_model">  {{$monitor->product->model}} </div>
                                             </div>
                                         </span>
                                         <span class="table_span">

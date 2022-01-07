@@ -268,7 +268,7 @@
         <h2>{{$sound_card->name}}</h2>
         <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i><a href="{{route('sound-card-list')}}">Sound Card</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">{{$sound_card->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('sound-card-details',['id'=>$sound_card->id])}}">{{$sound_card->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">

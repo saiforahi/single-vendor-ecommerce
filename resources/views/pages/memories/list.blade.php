@@ -1007,11 +1007,11 @@
                                         <span class="table_span">
                                             <div class="detail">
                                                 <div class="detail__name">Brand:</div>
-                                                <div class="detail__value f_brand"> G.Skill </div>
+                                                <div class="detail__value f_brand">{{$memory->product->brand}} </div>
                                             </div>
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
-                                                <div class="detail__value f_model"> Trident Z Royal </div>
+                                                <div class="detail__value f_model"> {{$memory->product->model}} </div>
                                             </div>
                                         </span>
                                         <span class="table_span">

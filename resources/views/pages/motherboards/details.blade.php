@@ -280,10 +280,10 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>ASRock TRX40 CREATOR</h2>
+        <h2>{{$motherboard->name}}</h2>
         <span><a href="../../../index.html">Home</a>
-            <i class="fa fa-angle-right"></i><a href="../../../product/motherboard/index.html">Motherboard</a>
-            <i class="fa fa-angle-right"></i><a href="index.html">ASRock TRX40 CREATOR</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{route('motherboard-list')}}">Motherboard</a>
+            <i class="fa fa-angle-right"></i><a href="{{route('motherboard-details',['id'=>$motherboard->id])}}">{{$motherboard->product->short_name}}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
