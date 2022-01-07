@@ -10,10 +10,11 @@ html, body {
 
 html {
   --headerBgColor: #001119;
-  --headerText: #3a4c56;
+  --headerText: #ffffff;
   --headerElementColor: #dae2e5;
   --headerBorderColor: rgba(255,255,255,0.15);
   --myNavColor: #dae2e5;
+  --textColor : #ffffff;
 }
 
 html[data-theme='dark'] {
@@ -22,8 +23,11 @@ html[data-theme='dark'] {
   --headerElementColor: #001119;
   --headerBorderColor: rgba(0,0,0,0.15);
   --myNavColor: #3a4c56;
+  --textColor : #3a4c56;
 }
-
+.slider-header{
+  color: var(--textColor) !important;
+}
 html.transition,
 html.transition *,
 html.transition *:before,
@@ -119,7 +123,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: var(--headerText);
+  color: var(--textColor);
   height: 100px;
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
@@ -2935,10 +2939,10 @@ footer {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
 footer>div>div>div>h5,p{
-  color: var(--headerText) !important;
+  color: var(--textColor) !important;
 }
 .footer-tags>a{
-  color: var(--headerText) !important;
+  color: var(--textColor) !important;
 }
 .footer-copyright .copyright-flex {
   display: -webkit-box;

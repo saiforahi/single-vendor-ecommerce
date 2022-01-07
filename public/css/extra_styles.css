@@ -12,13 +12,20 @@
         flex-basis: 100%;
     }
 }
+html {
+    --bgImage:url("/images/banner/bg-banner.png"), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+
+html[data-theme='dark'] {
+    --bgImage:url("/images/banner/bg-banner-white.jpg");
+}
 .hero .carousel-item-next,.hero .carousel-item-prev,.hero .carousel-item.active {
     height: 100vh;
     display: flex !important;
 }
 
 .hero {
-    background-image: url("/images/banner/bg-banner.png"), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+    background-image: var(--bgImage);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

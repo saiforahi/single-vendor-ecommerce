@@ -11,7 +11,7 @@
 
                 <div class="col-md-6 text-center text-md-right">
 
-                    <a class="btn btn-outline-white btn-md"> Visit Our Forum
+                    <a class="btn btn-outline-white btn-md slider-header"> Visit Our Forum
                     </a>
                 </div>
 
