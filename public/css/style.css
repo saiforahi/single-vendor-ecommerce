@@ -3396,3 +3396,72 @@ a.btn.btn-mdb-color.btn-sm {
         top: 11px;
         left: 16px;
     }
+
+  .component-details {
+    padding: 40px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: var(--headerBgColor);
+  }
+
+  .component-details .big-image {
+      width: 300px;
+      height: 300px;
+      margin: auto;
+  }
+
+  .small-image {
+      min-height: 50px;
+      min-width: 50px;
+
+  }
+
+  .carousel-indicators {
+      position: relative;
+  }
+
+  .carousel-indicators li {
+      background-color: var(--headerText);
+  }
+
+  .component-details h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--headerText);
+  }
+
+  .component-details h2,
+  .component-details h3,
+  .component-details h4 {
+      color: var(--headerText);
+  }
+
+  span.carousel-control-prev-icon,
+  span.carousel-control-next-icon {
+      background-color: var(--headerBgColor);
+  }
+
+  span.carousel-control-prev-icon:after,
+  span.carousel-control-next-icon:after {
+      color: var(--headerText);
+  }
+  .budget-price {
+    color: var(--headerText) !important;
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.stars-rating {
+  color: var(--headerText);
+  position: relative;
+  display: inline-block;
+}
+
+.stars-rating .stars-score {
+  color: var(--headerText);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 20%;
+  white-space: nowrap;
+}
