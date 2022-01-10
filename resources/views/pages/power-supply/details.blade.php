@@ -239,79 +239,39 @@
             <div class="col-12 col-md-3">
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                data-src="https://m.media-amazon.com/images/I/51EkSdu6J-L.jpg"
-                                alt="Build My PC, PC Builder, Corsair RM750">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                data-src="https://m.media-amazon.com/images/I/519DgdVUZ4L.jpg"
-                                alt="Build My PC, PC Builder, Corsair RM750">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                data-src="https://m.media-amazon.com/images/I/51t9-hvJ7bL.jpg"
-                                alt="Build My PC, PC Builder, Corsair RM750">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                data-src="https://m.media-amazon.com/images/I/51r7Jg8XC3L.jpg"
-                                alt="Build My PC, PC Builder, Corsair RM750">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                data-src="https://m.media-amazon.com/images/I/517BHtQa7BL.jpg"
-                                alt="Build My PC, PC Builder, Corsair RM750">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                data-src="https://m.media-amazon.com/images/I/51awwyC9k6L.jpg"
-                                alt="Build My PC, PC Builder, Corsair RM750">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply"
-                                data-src="https://m.media-amazon.com/images/I/51EbKSoV1CL.jpg"
-                                alt="Build My PC, PC Builder, Corsair RM750">
-                        </div>
+                        @foreach ($power_supplier->product->getMedia('main_image') as $image)
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                    data-src="{{ $image->getUrl('main_image') }}"
+                                    alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
+                            </div>
+                        @endforeach
                     </div>
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
+                    @if(count($power_supplier->product->getMedia('main_image'))>0)
+                        <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon temp"></span>
+                            <span class="sr-only" aria-hidden="true">Prev</span>
+                        </a>
+                        <a href="#main-carousel" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only" aria-hidden="true">Next</span>
+                        </a>
+                    @endif
                     <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="6">
-                        </li>
+                        @foreach ($power_supplier->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
                     </ol>
                 </div>
                 
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>Corsair RM 750 Series, 80+ Gold Certified 750W Fully Modular Power Supply</h1>
+                <h1>{{$power_supplier->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.6 out of 5">
                         <div class="stars-score" style="width: 92%">
@@ -338,16 +298,16 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                   {{$power_supplies->product->features}}
+                   {!!$power_supplier->product->features!!}
 
                     
-                    <div class="budget-price">৳ {{$power_supplies->product->price}}</div>
+                    <div class="budget-price">৳ {{$power_supplier->product->price}}</div>
                     
                     <div class="align-button">
-                        <a href="{{route('add-product-to-cart',['product_id'=>$power_supplies->product->id])}}" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B07RF237B1?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{route('add-product-to-cart',['product_id'=>$power_supplier->product->id])}}" class="btn btn-primary btn2 "><i
+                                class="fa fa-plus"></i>Add Product to Cart</a>
+                        <a href="{{route('add-power_supplier-to-system',['power_supplier_id'=>$power_supplier->id])}}" target="_blank"
+                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i>Add to System Builder</a>
                     </div>
                 </div>
             </div>

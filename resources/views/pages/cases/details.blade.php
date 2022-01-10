@@ -1,56 +1,7 @@
 @extends('layouts.app')
 
 @push('style')
-    <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-
-        }
-
-        .carousel-indicators {
-            position: relative;
-        }
-
-        .carousel-indicators li {
-            background-color: white;
-        }
-
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .component-details h2,
-        .component-details h3,
-        .component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        span.carousel-control-prev-icon,
-        span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-
-        span.carousel-control-prev-icon:after,
-        span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-
-    </style>
+    
     <style>
         a.disabled {
             pointer-events: none;
@@ -286,10 +237,10 @@
     </section>
     <div class="container-fluid component-details">
         <div class="row">
-            {{-- <div class="col-12 col-md-3">
+            <div class="col-12 col-md-3">
                 <?php $product = $casing->product; ?>
                 @include('components.product-media')
-                <div class="product-info d-none d-md-block">
+                {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
                     <div class="level1"><span class="title">Compatibility</span>
                         <div class="level2"><span class="key">Motherboard Support</span> : <span>ATX,
@@ -386,12 +337,11 @@
                         <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> :
                             <span>19.75 x 19.25 x 11"</span></div>
                     </div>
-                </div>
-            </div> --}}
+                </div> --}}
+            </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>NZXT H510 - CA-H510B-W1 - Compact ATX Mid-Tower PC Gaming Case - Front I/O USB Type-C Port - Tempered
-                    Glass Side Panel - Cable Management System - Water-Cooling Ready </h1>
+                <h1>{{$casing->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.7 out of 5">
                         <div class="stars-score" style="width: 94%">
@@ -409,7 +359,7 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(7810 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
@@ -418,7 +368,7 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{$casing->product->features}}
+                    {!!$casing->product->features!!}
 
                     
                     <div class="budget-price">৳ {{$casing->product->price}}</div>
@@ -427,7 +377,7 @@
                         <a href="{{route('add-product-to-cart',['product_id'=>$casing->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to Cart</a>
                         <a href="{{ route('add-casing-to-system', ['casing_id' => $casing->id]) }}"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> Add to System Builder </a>
+                            class="btn btn-primary btn1 ">Add to System Builder </a>
                     </div>
                 </div>
             </div>

@@ -259,7 +259,7 @@
                         <a href="{{route('add-product-to-cart',['product_id'=>$ups->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B00O8W9G3I?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                            class="btn btn-primary btn1 "> View on Amazon </a>
                     </div>
                 </div>
             </div>

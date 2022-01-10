@@ -1,56 +1,7 @@
 @extends('layouts.app')
 
 @push('style')
-    <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-
-        }
-
-        .carousel-indicators {
-            position: relative;
-        }
-
-        .carousel-indicators li {
-            background-color: white;
-        }
-
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .component-details h2,
-        .component-details h3,
-        .component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        span.carousel-control-prev-icon,
-        span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-
-        span.carousel-control-prev-icon:after,
-        span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-
-    </style>
+    
     <style>
         .pcb-product-summary {
             display: flex;
@@ -208,7 +159,7 @@
     <style>
         .sticky {
             /*position: sticky!important;
-                    top: 80px;*/
+                        top: 80px;*/
         }
 
     </style>
@@ -279,10 +230,11 @@
 
 @section('content')
     <section class="pcb-breadcrumb">
-        <h2>{{$keyboard->product->name}}</h2>
+        <h2>{{ $keyboard->product->name }}</h2>
         <span><a href="{{ route('home') }}">Home</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('keyboard-list')}}">Keyboard</a>
-            <i class="fa fa-angle-right"></i><a href="{{route('keyboard-details',['id'=>$keyboard->id])}}">{{$keyboard->product->short_name}}</a></span>
+            <i class="fa fa-angle-right"></i><a href="{{ route('keyboard-list') }}">Keyboard</a>
+            <i class="fa fa-angle-right"></i><a
+                href="{{ route('keyboard-details', ['id' => $keyboard->id]) }}">{{ $keyboard->product->short_name }}</a></span>
     </section>
     <div class="container-fluid component-details">
         <div class="row">
@@ -290,23 +242,24 @@
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
                         @foreach ($keyboard->product->getMedia('main_image') as $image)
-                            <div class="{{ $loop->index == 0 ? 'carousel-item img-gradient active':'carousel-item img-gradient' }}">
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
                                 <img class="d-block img-fluid big-image lazy"
                                     title="G.SKILL Trident Z Royal Series, 16GB (2 x 8GB) 288-Pin DDR4-4800MHz Desktop Memory Model with CL18"
-                                    data-src="{{$image->getUrl('main_image')}}"
+                                    data-src="{{ $image->getUrl('main_image') }}"
                                     alt="Build My PC, System Builder, G.Skill Trident Z Royal">
                             </div>
                         @endforeach
                     </div>
-                    @if(count($keyboard->product->getMedia('main_image'))>1)
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
+                    @if (count($keyboard->product->getMedia('main_image')) > 1)
+                        <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon temp"></span>
+                            <span class="sr-only" aria-hidden="true">Prev</span>
+                        </a>
+                        <a href="#main-carousel" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only" aria-hidden="true">Next</span>
+                        </a>
                     @endif
 
                     <ol class="carousel-indicators">
@@ -317,11 +270,11 @@
                         @endforeach
                     </ol>
                 </div>
-                
+
             </div>
-            
+
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>{{$keyboard->name}}</h1>
+                <h1>{{ $keyboard->name }}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.6 out of 5">
                         <div class="stars-score" style="width: 92%">
@@ -345,16 +298,17 @@
                     </div>
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
-                
+
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{$keyboard->product->features}}
+                    {!! $keyboard->product->features !!}
 
-                    
-                    <div class="budget-price">৳ {{$keyboard->product->price}}</div>
-                    
+
+                    <div class="budget-price">৳ {{ $keyboard->product->price }}</div>
+
                     <div class="align-button">
-                        <a href="{{ route('add-product-to-cart', ['product_id' => $keyboard->product->id]) }}" class="btn btn-primary btn2 "> Add Product to Cart</a>
+                        <a href="{{ route('add-product-to-cart', ['product_id' => $keyboard->product->id]) }}"
+                            class="btn btn-primary btn2 "> Add Product to Cart</a>
                         <a href="{{ route('add-keyboard-to-system', ['keyboard_id' => $keyboard->id]) }}"
                             class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
@@ -363,23 +317,3 @@
         </div>
     </div>
 @endsection
-
-
-@if(count($keyboard->product->getMedia('main_image'))>1)
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
-                    @endif
-                    <ol>
-                        @foreach ($keyboard->product->getMedia('main_image') as $image)
-                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
-                                class="{{ $loop->index == 0 ? 'active' : '' }}">
-                            </li>
-                        @endforeach
-
-                    </ol>

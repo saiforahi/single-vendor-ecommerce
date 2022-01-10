@@ -252,7 +252,7 @@ class SystemBuilderController extends Controller
         return "";
     }
     //cpu_cooler
-    public function add_cooler_web($cooler_id){
+    public function add_cpu_cooler_web($cooler_id){
         if(Session::has('system')){
             $system = Session::get('system');
             $system->set_cooler($cooler_id);
@@ -266,7 +266,7 @@ class SystemBuilderController extends Controller
         return redirect('/system-builder');
         // dd($req->all());
     }
-    public function remove_cooler_web(){
+    public function remove_cpu_cooler_web(){
         if(Session::has('system') && Session::get('system')->get_cooler()!=''){
             $system = Session::get('system');
             $system->remove_cooler();

@@ -177,44 +177,7 @@
     }
 
 </style>
-<style>
-    .component-details {
-        padding: 40px;
-        color: rgba(255, 255, 255, 0.8);
-        background-color: #1d2b36;
-    }
-    .component-details .big-image {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-    }
-    .small-image {
-        min-height: 50px;
-        min-width: 50px;
-        
-    }
-    .carousel-indicators {
-        position: relative;
-    }
-    .carousel-indicators li {
-        background-color: white;
-    }
-    .component-details h1 {
-        font-size: 28px;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.9);
-    }
-    .component-details h2,.component-details h3,.component-details h4 {
-        color: rgba(255, 255, 255, 0.9);
-    }
-    span.carousel-control-prev-icon, span.carousel-control-next-icon {
-        background-color: #373737;
-    }
-    span.carousel-control-prev-icon:after, span.carousel-control-next-icon:after {
-        color: #fff;
-    }
-    
-</style>
+
 <style>
 
 .pcb-product-summary {
@@ -341,7 +304,7 @@ font-size: 26px;
                         <a href="{{route('add-product-to-cart',['product_id'=>$thermalpaste->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to List</a>
                         <a href="https://amazon.com/dp/B0795DP124?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                            class="btn btn-primary btn1 "> View on Amazon </a>
                     </div>
                 </div>
             </div>

@@ -1,56 +1,7 @@
 @extends('layouts.app')
 
 @push('style')
-    <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-
-        }
-
-        .carousel-indicators {
-            position: relative;
-        }
-
-        .carousel-indicators li {
-            background-color: white;
-        }
-
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .component-details h2,
-        .component-details h3,
-        .component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        span.carousel-control-prev-icon,
-        span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-
-        span.carousel-control-prev-icon:after,
-        span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-
-    </style>
+    
     <style>
         .pcb-product-summary {
             display: flex;
@@ -300,23 +251,22 @@
                             </div>
                         @endforeach
                     </div>
-                    @if(count($motherboard->product->getMedia('main_image'))>1)
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
+                    @if(count($motherboard->product->getMedia('main_image'))>0)
+                        <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon temp"></span>
+                            <span class="sr-only" aria-hidden="true">Prev</span>
+                        </a>
+                        <a href="#main-carousel" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only" aria-hidden="true">Next</span>
+                        </a>
                     @endif
-                    <ol>
-                        @foreach ($motherboard->product->getMedia('main_image') as $image)
+                    <ol class="carousel-indicators">
+                        @foreach ($motherboard->getMedia('main_image') as $image)
                             <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
                                 class="{{ $loop->index == 0 ? 'active' : '' }}">
                             </li>
                         @endforeach
-
                     </ol>
                 </div>
                 
@@ -474,7 +424,7 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(5 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
@@ -483,7 +433,7 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                   {{$motherboard->product->features}}
+                   {!!$motherboard->product->features!!}
                    
                     <div class="budget-price">৳ {{$motherboard->product->price}}</div>
                     
@@ -494,7 +444,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-info d-md-none">
+            {{-- <div class="product-info d-md-none">
                 <h4><strong>Product Specification</strong></h4>
                 <div class="level1"><span class="title">CPU</span>
                     <div class="level2"><span class="key">Chipset</span> : <span>AMD X570</span></div>
@@ -618,7 +568,7 @@
                     <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>14.55 x
                             12.4 x 3.8"</span></div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 @endsection

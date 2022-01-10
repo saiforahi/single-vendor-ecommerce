@@ -2,56 +2,6 @@
 
 @push('style')
     <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-
-        }
-
-        .carousel-indicators {
-            position: relative;
-        }
-
-        .carousel-indicators li {
-            background-color: white;
-        }
-
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .component-details h2,
-        .component-details h3,
-        .component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        span.carousel-control-prev-icon,
-        span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-
-        span.carousel-control-prev-icon:after,
-        span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-
-    </style>
-    <style>
         .pcb-product-summary {
             display: flex;
             align-items: center;
@@ -289,81 +239,33 @@
             <div class="col-12 col-md-3">
                 <div class="carousel slide" id="main-carousel" data-ride="carousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/41t1VU+qlYL._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/41bTXLPtpaL._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/41uCUS87aiL._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/31ytZ-hrs8L._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/41329zTARGL._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/41uOWq0-lsL._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/416b6-eZt4L._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC Graphics Card (RTX 3090 GAMING X TRIO 24G)"
-                                data-src="https://m.media-amazon.com/images/I/21y6T7pjnTL._SL500_.jpg"
-                                alt="Build My PC, PC Builder, MSI RTX 3090 GAMING X TRIO 24G">
-                        </div>
+                        @foreach ($graphic->product->getMedia('main_image') as $image)
+                            <div
+                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
+                                <img class="d-block img-fluid big-image lazy"
+                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
+                                    data-src="{{ $image->getUrl('main_image') }}"
+                                    alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
+                            </div>
+                        @endforeach
 
                     </div>
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
+                    @if(count($graphic->product->getMedia('main_image'))>0)
+                        <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon temp"></span>
+                            <span class="sr-only" aria-hidden="true">Prev</span>
+                        </a>
+                        <a href="#main-carousel" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only" aria-hidden="true">Next</span>
+                        </a>
+                    @endif
                     <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="6">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="7">
-                        </li>
+                        @foreach ($graphic->getMedia('main_image') as $image)
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
+                        @endforeach
                     </ol>
                 </div>
                 
@@ -402,8 +304,7 @@
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>MSI Gaming GeForce RTX 3090 24GB GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 2 Ampere Architecture OC
-                    Graphics Card (RTX 3090 GAMING X TRIO 24G)</h1>
+                <h1>{{$graphic->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.3 out of 5">
                         <div class="stars-score" style="width: 86%">
@@ -421,7 +322,7 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(63 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
@@ -430,7 +331,7 @@
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{$graphic->product->features}}
+                    {!!$graphic->product->features!!}
 
                     
                     <div class="budget-price">৳ {{$graphic->product->price}}</div>
@@ -438,8 +339,8 @@
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$graphic->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to cart</a>
-                        <a href="https://amazon.com/dp/B08HRBW6VB?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{route('add-graphic-to-system',['graphic_id'=>$graphic->id])}}" target="_blank"
+                            class="btn btn-primary btn1 "> View on Amazon </a>
                     </div>
                 </div>
             </div>

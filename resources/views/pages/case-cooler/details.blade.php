@@ -178,44 +178,6 @@
 
     </style>
     <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-            
-        }
-        .carousel-indicators {
-            position: relative;
-        }
-        .carousel-indicators li {
-            background-color: white;
-        }
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        .component-details h2,.component-details h3,.component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-        span.carousel-control-prev-icon, span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-        span.carousel-control-prev-icon:after, span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-        
-    </style>
-    <style>
     
     .pcb-product-summary {
         display: flex;
@@ -272,75 +234,13 @@
     <div class="container-fluid component-details">
         <div class="row">
             <div class="col-12 col-md-3">
-                <div class="carousel slide" id="main-carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master MasterFan MF120R ARGB 120mm 3 Pack Fan with Independently-Controlled ARGB LEDs, Absorbing Rubber Pads, Controller, PWM Control for Computer Case, CPU Liquid & Air Cooler"
-                                data-src="https://m.media-amazon.com/images/I/411RCdonZAL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master MasterFan MF120R">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master MasterFan MF120R ARGB 120mm 3 Pack Fan with Independently-Controlled ARGB LEDs, Absorbing Rubber Pads, Controller, PWM Control for Computer Case, CPU Liquid & Air Cooler"
-                                data-src="https://m.media-amazon.com/images/I/51H-6n9yDjL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master MasterFan MF120R">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master MasterFan MF120R ARGB 120mm 3 Pack Fan with Independently-Controlled ARGB LEDs, Absorbing Rubber Pads, Controller, PWM Control for Computer Case, CPU Liquid & Air Cooler"
-                                data-src="https://m.media-amazon.com/images/I/41Lx22WCyeL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master MasterFan MF120R">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master MasterFan MF120R ARGB 120mm 3 Pack Fan with Independently-Controlled ARGB LEDs, Absorbing Rubber Pads, Controller, PWM Control for Computer Case, CPU Liquid & Air Cooler"
-                                data-src="https://m.media-amazon.com/images/I/51A8+9SQEBL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master MasterFan MF120R">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master MasterFan MF120R ARGB 120mm 3 Pack Fan with Independently-Controlled ARGB LEDs, Absorbing Rubber Pads, Controller, PWM Control for Computer Case, CPU Liquid & Air Cooler"
-                                data-src="https://m.media-amazon.com/images/I/41T+z5sPpQL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master MasterFan MF120R">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master MasterFan MF120R ARGB 120mm 3 Pack Fan with Independently-Controlled ARGB LEDs, Absorbing Rubber Pads, Controller, PWM Control for Computer Case, CPU Liquid & Air Cooler"
-                                data-src="https://m.media-amazon.com/images/I/51Rlp8jk6zL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master MasterFan MF120R">
-                        </div>
-                    </div>
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
-
-                    <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                    </ol>
-                </div>
+                <?php $product = $case_cooler->product; ?>
+                @include('components.product-media')
 
             </div>
 
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>Cooler Master MasterFan MF120R ARGB 120mm 3 Pack Fan with Independently-Controlled ARGB LEDs, Absorbing
-                    Rubber Pads, Controller, PWM Control for Computer Case, CPU Liquid & Air Cooler</h1>
+                <h1>{{$case_cooler->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.4 out of 5">
                         <div class="stars-score" style="width: 88%">
@@ -358,7 +258,7 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(848 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
@@ -367,7 +267,7 @@
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                   {{$case_cooler->product->features}}
+                   {!!$case_cooler->product->features!!}
 
 
                     <div class="budget-price">৳ {{ $case_cooler->product->price }}</div>
@@ -375,8 +275,8 @@
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$case_cooler->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B07GSRJJTQ?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{route('add-case_cooler-to-system',['case_cooler_id'=>$case_cooler->id])}}" target="_blank"
+                            class="btn btn-primary btn1 ">Add to System Builder</a>
                     </div>
                 </div>
             </div>

@@ -986,7 +986,7 @@
                                             href="https://amazon.com/dp/B005O65JXI?tag=pcbuilder00-20" target="_blank">View
                                             Details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="{{ route('add-cooler-to-system', ['cooler_id' => $cpu_cooler->id]) }}"><i
+                                            href="{{ route('add-cpu-cooler-to-system', ['cpu_cooler_id' => $cpu_cooler->id]) }}"><i
                                                 class="fa fa-plus"></i></a>
                                     </td>
                                 </tr>

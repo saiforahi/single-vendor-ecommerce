@@ -178,56 +178,6 @@
 
     </style>
     <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-
-        }
-
-        .carousel-indicators {
-            position: relative;
-        }
-
-        .carousel-indicators li {
-            background-color: white;
-        }
-
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .component-details h2,
-        .component-details h3,
-        .component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        span.carousel-control-prev-icon,
-        span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-
-        span.carousel-control-prev-icon:after,
-        span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-
-    </style>
-    <style>
         .pcb-product-summary {
             display: flex;
             align-items: center;
@@ -287,37 +237,8 @@
     <div class="container-fluid component-details">
         <div class="row">
             <div class="col-12 col-md-3">
-                <div class="carousel slide" id="main-carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                        @foreach ($mouse->product->getMedia('main_image') as $image)
-                            <div
-                                class="{{ $loop->index == 0 ? 'carousel-item img-gradient active' : 'carousel-item img-gradient' }}">
-                                <img class="d-block img-fluid big-image lazy"
-                                    title="AMD Ryzen Threadripper 3990X, 64 Cores & 128-Threads Unlocked Desktop Processor without Cooler"
-                                    data-src="{{ $image->getUrl('main_image') }}"
-                                    alt="Build My PC, System Builder, AMD Ryzen Threadripper 3990X">
-                            </div>
-                        @endforeach
-                    </div>
-                    @if(count($mouse->product->getMedia('main_image'))>1)
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
-                    @endif
-                    <ol>
-                        @foreach ($mouse->product->getMedia('main_image') as $image)
-                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
-                                class="{{ $loop->index == 0 ? 'active' : '' }}">
-                            </li>
-                        @endforeach
-
-                    </ol>
-                </div>
+                <?php $product = $mouse->product; ?>
+                @include('components.product-media')
 
             </div>
 
@@ -340,7 +261,7 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(6924 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
@@ -349,7 +270,7 @@
 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{$mouse->product->features}}
+                    {!!$mouse->product->features!!}
 
 
                     <div class="budget-price">৳ {{$mouse->product->price}}</div>

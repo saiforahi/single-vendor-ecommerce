@@ -164,56 +164,6 @@
 
     </style>
     <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-
-        }
-
-        .carousel-indicators {
-            position: relative;
-        }
-
-        .carousel-indicators li {
-            background-color: white;
-        }
-
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .component-details h2,
-        .component-details h3,
-        .component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        span.carousel-control-prev-icon,
-        span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-
-        span.carousel-control-prev-icon:after,
-        span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-
-    </style>
-    <style>
         .pcb-product-summary {
             display: flex;
             align-items: center;
@@ -288,76 +238,8 @@
     <div class="container-fluid component-details">
         <div class="row">
             <div class="col-12 col-md-3">
-                <div class="carousel slide" id="main-carousel" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item img-gradient active">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                data-src="https://m.media-amazon.com/images/I/51Au1Rx9vDL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master Hyper 212 EVO">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                data-src="https://m.media-amazon.com/images/I/51s2QFuoRwL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master Hyper 212 EVO">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                data-src="https://m.media-amazon.com/images/I/51kQmNhUMlL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master Hyper 212 EVO">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                data-src="https://m.media-amazon.com/images/I/41TIDYk0rqL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master Hyper 212 EVO">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                data-src="https://m.media-amazon.com/images/I/51k9eYEZDFL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master Hyper 212 EVO">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                data-src="https://m.media-amazon.com/images/I/51-VhrzOvwL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master Hyper 212 EVO">
-                        </div>
-                        <div class="carousel-item img-gradient">
-                            <img class="d-block img-fluid big-image lazy"
-                                title="Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins"
-                                data-src="https://m.media-amazon.com/images/I/41EacaX-5kL.jpg"
-                                alt="Build My PC, PC Builder, Cooler Master Hyper 212 EVO">
-                        </div>
-                    </div>
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
-                    <ol class="carousel-indicators">
-                        <li data-target="#main-carousel" data-slide-to="0" class="active">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="1">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="2">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="3">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="4">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="5">
-                        </li>
-                        <li data-target="#main-carousel" data-slide-to="6">
-                        </li>
-                    </ol>
-                </div>
+                <?php $product = $cpu_cooler->product; ?>
+                @include('components.product-media')
 
                 {{-- <div class="product-info d-none d-md-block">
                     <h4><strong>Product Specification</strong></h4>
@@ -401,7 +283,7 @@
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>Cooler Master Hyper 212 Evo CPU Cooler, 4 CDC Heatpipes, 120mm PWM Fan, Aluminum Fins</h1>
+                <h1>{{$cpu_cooler->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.6 out of 5">
                         <div class="stars-score" style="width: 92%">
@@ -419,32 +301,28 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(18285 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
                 <div class="description">
-                    <p>Keep your system cool and work properly with Cooler Master Hyper 212 Evo CPU Cooler. This CPU cooler
-                        has an aluminum find and 4 Continuous Direct Contact (CDC) base to ensure the heat pipes barriers
-                        are free while drawing heat away from the processor. </p>
-                    <p>The Cooler Master Hyper 212 EVO has a fan RPM of 600 to 2000 RPMs, a noise level of 9 to 36 dBA, and
-                        a 120mm PWM fan that can be sped up or slowed down when necessary.</p>
+                    {{$cpu_cooler->product->description}}
                 </div>
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{$cpu_cooler->product->features}}
+                    {!!$cpu_cooler->product->features!!}
 
                     
                     <div class="budget-price">৳ {{$cpu_cooler->product->price}}</div>
                     
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$cpu_cooler->product->id])}}" class="btn btn-primary btn2 "><i
-                                class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B005O65JXI?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                                class="fa fa-plus"></i>Add Product to Cart</a>
+                        <a href="{{route('add-cpu-cooler-to-system',['cpu_cooler_id'=>$cpu_cooler->id])}}" target="_blank"
+                            class="btn btn-primary btn1">Add to System Builder</a>
                     </div>
                 </div>
             </div>

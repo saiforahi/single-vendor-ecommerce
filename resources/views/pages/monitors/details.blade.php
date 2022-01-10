@@ -1,56 +1,6 @@
 @extends('layouts.app')
 @push('style')
     <style>
-        .component-details {
-            padding: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            background-color: #1d2b36;
-        }
-
-        .component-details .big-image {
-            width: 300px;
-            height: 300px;
-            margin: auto;
-        }
-
-        .small-image {
-            min-height: 50px;
-            min-width: 50px;
-
-        }
-
-        .carousel-indicators {
-            position: relative;
-        }
-
-        .carousel-indicators li {
-            background-color: white;
-        }
-
-        .component-details h1 {
-            font-size: 28px;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .component-details h2,
-        .component-details h3,
-        .component-details h4 {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        span.carousel-control-prev-icon,
-        span.carousel-control-next-icon {
-            background-color: #373737;
-        }
-
-        span.carousel-control-prev-icon:after,
-        span.carousel-control-next-icon:after {
-            color: #fff;
-        }
-
-    </style>
-    <style>
         .pcb-product-summary {
             display: flex;
             align-items: center;
@@ -122,19 +72,21 @@
                         @endforeach
                         
                     </div>
-                    <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
-                        <span class="carousel-control-prev-icon temp"></span>
-                        <span class="sr-only" aria-hidden="true">Prev</span>
-                    </a>
-                    <a href="#main-carousel" class="carousel-control-next" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                        <span class="sr-only" aria-hidden="true">Next</span>
-                    </a>
+                    @if(count($monitor->product->getMedia('main_image'))>0)
+                        <a href="#main-carousel" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon temp"></span>
+                            <span class="sr-only" aria-hidden="true">Prev</span>
+                        </a>
+                        <a href="#main-carousel" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only" aria-hidden="true">Next</span>
+                        </a>
+                    @endif
                     <ol class="carousel-indicators">
                         @foreach ($monitor->getMedia('main_image') as $image)
-                        <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
-                            class="{{ $loop->index == 0 ? 'active' : '' }}">
-                        </li>
+                            <li data-target="#main-carousel" data-slide-to="{{ $loop->index }}"
+                                class="{{ $loop->index == 0 ? 'active' : '' }}">
+                            </li>
                         @endforeach
                     </ol>
                 </div>
@@ -142,8 +94,7 @@
             </div>
             
             <div class="col-12 col-md-9 pl-md-5 pr-md-5">
-                <h1>AOC C24G1 24" Curved Frameless Gaming Monitor, FHD 1080p, 1500R VA panel, 1ms 144Hz, FreeSync, Height
-                    adjustable, VESA, 3-Year Zero Dead Pixels</h1>
+                <h1>{{$monitor->name}}</h1>
                 <div class="pcb-product-summary">
                     <div class="stars-rating" title="4.6 out of 5">
                         <div class="stars-score" style="width: 92%">
@@ -161,25 +112,19 @@
                             <i class="far fa-star"></i>
                         </div>
                     </div>
-                    <div>&nbsp;&nbsp;(8561 Total Review)</div>
+                    <div>&nbsp;&nbsp;(0 Total Review)</div>
                     <div class="hot-selling float-right d-none">
                         <i class="fa fa-fire hot" aria-hidden="true"></i> &nbsp;Hot Selling
                     </div>
                 </div>
                 <hr style="padding:1.5px ; background-color:darkgray">
                 <div class="description">
-                    <p>AOC 24" curved gaming monitor has a Full HD resolution and a wide viewing angle of up to 178 degrees
-                        to ensure that the colors are accurately rendered at any angle. The VA panel technology makes sure
-                        you have better color reproduction, higher brightness, and deeper blacks.</p>
-                    <p>This gaming monitor has a frameless design, making it ideal for multi-monitor setups. The monitor
-                        sports a 1080p Full HD resolution with an amazing 1ms response time to prevent ghosting or image
-                        distortion in fast-paced games. This monitor gives you the freedom to connect multiple devices to
-                        your PC/console via its HDMI or DisplayPort and VGA ports.</p>
+                    {!!$monitor->product->description!!}
                 </div>
                 
                 <div class="sticky-top" style="top: 80px">
                     <h4 class="price">Product Features </h4>
-                    {{$monitor->product->features}}
+                    {!!$monitor->product->features!!}
 
                     
                     <div class="budget-price">৳ {{$monitor->product->price}}</div>
@@ -187,8 +132,8 @@
                     <div class="align-button">
                         <a href="{{route('add-product-to-cart',['product_id'=>$monitor->product->id])}}" class="btn btn-primary btn2 "><i
                                 class="fa fa-plus"></i> Add Product to Cart</a>
-                        <a href="https://amazon.com/dp/B07GD7H18F?tag=pcbuilder00-20" target="_blank"
-                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i> View on Amazon </a>
+                        <a href="{{route('add-monitor-to-system',['monitor_id'=>$monitor->id])}}" target="_blank"
+                            class="btn btn-primary btn1 "><i class="fab fa-amazon"></i>Add to System Builder</a>
                     </div>
                 </div>
             </div>

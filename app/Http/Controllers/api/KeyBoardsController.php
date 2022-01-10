@@ -4,7 +4,7 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\KeyBoard;
+use App\Models\Keyboard;
 use App\Models\Product;
 use App\Http\Requests\v1\CreateKeyBoardsRequest;
 use App\Events\UploadImageEvent;

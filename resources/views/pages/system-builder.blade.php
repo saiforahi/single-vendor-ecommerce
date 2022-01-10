@@ -402,7 +402,7 @@
                                 <td><a class="btn btn-primary component-btn"
                                         href="{{route('cpu-coolers-details',['id'=>$cooler->id])}}" target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
-                                        id="motherboard0" href="{{ route('remove-cooler-from-system') }}"><i
+                                        id="motherboard0" href="{{ route('remove-cpu-cooler-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
                             @else
                                 <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
