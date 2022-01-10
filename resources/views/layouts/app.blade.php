@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
 
     <!-- Mirrored from pcbuilder.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Oct 2021 17:47:29 GMT -->
     <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
@@ -71,7 +71,7 @@
         <script>
             window.auth_user = {!! json_encode(Auth::user()); !!};  //retrieving auth user in a global script variable, it can be accessed in any vue component's script tag
         </script>
-        <script>
+        {{-- <script>
             if(sessionStorage.getItem('theme')=='dark'){
                 console.log('dark')
                 document.documentElement.setAttribute('data-theme', 'dark')
@@ -80,7 +80,7 @@
                 console.log('light')
                 document.documentElement.setAttribute('data-theme', 'light')
             }
-        </script>
+        </script> --}}
         <script async src="{{asset('js/analytics.js')}}"></script>
         <script src="{{(asset('js/analytics-code.js'))}}"></script>
         <!-- Styles -->

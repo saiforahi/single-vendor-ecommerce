@@ -90,10 +90,10 @@
             <div><span>Cart</span></div>
         </div>
         <div class="d-none d-lg-flex mode">
-            <label class="switch">
+            {{-- <label class="switch">
                 <input type="checkbox" id="switch" name="theme" >
                 <span class="slider round"></span>
-            </label>
+            </label> --}}
         </div>
         <button class="navbar-toggler menu" type="button">
             <svg width="60" height="60" viewBox="0 0 100 100">
