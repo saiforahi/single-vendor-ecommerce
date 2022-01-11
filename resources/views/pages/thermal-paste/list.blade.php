@@ -649,13 +649,13 @@
                                             <div class="detail__value f_model"> {{ $thermalpaste->model }} </div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Amount:</div>
                                             <div class="detail__value f_amount"> 4 Grams </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">

@@ -1697,7 +1697,7 @@
                                                 <div class="detail__value f_model">  {{$monitor->product->model}} </div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Screen Size:</div>
@@ -1723,7 +1723,7 @@
                                                 <div class="detail__name">Refresh Rate:</div>
                                                 <div class="detail__value f_refresh_rate"> 144 Hz </div>
                                             </div>
-                                        </span>
+                                        </span> --}}
 
                                     </td>
                                     <td class="price">{{ $monitor->product->price }}</td>

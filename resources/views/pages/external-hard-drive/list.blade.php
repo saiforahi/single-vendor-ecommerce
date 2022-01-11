@@ -863,35 +863,35 @@
                                                 <div class="detail__name">Model:</div>
                                                 <div class="detail__value f_model"> {{$external_hard_drive->product->model}} </div>
                                             </div>
-                                        </span>
-                                        <span class="table_span">
+                                        // </span>
+                                        // <span class="table_span">
 
-                                            <div class="detail">
-                                                <div class="detail__name">Capacity:</div>
-                                                <div class="detail__value f_capacity"> 1 TB </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail__name">Type:</div>
-                                                <div class="detail__value f_storage_type"> HDD </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail__name">RPM:</div>
-                                                <div class="detail__value f_rpm"> 5400 RPM </div>
-                                            </div>
-                                        </span><span class="table_span">
-                                            <div class="detail">
-                                                <div class="detail__name">Interface:</div>
-                                                <div class="detail__value f_interface"> USB 3.0 </div>
-                                            </div>
-                                            <div class="detail d-none">
-                                                <div class="detail__name">Cache Memory:</div>
-                                                <div class="detail__value f_cache_memory"> </div>
-                                            </div>
-                                            <div class="detail">
-                                                <div class="detail__name">Form Factor:</div>
-                                                <div class="detail__value f_form_factor"> 2.5" </div>
-                                            </div>
-                                        </span>
+                                        //     <div class="detail">
+                                        //         <div class="detail__name">Capacity:</div>
+                                        //         <div class="detail__value f_capacity"> 1 TB </div>
+                                        //     </div>
+                                        //     <div class="detail">
+                                        //         <div class="detail__name">Type:</div>
+                                        //         <div class="detail__value f_storage_type"> HDD </div>
+                                        //     </div>
+                                        //     <div class="detail">
+                                        //         <div class="detail__name">RPM:</div>
+                                        //         <div class="detail__value f_rpm"> 5400 RPM </div>
+                                        //     </div>
+                                        // </span><span class="table_span">
+                                        //     <div class="detail">
+                                        //         <div class="detail__name">Interface:</div>
+                                        //         <div class="detail__value f_interface"> USB 3.0 </div>
+                                        //     </div>
+                                        //     <div class="detail d-none">
+                                        //         <div class="detail__name">Cache Memory:</div>
+                                        //         <div class="detail__value f_cache_memory"> </div>
+                                        //     </div>
+                                        //     <div class="detail">
+                                        //         <div class="detail__name">Form Factor:</div>
+                                        //         <div class="detail__value f_form_factor"> 2.5" </div>
+                                        //     </div>
+                                        // </span>
 
                                     </td>
                                     <td class="price">

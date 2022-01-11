@@ -825,7 +825,7 @@
                                                 <div class="detail__value f_model"> {{$head_phone->product->model}} </div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Frequency:</div>
@@ -839,7 +839,7 @@
                                                 <div class="detail__name">Color:</div>
                                                 <div class="detail__value f_color"> Red </div>
                                             </div>
-                                        </span>
+                                        </span> --}}
 
                                     </td>
                                     <td class="price">

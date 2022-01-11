@@ -1187,7 +1187,7 @@
                                                 <div class="detail__value f_model">{{ $storage->model }}</div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Capacity:</div>
@@ -1214,7 +1214,7 @@
                                                 <div class="detail__name">Form Factor:</div>
                                                 <div class="detail__value f_form_factor">{{ empty(json_decode($storage->physical_specs, true)) ? '' : json_decode($storage->physical_specs, true)['form_factor'] }}</div>
                                             </div>
-                                        </span>
+                                        </span> --}}
 
                                     </td>
                                     <td class="price">৳ {{ $storage->product->price }}</td>

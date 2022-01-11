@@ -639,7 +639,7 @@
                                             <div class="detail__value f_model"> {{ $wireless_network_adapter->model }} </div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Protocol:</div>
@@ -653,11 +653,10 @@
                                             <div class="detail__name">Color:</div>
                                             <div class="detail__value f_color"> Black </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
-                                <td class="price">
-                                    $9.89 </td>
+                                <td class="price">{{$}}</td>
                                 <td><a class="btn btn-primary component-btn"
                                         href="https://amazon.com/dp/B008IFXQFU?tag=pcbuilder00-20" target="_blank"><i
                                             class="fab fa-amazon"></i> View on Amazon</a></td>

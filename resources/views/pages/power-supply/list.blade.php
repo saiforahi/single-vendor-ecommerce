@@ -879,7 +879,7 @@
                                                 <div class="detail__value f_model">{{$power_supplier->product->model}}</div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Power:</div>
@@ -893,7 +893,7 @@
                                                 <div class="detail__name">Color:</div>
                                                 <div class="detail__value f_color"> Black </div>
                                             </div>
-                                        </span>
+                                        </span> --}}
 
                                     </td>
                                     <td class="price">

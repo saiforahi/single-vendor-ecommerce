@@ -627,7 +627,7 @@
                                             <div class="detail__value f_model"> {{ $optical_drive->model }} </div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Type:</div>
@@ -641,7 +641,7 @@
                                             <div class="detail__name">Buffer Memory:</div>
                                             <div class="detail__value f_buffer_memory"> 2 MB </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">

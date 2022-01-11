@@ -901,7 +901,7 @@
                                                 <div class="detail__value f_model"> {{ $graphic->model }}</div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Memory:</div>
@@ -915,7 +915,7 @@
                                                     {{ empty(json_decode($graphic->general_specs, true)) ? '' : json_decode($graphic->general_specs, true)['memory_interface'] }}
                                                 </div>
                                             </div> --}}
-                                            <div class="detail">
+                                            {{-- <div class="detail">
                                                 <div
                                                     class="d
                                                 
@@ -963,7 +963,7 @@
                                             <div class="view-More108" onclick="viewMore(108);"><span
                                                     class="viewMore108">View More
                                                     Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                        </span>
+                                        </span> --}} 
                                     </td>
                                     <td class="price">৳ {{ $graphic->product->price }}</td>
                                     <td><a class="btn btn-primary component-btn"

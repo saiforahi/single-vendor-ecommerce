@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                        letter-spacing: 1px;
-                        word-spacing: 3px;
-                        text-decoration: none**/
+                            letter-spacing: 1px;
+                            word-spacing: 3px;
+                            text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                      transform: translate(-50%, -50%);
-                                      */
+                                          transform: translate(-50%, -50%);
+                                          */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,10 +354,10 @@
             }
 
             /*
-                            .modal-window div:not(:last-of-type) {
-                              margin-bottom: 15px;
-                            }
-                            */
+                                .modal-window div:not(:last-of-type) {
+                                  margin-bottom: 15px;
+                                }
+                                */
 
         }
 
@@ -434,15 +434,15 @@
                                                     onclick="f_brand(this.id);" class="option-input checkbox brand"
                                                     name="filter['brand']" value="All" checked> <span
                                                     class="ml-10">All </span></label> </div>
-                                                    @foreach ($brands as $brand)
-                                                    <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
-                                                                type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
-                                                                class="option-input checkbox brand" name="filter['brand']"
-                                                                value="{{ $brand->brand }}"> <span
-                                                                class="ml-10">{{ $brand->brand }}
-                                                                ({{ \App\Models\MotherBoard::where('brand', $brand->brand)->count() }})
-                                                            </span></label> </div>
-                                                @endforeach
+                                        @foreach ($brands as $brand)
+                                            <div class="checkbox"> <label> <input id="{{ $loop->index + 1 }}"
+                                                        type="checkbox" onclick="f_brand({{ $loop->index + 1 }});"
+                                                        class="option-input checkbox brand" name="filter['brand']"
+                                                        value="{{ $brand->brand }}"> <span
+                                                        class="ml-10">{{ $brand->brand }}
+                                                        ({{ \App\Models\MotherBoard::where('brand', $brand->brand)->count() }})
+                                                    </span></label> </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>
@@ -979,14 +979,14 @@
                 <span class="table_span">
                     <div class="detail">
                         <div class="detail__name">Brand:</div>
-                        <div class="detail__value f_brand"> {{$motherboard->product->brand}} </div>
+                        <div class="detail__value f_brand"> {{ $motherboard->product->brand }} </div>
                     </div>
                     <div class="detail">
                         <div class="detail__name">Model:</div>
-                        <div class="detail__value f_model"> {{$motherboard->product->model}} </div>
+                        <div class="detail__value f_model"> {{ $motherboard->product->model }} </div>
                     </div>
                 </span>
-                <span class="table_span">
+                {{-- <span class="table_span">
 
                     <div class="detail">
                         <div class="detail__name">Chipset:</div>
@@ -1014,7 +1014,7 @@
                 <span class="view-more">
                     <div class="view-More184" onclick="viewMore(184);"><span class="viewMore184">View More
                             Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                </span>
+                </span> --}}
                 </td>
                 <td class="price">{{ $motherboard->product->price }}</td>
                 <td><a class="btn btn-primary component-btn"

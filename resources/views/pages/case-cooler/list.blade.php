@@ -755,7 +755,7 @@
                                                 <div class="detail__value f_model"> {{ $case_cooler->model }} </div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Fan RPM:</div>
@@ -773,7 +773,7 @@
                                                 <div class="detail__name">Color:</div>
                                                 <div class="detail__value f_color"> RGB </div>
                                             </div>
-                                        </span>
+                                        </span> --}}
 
                                     </td>
                                     <td class="price">৳ {{ $case_cooler->product->price }}</td>

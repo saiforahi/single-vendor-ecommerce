@@ -829,7 +829,7 @@
                                                 <div class="detail__value f_model">{{$keyboard->product->model}}</div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">Keyboard Style:</div>
@@ -851,7 +851,7 @@
                                                 <div class="detail__name">Wireless:</div>
                                                 <div class="detail__value f_wireless"> No </div>
                                             </div>
-                                        </span>
+                                        </span> --}}
 
                                     </td>
                                     <td class="price">৳ {{ $keyboard->product->price }}</td>

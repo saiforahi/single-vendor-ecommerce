@@ -1014,7 +1014,7 @@
                                                 <div class="detail__value f_model"> {{$memory->product->model}} </div>
                                             </div>
                                         </span>
-                                        <span class="table_span">
+                                        {{-- <span class="table_span">
 
                                             <div class="detail">
                                                 <div class="detail__name">RAM Size:</div>
@@ -1049,7 +1049,7 @@
                                             <div class="view-More185" onclick="viewMore(185);"><span
                                                     class="viewMore185">View More Details</span> <i
                                                     class="fas fa-chevron-circle-down"></i></div>
-                                        </span>
+                                        </span> --}}
                                     </td>
                                     <td class="price">{{ $memory->product->price }}</td>
                                     <td><a class="btn btn-primary component-btn"

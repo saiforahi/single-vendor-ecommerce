@@ -1208,7 +1208,7 @@
                                             <div class="detail__value f_model"> {{ $ups->model }} </div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Capacity (W):</div>
@@ -1222,7 +1222,7 @@
                                             <div class="detail__name">Output Voltage:</div>
                                             <div class="detail__value f_capacity_output_voltage"> 230 V </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">

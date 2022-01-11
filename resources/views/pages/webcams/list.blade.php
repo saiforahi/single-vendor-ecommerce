@@ -690,7 +690,7 @@
                                             <div class="detail__value f_model">{{ $web_cam->model }} </div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Resolution:</div>
@@ -704,7 +704,7 @@
                                             <div class="detail__name">Sensor:</div>
                                             <div class="detail__value f_sensor_resolution"> 1 MP </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">

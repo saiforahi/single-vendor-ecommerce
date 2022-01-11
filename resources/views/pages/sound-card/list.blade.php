@@ -694,7 +694,7 @@
                                             <div class="detail__value f_model"> {{ $sound_card->model }} </div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Channel Type:</div>
@@ -712,7 +712,7 @@
                                             <div class="detail__name">Color:</div>
                                             <div class="detail__value f_color"> Gray </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">৳ {{ $sound_card->product->price }}</td>
