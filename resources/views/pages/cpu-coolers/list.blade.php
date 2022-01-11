@@ -961,6 +961,10 @@
                                                 <div class="detail__name">Model:</div>
                                                 <div class="detail__value f_model"> {{$cpu_cooler->product->model}} </div>
                                             </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Stock:</div>
+                                                <div class="detail__value f_stock"> {{ $cpu_cooler->product->stock }} </div>
+                                            </div>
                                         </span>
                                         {{-- <span class="table_span">
 
@@ -983,7 +987,7 @@
                                         {{ $cpu_cooler->product->price }} </td>
 
                                     <td><a class="btn btn-primary component-btn"
-                                            href="https://amazon.com/dp/B005O65JXI?tag=pcbuilder00-20" target="_blank">View
+                                            href="{{ route('cpu-coolers-details', ['id' => $cpu_cooler->id]) }}" target="_blank">View
                                             Details</a></td>
                                     <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
                                             href="{{ route('add-cpu-cooler-to-system', ['cpu_cooler_id' => $cpu_cooler->id]) }}"><i

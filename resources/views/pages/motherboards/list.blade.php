@@ -87,9 +87,9 @@
             color: #f3f3f3;
             font-size: 16px;
             /**text-transform: uppercase;
-                            letter-spacing: 1px;
-                            word-spacing: 3px;
-                            text-decoration: none**/
+                                letter-spacing: 1px;
+                                word-spacing: 3px;
+                                text-decoration: none**/
         }
 
         .checkbox label,
@@ -329,8 +329,8 @@
                 left: 0;
 
                 /*-webkit-transform: translate(-50%, -50%);
-                                          transform: translate(-50%, -50%);
-                                          */
+                                              transform: translate(-50%, -50%);
+                                              */
                 padding: 2em;
                 background: #ffffff;
                 overflow: scroll;
@@ -354,10 +354,10 @@
             }
 
             /*
-                                .modal-window div:not(:last-of-type) {
-                                  margin-bottom: 15px;
-                                }
-                                */
+                                    .modal-window div:not(:last-of-type) {
+                                      margin-bottom: 15px;
+                                    }
+                                    */
 
         }
 
@@ -984,6 +984,10 @@
                     <div class="detail">
                         <div class="detail__name">Model:</div>
                         <div class="detail__value f_model"> {{ $motherboard->product->model }} </div>
+                    </div>
+                    <div class="detail">
+                        <div class="detail__name">Stock:</div>
+                        <div class="detail__value f_stock"> {{ $motherboard->product->stock }} </div>
                     </div>
                 </span>
                 {{-- <span class="table_span">

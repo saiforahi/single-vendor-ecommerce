@@ -291,13 +291,13 @@
                     <div class="level1"><span class="title">Reliability / Data Integrity</span>
                         <div class="level2"><span class="key">Encryption</span> : <span>{{ empty(json_decode($storage->reliability_specs, true)) ? "":json_decode($storage->reliability_specs, true)['encryption']}}</span></div>
                     </div>
-                    {{--<div class="level1"><span class="title">Packaging Info</span>
+                    <div class="level1"><span class="title">Packaging Info</span>
                         <div class="level2"><span class="key">Package Weight</span> : <span>0.185
                                 lb</span></div>
                         <div class="level2"><span class="key">Box Dimensions (LxWxH)</span> : <span>6.7 x
                                 6.25 x
                                 6.15"</span></div>
-                    </div> --}}
+                    </div>
                 </div> --}}
             </div>
             <style>

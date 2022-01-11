@@ -878,6 +878,10 @@
                                                 <div class="detail__name">Model:</div>
                                                 <div class="detail__value f_model">{{$power_supplier->product->model}}</div>
                                             </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Stock:</div>
+                                                <div class="detail__value f_stock"> {{ $power_supplier->product->stock }} </div>
+                                            </div>
                                         </span>
                                         {{-- <span class="table_span">
 

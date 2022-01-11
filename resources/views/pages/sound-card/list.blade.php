@@ -648,8 +648,9 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        @foreach ($sound_cards as $sound_card )
+                        
                         <tbody>
+                            @foreach ($sound_cards as $sound_card )
                             <tr class="items" data-href="#">
                                 <td scope="row" class="component d-sm-none">
                                     <a href="index.html">#</a>
@@ -693,6 +694,10 @@
                                             <div class="detail__name">Model:</div>
                                             <div class="detail__value f_model"> {{ $sound_card->model }} </div>
                                         </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Stock:</div>
+                                            <div class="detail__value f_stock"> {{ $sound_card->product->stock }} </div>
+                                        </div>
                                     </span>
                                     {{-- <span class="table_span">
 
@@ -725,8 +730,9 @@
                                                 class="fa fa-plus"></i></a>
                                     </td>
                             </tr>
-                                   </tbody>
-                        @endforeach
+                            @endforeach
+                         </tbody>
+                        
                         
                     </table>
                 </div>

@@ -783,8 +783,9 @@
                                 <th scope="col" width="12%">Add Product</th>
                             </tr>
                         </thead>
-                        @foreach ($keyboards as $keyboard)
+                       
                             <tbody>
+                                @foreach ($keyboards as $keyboard)
                                 <tr class="items" data-href="#">
                                     <td scope="row" class="component d-sm-none">
                                         <a href="index.html">#</a>
@@ -827,6 +828,10 @@
                                             <div class="detail">
                                                 <div class="detail__name">Model:</div>
                                                 <div class="detail__value f_model">{{$keyboard->product->model}}</div>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="detail__name">Stock:</div>
+                                                <div class="detail__value f_stock"> {{ $keyboard->product->stock }} </div>
                                             </div>
                                         </span>
                                         {{-- <span class="table_span">
