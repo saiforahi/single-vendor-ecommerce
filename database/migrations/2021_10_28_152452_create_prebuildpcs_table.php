@@ -23,7 +23,7 @@ class CreatePrebuildpcsTable extends Migration
             $table->string('short_name')->nullable();
             $table->json('specifications')->nullable();
             $table->json('features')->nullable();
-            $table->string('type')->nullable();
+            $table->enum('type',['gaming','cheap','all-in-one'])->nullable();
             $table->enum('status',['active','inactive'])->default('active');
             $table->timestamps();
             $table->softDeletes();
