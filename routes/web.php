@@ -53,9 +53,13 @@ Route::get('system-builder',function(){
 Route::get('dashboard',function(){
     return view('pages.dashboard');
 })->name('dashboard');
+
 Route::get('pre-built',function(){
     return view('pages.pre-built');
 })->name('pre-built');
+Route::get('pre-built/list/{type}',[App\Http\Controllers\api\PreBuildpcController::class,'show_desktop'])->name('desktop-list');
+Route::get('cart',[App\Http\Controllers\api\CartController::class,'show_cart_page'])->name('cart');
+
 Route::get('laptops',function(){
     return view('pages.laptops');
 })->name('laptops');

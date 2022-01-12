@@ -48,3 +48,4 @@ require __DIR__.'/wirednetworkadapters.php';
 require __DIR__.'/casecooler.php';
 require __DIR__.'/orders.php';
 require __DIR__.'/dashboards.php';
+require __DIR__.'/prebuildpc.php';
