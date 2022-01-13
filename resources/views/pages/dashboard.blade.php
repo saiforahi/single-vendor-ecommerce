@@ -390,13 +390,10 @@
            
         </span>
     </section>
-    <a href="#open-modal" class="float">
-        <i class="fa fa-filter my-float"></i>
-    </a>
     <section class="system-builder">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-2 modal-window" id="open-modal">
+                <div class="col-md-2" id="">
                     
                 </div>
                 <div class="col-12 col-md-10">
