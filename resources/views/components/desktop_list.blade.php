@@ -335,27 +335,26 @@
                                         style="font-weight:500;" class="content-information">
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">{{ json_decode($item->specifications, true)['os'] }}
+                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['os'] }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">{{ json_decode($item->specifications, true)['processor'] }}
+                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['processor'] }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">{{ json_decode($item->specifications, true)['graphic'] }}
+                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['graphic'] }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">{{ json_decode($item->specifications, true)['memory'] }}
+                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['memory'] }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/rgb.svg">Apple
-                                            - Gold</div>
+                                                data-src="{{asset('images/pre-builts/rgb.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['color'] }}</div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">{{ json_decode($item->specifications, true)['storage'] }}
+                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['storage'] }}
                                         </div>
                                     </div>
                                     <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'"

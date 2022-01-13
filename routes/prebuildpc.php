@@ -21,7 +21,7 @@ Route::prefix('pre-built')->group(function(){
     Route::put('/update',[App\Http\Controllers\api\PreBuildpcController::class,'update']);
     Route::post('/image/update',[App\Http\Controllers\api\PreBuildpcController::class,'update_image']);
     Route::get('/details/{id}',[App\Http\Controllers\api\PreBuildpcController::class,'details']);
-    Route::get('/specification/list/{type}',[App\Http\Controllers\api\PreBuildpcController::class,'get_desktop_create_options']);
+    Route::get('/specification/list/{parent}/{child}',[App\Http\Controllers\api\PreBuildpcController::class,'get_desktop_create_options']);
 
     Route::get('/images/{id}',[App\Http\Controllers\api\PreBuildpcController::class,'get_all_media']);
 });

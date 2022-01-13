@@ -86,18 +86,18 @@ class PreBuildpcController extends Controller
         return view('components.desktop_list')->with('type',$type)->with('desktop',Prebuildpc::all());
     }
 
-    public function get_desktop_create_options($type){
+    public function get_desktop_create_options($parent,$child){
         try{
             $list = array();
-            if($type == 'brand'){
+            if($parent == 'brand'){
                 $list = Prebuildpc::select('brand')->distinct()->get('brand')->toArray();
             }
-            else if($type=='model'){
+            else if($parent=='model'){
                 $list = Prebuildpc::select('model')->distinct()->get('model')->toArray();
             }else{
                 foreach( Prebuildpc::all() as $desktop ){
-                    if(isset(json_decode($desktop->specifications,true)[$type])){
-                        array_push($list,json_decode($desktop->specifications,true)[$type]);
+                    if(isset(json_decode($desktop->specifications,true)[$child])){
+                        array_push($list,json_decode($desktop->specifications,true)[$child]);
                     }
                 }
             }
