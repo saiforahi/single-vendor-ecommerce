@@ -217,6 +217,70 @@
         }
 
     </style>
+    <style>
+        .shadow-soft {
+            box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03) !important;
+        }
+
+        .nav-tabs .nav-link {
+            border: 0;
+            padding: 1rem;
+            background-color: #fff;
+        }
+
+        .bg-white {
+            background-color: #fff !important;
+        }
+
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
+            color: #1d3f66;
+            background-color: #f3f7fa;
+            border-color: #f0f3f6 #f0f3f6 #f3f7fa;
+        }
+
+        .nav-tabs .nav-link.active {
+            color: #fff;
+            background-color: #1d3f66;
+        }
+
+        .rounded {
+            border-radius: .5rem !important;
+        }
+
+        .nav-link {
+            color: #4a5073;
+        }
+
+
+        .nav-tabs {
+            padding: 0.6rem 1rem;
+        }
+
+        .pre-builts .nav-item {
+            flex-basis: 33%;
+            padding: 0.7rem !important;
+        }
+
+        .btn-open {
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            background-color: #1e3f66;
+            padding: 0.8rem 1rem;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn-open:hover {
+            text-decoration: none;
+            outline: none;
+            color: white;
+            background-color: #1e3f66;
+
+        }
+
+    </style>
 @endpush
 @section('content')
     <section class="pcb-breadcrumb">
@@ -231,70 +295,7 @@
     </section>
     <section class="system-builder pre-builts">
         <div class="container">
-            <style>
-                .shadow-soft {
-                    box-shadow: 0 .75rem 1.5rem rgba(18, 38, 63, .03) !important;
-                }
-
-                .nav-tabs .nav-link {
-                    border: 0;
-                    padding: 1rem;
-                    background-color: #fff;
-                }
-
-                .bg-white {
-                    background-color: #fff !important;
-                }
-
-                .nav-tabs .nav-item.show .nav-link,
-                .nav-tabs .nav-link.active {
-                    color: #1d3f66;
-                    background-color: #f3f7fa;
-                    border-color: #f0f3f6 #f0f3f6 #f3f7fa;
-                }
-
-                .nav-tabs .nav-link.active {
-                    color: #fff;
-                    background-color: #1d3f66;
-                }
-
-                .rounded {
-                    border-radius: .5rem !important;
-                }
-
-                .nav-link {
-                    color: #4a5073;
-                }
-
-
-                .nav-tabs {
-                    padding: 0.6rem 1rem;
-                }
-
-                .pre-builts .nav-item {
-                    flex-basis: 33%;
-                    padding: 0.7rem !important;
-                }
-
-                .btn-open {
-                    align-items: center;
-                    text-align: center;
-                    margin: 0 auto;
-                    background-color: #1e3f66;
-                    padding: 0.8rem 1rem;
-                    color: white;
-                    border-radius: 5px;
-                }
-
-                .btn-open:hover {
-                    text-decoration: none;
-                    outline: none;
-                    color: white;
-                    background-color: #1e3f66;
-
-                }
-
-            </style>
+            
             <div class="row">
                 <div class="col-12">
                     <div class="nav nav-tabs flex-column text-center flex-md-row bg-white shadow-soft border border-light justify-content-around rounded mb-lg-3"
@@ -306,9 +307,9 @@
                         <a class="nav-item nav-link rounded" id="nav-rank-track-tab" data-toggle="tab"
                             href="#nav-rank-track" role="tab" aria-controls="nav-rank-track" aria-selected="false"><i
                                 class="fas fa-chart-line"></i><span class="font-weight-bold"> Cheap Desktop</span></a>
-                        <a class="nav-item nav-link rounded" id="nav-web-monitor-tab" data-toggle="tab"
+                        {{-- <a class="nav-item nav-link rounded" id="nav-web-monitor-tab" data-toggle="tab"
                             href="#nav-web-monitor" role="tab" aria-controls="nav-web-monitor" aria-selected="false"><i
-                                class="far fa-bell"></i><span class="font-weight-bold"> All in One Desktop</span></a>
+                                class="far fa-bell"></i><span class="font-weight-bold"> All in One Desktop</span></a> --}}
                     </div>
                     <div class="tab-content mt-5 mt-lg-6" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-content-research" role="tabpanel"

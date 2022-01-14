@@ -330,7 +330,7 @@
                                 <center>
                                     <h4
                                         onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'">
-                                        {{ $item->name }}</h4>
+                                        {{ $item->short_name }}</h4>
                                     <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'"
                                         style="font-weight:500;" class="content-information">
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
@@ -343,7 +343,7 @@
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['graphic'] }}
+                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['gpu'] }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"

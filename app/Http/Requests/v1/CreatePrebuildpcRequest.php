@@ -28,10 +28,12 @@ class CreatePrebuildpcRequest extends FormRequest
             'specifications'=>'required|json',
             'images' => 'sometimes|nullable|file',
             'brand'=> 'required|string',
+            'type'=> 'required|string',
             'model' => 'required|string',
             'short_name'=>'sometimes|nullable|string',
             'stock' => 'required|numeric',
             'description'=>'sometimes|nullable|string',
+            'features'=>'sometimes|nullable|string',
         ];
     }
 }

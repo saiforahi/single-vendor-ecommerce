@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('model')->nullable();
             $table->longText('description')->nullable();
             $table->longText('features')->nullable();
+            $table->longText('compatible_products')->nullable();
             $table->nullableMorphs('extendable');
             $table->integer('price')->nullable();
             $table->float('weight',8,2)->default(0.0);

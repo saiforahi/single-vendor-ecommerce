@@ -13,13 +13,13 @@ class PreBuildpcController extends Controller
 {
     //
     public function __construct(){
-        $this->middleware('auth:sanctum')->except(['show_desktop','get_desktop_create_options']);
-        $this->middleware('role:admin|user')->except(['show_desktop','get_desktop_create_options']);
+        // $this->middleware('auth:sanctum')->except(['show_desktop','get_desktop_create_options']);
+        // $this->middleware('role:admin|user')->except(['show_desktop','get_desktop_create_options']);
     }
     public function create(CreatePrebuildpcRequest $req){
         try{
             $new_product = Product::create($req->all());
-            $new_desktop = Prebuildpc::create(array_merge($req->except('total_images'),['product_id'=>$new_product->id]));
+            $new_desktop = Prebuildpc::create(array_merge($req->except('total_images','features'),['product_id'=>$new_product->id]));
             $images=array();
             if($req->has('total_images') && $req->total_images>0){
                 for($index=1;$index<=$req->total_images;$index++){
@@ -89,18 +89,29 @@ class PreBuildpcController extends Controller
     public function get_desktop_create_options($parent,$child){
         try{
             $list = array();
-            if($parent == 'brand'){
-                $list = Prebuildpc::select('brand')->distinct()->get('brand')->toArray();
-            }
-            else if($parent=='model'){
-                $list = Prebuildpc::select('model')->distinct()->get('model')->toArray();
-            }else{
-                foreach( Prebuildpc::all() as $desktop ){
-                    if(isset(json_decode($desktop->specifications,true)[$child])){
-                        array_push($list,json_decode($desktop->specifications,true)[$child]);
+            switch($parent){
+                case 'specifications':
+                    foreach( Prebuildpc::all() as $desktop ){
+                        if(isset(json_decode($desktop->specifications,true)[$child])){
+                            array_push($list,json_decode($desktop->specifications,true)[$child]);
+                        }
                     }
-                }
+                    break;
+                
+                case 'brand':
+                    foreach( Prebuildpc::all() as $processor ){
+                        array_push($list,$processor->brand);
+                    }
+                    break;
+
+                case 'model':
+                    foreach( Prebuildpc::all() as $processor ){
+                        array_push($list,$processor->model);
+                    }
+                    break;
+                    
             }
+            
             return response()->json(['success'=>true,'data'=>array_values(array_unique($list))],200);
         }
         catch(Exception $e){

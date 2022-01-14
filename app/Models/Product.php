@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
-use App\Models\Product;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Gloudemans\Shoppingcart\Contracts\Buyable;
+
 class Product extends Model implements HasMedia, Buyable
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
     // use Gloudemans\Shoppingcart\CanBeBought;
-    protected $fillable=['price','name','brand','model','weight','stock','description','features'];
+    protected $fillable=['price','name','brand','model','weight','stock','description','features','compatible_products'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
