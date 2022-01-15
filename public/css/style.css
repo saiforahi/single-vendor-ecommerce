@@ -15,6 +15,7 @@ html {
   --headerBorderColor: rgba(255,255,255,0.15);
   --myNavColor: #dae2e5;
   --textColor : #ffffff;
+  --textColorSecondary : #3a4c56;
 }
 
 html[data-theme='dark'] {
@@ -24,6 +25,7 @@ html[data-theme='dark'] {
   --headerBorderColor: rgba(0,0,0,0.15);
   --myNavColor: #3a4c56;
   --textColor : #3a4c56;
+  --textColorSecondary : #ffffff;
 }
 .slider-header{
   color: var(--textColor) !important;
@@ -412,7 +414,7 @@ header .mode .slider.round:before {
 
 .line {
   fill: none;
-  stroke: white;
+  stroke: var(--headerText) !important;
   stroke-width: 6;
   -webkit-transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -484,7 +486,7 @@ header .mode .slider.round:before {
     margin-left: auto;
   }
   .login .mobile i {
-    color: white;
+    color: var(--headerText);
   }
   .login .pc {
     display: none !important;
@@ -533,7 +535,7 @@ header .mode .slider.round:before {
 #my-profile .mega-profile a {
   padding-top: 10px;
   padding-bottom: 10px;
-  color: white;
+  color: var(--headerText) !important;
   padding-left: 10px;
   font-weight: 600;
   border-bottom: 1px solid var(--headerBorderColor);
@@ -555,12 +557,15 @@ header .mode .slider.round:before {
 }
 
 nav {
-  background-color: var(--navbarBgColor);
+  background-color: var(--headerBgColor);
   /*box-shadow: 0 2px 5px 0 rgba(255,255,255,.16), 0 2px 10px 0 rgba(255,255,255,.12);
     */
   color: white;
 }
-
+.navbar-light .navbar-toggler {
+  color: var(--headerText) !important;
+  border-color: var(--headerBgColor) !important;
+}
 nav #my-nav {
   border-top: 1px solid var(--headerBorderColor);
   border-bottom: 1px solid var(--headerBorderColor);
@@ -592,7 +597,7 @@ nav .navbar-nav .nav-item .nav-link:hover {
 }
 
 nav .navbar-nav .nav-item.active, nav .navbar-nav .nav-item.show {
-  background-color: #011119 !important;
+  background-color: var(--headerBgColor) !important;
   border-left: none !important;
   -webkit-box-shadow: inset 0px 2px 4px black;
           box-shadow: inset 0px 2px 4px black;
@@ -713,8 +718,8 @@ nav .nav-item {
   left: 0;
   right: 0;
   padding: 15px;
-  background-color: #011119;
-  color: white;
+  background-color: var(--headerBgColor);
+  color: var(--textColorSecondary);
 }
 
 .megamenu a {
@@ -2928,7 +2933,7 @@ footer .footer-top {
 }
 
 footer.page-footer a {
-  color: var(--myNavColor) !important;
+  color: var(--textColorSecondary) !important;
 }
 
 footer {

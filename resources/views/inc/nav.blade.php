@@ -42,8 +42,8 @@
     <header>
         <div class="logo">
             <a href="/">
-                <img src="{{ asset('images/logo-80.png') }}" alt="PC Builder" height="80" width="80" />
-                <p class="hide-mobile"><span>PC</span>Builder</p>
+                <img src="{{ asset('images/systembuilder-logo.svg') }}" alt="PC Builder" height="80" width="80" />
+                <p class="hide-mobile"><span>System</span>Builder</p>
             </a>
         </div>
         <div class="d-none d-md-flex pbc-border"></div>
@@ -86,7 +86,7 @@
         </div>
         <div class="d-none d-lg-flex cart">
             <a href="{{ route('cart') }}"><img class="lazy"
-                    src="https://images.pcbuilder.dev/assets/images/icons/cart.svg" height="32" width="32" /></a>
+                    src="{{asset('images/cart.svg')}}" height="32" width="32" /></a>
             <div><span>Cart</span></div>
         </div>
         <div class="d-none d-lg-flex mode">
@@ -275,10 +275,10 @@
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Pre-Built PCs</li>
-                                        <li itemprop="name"><a itemprop="url" href="#">Gaming Desktops</a></li>
-                                        <li itemprop="name"><a itemprop="url" href="#">Cheap Desktops</a></li>
-                                        <li itemprop="name"><a itemprop="url" href="#">AIO
-                                                Desktops</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="{!! route('desktop-list', ['type' => 'gaming']) !!}">Gaming Desktops</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="{!! route('desktop-list', ['type' => 'cheap']) !!}">Cheap Desktops</a></li>
+                                        {{-- <li itemprop="name"><a itemprop="url" href="#">AIO
+                                                Desktops</a></li> --}}
                                     </ul>
                                     <ul class="list-unstyled">
                                         <li class="heading">Others</li>

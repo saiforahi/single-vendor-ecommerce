@@ -335,38 +335,34 @@
                                         style="font-weight:500;" class="content-information">
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/windows.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['os'] }}
+                                                src="{{asset('images/pre-builts/windows.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['os'] }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/cpu.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['processor'] }}
+                                                src="{{asset('images/pre-builts/cpu.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['processor'] ?? null }}
+                                        </div>
+                                        <div class="content-detail col-md-6 d-flex align-items-center"><img class="component-icons lazy" src="{{asset('images/pre-builts/graphics-card.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['gpu'] ?? null }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/graphics-card.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['gpu'] }}
+                                                src="{{asset('images/pre-builts/ram-memory.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['memory'] ?? null }}
                                         </div>
+                                        <div class="content-detail col-md-6 d-flex align-items-center"><img class="component-icons lazy" src="{{asset('images/pre-builts/rgb.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['color'] ?? null }}</div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ram-memory.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['memory'] }}
-                                        </div>
-                                        <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                                class="component-icons lazy"
-                                                data-src="{{asset('images/pre-builts/rgb.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['color'] }}</div>
-                                        <div class="content-detail col-md-6 d-flex align-items-center"><img
-                                                class="component-icons lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/ssd.svg">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['storage'] }}
+                                                src="{{asset('images/pre-builts/ssd.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['storage'] ?? null }}
                                         </div>
                                     </div>
                                     <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'"
                                         class="col-md-12">
                                         <h3>
                                             <img style="width:30px; height:30px" class="lazy"
-                                                data-src="https://images.pcbuilder.dev/assets/images/pre-builts/receive-amount.svg" />
+                                                src="{{asset('images/pre-builts/receive-amount.svg')}}" />
                                             ৳ {{ $item->product->price }}
                                         </h3>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <a style="margin:10px;" class="btn component-btn btn-block" href="#"
+                                        <a style="margin:10px;" class="btn component-btn btn-block" href="{{route('add-product-to-cart',['product_id'=>$item->product->id])}}"
                                             target="_blank"><i class=""></i> Add to Cart</a>
                                     </div>
                                 </center>

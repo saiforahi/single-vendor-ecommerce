@@ -328,8 +328,8 @@
                                 </div>
                                 <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
                                         src="{!! asset('images/builds/pc-builds.jpg') !!}" alt="AIO PC"></div>
-                                <a href="{!! route('desktop-list', ['type' => 'cheap']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
-                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Cheap PC</a>
+                                <a href="{!! route('desktop-list', ['type' => 'gaming']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
+                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Gaming PC</a>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-rank-track" role="tabpanel"
