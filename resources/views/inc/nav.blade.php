@@ -276,7 +276,7 @@
                                     <ul class="list-unstyled">
                                         <li class="heading">Pre-Built PCs</li>
                                         <li itemprop="name"><a itemprop="url" href="{!! route('desktop-list', ['type' => 'gaming']) !!}">Gaming Desktops</a></li>
-                                        <li itemprop="name"><a itemprop="url" href="{!! route('desktop-list', ['type' => 'cheap']) !!}">Cheap Desktops</a></li>
+                                        <li itemprop="name"><a itemprop="url" href="{!! route('desktop-list', ['type' => 'hybrid']) !!}">Hybrid Desktops</a></li>
                                         {{-- <li itemprop="name"><a itemprop="url" href="#">AIO
                                                 Desktops</a></li> --}}
                                     </ul>

@@ -238,7 +238,7 @@
                             <div class="action-box">
                                 <div class="action-box-item search"> Search: </div>
                                 <input type="text" id="myInput" onkeyup="myFunction()"
-                                    placeholder="Search Gaming Desktop....." title="Search....">
+                                    placeholder="Search Desktop....." title="Search....">
                             </div>
                             <div class="action-box">
                                 <div class="action-box-item ">Share: </div>
@@ -261,7 +261,7 @@
                                     class="action-box-item" data-toggle="tooltip" title="Share To Tumblr"><i
                                         class="fab fa-tumblr" aria-hidden="true"></i></div>
                             </div>
-                            <div class="selectbox dropup center-block">
+                            {{-- <div class="selectbox dropup center-block">
                                 <div class="choose-country px-2"><b>Select Country:</b></div>
                                 <li class="image-li dropdown pcb-country">
                                     <a class="country dropdown-toggle" id="navbarDropdownMenuLink3" role="button"
@@ -292,7 +292,7 @@
                                                 data-src="https://images.pcbuilder.dev/assets/images/flags/it.svg">Italy</a>
                                     </div>
                                 </li>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>

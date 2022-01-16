@@ -288,9 +288,9 @@
         <p class="pcb-breadcrumb-p">If you don't want to get into the complexity of building a PC of your own and want a
             pre-built PC instead then here our some of the best picks of PC's for you.</p>
         <hr class="pcb-breadcrumb-hr">
-        <span><a href="../index.html">Home</a>
+        <span><a href="{{route('home')}}">Home</a>
             <i class="fa fa-angle-right"></i>
-            <a href="index.html">Builts</a>
+            <a href="{{ route('pre-built') }}">Builts</a>
         </span>
     </section>
     <section class="system-builder pre-builts">
@@ -300,16 +300,15 @@
                 <div class="col-12">
                     <div class="nav nav-tabs flex-column text-center flex-md-row bg-white shadow-soft border border-light justify-content-around rounded mb-lg-3"
                         id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link rounded active" id="nav-content-research-tab" data-toggle="tab"
-                            href="#nav-content-research" role="tab" aria-controls="nav-content-research"
-                            aria-selected="true"><span class="d-block"><i class="fas fa-file-alt"></i><span
+                        <a class="nav-item nav-link rounded active" id="nav-content-research-tab"
+                            href="{!! route('desktop-list', ['type' => 'gaming']) !!}" role="tab" aria-controls="nav-content-research"
+                            aria-selected="true"><span class="d-block"><span
                                     class="font-weight-bold"> Gaming Desktop</span></span></a>
-                        <a class="nav-item nav-link rounded" id="nav-rank-track-tab" data-toggle="tab"
+                        {{-- <a class="nav-item nav-link rounded" id="nav-rank-track-tab" data-toggle="tab"
                             href="#nav-rank-track" role="tab" aria-controls="nav-rank-track" aria-selected="false"><i
-                                class="fas fa-chart-line"></i><span class="font-weight-bold"> Cheap Desktop</span></a>
-                        {{-- <a class="nav-item nav-link rounded" id="nav-web-monitor-tab" data-toggle="tab"
-                            href="#nav-web-monitor" role="tab" aria-controls="nav-web-monitor" aria-selected="false"><i
-                                class="far fa-bell"></i><span class="font-weight-bold"> All in One Desktop</span></a> --}}
+                                class="fas fa-chart-line"></i><span class="font-weight-bold"> Cheap Desktop</span></a> --}}
+                        <a class="nav-item nav-link rounded" id="nav-web-monitor-tab"
+                            href="{!! route('desktop-list', ['type' => 'hybrid']) !!}" role="tab" aria-controls="nav-web-monitor" aria-selected="false"><span class="font-weight-bold">Hybrid Desktop</span></a>
                     </div>
                     <div class="tab-content mt-5 mt-lg-6" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-content-research" role="tabpanel"
@@ -328,8 +327,8 @@
                                 </div>
                                 <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
                                         src="{!! asset('images/builds/pc-builds.jpg') !!}" alt="AIO PC"></div>
-                                <a href="{!! route('desktop-list', ['type' => 'gaming']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
-                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Gaming PC</a>
+                                {{-- <a href="{!! route('desktop-list', ['type' => 'gaming']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
+                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Gaming PC</a> --}}
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-rank-track" role="tabpanel"
@@ -347,26 +346,26 @@
                                 </div>
                                 <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
                                         src="{!! asset('images/builds/pc-builds.jpg') !!}" alt="AIO PC"></div>
-                                <a href="{!! route('desktop-list', ['type' => 'cheap']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
-                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Cheap PC</a>
+                                {{-- <a href="{!! route('desktop-list', ['type' => 'cheap']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
+                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Cheap PC</a> --}}
                             </div>
                         </div>
                         <div class="tab-pane fade" id="nav-web-monitor" role="tabpanel"
                             aria-labelledby="nav-web-monitor-tab">
                             <div class="row justify-content-between align-items-center">
                                 <div class="col-12 col-md-5">
-                                    <h3 class="mb-4">Pre-build AIO PC</h3>
-                                    <p>AIO or All-in-One Desktops comes pre-equipped with a keyboard, mouse, and
+                                    <h3 class="mb-4">Pre-build Hybrid PC</h3>
+                                    <p>Hybrid or All-in-One Desktops comes pre-equipped with a keyboard, mouse, and
                                         monitor, which reduces your load and tension to search for them manually and is
                                         perfect for people who do usual works and basic gaming.</p>
-                                    <p>So if you're looking for an AIO laptop for your children to help them do their
+                                    <p>So if you're looking for an Hybrid desktop for your children to help them do their
                                         school work and projects, then here in this section, you can explore the top PCs
                                         which are exclusively picked by our editorial team for extreme performance.</p>
                                 </div>
                                 <div class="col-12 col-md-6"><img class="img-fluid shadow rounded"
                                         src="{!! asset('images/builds/pc-builds.jpg') !!}" alt="AIO PC"></div>
-                                <a href="{!! route('desktop-list', ['type' => 'cheap']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
-                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Cheap PC</a>
+                                {{-- <a href="{!! route('desktop-list', ['type' => 'hybrid']) !!}" class="my-4 mb-5 d-block font-weight-bold btn-open"><i
+                                        class="fas fa-external-link-alt mr-2"></i>Explore Pre-Built Hybrid PC</a> --}}
                             </div>
                         </div>
                     </div>

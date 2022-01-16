@@ -28,7 +28,7 @@
 
                 <div class="logo">
                     <a href="index.html">
-                        <img class="ml-auto mx-lg-0 lazy" src="https://images.pcbuilder.dev/assets/images/logo-80.png" alt="PC Builder">
+                        <img class="ml-auto mx-lg-0 lazy" src="{{ asset('images/systembuilder-logo.svg') }}" alt="PC Builder">
                         <p class="mr-auto mx-lg-0"><span>System</span>Builder</p>
                     </a>
                 </div>
