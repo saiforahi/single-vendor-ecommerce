@@ -225,7 +225,7 @@
         <h1>{{ ucfirst($type) }} Desktop</h1>
         <span><a href="/">Home</a>
             <i class="fa fa-angle-right"></i>
-            <a href="{!! route('laptops') !!}">Desktop</a>
+            <a href="{!! route('pre-built') !!}">Desktop</a>
             <i class="fa fa-angle-right"></i><a href="{!! route('desktop-list', ['type' => $type]) !!}">{{ ucfirst($type) }} Desktop</a>
         </span>
     </section>
@@ -306,7 +306,7 @@
                                 <div class="product-image ">
                                     @foreach ($item->product->getMedia('main_image') as $image)
                                         {{-- <p>{{ $loop->index+1 }}</p> --}}
-                                        <a href="#">
+                                        <a href="{{route('desktop-details',['id'=>$item->id])}}">
                                             <img class="pic-{{ $loop->index + 1 }} lazy" src="{{ $image->getUrl('main_image') }}"
                                                 data-src="{{ $image->getUrl('main_image') }}" title="{{ $item->name }}"
                                                 alt="{{ $item->name }}">

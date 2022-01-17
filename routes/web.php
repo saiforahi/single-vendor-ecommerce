@@ -57,7 +57,7 @@ Route::get('dashboard',function(){
 Route::get('pre-built',function(){
     return view('pages.pre-built');
 })->name('pre-built');
-Route::get('pre-built/list/{type}',[App\Http\Controllers\api\PreBuildpcController::class,'show_desktop'])->name('desktop-list');
+
 Route::get('cart',[App\Http\Controllers\api\CartController::class,'show_cart_page'])->name('cart');
 
 Route::get('laptops',function(){
@@ -70,7 +70,10 @@ Route::prefix('storages')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\StoragesController::class,'show_list'])->name('storage-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\StoragesController::class,'show_details'])->name('storage-details');
 });
-
+Route::prefix('pre-built')->group(function(){
+    Route::get('/list/{type}',[App\Http\Controllers\api\PreBuildpcController::class,'show_desktop'])->name('desktop-list');
+    Route::get('/details/{id}',[App\Http\Controllers\api\PreBuildpcController::class,'show_details'])->name('desktop-details');
+});
 Route::prefix('graphics')->group(function(){
     Route::get('/list',[App\Http\Controllers\api\GraphicsController::class,'show_list'])->name('graphics-cards-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\GraphicsController::class,'show_details'])->name('graphics-cards-details');

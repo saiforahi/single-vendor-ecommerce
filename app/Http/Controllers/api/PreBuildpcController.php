@@ -85,6 +85,9 @@ class PreBuildpcController extends Controller
     public function show_desktop($type){
         return view('components.desktop_list')->with('type',$type)->with('desktop',Prebuildpc::where('type',$type)->get());
     }
+    public function show_details($id){
+        return view('pages.pre-built.details')->with('desktop',Prebuildpc::findOrFail($id));
+    }
 
     public function get_desktop_create_options($parent,$child){
         try{
