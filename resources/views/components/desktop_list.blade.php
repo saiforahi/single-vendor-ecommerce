@@ -237,8 +237,8 @@
                         <div class="upper-box">
                             <div class="action-box">
                                 <div class="action-box-item search"> Search: </div>
-                                <input type="text" id="myInput" onkeyup="myFunction()"
-                                    placeholder="Search Desktop....." title="Search....">
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Desktop....."
+                                    title="Search....">
                             </div>
                             <div class="action-box">
                                 <div class="action-box-item ">Share: </div>
@@ -306,63 +306,54 @@
                                 <div class="product-image ">
                                     @foreach ($item->product->getMedia('main_image') as $image)
                                         {{-- <p>{{ $loop->index+1 }}</p> --}}
-                                        <a href="{{route('desktop-details',['id'=>$item->id])}}">
-                                            <img class="pic-{{ $loop->index + 1 }} lazy" src="{{ $image->getUrl('main_image') }}"
+                                        <a href="{{ route('desktop-details', ['id' => $item->id]) }}">
+                                            <img class="pic-{{ $loop->index + 1 }} lazy"
+                                                src="{{ $image->getUrl('main_image') }}"
                                                 data-src="{{ $image->getUrl('main_image') }}" title="{{ $item->name }}"
                                                 alt="{{ $item->name }}">
                                         </a>
                                     @endforeach
-                                    {{-- <a
-                                href="#">
-                                <img class="pic-1 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/41Kp8-ILkYL._SL160_.jpg"
-                                    title="Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Gold (Latest Model)"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a>
-                            <a
-                                href="#">
-                                <img class="pic-2 lazy" src="../../../images.pcbuilder.dev/assets/images/blank.jpg"
-                                    data-src="https://m.media-amazon.com/images/I/21NSNFwRHaL.jpg"
-                                    title="Apple MacBook Air (13-inch, 8GB RAM, 256GB SSD Storage) - Gold (Latest Model)"
-                                    alt="PC Builder, Build My PC, Apple, Business Laptop">
-                            </a> --}}
+
                                 </div>
                                 <center>
-                                    <h4
-                                        onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'">
+                                    <h4 onclick="window.location='{{ route('desktop-details', ['id' => $item->id]) }}'">
                                         {{ $item->short_name }}</h4>
-                                    <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'"
-                                        style="font-weight:500;" class="content-information">
+                                    <div style="font-weight:500;" class="content-information">
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                src="{{asset('images/pre-builts/windows.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['os'] }}
+                                                src="{{ asset('images/pre-builts/windows.svg') }}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['os'] }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                src="{{asset('images/pre-builts/cpu.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['processor'] ?? null }}
-                                        </div>
-                                        <div class="content-detail col-md-6 d-flex align-items-center"><img class="component-icons lazy" src="{{asset('images/pre-builts/graphics-card.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['gpu'] ?? null }}
+                                                src="{{ asset('images/pre-builts/cpu.svg') }}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['processor'] ?? null }}
                                         </div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                src="{{asset('images/pre-builts/ram-memory.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['memory'] ?? null }}
+                                                src="{{ asset('images/pre-builts/graphics-card.svg') }}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['gpu'] ?? null }}
                                         </div>
-                                        <div class="content-detail col-md-6 d-flex align-items-center"><img class="component-icons lazy" src="{{asset('images/pre-builts/rgb.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['color'] ?? null }}</div>
                                         <div class="content-detail col-md-6 d-flex align-items-center"><img
                                                 class="component-icons lazy"
-                                                src="{{asset('images/pre-builts/ssd.svg')}}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['storage'] ?? null }}
+                                                src="{{ asset('images/pre-builts/ram-memory.svg') }}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['memory'] ?? null }}
+                                        </div>
+                                        <div class="content-detail col-md-6 d-flex align-items-center"><img
+                                                class="component-icons lazy"
+                                                src="{{ asset('images/pre-builts/rgb.svg') }}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['color'] ?? null }}
+                                        </div>
+                                        <div class="content-detail col-md-6 d-flex align-items-center"><img
+                                                class="component-icons lazy"
+                                                src="{{ asset('images/pre-builts/ssd.svg') }}">{{ empty(json_decode($item->specifications, true)) ? '' : json_decode($item->specifications, true)['storage'] ?? null }}
                                         </div>
                                     </div>
-                                    <div onclick="window.location='../../complete-laptop-details/business-laptop/apple-macbook-air-mwtl2ll-a/index.html'"
-                                        class="col-md-12">
+                                    <div class="col-md-12">
                                         <h3>
                                             <img style="width:30px; height:30px" class="lazy"
-                                                src="{{asset('images/pre-builts/receive-amount.svg')}}" />
+                                                src="{{ asset('images/pre-builts/receive-amount.svg') }}" />
                                             ৳ {{ $item->product->price }}
                                         </h3>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <a style="margin:10px;" class="btn component-btn btn-block" href="{{route('add-product-to-cart',['product_id'=>$item->product->id])}}"
+                                        <a style="margin:10px;" class="btn component-btn btn-block"
+                                            href="{{ route('add-product-to-cart', ['product_id' => $item->product->id]) }}"
                                             target="_blank"><i class=""></i> Add to Cart</a>
                                     </div>
                                 </center>

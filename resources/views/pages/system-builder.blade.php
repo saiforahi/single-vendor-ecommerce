@@ -88,7 +88,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route('processor-details',['id'=>$processor->id])}}">{{ $processor->name }}</a>
+                                            href="{{ route('processor-details', ['id' => $processor->id]) }}">{{ $processor->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -100,7 +100,7 @@
                                             <div class="detail__value">{{ $processor->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Cores:</div>
@@ -114,7 +114,8 @@
                                             <div class="detail__name">Socket Type:</div>
                                             <div class="detail__value f_socket_type"> sTRX4 </div>
                                         </div>
-                                    </span><span class="table_span">
+                                    </span>
+                                    <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Base Speed:</div>
                                             <div class="detail__value f_maximum_speed"> 2.9 GHz </div>
@@ -123,7 +124,8 @@
                                             <div class="detail__name">Turbo Speed:</div>
                                             <div class="detail__value f_maximum_speed"> 4.3 GHz </div>
                                         </div>
-                                    </span><span class="table_span view-more-6" style="display: none;">
+                                    </span>
+                                    <span class="table_span view-more-6" style="display: none;">
                                         <div class="detail">
                                             <div class="detail__name">Architechture:</div>
                                             <div class="detail__value f_micro_architecture"> Zen 2 </div>
@@ -132,7 +134,8 @@
                                             <div class="detail__name">Core Family:</div>
                                             <div class="detail__value f_core_family"> Castle Peak </div>
                                         </div>
-                                    </span><span class="table_span view-more-6" style="display: none;">
+                                    </span>
+                                    <span class="table_span view-more-6" style="display: none;">
                                         <div class="detail">
                                             <div class="detail__name">Integrated Graphics:</div>
                                             <div class="detail__value f_integrated_graphics"> None </div>
@@ -141,7 +144,8 @@
                                             <div class="detail__name">Memory Type:</div>
                                             <div class="detail__value f_memory_type"> DDR4 - 3200 MHz </div>
                                         </div>
-                                    </span><span style="display: none;">
+                                    </span>
+                                    <span style="display: none;">
                                         <div class="detail">
                                             <div class="detail__name">Series:</div>
                                             <div class="detail__value f_series"> Threadripper </div>
@@ -155,12 +159,13 @@
                                     <span class="view-more">
                                         <div class="view-More6" onclick="viewMore(6);"><span class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span> --}}
                                 </td>
                                 <td class="price">
                                     ৳ {{ $processor->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{route('processor-details',['id'=>$processor->id])}}" target="_blank">View Details</a></td>
+                                        href="{{ route('processor-details', ['id' => $processor->id]) }}" target="_blank">View
+                                        Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="processor0"
                                         href="{{ route('remove-processor-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -208,7 +213,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route('motherboard-details',['id'=>$processor->id])}}">{{ $motherboard->name }}</a>
+                                            href="{{ route('motherboard-details', ['id' => $processor->id]) }}">{{ $motherboard->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -220,7 +225,7 @@
                                             <div class="detail__value">{{ $motherboard->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Cores:</div>
@@ -276,12 +281,13 @@
                                         <div class="view-More6" onclick="viewMore(6);"><span
                                                 class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span> --}}
                                 </td>
                                 <td class="price">
                                     ৳ {{ $motherboard->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{route('motherboard-details',['id'=>$processor->id])}}" target="_blank">View Details</a></td>
+                                        href="{{ route('motherboard-details', ['id' => $processor->id]) }}"
+                                        target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-motherboard-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -327,7 +333,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route('cpu-coolers-details',['id'=>$cooler->id])}}">{{ $cooler->name }}</a>
+                                            href="{{ route('cpu-coolers-details', ['id' => $cooler->id]) }}">{{ $cooler->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -339,7 +345,7 @@
                                             <div class="detail__value">{{ $cooler->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Cores:</div>
@@ -389,18 +395,19 @@
                                             <div class="detail__name">Generation:</div>
                                             <div class="detail__value f_generation"> 3 </div>
                                         </div>
-                                    </span>
+                                    </span> 
 
                                     <span class="view-more">
                                         <div class="view-More6" onclick="viewMore(6);"><span
                                                 class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span>--}}
                                 </td>
                                 <td class="price">
                                     ৳ {{ $cooler->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{route('cpu-coolers-details',['id'=>$cooler->id])}}" target="_blank">View Details</a></td>
+                                        href="{{ route('cpu-coolers-details', ['id' => $cooler->id]) }}" target="_blank">View
+                                        Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-cpu-cooler-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -445,7 +452,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route('case-details',['id'=>$casing->id])}}">{{ $casing->name }}</a>
+                                            href="{{ route('case-details', ['id' => $casing->id]) }}">{{ $casing->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -457,7 +464,7 @@
                                             <div class="detail__value">{{ $casing->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Cores:</div>
@@ -513,12 +520,13 @@
                                         <div class="view-More6" onclick="viewMore(6);"><span
                                                 class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span> --}}
                                 </td>
                                 <td class="price">
                                     ৳ {{ $casing->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{route('case-details',['id'=>$casing->id])}}" target="_blank">View Details</a></td>
+                                        href="{{ route('case-details', ['id' => $casing->id]) }}" target="_blank">View
+                                        Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-casing-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -563,7 +571,7 @@
                                 </td>
                                 <td class="comp-details">
                                     <div class="table_title"><a
-                                            href="{{route('graphics-cards-details',['id'=>$graphic->id])}}">{{ $graphic->name }}</a>
+                                            href="{{ route('graphics-cards-details', ['id' => $graphic->id]) }}">{{ $graphic->name }}</a>
                                     </div>
                                     <span class="table_span">
                                         <div class="detail">
@@ -575,7 +583,7 @@
                                             <div class="detail__value">{{ $graphic->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Cores:</div>
@@ -631,12 +639,13 @@
                                         <div class="view-More6" onclick="viewMore(6);"><span
                                                 class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span> --}}
                                 </td>
                                 <td class="price">
                                     ৳ {{ $graphic->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
-                                        href="{{route('graphics-cards-details',['id'=>$graphic->id])}}" target="_blank">View Details</a></td>
+                                        href="{{ route('graphics-cards-details', ['id' => $graphic->id]) }}"
+                                        target="_blank">View Details</a></td>
                                 <td class="remove"><a class="btn btn-danger component-delete-btn"
                                         id="motherboard0" href="{{ route('remove-graphic-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
@@ -691,14 +700,14 @@
                                     <span class="table_span">
                                         <div class="detail">
                                             <div class="detail__name">Brand:</div>
-                                            <div class="detail__value f_brand"> G.Skill </div>
+                                            <div class="detail__value f_brand">{{$memory->brand}}</div>
                                         </div>
                                         <div class="detail">
                                             <div class="detail__name">Model:</div>
-                                            <div class="detail__value f_model"> Trident Z Royal </div>
+                                            <div class="detail__value f_model">{{$memory->model}}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">RAM Size:</div>
@@ -733,7 +742,7 @@
                                         <div class="view-More185" onclick="viewMore(185);"><span
                                                 class="viewMore185">View More Details</span> <i
                                                 class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span> --}}
                                 </td>
                                 <td class="price">৳{{ $memory->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
@@ -802,7 +811,7 @@
                                             <div class="detail__value f_model">{{ $storage->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Capacity:</div>
@@ -829,7 +838,106 @@
                                             <div class="detail__name">Form Factor:</div>
                                             <div class="detail__value f_form_factor"> M.2-2280 </div>
                                         </div>
+                                    </span> --}}
+
+                                </td>
+                                <td class="price">৳{{ $storage->product->price }}</td>
+                                <td><a class="btn btn-primary component-btn"
+                                        href="{{ route('storage-details', ['id' => $storage->id]) }}"
+                                        target="_blank">View
+                                        details</a></td>
+
+                                <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
+                                        href="{{ route('remove-storage-from-system') }}"><i
+                                            class="fa fa-trash"></i></a></td>
+
+
+                            @else
+                                <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
+                                        href="{{ route('storage-list') }}"><i class="fa fa-plus"></i> ADD Component
+                                    </a>
+                                </td>
+                            @endif
+                        </tr>
+                        <tr class="items">
+                            <td scope="row" class="component">
+                                <a href="{{ route('storage-list') }}">Secondary Storage</a>
+                            </td>
+                            @if (Session::has('system') && Session::get('system')->get_storage() != '')
+                                <?php $storage = Session::get('system')->get_storage(); ?>
+
+                                <td scope="row" class="component d-sm-none">
+                                    <a href="#">#</a>
+                                </td>
+                                <td class="box">
+                                    <div class="logo-name">
+                                        <div class="item-logo">
+                                            <?php $images = $storage->product->getMedia('main_image'); ?>
+                                            <img src="{{ $images[0]->getUrl('main_image') }}"
+                                                class="img-responsive lazy img-fluid"
+                                                data-src="{{ $images[0]->getUrl('main_image') }}"
+                                                title="{{ $storage->name }}" alt="{{ $storage->name }}">
+                                            {{-- <div class="stars-rating" title="4.9 out of 5">
+                                            <div class="stars-score" style="width: 98%">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="stars-scale">
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div> --}}
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="comp-details">
+                                    <div class="table_title"><a
+                                            href="{{ route('storage-details', ['id' => $storage->id]) }}">{{ $storage->name }}</a>
+                                    </div>
+                                    <span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Brand:</div>
+                                            <div class="detail__value f_brand">{{ $storage->brand }}</div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Model:</div>
+                                            <div class="detail__value f_model">{{ $storage->model }}</div>
+                                        </div>
                                     </span>
+                                    {{-- <span class="table_span">
+
+                                        <div class="detail">
+                                            <div class="detail__name">Capacity:</div>
+                                            <div class="detail__value f_capacity"> 1 TB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Type:</div>
+                                            <div class="detail__value f_storage_type"> SSD </div>
+                                        </div>
+                                        <div class="detail d-none">
+                                            <div class="detail__name">RPM:</div>
+                                            <div class="detail__value f_rpm"> </div>
+                                        </div>
+                                    </span><span class="table_span">
+                                        <div class="detail">
+                                            <div class="detail__name">Interface:</div>
+                                            <div class="detail__value f_interface"> PCIe 3.0 x4 </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Cache Memory:</div>
+                                            <div class="detail__value f_cache_memory"> 1024 MB </div>
+                                        </div>
+                                        <div class="detail">
+                                            <div class="detail__name">Form Factor:</div>
+                                            <div class="detail__value f_form_factor"> M.2-2280 </div>
+                                        </div>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">৳{{ $storage->product->price }}</td>
@@ -901,7 +1009,7 @@
                                             <div class="detail__value f_model">{{ $case_cooler->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Capacity:</div>
@@ -928,7 +1036,7 @@
                                             <div class="detail__name">Form Factor:</div>
                                             <div class="detail__value f_form_factor"> M.2-2280 </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">৳{{ $case_cooler->product->price }}</td>
@@ -967,7 +1075,8 @@
                                             <img src="{{ $images[0]->getUrl('main_image') }}"
                                                 class="img-responsive lazy img-fluid"
                                                 data-src="{{ $images[0]->getUrl('main_image') }}"
-                                                title="{{ $power_supplier->name }}" alt="{{ $power_supplier->name }}">
+                                                title="{{ $power_supplier->name }}"
+                                                alt="{{ $power_supplier->name }}">
                                             <div class="stars-rating" title="4.9 out of 5">
                                                 <div class="stars-score" style="width: 98%">
                                                     <i class="fas fa-star"></i>
@@ -1001,7 +1110,7 @@
                                             <div class="detail__value f_model">{{ $power_supplier->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Capacity:</div>
@@ -1028,7 +1137,7 @@
                                             <div class="detail__name">Form Factor:</div>
                                             <div class="detail__value f_form_factor"> M.2-2280 </div>
                                         </div>
-                                    </span>
+                                    </span> --}}
 
                                 </td>
                                 <td class="price">৳{{ $power_supplier->product->price }}</td>
@@ -1094,7 +1203,7 @@
                                             <div class="detail__value">{{ $monitor->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Cores:</div>
@@ -1150,7 +1259,7 @@
                                         <div class="view-More6" onclick="viewMore(6);"><span
                                                 class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span> --}}
                                 </td>
                                 <td class="price">৳{{ $monitor->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
@@ -1169,11 +1278,11 @@
                             @endif
                         </tr>
                         @if (Session::has('system') && Session::get('system')->get_keyboard() != '')
-                        <tr class="items">
-                            <td scope="row" class="component">
-                                <a href="{{ route('keyboard-list') }}">Keyboard</a>
-                            </td>
-                            
+                            <tr class="items">
+                                <td scope="row" class="component">
+                                    <a href="{{ route('keyboard-list') }}">Keyboard</a>
+                                </td>
+
                                 <?php $keyboard = Session::get('system')->get_keyboard(); ?>
                                 <td>
                                     <div class="logo-name">
@@ -1215,7 +1324,7 @@
                                             <div class="detail__value">{{ $keyboard->model }}</div>
                                         </div>
                                     </span>
-                                    <span class="table_span">
+                                    {{-- <span class="table_span">
 
                                         <div class="detail">
                                             <div class="detail__name">Cores:</div>
@@ -1271,7 +1380,7 @@
                                         <div class="view-More6" onclick="viewMore(6);"><span
                                                 class="viewMore6">View
                                                 More Details</span> <i class="fas fa-chevron-circle-down"></i></div>
-                                    </span>
+                                    </span> --}}
                                 </td>
                                 <td class="price">৳{{ $keyboard->product->price }}</td>
                                 <td><a class="btn btn-primary component-btn"
@@ -1282,20 +1391,20 @@
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
                                         href="{{ route('remove-keyboard-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
-                            
+
                                 {{-- <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
                                         href="{{ route('keyboard-list') }}"><i class="fa fa-plus"></i> ADD Component
                                     </a>
                                 </td> --}}
-                            
-                        </tr>
+
+                            </tr>
                         @endif
                         <tr class="items extra">
                             <td scope="row" class="component">
                                 <a>Accessories</a>
                             </td>
                             <td colspan="6" class="comps">
-                                @if (!Session::has('system') || Session::get('system')->get_keyboard() == '')<a href="{{ route('keyboard-list') }}">Keyboard</a>,@endif 
+                                @if (!Session::has('system') || Session::get('system')->get_keyboard() == '')<a href="{{ route('keyboard-list') }}">Keyboard</a>,@endif
                                 <a href="{{ route('mouse-list') }}">Mouse</a>, <a
                                     href="{{ route('thermalpaste-list') }}">Thermal Paste</a>, <a
                                     href="{{ route('speakers-list') }}">Speakers</a>, <a
@@ -1311,7 +1420,7 @@
                                 <a>Expensions / Networking</a>
                             </td>
                             <td colspan="6" class="comps">
-                                <a href="{{ route('sound-card-list') }}">Sound Card</a>, 
+                                <a href="{{ route('sound-card-list') }}">Sound Card</a>,
                                 <a href="../product/wireless-network-adapter/#">Wireless Network Adapter</a>,
                                 <a href="../product/wired-network-adapter/#">Wired Network Adapter</a>
                             </td>
