@@ -861,10 +861,10 @@
                         </tr>
                         <tr class="items">
                             <td scope="row" class="component">
-                                <a href="{{ route('storage-list') }}">Secondary Storage</a>
+                                <a href="{{ route('storage-list',['intended_type'=>'secondary']) }}">Secondary Storage</a>
                             </td>
-                            @if (Session::has('system') && Session::get('system')->get_storage() != '')
-                                <?php $storage = Session::get('system')->get_storage(); ?>
+                            @if (Session::has('system') && Session::get('system')->get_secondary_storage() != '')
+                                <?php $storage = Session::get('system')->get_secondary_storage(); ?>
 
                                 <td scope="row" class="component d-sm-none">
                                     <a href="#">#</a>
@@ -953,7 +953,7 @@
 
                             @else
                                 <td class="select-comp" colspan=6><a class="btn btn-primary component-btn"
-                                        href="{{ route('storage-list') }}"><i class="fa fa-plus"></i> ADD Component
+                                        href="{{ route('storage-list',['intended_type'=>'secondary']) }}"><i class="fa fa-plus"></i> ADD Component
                                     </a>
                                 </td>
                             @endif

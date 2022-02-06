@@ -1226,9 +1226,13 @@
                                             href="{{ route('storage-details', ['id' => $storage->id]) }}"
                                             target="_blank">View
                                             details</a></td>
-                                    <td class="remove"><a class="btn btn-danger component-add-btn" id="p_1"
-                                            href="{{route('add-storage-to-system',['storage_id'=>$storage->id])}}"><i
-                                                class="fa fa-plus"></i></a>
+                                    <td class="remove">
+                                        @if($intended_type == 'secondary')
+                                        <a class="btn btn-danger component-add-btn" id="p_1" href="{{route('add-secondary-storage-to-system',['storage_id'=>$storage->id])}}"><i class="fa fa-plus"></i></a>
+                                        @else
+                                        <a class="btn btn-danger component-add-btn" id="p_1" href="{{route('add-storage-to-system',['storage_id'=>$storage->id])}}"><i class="fa fa-plus"></i></a>
+                                        @endif
+                                        
                                     </td>
                                 </tr>
                             @endforeach

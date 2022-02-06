@@ -13,6 +13,30 @@ class SystemBuilderController extends Controller
         // $this->middleware('session')->except([]);
         // $this->middleware('role:admin|user')->except(['show_list','show_details','get_processor_create_options']);
     }
+    //add secondary storage
+    public function add_secondary_storage_web($storage_id){
+        if(Session::has('system')){
+            $system = Session::get('system');
+            $system->set_secondary_storage($storage_id);
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+            // return redirect('/system-builder');
+        }
+        $system = new SystemBuilder();
+        $system->set_secondary_storage($storage_id);
+        session(['system'=>$system]);
+        return redirect('/system-builder');
+        // dd($req->all());
+    }
+    public function remove_secondary_storage_web(){
+        if(Session::has('system') && Session::get('system')->get_secondary_storage()!=''){
+            $system = Session::get('system');
+            $system->remove_secondary_storage();
+            session(['system'=>$system]);
+            return redirect('/system-builder');
+        }
+        return redirect('/system-builder');
+    }
     public function add_processor(Request $req){
         
         $system = new SystemBuilder();

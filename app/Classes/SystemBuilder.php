@@ -21,6 +21,7 @@ class SystemBuilder
     private $processor = '';
     private $motherboard = '';
     private $storage = '';
+    private $secondary_storage = '';
     private $memory = '';
     private $cooler = '';
     private $casing = '';
@@ -37,6 +38,7 @@ class SystemBuilder
         $this->processor = '';
         $this->motherboard = '';
         $this->storage = '';
+        $this->secondary_storage='';
         $this->memory = '';
         $this->cooler = '';
         $this->casing = '';
@@ -222,6 +224,24 @@ class SystemBuilder
     public function remove_storage(){
         $this->total_price-=Storage::find($this->storage)->product->price;
         $this->storage="";
+    }
+    //secondary storage
+    public function set_secondary_storage($storage_id){
+        $this->total_price+=Storage::find($storage_id)->product->price;
+        $this->secondary_storage = $storage_id;
+    }
+    
+
+    public function get_secondary_storage(){
+        if($this->secondary_storage!=''){
+            return Storage::with('product')->findOrFail($this->secondary_storage);
+        }
+        return $this->secondary_storage;
+    }
+
+    public function remove_secondary_storage(){
+        $this->total_price-=Storage::find($this->secondary_storage)->product->price;
+        $this->secondary_storage="";
     }
     //memory
     public function set_memory($memory_id){

@@ -59,8 +59,8 @@ class StoragesController extends Controller
         }
     }
 
-    public function show_list(){
-        return view('pages.storages.list')->with('storages',Storage::with('product')->get())->with('brands',Storage::select('brand')->distinct()->get());
+    public function show_list(Request $req,$intended_type=null){
+        return view('pages.storages.list')->with('intended_type',$intended_type)->with('storages',Storage::with('product')->get())->with('brands',Storage::select('brand')->distinct()->get());
     }
     public function show_details($id){
         return view('pages.storages.details')->with('storage',Storage::findOrFail($id));

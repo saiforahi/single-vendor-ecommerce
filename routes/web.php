@@ -67,7 +67,7 @@ Route::get('laptops/list/{type}',[App\Http\Controllers\api\LaptopController::cla
 Route::get('cart',[App\Http\Controllers\api\CartController::class,'show_cart_page'])->name('cart');
 
 Route::prefix('storages')->group(function(){
-    Route::get('/list',[App\Http\Controllers\api\StoragesController::class,'show_list'])->name('storage-list');
+    Route::get('/list/{intended_type?}',[App\Http\Controllers\api\StoragesController::class,'show_list'])->name('storage-list');
     Route::get('/details/{id}',[App\Http\Controllers\api\StoragesController::class,'show_details'])->name('storage-details');
 });
 Route::prefix('pre-built')->group(function(){
@@ -175,6 +175,10 @@ Route::prefix('system-builder')->group(function(){
     //storage
     Route::get('/add-storage/{storage_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_storage_web'])->name('add-storage-to-system');
     Route::get('/remove-storage',[App\Http\Controllers\api\SystemBuilderController::class,'remove_storage_web'])->name('remove-storage-from-system');
+    //secondary storage
+    Route::get('/add-secondary-storage/{storage_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_secondary_storage_web'])->name('add-secondary-storage-to-system');
+    Route::get('/remove-secondary-storage',[App\Http\Controllers\api\SystemBuilderController::class,'remove_secondary_storage_web'])->name('remove-secondary-storage-from-system');
+    //memory
     Route::get('/add-memory/{memory_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_memory_web'])->name('add-memory-to-system');
     Route::get('/remove-memory',[App\Http\Controllers\api\SystemBuilderController::class,'remove_memory_web'])->name('remove-memory-from-system');
     Route::get('/add-power_supplier/{power_supplier_id}',[App\Http\Controllers\api\SystemBuilderController::class,'add_power_supplier_web'])->name('add-power_supplier-to-system');
