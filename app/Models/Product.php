@@ -14,7 +14,7 @@ class Product extends Model implements HasMedia, Buyable
 {
     use HasFactory, SoftDeletes, InteractsWithMedia;
     // use Gloudemans\Shoppingcart\CanBeBought;
-    protected $fillable=['price','name','brand','model','weight','stock','description','features','compatible_products'];
+    protected $fillable=['price','name','brand','model','weight','stock','description','features','compatible_products','type'];
     protected $casts = [
         'created_at' => 'datetime:Y-m-d h:i:s A',
         'updated_at' => 'datetime:Y-m-d h:i:s A',
