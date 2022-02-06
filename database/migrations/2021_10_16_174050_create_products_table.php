@@ -25,6 +25,7 @@ class CreateProductsTable extends Migration
             $table->integer('price')->nullable();
             $table->float('weight',8,2)->default(0.0);
             $table->integer('stock')->default(0);
+            $table->enum('type',['new','used'])->nullable();
             $table->json('packaging_specs')->nullable();
             $table->enum('status',['active','inactive']);
             $table->timestamps();
