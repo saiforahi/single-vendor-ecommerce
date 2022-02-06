@@ -947,7 +947,7 @@
                                         details</a></td>
 
                                 <td class="remove"><a class="btn btn-danger component-delete-btn" id="storage0"
-                                        href="{{ route('remove-storage-from-system') }}"><i
+                                        href="{{ route('remove-secondary-storage-from-system') }}"><i
                                             class="fa fa-trash"></i></a></td>
 
 
